@@ -1,8 +1,8 @@
-opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 11162"
+opt subtitle "HI-TECH Software Omniscient Code Generator (PRO mode) build 11162"
 
 opt pagewidth 120
 
-	opt lm
+	opt pm
 
 	processor	18F45K80
 porta	equ	0F80h
@@ -105,933 +105,933 @@ skipnz macro
 	endm
 	global	__ramtop
 	global	__accesstop
-# 19 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 19 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXERRCNT equ 0E41h ;# 
-# 41 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 41 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXERRCNT equ 0E42h ;# 
-# 63 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 63 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 BRGCON1 equ 0E43h ;# 
-# 86 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 86 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 BRGCON2 equ 0E44h ;# 
-# 113 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 113 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 BRGCON3 equ 0E45h ;# 
-# 133 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 133 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFCON0 equ 0E46h ;# 
-# 152 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 152 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFCON1 equ 0E47h ;# 
-# 171 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 171 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF6SIDH equ 0E48h ;# 
-# 224 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 224 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF6SIDL equ 0E49h ;# 
-# 271 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 271 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF6EIDH equ 0E4Ah ;# 
-# 324 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 324 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF6EIDL equ 0E4Bh ;# 
-# 377 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 377 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF7SIDH equ 0E4Ch ;# 
-# 430 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 430 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF7SIDL equ 0E4Dh ;# 
-# 477 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 477 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF7EIDH equ 0E4Eh ;# 
-# 530 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 530 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF7EIDL equ 0E4Fh ;# 
-# 583 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 583 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF8SIDH equ 0E50h ;# 
-# 636 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 636 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF8SIDL equ 0E51h ;# 
-# 683 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 683 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF8EIDH equ 0E52h ;# 
-# 736 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 736 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF8EIDL equ 0E53h ;# 
-# 789 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 789 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF9SIDH equ 0E54h ;# 
-# 842 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 842 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF9SIDL equ 0E55h ;# 
-# 889 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 889 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF9EIDH equ 0E56h ;# 
-# 942 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 942 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF9EIDL equ 0E57h ;# 
-# 995 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 995 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF10SIDH equ 0E58h ;# 
-# 1048 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1048 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF10SIDL equ 0E59h ;# 
-# 1095 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1095 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF10EIDH equ 0E5Ah ;# 
-# 1148 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1148 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF10EIDL equ 0E5Bh ;# 
-# 1201 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1201 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF11SIDH equ 0E5Ch ;# 
-# 1254 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1254 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF11SIDL equ 0E5Dh ;# 
-# 1301 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1301 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF11EIDH equ 0E5Eh ;# 
-# 1354 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1354 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF11EIDL equ 0E5Fh ;# 
-# 1407 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1407 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF12SIDH equ 0E60h ;# 
-# 1460 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1460 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF12SIDL equ 0E61h ;# 
-# 1507 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1507 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF12EIDH equ 0E62h ;# 
-# 1560 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1560 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF12EIDL equ 0E63h ;# 
-# 1613 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1613 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF13SIDH equ 0E64h ;# 
-# 1666 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1666 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF13SIDL equ 0E65h ;# 
-# 1713 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1713 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF13EIDH equ 0E66h ;# 
-# 1766 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1766 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF13EIDL equ 0E67h ;# 
-# 1819 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1819 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF14SIDH equ 0E68h ;# 
-# 1872 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1872 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF14SIDL equ 0E69h ;# 
-# 1919 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1919 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF14EIDH equ 0E6Ah ;# 
-# 1972 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 1972 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF14EIDL equ 0E6Bh ;# 
-# 2025 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2025 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF15SIDH equ 0E6Ch ;# 
-# 2078 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2078 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF15SIDL equ 0E6Dh ;# 
-# 2125 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2125 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF15EIDH equ 0E6Eh ;# 
-# 2178 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2178 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF15EIDL equ 0E6Fh ;# 
-# 2231 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2231 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SDFLC equ 0E70h ;# 
-# 2250 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2250 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFBCON0 equ 0E71h ;# 
-# 2276 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2276 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFBCON1 equ 0E72h ;# 
-# 2302 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2302 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFBCON2 equ 0E73h ;# 
-# 2328 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2328 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFBCON3 equ 0E74h ;# 
-# 2354 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2354 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFBCON4 equ 0E75h ;# 
-# 2380 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2380 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFBCON5 equ 0E76h ;# 
-# 2406 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2406 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFBCON6 equ 0E77h ;# 
-# 2432 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2432 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXFBCON7 equ 0E78h ;# 
-# 2458 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2458 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 MSEL0 equ 0E79h ;# 
-# 2483 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2483 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 MSEL1 equ 0E7Ah ;# 
-# 2508 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2508 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 MSEL2 equ 0E7Bh ;# 
-# 2533 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2533 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 MSEL3 equ 0E7Ch ;# 
-# 2558 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2558 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 BSEL0 equ 0E7Dh ;# 
-# 2576 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2576 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 BIE0 equ 0E7Eh ;# 
-# 2602 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2602 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXBIE equ 0E7Fh ;# 
-# 2629 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2629 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0CON equ 0E80h ;# 
-# 2740 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2740 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0SIDH equ 0E81h ;# 
-# 2793 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2793 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0SIDL equ 0E82h ;# 
-# 2844 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2844 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0EIDH equ 0E83h ;# 
-# 2897 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2897 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0EIDL equ 0E84h ;# 
-# 2950 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 2950 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0DLC equ 0E85h ;# 
-# 3004 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3004 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0D0 equ 0E86h ;# 
-# 3026 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3026 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0D1 equ 0E87h ;# 
-# 3048 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3048 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0D2 equ 0E88h ;# 
-# 3070 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3070 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0D3 equ 0E89h ;# 
-# 3092 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3092 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0D4 equ 0E8Ah ;# 
-# 3114 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3114 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0D5 equ 0E8Bh ;# 
-# 3136 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3136 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0D6 equ 0E8Ch ;# 
-# 3158 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3158 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B0D7 equ 0E8Dh ;# 
-# 3180 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3180 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO9 equ 0E8Eh ;# 
-# 3221 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3221 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO9 equ 0E8Fh ;# 
-# 3258 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3258 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1CON equ 0E90h ;# 
-# 3369 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3369 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1SIDH equ 0E91h ;# 
-# 3422 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3422 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1SIDL equ 0E92h ;# 
-# 3473 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3473 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1EIDH equ 0E93h ;# 
-# 3526 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3526 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1EIDL equ 0E94h ;# 
-# 3579 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3579 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1DLC equ 0E95h ;# 
-# 3633 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3633 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1D0 equ 0E96h ;# 
-# 3655 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3655 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1D1 equ 0E97h ;# 
-# 3677 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3677 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1D2 equ 0E98h ;# 
-# 3699 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3699 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1D3 equ 0E99h ;# 
-# 3721 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3721 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1D4 equ 0E9Ah ;# 
-# 3743 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3743 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1D5 equ 0E9Bh ;# 
-# 3765 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3765 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1D6 equ 0E9Ch ;# 
-# 3787 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3787 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B1D7 equ 0E9Dh ;# 
-# 3809 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3809 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO8 equ 0E9Eh ;# 
-# 3850 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3850 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO8 equ 0E9Fh ;# 
-# 3887 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3887 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2CON equ 0EA0h ;# 
-# 3998 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 3998 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2SIDH equ 0EA1h ;# 
-# 4051 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4051 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2SIDL equ 0EA2h ;# 
-# 4106 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4106 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2EIDH equ 0EA3h ;# 
-# 4159 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4159 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2EIDL equ 0EA4h ;# 
-# 4212 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4212 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2DLC equ 0EA5h ;# 
-# 4266 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4266 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2D0 equ 0EA6h ;# 
-# 4288 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4288 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2D1 equ 0EA7h ;# 
-# 4310 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4310 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2D2 equ 0EA8h ;# 
-# 4332 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4332 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2D3 equ 0EA9h ;# 
-# 4354 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4354 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2D4 equ 0EAAh ;# 
-# 4376 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4376 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2D5 equ 0EABh ;# 
-# 4398 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4398 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2D6 equ 0EACh ;# 
-# 4420 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4420 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B2D7 equ 0EADh ;# 
-# 4442 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4442 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO7 equ 0EAEh ;# 
-# 4483 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4483 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO7 equ 0EAFh ;# 
-# 4520 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4520 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3CON equ 0EB0h ;# 
-# 4631 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4631 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3SIDH equ 0EB1h ;# 
-# 4684 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4684 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3SIDL equ 0EB2h ;# 
-# 4739 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4739 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3EIDH equ 0EB3h ;# 
-# 4792 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4792 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3EIDL equ 0EB4h ;# 
-# 4845 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4845 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3DLC equ 0EB5h ;# 
-# 4899 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4899 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3D0 equ 0EB6h ;# 
-# 4921 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4921 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3D1 equ 0EB7h ;# 
-# 4943 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4943 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3D2 equ 0EB8h ;# 
-# 4965 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4965 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3D3 equ 0EB9h ;# 
-# 4987 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 4987 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3D4 equ 0EBAh ;# 
-# 5009 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5009 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3D5 equ 0EBBh ;# 
-# 5031 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5031 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3D6 equ 0EBCh ;# 
-# 5053 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5053 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B3D7 equ 0EBDh ;# 
-# 5075 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5075 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO6 equ 0EBEh ;# 
-# 5116 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5116 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO6 equ 0EBFh ;# 
-# 5153 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5153 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4CON equ 0EC0h ;# 
-# 5264 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5264 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4SIDH equ 0EC1h ;# 
-# 5317 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5317 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4SIDL equ 0EC2h ;# 
-# 5372 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5372 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4EIDH equ 0EC3h ;# 
-# 5425 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5425 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4EIDL equ 0EC4h ;# 
-# 5478 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5478 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4DLC equ 0EC5h ;# 
-# 5532 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5532 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4D0 equ 0EC6h ;# 
-# 5554 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5554 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4D1 equ 0EC7h ;# 
-# 5576 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5576 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4D2 equ 0EC8h ;# 
-# 5598 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5598 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4D3 equ 0EC9h ;# 
-# 5620 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5620 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4D4 equ 0ECAh ;# 
-# 5642 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5642 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4D5 equ 0ECBh ;# 
-# 5664 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5664 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4D6 equ 0ECCh ;# 
-# 5686 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5686 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B4D7 equ 0ECDh ;# 
-# 5708 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5708 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO5 equ 0ECEh ;# 
-# 5749 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5749 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO5 equ 0ECFh ;# 
-# 5786 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5786 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5CON equ 0ED0h ;# 
-# 5897 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5897 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5SIDH equ 0ED1h ;# 
-# 5950 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 5950 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5SIDL equ 0ED2h ;# 
-# 6005 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6005 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5EIDH equ 0ED3h ;# 
-# 6058 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6058 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5EIDL equ 0ED4h ;# 
-# 6111 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6111 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5DLC equ 0ED5h ;# 
-# 6165 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6165 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5D0 equ 0ED6h ;# 
-# 6187 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6187 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5D1 equ 0ED7h ;# 
-# 6209 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6209 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5D2 equ 0ED8h ;# 
-# 6231 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6231 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5D3 equ 0ED9h ;# 
-# 6253 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6253 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5D4 equ 0EDAh ;# 
-# 6275 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6275 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5D5 equ 0EDBh ;# 
-# 6297 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6297 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5D6 equ 0EDCh ;# 
-# 6319 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6319 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 B5D7 equ 0EDDh ;# 
-# 6341 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6341 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO4 equ 0EDEh ;# 
-# 6382 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6382 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO4 equ 0EDFh ;# 
-# 6419 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6419 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF0SIDH equ 0EE0h ;# 
-# 6472 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6472 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF0SIDL equ 0EE1h ;# 
-# 6519 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6519 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF0EIDH equ 0EE2h ;# 
-# 6572 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6572 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF0EIDL equ 0EE3h ;# 
-# 6625 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6625 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF1SIDH equ 0EE4h ;# 
-# 6678 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6678 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF1SIDL equ 0EE5h ;# 
-# 6725 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6725 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF1EIDH equ 0EE6h ;# 
-# 6778 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6778 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF1EIDL equ 0EE7h ;# 
-# 6831 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6831 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF2SIDH equ 0EE8h ;# 
-# 6884 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6884 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF2SIDL equ 0EE9h ;# 
-# 6931 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6931 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF2EIDH equ 0EEAh ;# 
-# 6984 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 6984 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF2EIDL equ 0EEBh ;# 
-# 7037 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7037 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF3SIDH equ 0EECh ;# 
-# 7090 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7090 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF3SIDL equ 0EEDh ;# 
-# 7137 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7137 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF3EIDH equ 0EEEh ;# 
-# 7190 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7190 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF3EIDL equ 0EEFh ;# 
-# 7243 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7243 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF4SIDH equ 0EF0h ;# 
-# 7296 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7296 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF4SIDL equ 0EF1h ;# 
-# 7343 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7343 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF4EIDH equ 0EF2h ;# 
-# 7396 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7396 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF4EIDL equ 0EF3h ;# 
-# 7449 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7449 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF5SIDH equ 0EF4h ;# 
-# 7502 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7502 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF5SIDL equ 0EF5h ;# 
-# 7549 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7549 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF5EIDH equ 0EF6h ;# 
-# 7602 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7602 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXF5EIDL equ 0EF7h ;# 
-# 7655 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7655 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXM0SIDH equ 0EF8h ;# 
-# 7708 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7708 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXM0SIDL equ 0EF9h ;# 
-# 7755 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7755 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXM0EIDH equ 0EFAh ;# 
-# 7808 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7808 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXM0EIDL equ 0EFBh ;# 
-# 7861 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7861 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXM1SIDH equ 0EFCh ;# 
-# 7914 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7914 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXM1SIDL equ 0EFDh ;# 
-# 7961 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 7961 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXM1EIDH equ 0EFEh ;# 
-# 8014 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8014 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXM1EIDL equ 0EFFh ;# 
-# 8067 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8067 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2CON equ 0F00h ;# 
-# 8116 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8116 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2SIDH equ 0F01h ;# 
-# 8169 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8169 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2SIDL equ 0F02h ;# 
-# 8216 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8216 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2EIDH equ 0F03h ;# 
-# 8269 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8269 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2EIDL equ 0F04h ;# 
-# 8322 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8322 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2DLC equ 0F05h ;# 
-# 8361 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8361 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2D0 equ 0F06h ;# 
-# 8383 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8383 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2D1 equ 0F07h ;# 
-# 8405 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8405 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2D2 equ 0F08h ;# 
-# 8427 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8427 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2D3 equ 0F09h ;# 
-# 8449 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8449 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2D4 equ 0F0Ah ;# 
-# 8471 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8471 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2D5 equ 0F0Bh ;# 
-# 8493 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8493 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2D6 equ 0F0Ch ;# 
-# 8515 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8515 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB2D7 equ 0F0Dh ;# 
-# 8537 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8537 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO3 equ 0F0Eh ;# 
-# 8578 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8578 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO3 equ 0F0Fh ;# 
-# 8615 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8615 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1CON equ 0F10h ;# 
-# 8664 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8664 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1SIDH equ 0F11h ;# 
-# 8717 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8717 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1SIDL equ 0F12h ;# 
-# 8764 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8764 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1EIDH equ 0F13h ;# 
-# 8817 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8817 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1EIDL equ 0F14h ;# 
-# 8870 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8870 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1DLC equ 0F15h ;# 
-# 8909 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8909 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1D0 equ 0F16h ;# 
-# 8931 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8931 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1D1 equ 0F17h ;# 
-# 8953 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8953 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1D2 equ 0F18h ;# 
-# 8975 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8975 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1D3 equ 0F19h ;# 
-# 8997 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 8997 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1D4 equ 0F1Ah ;# 
-# 9019 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9019 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1D5 equ 0F1Bh ;# 
-# 9041 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9041 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1D6 equ 0F1Ch ;# 
-# 9063 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9063 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB1D7 equ 0F1Dh ;# 
-# 9085 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9085 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO2 equ 0F1Eh ;# 
-# 9126 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9126 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO2 equ 0F1Fh ;# 
-# 9163 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9163 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0CON equ 0F20h ;# 
-# 9212 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9212 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0SIDH equ 0F21h ;# 
-# 9265 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9265 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0SIDL equ 0F22h ;# 
-# 9312 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9312 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0EIDH equ 0F23h ;# 
-# 9365 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9365 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0EIDL equ 0F24h ;# 
-# 9418 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9418 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0DLC equ 0F25h ;# 
-# 9457 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9457 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0D0 equ 0F26h ;# 
-# 9479 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9479 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0D1 equ 0F27h ;# 
-# 9501 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9501 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0D2 equ 0F28h ;# 
-# 9523 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9523 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0D3 equ 0F29h ;# 
-# 9545 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9545 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0D4 equ 0F2Ah ;# 
-# 9567 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9567 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0D5 equ 0F2Bh ;# 
-# 9589 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9589 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0D6 equ 0F2Ch ;# 
-# 9611 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9611 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXB0D7 equ 0F2Dh ;# 
-# 9633 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9633 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO1 equ 0F2Eh ;# 
-# 9674 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9674 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO1 equ 0F2Fh ;# 
-# 9711 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9711 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1CON equ 0F30h ;# 
-# 9781 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9781 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1SIDH equ 0F31h ;# 
-# 9834 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9834 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1SIDL equ 0F32h ;# 
-# 9885 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9885 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1EIDH equ 0F33h ;# 
-# 9938 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9938 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1EIDL equ 0F34h ;# 
-# 9991 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 9991 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1DLC equ 0F35h ;# 
-# 10040 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10040 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1D0 equ 0F36h ;# 
-# 10062 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10062 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1D1 equ 0F37h ;# 
-# 10084 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10084 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1D2 equ 0F38h ;# 
-# 10106 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10106 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1D3 equ 0F39h ;# 
-# 10128 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10128 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1D4 equ 0F3Ah ;# 
-# 10150 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10150 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1D5 equ 0F3Bh ;# 
-# 10172 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10172 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1D6 equ 0F3Ch ;# 
-# 10194 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10194 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB1D7 equ 0F3Dh ;# 
-# 10216 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10216 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT_RO0 equ 0F3Eh ;# 
-# 10257 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10257 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON_RO0 equ 0F3Fh ;# 
-# 10294 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10294 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PSPCON equ 0F46h ;# 
-# 10310 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10310 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCP5CON equ 0F47h ;# 
-# 10336 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10336 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR5 equ 0F48h ;# 
-# 10342 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10342 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR5L equ 0F48h ;# 
-# 10354 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10354 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR5H equ 0F49h ;# 
-# 10366 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10366 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCP4CON equ 0F4Ah ;# 
-# 10392 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10392 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR4 equ 0F4Bh ;# 
-# 10398 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10398 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR4L equ 0F4Bh ;# 
-# 10410 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10410 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR4H equ 0F4Ch ;# 
-# 10422 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10422 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCP3CON equ 0F4Dh ;# 
-# 10448 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10448 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR3 equ 0F4Eh ;# 
-# 10454 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10454 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR3L equ 0F4Eh ;# 
-# 10466 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10466 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR3H equ 0F4Fh ;# 
-# 10478 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10478 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCP2CON equ 0F50h ;# 
-# 10483 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10483 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ECCP2CON equ 0F50h ;# 
-# 10529 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10529 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR2 equ 0F51h ;# 
-# 10535 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10535 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR2L equ 0F51h ;# 
-# 10547 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10547 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR2H equ 0F52h ;# 
-# 10559 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10559 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CTMUICON equ 0F53h ;# 
-# 10582 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10582 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CTMUCONL equ 0F54h ;# 
-# 10607 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10607 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CTMUCONH equ 0F55h ;# 
-# 10626 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10626 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PADCFG1 equ 0F56h ;# 
-# 10644 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10644 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PMD2 equ 0F57h ;# 
-# 10658 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10658 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PMD1 equ 0F58h ;# 
-# 10680 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10680 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PMD0 equ 0F59h ;# 
-# 10707 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10707 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 IOCB equ 0F5Ah ;# 
-# 10723 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10723 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 WPUB equ 0F5Bh ;# 
-# 10742 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10742 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ANCON1 equ 0F5Ch ;# 
-# 10787 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10787 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ANCON0 equ 0F5Dh ;# 
-# 10837 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10837 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CM2CON equ 0F5Eh ;# 
-# 10842 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10842 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CM2CON1 equ 0F5Eh ;# 
-# 10946 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10946 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CM1CON equ 0F5Fh ;# 
-# 10951 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 10951 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CM1CON1 equ 0F5Fh ;# 
-# 11069 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11069 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0CON equ 0F60h ;# 
-# 11143 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11143 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0SIDH equ 0F61h ;# 
-# 11196 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11196 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0SIDL equ 0F62h ;# 
-# 11247 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11247 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0EIDH equ 0F63h ;# 
-# 11300 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11300 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0EIDL equ 0F64h ;# 
-# 11353 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11353 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0DLC equ 0F65h ;# 
-# 11402 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11402 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0D0 equ 0F66h ;# 
-# 11424 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11424 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0D1 equ 0F67h ;# 
-# 11446 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11446 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0D2 equ 0F68h ;# 
-# 11468 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11468 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0D3 equ 0F69h ;# 
-# 11490 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11490 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0D4 equ 0F6Ah ;# 
-# 11512 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11512 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0D5 equ 0F6Bh ;# 
-# 11534 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11534 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0D6 equ 0F6Ch ;# 
-# 11556 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11556 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RXB0D7 equ 0F6Dh ;# 
-# 11578 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11578 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANSTAT equ 0F6Eh ;# 
-# 11619 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11619 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CANCON equ 0F6Fh ;# 
-# 11656 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11656 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CIOCON equ 0F70h ;# 
-# 11673 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11673 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 COMSTAT equ 0F71h ;# 
-# 11722 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11722 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ECANCON equ 0F72h ;# 
-# 11746 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11746 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 EEDATA equ 0F73h ;# 
-# 11758 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11758 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 EEADR equ 0F74h ;# 
-# 11770 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11770 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 EEADRH equ 0F75h ;# 
-# 11782 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11782 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIE5 equ 0F76h ;# 
-# 11807 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11807 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIR5 equ 0F77h ;# 
-# 11832 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11832 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 IPR5 equ 0F78h ;# 
-# 11872 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11872 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXREG2 equ 0F79h ;# 
-# 11884 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11884 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RCREG2 equ 0F7Ah ;# 
-# 11896 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11896 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SPBRG2 equ 0F7Bh ;# 
-# 11908 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11908 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SPBRGH2 equ 0F7Ch ;# 
-# 11920 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11920 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SPBRGH1 equ 0F7Dh ;# 
-# 11932 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11932 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 EECON2 equ 0F7Eh ;# 
-# 11944 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11944 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 EECON1 equ 0F7Fh ;# 
-# 11967 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 11967 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PORTA equ 0F80h ;# 
-# 12004 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12004 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PORTB equ 0F81h ;# 
-# 12030 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12030 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PORTC equ 0F82h ;# 
-# 12064 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12064 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PORTD equ 0F83h ;# 
-# 12090 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12090 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PORTE equ 0F84h ;# 
-# 12190 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12190 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR4 equ 0F87h ;# 
-# 12202 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12202 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 T4CON equ 0F88h ;# 
-# 12225 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12225 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 LATA equ 0F89h ;# 
-# 12278 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12278 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 LATB equ 0F8Ah ;# 
-# 12331 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12331 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 LATC equ 0F8Bh ;# 
-# 12384 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12384 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 LATD equ 0F8Ch ;# 
-# 12437 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12437 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 LATE equ 0F8Dh ;# 
-# 12485 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12485 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SLRCON equ 0F90h ;# 
-# 12501 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12501 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ODCON equ 0F91h ;# 
-# 12520 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12520 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TRISA equ 0F92h ;# 
-# 12542 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12542 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TRISB equ 0F93h ;# 
-# 12564 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12564 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TRISC equ 0F94h ;# 
-# 12586 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12586 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TRISD equ 0F95h ;# 
-# 12608 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12608 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TRISE equ 0F96h ;# 
-# 12625 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12625 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPTMRS equ 0F99h ;# 
-# 12641 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12641 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 REFOCON equ 0F9Ah ;# 
-# 12663 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12663 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 OSCTUNE equ 0F9Bh ;# 
-# 12685 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12685 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PSTR1CON equ 0F9Ch ;# 
-# 12708 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12708 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIE1 equ 0F9Dh ;# 
-# 12732 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12732 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIR1 equ 0F9Eh ;# 
-# 12756 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12756 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 IPR1 equ 0F9Fh ;# 
-# 12780 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12780 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIE2 equ 0FA0h ;# 
-# 12801 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12801 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIR2 equ 0FA1h ;# 
-# 12822 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12822 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 IPR2 equ 0FA2h ;# 
-# 12843 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12843 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIE3 equ 0FA3h ;# 
-# 12884 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12884 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIR3 equ 0FA4h ;# 
-# 12909 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12909 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 IPR3 equ 0FA5h ;# 
-# 12934 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12934 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RCSTA2 equ 0FA6h ;# 
-# 12974 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 12974 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 BAUDCON1 equ 0FA7h ;# 
-# 13048 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13048 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 HLVDCON equ 0FA8h ;# 
-# 13070 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13070 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PR4 equ 0FA9h ;# 
-# 13082 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13082 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 T1GCON equ 0FAAh ;# 
-# 13118 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13118 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RCSTA1 equ 0FABh ;# 
-# 13123 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13123 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RCSTA equ 0FABh ;# 
-# 13221 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13221 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXSTA1 equ 0FACh ;# 
-# 13226 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13226 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXSTA equ 0FACh ;# 
-# 13304 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13304 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXREG1 equ 0FADh ;# 
-# 13309 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13309 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXREG equ 0FADh ;# 
-# 13327 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13327 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RCREG1 equ 0FAEh ;# 
-# 13332 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13332 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RCREG equ 0FAEh ;# 
-# 13350 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13350 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SPBRG1 equ 0FAFh ;# 
-# 13355 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13355 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SPBRG equ 0FAFh ;# 
-# 13373 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13373 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 T3GCON equ 0FB0h ;# 
-# 13409 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13409 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 T3CON equ 0FB1h ;# 
-# 13449 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13449 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR3 equ 0FB2h ;# 
-# 13461 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13461 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR3L equ 0FB2h ;# 
-# 13473 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13473 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR3H equ 0FB3h ;# 
-# 13485 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13485 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CMSTAT equ 0FB4h ;# 
-# 13490 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13490 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CMSTATUS equ 0FB4h ;# 
-# 13528 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13528 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CVRCON equ 0FB5h ;# 
-# 13558 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13558 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIE4 equ 0FB6h ;# 
-# 13577 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13577 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PIR4 equ 0FB7h ;# 
-# 13596 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13596 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 IPR4 equ 0FB8h ;# 
-# 13618 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13618 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 BAUDCON2 equ 0FB9h ;# 
-# 13680 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13680 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TXSTA2 equ 0FBAh ;# 
-# 13716 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13716 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCP1CON equ 0FBBh ;# 
-# 13721 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13721 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ECCP1CON equ 0FBBh ;# 
-# 13773 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13773 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR1 equ 0FBCh ;# 
-# 13779 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13779 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR1L equ 0FBCh ;# 
-# 13791 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13791 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 CCPR1H equ 0FBDh ;# 
-# 13803 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13803 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ECCP1DEL equ 0FBEh ;# 
-# 13808 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13808 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PWM1CON equ 0FBEh ;# 
-# 13846 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13846 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ECCP1AS equ 0FBFh ;# 
-# 13870 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13870 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ADCON2 equ 0FC0h ;# 
-# 13893 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13893 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ADCON1 equ 0FC1h ;# 
-# 13930 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13930 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ADCON0 equ 0FC2h ;# 
-# 13977 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13977 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ADRES equ 0FC3h ;# 
-# 13989 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 13989 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ADRESL equ 0FC3h ;# 
-# 14001 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14001 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 ADRESH equ 0FC4h ;# 
-# 14013 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14013 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SSPCON2 equ 0FC5h ;# 
-# 14040 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14040 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SSPCON1 equ 0FC6h ;# 
-# 14062 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14062 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SSPSTAT equ 0FC7h ;# 
-# 14158 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14158 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SSPADD equ 0FC8h ;# 
-# 14180 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14180 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 SSPBUF equ 0FC9h ;# 
-# 14192 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14192 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 T2CON equ 0FCAh ;# 
-# 14215 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14215 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PR2 equ 0FCBh ;# 
-# 14220 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14220 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 MEMCON equ 0FCBh ;# 
-# 14238 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14238 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR2 equ 0FCCh ;# 
-# 14250 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14250 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 T1CON equ 0FCDh ;# 
-# 14286 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14286 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR1 equ 0FCEh ;# 
-# 14298 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14298 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR1L equ 0FCEh ;# 
-# 14310 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14310 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR1H equ 0FCFh ;# 
-# 14322 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14322 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 RCON equ 0FD0h ;# 
-# 14372 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14372 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 WDTCON equ 0FD1h ;# 
-# 14394 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14394 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 OSCCON2 equ 0FD2h ;# 
-# 14418 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14418 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 OSCCON equ 0FD3h ;# 
-# 14442 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14442 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 T0CON equ 0FD5h ;# 
-# 14464 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14464 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR0 equ 0FD6h ;# 
-# 14476 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14476 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR0L equ 0FD6h ;# 
-# 14488 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14488 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TMR0H equ 0FD7h ;# 
-# 14500 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14500 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 STATUS equ 0FD8h ;# 
-# 14531 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14531 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR2 equ 0FD9h ;# 
-# 14543 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14543 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR2L equ 0FD9h ;# 
-# 14555 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14555 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR2H equ 0FDAh ;# 
-# 14567 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14567 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PLUSW2 equ 0FDBh ;# 
-# 14579 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14579 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PREINC2 equ 0FDCh ;# 
-# 14591 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14591 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 POSTDEC2 equ 0FDDh ;# 
-# 14603 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14603 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 POSTINC2 equ 0FDEh ;# 
-# 14615 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14615 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 INDF2 equ 0FDFh ;# 
-# 14627 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14627 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 BSR equ 0FE0h ;# 
-# 14639 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14639 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR1 equ 0FE1h ;# 
-# 14651 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14651 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR1L equ 0FE1h ;# 
-# 14663 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14663 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR1H equ 0FE2h ;# 
-# 14675 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14675 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PLUSW1 equ 0FE3h ;# 
-# 14687 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14687 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PREINC1 equ 0FE4h ;# 
-# 14699 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14699 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 POSTDEC1 equ 0FE5h ;# 
-# 14711 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14711 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 POSTINC1 equ 0FE6h ;# 
-# 14723 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14723 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 INDF1 equ 0FE7h ;# 
-# 14735 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14735 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 WREG equ 0FE8h ;# 
-# 14747 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14747 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR0 equ 0FE9h ;# 
-# 14759 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14759 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR0L equ 0FE9h ;# 
-# 14771 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14771 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 FSR0H equ 0FEAh ;# 
-# 14783 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14783 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PLUSW0 equ 0FEBh ;# 
-# 14795 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14795 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PREINC0 equ 0FECh ;# 
-# 14807 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14807 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 POSTDEC0 equ 0FEDh ;# 
-# 14819 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14819 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 POSTINC0 equ 0FEEh ;# 
-# 14831 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14831 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 INDF0 equ 0FEFh ;# 
-# 14843 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14843 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 INTCON3 equ 0FF0h ;# 
-# 14872 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14872 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 INTCON2 equ 0FF1h ;# 
-# 14902 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14902 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 INTCON equ 0FF2h ;# 
-# 14907 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14907 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 INTCON1 equ 0FF2h ;# 
-# 14999 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 14999 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PROD equ 0FF3h ;# 
-# 15011 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15011 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PRODL equ 0FF3h ;# 
-# 15023 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15023 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PRODH equ 0FF4h ;# 
-# 15035 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15035 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TABLAT equ 0FF5h ;# 
-# 15047 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15047 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TBLPTR equ 0FF6h ;# 
-# 15059 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15059 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TBLPTRL equ 0FF6h ;# 
-# 15071 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15071 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TBLPTRH equ 0FF7h ;# 
-# 15083 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15083 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TBLPTRU equ 0FF8h ;# 
-# 15095 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15095 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PCLAT equ 0FF9h ;# 
-# 15100 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15100 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PC equ 0FF9h ;# 
-# 15118 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15118 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PCL equ 0FF9h ;# 
-# 15130 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15130 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PCLATH equ 0FFAh ;# 
-# 15142 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15142 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 PCLATU equ 0FFBh ;# 
-# 15154 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15154 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 STKPTR equ 0FFCh ;# 
-# 15178 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15178 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TOS equ 0FFDh ;# 
-# 15190 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15190 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TOSL equ 0FFDh ;# 
-# 15202 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15202 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TOSH equ 0FFEh ;# 
-# 15214 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 15214 "d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 TOSU equ 0FFFh ;# 
 	FNCALL	_main,_delayms
 	FNCALL	_main,_PORTInit
@@ -1083,13 +1083,13 @@ TOSU equ 0FFFh ;#
 	global	_turnoff
 	global	_CANRdlc
 	global	_eeprom_num
+	global	_cycledutyoff
 	global	_cycledutyon
 	global	_period
-	global	_cycledutyoff
 psect	idataCOMRAM,class=CODE,space=0,delta=1
 global __pidataCOMRAM
 __pidataCOMRAM:
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	86
 
 ;initializer for _CANSdlc
@@ -1109,6 +1109,57 @@ __pidataCOMRAM:
 psect	idataBANK0,class=CODE,space=0,delta=1
 global __pidataBANK0
 __pidataBANK0:
+	line	95
+
+;initializer for _cycledutyoff
+	db	low(float24(1.0000000000000000))
+	db	high(float24(1.0000000000000000))
+	db	low highword(float24(1.0000000000000000))
+	db	low(float24(0.93750000000000000))
+	db	high(float24(0.93750000000000000))
+	db	low highword(float24(0.93750000000000000))
+	db	low(float24(0.87500000000000000))
+	db	high(float24(0.87500000000000000))
+	db	low highword(float24(0.87500000000000000))
+	db	low(float24(0.81250000000000000))
+	db	high(float24(0.81250000000000000))
+	db	low highword(float24(0.81250000000000000))
+	db	low(float24(0.75000000000000000))
+	db	high(float24(0.75000000000000000))
+	db	low highword(float24(0.75000000000000000))
+	db	low(float24(0.68750000000000000))
+	db	high(float24(0.68750000000000000))
+	db	low highword(float24(0.68750000000000000))
+	db	low(float24(0.62500000000000000))
+	db	high(float24(0.62500000000000000))
+	db	low highword(float24(0.62500000000000000))
+	db	low(float24(0.56250000000000000))
+	db	high(float24(0.56250000000000000))
+	db	low highword(float24(0.56250000000000000))
+	db	low(float24(0.50000000000000000))
+	db	high(float24(0.50000000000000000))
+	db	low highword(float24(0.50000000000000000))
+	db	low(float24(0.43750000000000000))
+	db	high(float24(0.43750000000000000))
+	db	low highword(float24(0.43750000000000000))
+	db	low(float24(0.37500000000000000))
+	db	high(float24(0.37500000000000000))
+	db	low highword(float24(0.37500000000000000))
+	db	low(float24(0.31250000000000000))
+	db	high(float24(0.31250000000000000))
+	db	low highword(float24(0.31250000000000000))
+	db	low(float24(0.25000000000000000))
+	db	high(float24(0.25000000000000000))
+	db	low highword(float24(0.25000000000000000))
+	db	low(float24(0.18750000000000000))
+	db	high(float24(0.18750000000000000))
+	db	low highword(float24(0.18750000000000000))
+	db	low(float24(0.12500000000000000))
+	db	high(float24(0.12500000000000000))
+	db	low highword(float24(0.12500000000000000))
+	db	low(float24(0.0000000000000000))
+	db	high(float24(0.0000000000000000))
+	db	low highword(float24(0.0000000000000000))
 	line	92
 
 ;initializer for _cycledutyon
@@ -1193,92 +1244,31 @@ __pidataBANK0:
 	db	low(float24(200.00000000000000))
 	db	high(float24(200.00000000000000))
 	db	low highword(float24(200.00000000000000))
-psect	idataBANK1,class=CODE,space=0,delta=1
-global __pidataBANK1
-__pidataBANK1:
-	line	95
-
-;initializer for _cycledutyoff
-	db	low(float24(1.0000000000000000))
-	db	high(float24(1.0000000000000000))
-	db	low highword(float24(1.0000000000000000))
-	db	low(float24(0.93750000000000000))
-	db	high(float24(0.93750000000000000))
-	db	low highword(float24(0.93750000000000000))
-	db	low(float24(0.87500000000000000))
-	db	high(float24(0.87500000000000000))
-	db	low highword(float24(0.87500000000000000))
-	db	low(float24(0.81250000000000000))
-	db	high(float24(0.81250000000000000))
-	db	low highword(float24(0.81250000000000000))
-	db	low(float24(0.75000000000000000))
-	db	high(float24(0.75000000000000000))
-	db	low highword(float24(0.75000000000000000))
-	db	low(float24(0.68750000000000000))
-	db	high(float24(0.68750000000000000))
-	db	low highword(float24(0.68750000000000000))
-	db	low(float24(0.62500000000000000))
-	db	high(float24(0.62500000000000000))
-	db	low highword(float24(0.62500000000000000))
-	db	low(float24(0.56250000000000000))
-	db	high(float24(0.56250000000000000))
-	db	low highword(float24(0.56250000000000000))
-	db	low(float24(0.50000000000000000))
-	db	high(float24(0.50000000000000000))
-	db	low highword(float24(0.50000000000000000))
-	db	low(float24(0.43750000000000000))
-	db	high(float24(0.43750000000000000))
-	db	low highword(float24(0.43750000000000000))
-	db	low(float24(0.37500000000000000))
-	db	high(float24(0.37500000000000000))
-	db	low highword(float24(0.37500000000000000))
-	db	low(float24(0.31250000000000000))
-	db	high(float24(0.31250000000000000))
-	db	low highword(float24(0.31250000000000000))
-	db	low(float24(0.25000000000000000))
-	db	high(float24(0.25000000000000000))
-	db	low highword(float24(0.25000000000000000))
-	db	low(float24(0.18750000000000000))
-	db	high(float24(0.18750000000000000))
-	db	low highword(float24(0.18750000000000000))
-	db	low(float24(0.12500000000000000))
-	db	high(float24(0.12500000000000000))
-	db	low highword(float24(0.12500000000000000))
-	db	low(float24(0.0000000000000000))
-	db	high(float24(0.0000000000000000))
-	db	low highword(float24(0.0000000000000000))
+	global	_t1_cont
+	global	_time_counter
 	global	_time_counters
+	global	_time_off_counter
+	global	_time_on_counter
 	global	_f_r_mod
 	global	_force_status
+	global	_heartbeat
+	global	_lines
 	global	_my_addr
+	global	_rows
 	global	_run_mode
+	global	_t500ms_count
 	global	_yflash_status
+	global	_CANSid
 	global	_eeprom_addr
 	global	_readwrite
 	global	_yflash_CFG
-	global	_CANInt
 	global	_switchmode
 	global	_time5ms
 	global	_time_off
 	global	_time_on
-	global	_t1_cont
-	global	_time_counter
-	global	_time_off_counter
-	global	_time_on_counter
-	global	_can_time_cont
-	global	_heartbeat
-	global	_led_data0
-	global	_led_data1
-	global	_lines
-	global	_master_time_cont
-	global	_my_config
-	global	_rows
-	global	_sta
-	global	_t500ms_count
 	global	_CANRdata
 	global	_CANSdata
 	global	_CANRid
-	global	_CANSid
 	global	_ADRESH
 _ADRESH	set	0xFC4
 	global	_ADRESL
@@ -1553,6 +1543,8 @@ _RD3	set	0x7C1B
 _RXB0IF	set	0x7BB8
 	global	_RXB1IF
 _RXB1IF	set	0x7BB9
+	global	_SWDTEN
+_SWDTEN	set	0x7E88
 	global	_T08BIT
 _T08BIT	set	0x7EAE
 	global	_T0CS
@@ -1582,8 +1574,10 @@ global __CFG_FOSC$HS1
 __CFG_FOSC$HS1 equ 0x0
 global __CFG_PLLCFG$OFF
 __CFG_PLLCFG$OFF equ 0x0
-global __CFG_WDTEN$OFF
-__CFG_WDTEN$OFF equ 0x0
+global __CFG_WDTPS$256
+__CFG_WDTPS$256 equ 0x0
+global __CFG_WDTEN$ON
+__CFG_WDTEN$ON equ 0x0
 global __CFG_WRTD$OFF
 __CFG_WRTD$OFF equ 0x0
 	file	"YF.as"
@@ -1597,9 +1591,6 @@ start_initialization:
 psect	bitbssCOMRAM,class=COMRAM,bit,space=1
 global __pbitbssCOMRAM
 __pbitbssCOMRAM:
-	global	_CANInt
-_CANInt:
-       ds      1
 	global	_switchmode
 _switchmode:
        ds      1
@@ -1609,8 +1600,20 @@ _time5ms:
 psect	bssCOMRAM,class=COMRAM,space=1
 global __pbssCOMRAM
 __pbssCOMRAM:
+	global	_t1_cont
+_t1_cont:
+       ds      2
+	global	_time_counter
+_time_counter:
+       ds      2
 	global	_time_counters
 _time_counters:
+       ds      2
+	global	_time_off_counter
+_time_off_counter:
+       ds      2
+	global	_time_on_counter
+_time_on_counter:
        ds      2
 	global	_f_r_mod
 _f_r_mod:
@@ -1618,15 +1621,30 @@ _f_r_mod:
 	global	_force_status
 _force_status:
        ds      1
+	global	_heartbeat
+_heartbeat:
+       ds      1
+	global	_lines
+_lines:
+       ds      1
 	global	_my_addr
 _my_addr:
+       ds      1
+	global	_rows
+_rows:
        ds      1
 	global	_run_mode
 _run_mode:
        ds      1
+	global	_t500ms_count
+_t500ms_count:
+       ds      1
 	global	_yflash_status
 _yflash_status:
        ds      1
+	global	_CANSid
+_CANSid:
+       ds      4
 	global	_eeprom_addr
 _eeprom_addr:
        ds      2
@@ -1639,25 +1657,25 @@ _yflash_CFG:
 psect	dataCOMRAM,class=COMRAM,space=1
 global __pdataCOMRAM
 __pdataCOMRAM:
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	86
 	global	_CANSdlc
 _CANSdlc:
        ds      1
 psect	dataCOMRAM
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	108
 	global	_turnoff
 _turnoff:
        ds      1
 psect	dataCOMRAM
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	84
 	global	_CANRdlc
 _CANRdlc:
        ds      1
 psect	dataCOMRAM
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	116
 	global	_eeprom_num
 _eeprom_num:
@@ -1665,51 +1683,6 @@ _eeprom_num:
 psect	bssBANK0,class=BANK0,space=1
 global __pbssBANK0
 __pbssBANK0:
-	global	_t1_cont
-_t1_cont:
-       ds      2
-	global	_time_counter
-_time_counter:
-       ds      2
-	global	_time_off_counter
-_time_off_counter:
-       ds      2
-	global	_time_on_counter
-_time_on_counter:
-       ds      2
-	global	_can_time_cont
-_can_time_cont:
-       ds      1
-	global	_heartbeat
-_heartbeat:
-       ds      1
-	global	_led_data0
-	global	_led_data0
-_led_data0:
-       ds      1
-	global	_led_data1
-	global	_led_data1
-_led_data1:
-       ds      1
-	global	_lines
-_lines:
-       ds      1
-	global	_master_time_cont
-_master_time_cont:
-       ds      1
-	global	_my_config
-	global	_my_config
-_my_config:
-       ds      1
-	global	_rows
-_rows:
-       ds      1
-	global	_sta
-_sta:
-       ds      1
-	global	_t500ms_count
-_t500ms_count:
-       ds      1
 	global	_CANRdata
 _CANRdata:
        ds      8
@@ -1719,31 +1692,26 @@ _CANSdata:
 	global	_CANRid
 _CANRid:
        ds      4
-	global	_CANSid
-_CANSid:
-       ds      4
 psect	dataBANK0,class=BANK0,space=1
 global __pdataBANK0
 __pdataBANK0:
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
+	line	95
+	global	_cycledutyoff
+_cycledutyoff:
+       ds      48
+psect	dataBANK0
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	92
 	global	_cycledutyon
 _cycledutyon:
        ds      48
 psect	dataBANK0
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	90
 	global	_period
 _period:
        ds      30
-psect	dataBANK1,class=BANK1,space=1
-global __pdataBANK1
-__pdataBANK1:
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
-	line	95
-	global	_cycledutyoff
-_cycledutyoff:
-       ds      48
 psect	bssBIGRAM,class=BIGRAM,space=1
 global __pbssBIGRAM
 __pbssBIGRAM:
@@ -1765,10 +1733,10 @@ movf	fsr1l,w
 bnz	clear_0
 movf	fsr1h,w
 bnz	clear_0
-; Clear objects allocated to BANK0 (42 bytes)
+; Clear objects allocated to BANK0 (20 bytes)
 	global __pbssBANK0
 lfsr	0,__pbssBANK0
-movlw	42
+movlw	20
 clear_1:
 clrf	postinc0,c
 decf	wreg
@@ -1776,32 +1744,15 @@ bnz	clear_1
 ; Clear objects allocated to BITCOMRAM (1 bytes)
 	global __pbitbssCOMRAM
 clrf	(__pbitbssCOMRAM/8+0)&0xffh,c
-; Clear objects allocated to COMRAM (13 bytes)
+; Clear objects allocated to COMRAM (29 bytes)
 	global __pbssCOMRAM
 lfsr	0,__pbssCOMRAM
-movlw	13
+movlw	29
 clear_2:
 clrf	postinc0,c
 decf	wreg
 bnz	clear_2
-; Initialize objects allocated to BANK1 (48 bytes)
-	global __pidataBANK1
-	; load TBLPTR registers with __pidataBANK1
-	movlw	low (__pidataBANK1)
-	movwf	tblptrl
-	movlw	high(__pidataBANK1)
-	movwf	tblptrh
-	movlw	low highword(__pidataBANK1)
-	movwf	tblptru
-	lfsr	0,__pdataBANK1
-	lfsr	1,48
-	copy_data0:
-	tblrd	*+
-	movff	tablat, postinc0
-	movf	postdec1,w
-	movf	fsr1l,w
-	bnz	copy_data0
-; Initialize objects allocated to BANK0 (78 bytes)
+; Initialize objects allocated to BANK0 (126 bytes)
 	global __pidataBANK0
 	; load TBLPTR registers with __pidataBANK0
 	movlw	low (__pidataBANK0)
@@ -1811,13 +1762,13 @@ bnz	clear_2
 	movlw	low highword(__pidataBANK0)
 	movwf	tblptru
 	lfsr	0,__pdataBANK0
-	lfsr	1,78
-	copy_data1:
+	lfsr	1,126
+	copy_data0:
 	tblrd	*+
 	movff	tablat, postinc0
 	movf	postdec1,w
 	movf	fsr1l,w
-	bnz	copy_data1
+	bnz	copy_data0
 ; Initialize objects allocated to COMRAM (4 bytes)
 	global __pidataCOMRAM
 	; load TBLPTR registers with __pidataCOMRAM
@@ -1829,12 +1780,12 @@ bnz	clear_2
 	movwf	tblptru
 	lfsr	0,__pdataCOMRAM
 	lfsr	1,4
-	copy_data2:
+	copy_data1:
 	tblrd	*+
 	movff	tablat, postinc0
 	movf	postdec1,w
 	movf	fsr1l,w
-	bnz	copy_data2
+	bnz	copy_data1
 psect cinit,class=CODE,delta=1
 global end_of_initialization
 
@@ -1843,48 +1794,27 @@ global end_of_initialization
 end_of_initialization:
 movlb 0
 goto _main	;jump to C main() function
-psect	cstackBANK0,class=BANK0,space=1
-global __pcstackBANK0
-__pcstackBANK0:
-	global	?_CalculateTime25msCounter
-?_CalculateTime25msCounter:	; 0 bytes @ 0x0
-	global	CalculateTime25msCounter@row
-CalculateTime25msCounter@row:	; 1 bytes @ 0x0
-	ds   1
-	global	CalculateTime25msCounter@line
-CalculateTime25msCounter@line:	; 1 bytes @ 0x1
-	ds   1
-	global	??_CalculateTime25msCounter
-??_CalculateTime25msCounter:	; 0 bytes @ 0x2
-	ds   6
-	global	CalculateTime25msCounter@i
-CalculateTime25msCounter@i:	; 2 bytes @ 0x8
-	ds   2
-	global	CalculateTime25msCounter@j
-CalculateTime25msCounter@j:	; 2 bytes @ 0xA
-	ds   2
-	global	?_CANDATAAnalyzing
-?_CANDATAAnalyzing:	; 0 bytes @ 0xC
-	global	CANDATAAnalyzing@id
-CANDATAAnalyzing@id:	; 2 bytes @ 0xC
-	ds   2
-	global	CANDATAAnalyzing@dat
-CANDATAAnalyzing@dat:	; 2 bytes @ 0xE
-	ds   2
-	global	CANDATAAnalyzing@dlc
-CANDATAAnalyzing@dlc:	; 1 bytes @ 0x10
-	ds   1
-	global	??_CANDATAAnalyzing
-??_CANDATAAnalyzing:	; 0 bytes @ 0x11
-	ds   4
-	global	??_main
-??_main:	; 0 bytes @ 0x15
-	ds   1
 psect	cstackCOMRAM,class=COMRAM,space=1
 global __pcstackCOMRAM
 __pcstackCOMRAM:
+	global	??_GetLampBoardAddr
+??_GetLampBoardAddr:	; 0 bytes @ 0x0
+	global	?_CANFilterSet
+?_CANFilterSet:	; 0 bytes @ 0x0
 	global	?_CANErrClr
 ?_CANErrClr:	; 0 bytes @ 0x0
+	global	??_CANErrClr
+??_CANErrClr:	; 0 bytes @ 0x0
+	global	?_CANSetID
+?_CANSetID:	; 0 bytes @ 0x0
+	global	?_CANInit
+?_CANInit:	; 0 bytes @ 0x0
+	global	?_EEPROMRead
+?_EEPROMRead:	; 0 bytes @ 0x0
+	global	?_EEPROMWrite
+?_EEPROMWrite:	; 0 bytes @ 0x0
+	global	?_delayus
+?_delayus:	; 0 bytes @ 0x0
 	global	?_LED_On_Disp
 ?_LED_On_Disp:	; 0 bytes @ 0x0
 	global	??_LED_On_Disp
@@ -1911,12 +1841,22 @@ __pcstackCOMRAM:
 ??_ADIntServer:	; 0 bytes @ 0x0
 	global	?_IntServer
 ?_IntServer:	; 0 bytes @ 0x0
+	global	??_IntServer
+??_IntServer:	; 0 bytes @ 0x0
 	global	?_PORTInit
 ?_PORTInit:	; 0 bytes @ 0x0
+	global	??_PORTInit
+??_PORTInit:	; 0 bytes @ 0x0
 	global	?_IntManager
 ?_IntManager:	; 0 bytes @ 0x0
+	global	??_IntManager
+??_IntManager:	; 0 bytes @ 0x0
 	global	?_CANSendConfirm
 ?_CANSendConfirm:	; 0 bytes @ 0x0
+	global	?_CANSendID
+?_CANSendID:	; 0 bytes @ 0x0
+	global	?_CANWriteID
+?_CANWriteID:	; 0 bytes @ 0x0
 	global	?_Read_YFlash_CFG
 ?_Read_YFlash_CFG:	; 0 bytes @ 0x0
 	global	?_YFlashNewConfigure
@@ -1927,221 +1867,219 @@ __pcstackCOMRAM:
 ?_main:	; 0 bytes @ 0x0
 	global	?_GetLampBoardAddr
 ?_GetLampBoardAddr:	; 1 bytes @ 0x0
-	ds   2
-	global	ADIntServer@adrel
-ADIntServer@adrel:	; 2 bytes @ 0x2
-	ds   2
-	global	??_IntServer
-??_IntServer:	; 0 bytes @ 0x4
-	ds   14
-	global	??_GetLampBoardAddr
-??_GetLampBoardAddr:	; 0 bytes @ 0x12
-	global	?_CANFilterSet
-?_CANFilterSet:	; 0 bytes @ 0x12
-	global	??_CANErrClr
-??_CANErrClr:	; 0 bytes @ 0x12
-	global	?_CANSetID
-?_CANSetID:	; 0 bytes @ 0x12
-	global	?_EEPROMRead
-?_EEPROMRead:	; 0 bytes @ 0x12
-	global	?_EEPROMWrite
-?_EEPROMWrite:	; 0 bytes @ 0x12
-	global	?_delayus
-?_delayus:	; 0 bytes @ 0x12
-	global	??_PORTInit
-??_PORTInit:	; 0 bytes @ 0x12
-	global	??_IntManager
-??_IntManager:	; 0 bytes @ 0x12
+	global	?_GetAddr
+?_GetAddr:	; 1 bytes @ 0x0
 	global	?_CANSend
-?_CANSend:	; 1 bytes @ 0x12
+?_CANSend:	; 1 bytes @ 0x0
 	global	?___lwdiv
-?___lwdiv:	; 2 bytes @ 0x12
+?___lwdiv:	; 2 bytes @ 0x0
 	global	?___ftpack
-?___ftpack:	; 3 bytes @ 0x12
-	global	CANFilterSet@board_addr
-CANFilterSet@board_addr:	; 1 bytes @ 0x12
-	global	CANSetID@board_addr
-CANSetID@board_addr:	; 1 bytes @ 0x12
-	global	CANSend@id
-CANSend@id:	; 2 bytes @ 0x12
-	global	EEPROMRead@addr
-EEPROMRead@addr:	; 2 bytes @ 0x12
-	global	EEPROMWrite@addr
-EEPROMWrite@addr:	; 2 bytes @ 0x12
-	global	delayus@us
-delayus@us:	; 2 bytes @ 0x12
-	global	___lwdiv@dividend
-___lwdiv@dividend:	; 2 bytes @ 0x12
-	global	___ftpack@arg
-___ftpack@arg:	; 3 bytes @ 0x12
-	ds   1
+?___ftpack:	; 3 bytes @ 0x0
 	global	CANFilterSet@f_type
-CANFilterSet@f_type:	; 1 bytes @ 0x13
+CANFilterSet@f_type:	; 1 bytes @ 0x0
 	global	CANSetID@f_type
-CANSetID@f_type:	; 1 bytes @ 0x13
+CANSetID@f_type:	; 1 bytes @ 0x0
+	global	CANSend@id
+CANSend@id:	; 1 bytes @ 0x0
+	global	CANSend@dat
+CANSend@dat:	; 1 bytes @ 0x0
+	global	EEPROMRead@num
+EEPROMRead@num:	; 1 bytes @ 0x0
+	global	EEPROMWrite@num
+EEPROMWrite@num:	; 1 bytes @ 0x0
 	global	GetLampBoardAddr@i
-GetLampBoardAddr@i:	; 2 bytes @ 0x13
+GetLampBoardAddr@i:	; 2 bytes @ 0x0
+	global	delayus@us
+delayus@us:	; 2 bytes @ 0x0
+	global	___lwdiv@dividend
+___lwdiv@dividend:	; 2 bytes @ 0x0
+	global	___ftpack@arg
+___ftpack@arg:	; 3 bytes @ 0x0
 	ds   1
 	global	??_CANFilterSet
-??_CANFilterSet:	; 0 bytes @ 0x14
+??_CANFilterSet:	; 0 bytes @ 0x1
 	global	??_CANSetID
-??_CANSetID:	; 0 bytes @ 0x14
-	global	??_delayus
-??_delayus:	; 0 bytes @ 0x14
-	global	CANSend@dat
-CANSend@dat:	; 2 bytes @ 0x14
-	global	EEPROMRead@num
-EEPROMRead@num:	; 2 bytes @ 0x14
-	global	EEPROMWrite@num
-EEPROMWrite@num:	; 2 bytes @ 0x14
-	global	delayus@i
-delayus@i:	; 2 bytes @ 0x14
-	global	___lwdiv@divisor
-___lwdiv@divisor:	; 2 bytes @ 0x14
+??_CANSetID:	; 0 bytes @ 0x1
+	global	CANFilterSet@board_addr
+CANFilterSet@board_addr:	; 1 bytes @ 0x1
+	global	CANSend@dlc
+CANSend@dlc:	; 1 bytes @ 0x1
+	global	EEPROMRead@dat
+EEPROMRead@dat:	; 2 bytes @ 0x1
+	global	EEPROMWrite@dat
+EEPROMWrite@dat:	; 2 bytes @ 0x1
 	ds   1
+	global	??_CANSend
+??_CANSend:	; 0 bytes @ 0x2
+	global	??_delayus
+??_delayus:	; 0 bytes @ 0x2
+	global	??_CANSendConfirm
+??_CANSendConfirm:	; 0 bytes @ 0x2
 	global	GetLampBoardAddr@addr
-GetLampBoardAddr@addr:	; 1 bytes @ 0x15
+GetLampBoardAddr@addr:	; 1 bytes @ 0x2
+	global	CANSetID@board_addr
+CANSetID@board_addr:	; 1 bytes @ 0x2
+	global	CANSendConfirm@i
+CANSendConfirm@i:	; 1 bytes @ 0x2
+	global	delayus@i
+delayus@i:	; 2 bytes @ 0x2
+	global	___lwdiv@divisor
+___lwdiv@divisor:	; 2 bytes @ 0x2
+	ds   1
+	global	??_GetAddr
+??_GetAddr:	; 0 bytes @ 0x3
+	global	??_CANInit
+??_CANInit:	; 0 bytes @ 0x3
+	global	??_EEPROMRead
+??_EEPROMRead:	; 0 bytes @ 0x3
+	global	??_EEPROMWrite
+??_EEPROMWrite:	; 0 bytes @ 0x3
+	global	GetAddr@board_type
+GetAddr@board_type:	; 1 bytes @ 0x3
+	global	CANInit@b_addr
+CANInit@b_addr:	; 1 bytes @ 0x3
+	global	EEPROMRead@addr
+EEPROMRead@addr:	; 1 bytes @ 0x3
+	global	EEPROMWrite@addr
+EEPROMWrite@addr:	; 1 bytes @ 0x3
 	global	___ftpack@exp
-___ftpack@exp:	; 1 bytes @ 0x15
+___ftpack@exp:	; 1 bytes @ 0x3
 	ds   1
 	global	?_delayms
-?_delayms:	; 0 bytes @ 0x16
+?_delayms:	; 0 bytes @ 0x4
+	global	??_CANSendID
+??_CANSendID:	; 0 bytes @ 0x4
+	global	??_Read_YFlash_CFG
+??_Read_YFlash_CFG:	; 0 bytes @ 0x4
+	global	??_HeartbeatTest
+??_HeartbeatTest:	; 0 bytes @ 0x4
 	global	??___lwdiv
-??___lwdiv:	; 0 bytes @ 0x16
-	global	?_GetAddr
-?_GetAddr:	; 1 bytes @ 0x16
-	global	GetAddr@board_type
-GetAddr@board_type:	; 1 bytes @ 0x16
-	global	CANSend@dlc
-CANSend@dlc:	; 1 bytes @ 0x16
+??___lwdiv:	; 0 bytes @ 0x4
+	global	GetAddr@rel
+GetAddr@rel:	; 1 bytes @ 0x4
+	global	CANSendID@sm
+CANSendID@sm:	; 1 bytes @ 0x4
 	global	___ftpack@sign
-___ftpack@sign:	; 1 bytes @ 0x16
-	global	EEPROMRead@dat
-EEPROMRead@dat:	; 2 bytes @ 0x16
-	global	EEPROMWrite@dat
-EEPROMWrite@dat:	; 2 bytes @ 0x16
+___ftpack@sign:	; 1 bytes @ 0x4
 	global	delayms@ms
-delayms@ms:	; 2 bytes @ 0x16
+delayms@ms:	; 2 bytes @ 0x4
+	global	___lwdiv@quotient
+___lwdiv@quotient:	; 2 bytes @ 0x4
 	ds   1
 	global	??___ftpack
-??___ftpack:	; 0 bytes @ 0x17
-	global	??_GetAddr
-??_GetAddr:	; 0 bytes @ 0x17
-	global	??_CANSend
-??_CANSend:	; 0 bytes @ 0x17
-	global	??_CANSendConfirm
-??_CANSendConfirm:	; 0 bytes @ 0x17
-	global	___lwdiv@counter
-___lwdiv@counter:	; 1 bytes @ 0x17
-	ds   1
-	global	??_EEPROMRead
-??_EEPROMRead:	; 0 bytes @ 0x18
-	global	??_EEPROMWrite
-??_EEPROMWrite:	; 0 bytes @ 0x18
-	global	??_delayms
-??_delayms:	; 0 bytes @ 0x18
-	global	?_CANSendID
-?_CANSendID:	; 0 bytes @ 0x18
-	global	??_Read_YFlash_CFG
-??_Read_YFlash_CFG:	; 0 bytes @ 0x18
-	global	GetAddr@rel
-GetAddr@rel:	; 1 bytes @ 0x18
-	global	CANSendConfirm@i
-CANSendConfirm@i:	; 1 bytes @ 0x18
-	global	CANSendID@sm
-CANSendID@sm:	; 1 bytes @ 0x18
-	global	delayms@i
-delayms@i:	; 2 bytes @ 0x18
-	global	___lwdiv@quotient
-___lwdiv@quotient:	; 2 bytes @ 0x18
-	ds   1
-	global	?_CANInit
-?_CANInit:	; 0 bytes @ 0x19
-	global	??_CANSendID
-??_CANSendID:	; 0 bytes @ 0x19
-	global	??_HeartbeatTest
-??_HeartbeatTest:	; 0 bytes @ 0x19
-	global	CANInit@b_addr
-CANInit@b_addr:	; 1 bytes @ 0x19
-	ds   1
-	global	??_CANInit
-??_CANInit:	; 0 bytes @ 0x1A
-	global	?_CANWriteID
-?_CANWriteID:	; 0 bytes @ 0x1A
-	global	?___ftmul
-?___ftmul:	; 3 bytes @ 0x1A
-	global	CANWriteID@fm
-CANWriteID@fm:	; 1 bytes @ 0x1A
-	global	___ftmul@f1
-___ftmul@f1:	; 3 bytes @ 0x1A
-	ds   1
+??___ftpack:	; 0 bytes @ 0x5
 	global	?_CANRecv
 ?_CANRecv:	; 1 bit 
 	global	??_CANWriteID
-??_CANWriteID:	; 0 bytes @ 0x1B
-	global	CANRecv@id
-CANRecv@id:	; 2 bytes @ 0x1B
-	ds   2
+??_CANWriteID:	; 0 bytes @ 0x5
 	global	CANRecv@dat
-CANRecv@dat:	; 2 bytes @ 0x1D
-	global	___ftmul@f2
-___ftmul@f2:	; 3 bytes @ 0x1D
-	ds   2
-	global	CANRecv@dlc
-CANRecv@dlc:	; 2 bytes @ 0x1F
+CANRecv@dat:	; 1 bytes @ 0x5
+	global	CANWriteID@fm
+CANWriteID@fm:	; 1 bytes @ 0x5
 	ds   1
-	global	??___ftmul
-??___ftmul:	; 0 bytes @ 0x20
+	global	??_delayms
+??_delayms:	; 0 bytes @ 0x6
+	global	CANRecv@dlc
+CANRecv@dlc:	; 1 bytes @ 0x6
+	global	___lwdiv@counter
+___lwdiv@counter:	; 1 bytes @ 0x6
+	global	delayms@i
+delayms@i:	; 2 bytes @ 0x6
 	ds   1
 	global	??_CANRecv
-??_CANRecv:	; 0 bytes @ 0x21
-	ds   4
+??_CANRecv:	; 0 bytes @ 0x7
+	global	CANRecv@id
+CANRecv@id:	; 1 bytes @ 0x7
+	ds   1
+	global	?___ftmul
+?___ftmul:	; 3 bytes @ 0x8
+	global	___ftmul@f1
+___ftmul@f1:	; 3 bytes @ 0x8
+	ds   3
+	global	___ftmul@f2
+___ftmul@f2:	; 3 bytes @ 0xB
+	ds   3
+	global	??___ftmul
+??___ftmul:	; 0 bytes @ 0xE
+	ds   5
 	global	___ftmul@exp
-___ftmul@exp:	; 1 bytes @ 0x25
+___ftmul@exp:	; 1 bytes @ 0x13
 	ds   1
 	global	___ftmul@f3_as_product
-___ftmul@f3_as_product:	; 3 bytes @ 0x26
+___ftmul@f3_as_product:	; 3 bytes @ 0x14
 	ds   3
 	global	___ftmul@cntr
-___ftmul@cntr:	; 1 bytes @ 0x29
+___ftmul@cntr:	; 1 bytes @ 0x17
 	ds   1
 	global	___ftmul@sign
-___ftmul@sign:	; 1 bytes @ 0x2A
+___ftmul@sign:	; 1 bytes @ 0x18
 	ds   1
 	global	?___fttol
-?___fttol:	; 4 bytes @ 0x2B
+?___fttol:	; 4 bytes @ 0x19
 	global	___fttol@f1
-___fttol@f1:	; 3 bytes @ 0x2B
+___fttol@f1:	; 3 bytes @ 0x19
 	ds   4
 	global	??___fttol
-??___fttol:	; 0 bytes @ 0x2F
+??___fttol:	; 0 bytes @ 0x1D
 	ds   5
 	global	___fttol@sign1
-___fttol@sign1:	; 1 bytes @ 0x34
+___fttol@sign1:	; 1 bytes @ 0x22
 	ds   1
 	global	___fttol@lval
-___fttol@lval:	; 4 bytes @ 0x35
+___fttol@lval:	; 4 bytes @ 0x23
 	ds   4
 	global	___fttol@exp1
-___fttol@exp1:	; 1 bytes @ 0x39
+___fttol@exp1:	; 1 bytes @ 0x27
 	ds   1
+	global	?_CalculateTime25msCounter
+?_CalculateTime25msCounter:	; 0 bytes @ 0x28
+	global	CalculateTime25msCounter@line
+CalculateTime25msCounter@line:	; 1 bytes @ 0x28
+	ds   1
+	global	??_CalculateTime25msCounter
+??_CalculateTime25msCounter:	; 0 bytes @ 0x29
+	ds   6
+	global	CalculateTime25msCounter@row
+CalculateTime25msCounter@row:	; 1 bytes @ 0x2F
+	ds   1
+	global	CalculateTime25msCounter@i
+CalculateTime25msCounter@i:	; 2 bytes @ 0x30
+	ds   2
+	global	CalculateTime25msCounter@j
+CalculateTime25msCounter@j:	; 2 bytes @ 0x32
+	ds   2
 	global	??_YFlashNewConfigure
-??_YFlashNewConfigure:	; 0 bytes @ 0x3A
+??_YFlashNewConfigure:	; 0 bytes @ 0x34
+	global	?_CANDATAAnalyzing
+?_CANDATAAnalyzing:	; 0 bytes @ 0x34
+	global	CANDATAAnalyzing@dat
+CANDATAAnalyzing@dat:	; 1 bytes @ 0x34
 	ds   1
+	global	CANDATAAnalyzing@dlc
+CANDATAAnalyzing@dlc:	; 1 bytes @ 0x35
+	ds   1
+	global	??_CANDATAAnalyzing
+??_CANDATAAnalyzing:	; 0 bytes @ 0x36
+	ds   4
+	global	CANDATAAnalyzing@id
+CANDATAAnalyzing@id:	; 1 bytes @ 0x3A
+	ds   1
+	global	??_main
+??_main:	; 0 bytes @ 0x3B
 ;!
 ;!Data Sizes:
 ;!    Strings     0
 ;!    Constant    0
 ;!    Data        130
-;!    BSS         695
+;!    BSS         689
 ;!    Persistent  0
 ;!    Stack       0
 ;!
 ;!Auto Spaces:
 ;!    Space          Size  Autos    Used
-;!    COMRAM           95     59      77
-;!    BANK0           160     22     142
-;!    BANK1           256      0      48
+;!    COMRAM           95     59      93
+;!    BANK0           160      0     146
+;!    BANK1           256      0       0
 ;!    BANK2           256      0       0
 ;!    BANK3           256      0       0
 ;!    BANK4           256      0       0
@@ -2159,51 +2097,51 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!
 ;!Pointer List with Targets:
 ;!
-;!    ?___ftpack	float  size(2) Largest target is 0
+;!    ?___ftpack	float  size(1) Largest target is 0
 ;!
-;!    CANSend@id	PTR unsigned char  size(2) Largest target is 4
-;!		 -> CANSid(BANK0[4]), 
+;!    CANSend@id	PTR unsigned char  size(1) Largest target is 4
+;!		 -> CANSid(COMRAM[4]), 
 ;!
-;!    ?___lwdiv	unsigned int  size(2) Largest target is 0
+;!    ?___lwdiv	unsigned int  size(1) Largest target is 0
 ;!
-;!    ?___fttol	long  size(2) Largest target is 0
+;!    ?___fttol	long  size(1) Largest target is 0
 ;!
-;!    ?___ftmul	float  size(2) Largest target is 0
+;!    ?___ftmul	float  size(1) Largest target is 0
 ;!
-;!    CANDATAAnalyzing@id	PTR unsigned char  size(2) Largest target is 4
+;!    CANDATAAnalyzing@id	PTR unsigned char  size(1) Largest target is 4
 ;!		 -> CANRid(BANK0[4]), 
 ;!
-;!    CANDATAAnalyzing@dat	PTR unsigned char  size(2) Largest target is 8
+;!    CANDATAAnalyzing@dat	PTR unsigned char  size(1) Largest target is 8
 ;!		 -> CANRdata(BANK0[8]), 
 ;!
-;!    EEPROMWrite@num	PTR unsigned char  size(2) Largest target is 1
+;!    EEPROMWrite@num	PTR unsigned char  size(1) Largest target is 1
 ;!		 -> eeprom_num(COMRAM[1]), 
 ;!
 ;!    EEPROMWrite@dat	PTR unsigned char  size(2) Largest target is 8
 ;!		 -> readwrite(COMRAM[2]), CANRdata(BANK0[8]), 
 ;!
-;!    EEPROMWrite@addr	PTR unsigned char  size(2) Largest target is 2
+;!    EEPROMWrite@addr	PTR unsigned char  size(1) Largest target is 2
 ;!		 -> eeprom_addr(COMRAM[2]), 
 ;!
-;!    EEPROMRead@num	PTR unsigned char  size(2) Largest target is 1
+;!    EEPROMRead@num	PTR unsigned char  size(1) Largest target is 1
 ;!		 -> eeprom_num(COMRAM[1]), 
 ;!
 ;!    EEPROMRead@dat	PTR unsigned char  size(2) Largest target is 8
 ;!		 -> yflash_CFG(COMRAM[2]), readwrite(COMRAM[2]), CANSdata(BANK0[8]), 
 ;!
-;!    EEPROMRead@addr	PTR unsigned char  size(2) Largest target is 2
+;!    EEPROMRead@addr	PTR unsigned char  size(1) Largest target is 2
 ;!		 -> eeprom_addr(COMRAM[2]), 
 ;!
-;!    CANRecv@dat	PTR unsigned char  size(2) Largest target is 8
+;!    CANRecv@dat	PTR unsigned char  size(1) Largest target is 8
 ;!		 -> CANRdata(BANK0[8]), 
 ;!
-;!    CANRecv@dlc	PTR unsigned char  size(2) Largest target is 1
+;!    CANRecv@dlc	PTR unsigned char  size(1) Largest target is 1
 ;!		 -> CANRdlc(COMRAM[1]), 
 ;!
-;!    CANRecv@id	PTR unsigned char  size(2) Largest target is 4
+;!    CANRecv@id	PTR unsigned char  size(1) Largest target is 4
 ;!		 -> CANRid(BANK0[4]), 
 ;!
-;!    CANSend@dat	PTR unsigned char  size(2) Largest target is 8
+;!    CANSend@dat	PTR unsigned char  size(1) Largest target is 8
 ;!		 -> CANSdata(BANK0[8]), 
 ;!
 
@@ -2211,28 +2149,27 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!
 ;!Critical Paths under _main in COMRAM
 ;!
-;!    _CANRecv->_CANInit
+;!    _main->_CANDATAAnalyzing
+;!    _CANRecv->_GetAddr
 ;!    _GetAddr->_GetLampBoardAddr
-;!    _CANInit->_GetAddr
+;!    _CANInit->_CANSetID
 ;!    _delayms->_delayus
-;!    _CANDATAAnalyzing->_YFlashNewConfigure
 ;!    _CANSendConfirm->_CANSend
 ;!    _CANWriteID->_CANSendID
 ;!    _CANSendID->_EEPROMRead
+;!    _YFlashNewConfigure->_CalculateTime25msCounter
 ;!    _CalculateTime25msCounter->___fttol
-;!    _HeartbeatTest->_Read_YFlash_CFG
 ;!    _Read_YFlash_CFG->_EEPROMRead
 ;!    ___ftmul->___ftpack
 ;!    ___fttol->___ftmul
 ;!
 ;!Critical Paths under _IntServer in COMRAM
 ;!
-;!    _IntServer->_ADIntServer
+;!    None.
 ;!
 ;!Critical Paths under _main in BANK0
 ;!
-;!    _main->_CANDATAAnalyzing
-;!    _YFlashNewConfigure->_CalculateTime25msCounter
+;!    None.
 ;!
 ;!Critical Paths under _IntServer in BANK0
 ;!
@@ -2351,7 +2288,7 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!    None.
 
 ;;
-;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
 ;;
 
 ;!
@@ -2360,8 +2297,7 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;! ---------------------------------------------------------------------------------
 ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
 ;! ---------------------------------------------------------------------------------
-;! (0) _main                                                 1     1      0    6895
-;!                                             21 BANK0      1     1      0
+;! (0) _main                                                 0     0      0    6222
 ;!                            _delayms
 ;!                           _PORTInit
 ;!                         _IntManager
@@ -2371,46 +2307,45 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!                   _CANDATAAnalyzing
 ;!                      _HeartbeatTest
 ;! ---------------------------------------------------------------------------------
-;! (1) _CANRecv                                              7     1      6    1175
-;!                                             27 COMRAM     7     1      6
+;! (1) _CANRecv                                              3     1      2    1175
+;!                                              5 COMRAM     3     1      2
 ;!                            _GetAddr
 ;!                            _CANInit
 ;! ---------------------------------------------------------------------------------
-;! (2) _GetAddr                                              3     2      1     141
-;!                                             22 COMRAM     3     2      1
+;! (2) _GetAddr                                              2     2      0     141
+;!                                              3 COMRAM     2     2      0
 ;!                   _GetLampBoardAddr
 ;! ---------------------------------------------------------------------------------
-;! (3) _GetLampBoardAddr                                     4     4      0      93
-;!                                             18 COMRAM     4     4      0
+;! (3) _GetLampBoardAddr                                     3     3      0      93
+;!                                              0 COMRAM     3     3      0
 ;! ---------------------------------------------------------------------------------
-;! (2) _CANInit                                              2     1      1     176
-;!                                             25 COMRAM     2     1      1
+;! (2) _CANInit                                              1     1      0     176
+;!                                              3 COMRAM     1     1      0
 ;!                           _CANSetID
 ;!                       _CANFilterSet
 ;!                          _CANErrClr
-;!                            _GetAddr (ARG)
 ;! ---------------------------------------------------------------------------------
-;! (3) _CANFilterSet                                         2     0      2      66
-;!                                             18 COMRAM     2     0      2
+;! (3) _CANFilterSet                                         2     1      1      66
+;!                                              0 COMRAM     2     1      1
 ;! ---------------------------------------------------------------------------------
 ;! (3) _CANErrClr                                            0     0      0       0
 ;! ---------------------------------------------------------------------------------
-;! (3) _CANSetID                                             3     1      2      66
-;!                                             18 COMRAM     3     1      2
+;! (3) _CANSetID                                             3     2      1      66
+;!                                              0 COMRAM     3     2      1
 ;! ---------------------------------------------------------------------------------
-;! (1) _delayms                                              4     2      2     115
-;!                                             22 COMRAM     4     2      2
+;! (1) _delayms                                              4     2      2      93
+;!                                              4 COMRAM     4     2      2
 ;!                            _delayus
 ;! ---------------------------------------------------------------------------------
-;! (2) _delayus                                              4     2      2      69
-;!                                             18 COMRAM     4     2      2
+;! (2) _delayus                                              4     2      2      47
+;!                                              0 COMRAM     4     2      2
 ;! ---------------------------------------------------------------------------------
 ;! (1) _PORTInit                                             0     0      0       0
 ;! ---------------------------------------------------------------------------------
 ;! (1) _IntManager                                           0     0      0       0
 ;! ---------------------------------------------------------------------------------
-;! (1) _CANDATAAnalyzing                                     9     4      5    5199
-;!                                             12 BANK0      9     4      5
+;! (1) _CANDATAAnalyzing                                     7     5      2    4548
+;!                                             52 COMRAM     7     5      2
 ;!                     _CANSendConfirm
 ;!                          _CANSendID
 ;!                         _CANWriteID
@@ -2419,69 +2354,65 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!                 _YFlashNewConfigure
 ;!                    _Read_YFlash_CFG
 ;! ---------------------------------------------------------------------------------
-;! (2) _CANSendConfirm                                       2     2      0     684
-;!                                             23 COMRAM     2     2      0
+;! (2) _CANSendConfirm                                       1     1      0     684
+;!                                              2 COMRAM     1     1      0
 ;!                            _CANSend
 ;! ---------------------------------------------------------------------------------
-;! (2) _CANWriteID                                           2     1      1     816
-;!                                             26 COMRAM     2     1      1
+;! (2) _CANWriteID                                           1     1      0     816
+;!                                              5 COMRAM     1     1      0
 ;!                        _EEPROMWrite
 ;!                          _CANSendID
 ;! ---------------------------------------------------------------------------------
-;! (3) _CANSendID                                            2     1      1     705
-;!                                             24 COMRAM     2     1      1
+;! (3) _CANSendID                                            1     1      0     705
+;!                                              4 COMRAM     1     1      0
 ;!                         _EEPROMRead
 ;!                            _CANSend
 ;! ---------------------------------------------------------------------------------
-;! (2) _CANSend                                              5     0      5     594
-;!                                             18 COMRAM     5     0      5
+;! (2) _CANSend                                              3     1      2     594
+;!                                              0 COMRAM     2     0      2
 ;! ---------------------------------------------------------------------------------
-;! (2) _YFlashNewConfigure                                   1     1      0    2098
-;!                                             58 COMRAM     1     1      0
+;! (2) _YFlashNewConfigure                                   0     0      0    1483
 ;!                         _EEPROMRead
 ;!                        _EEPROMWrite
 ;!           _CalculateTime25msCounter
 ;! ---------------------------------------------------------------------------------
-;! (3) _EEPROMWrite                                          6     0      6      89
-;!                                             18 COMRAM     6     0      6
+;! (3) _EEPROMWrite                                          4     1      3      89
+;!                                              0 COMRAM     4     1      3
 ;! ---------------------------------------------------------------------------------
-;! (3) _CalculateTime25msCounter                            12    10      2    1920
-;!                                              0 BANK0     12    10      2
+;! (3) _CalculateTime25msCounter                            12    11      1    1305
+;!                                             40 COMRAM    12    11      1
 ;!                            ___ftmul
 ;!                            ___fttol
 ;!                            ___lwdiv
 ;! ---------------------------------------------------------------------------------
-;! (1) _HeartbeatTest                                        1     1      0      89
-;!                                             25 COMRAM     1     1      0
+;! (1) _HeartbeatTest                                        0     0      0      89
 ;!                    _Read_YFlash_CFG
 ;! ---------------------------------------------------------------------------------
-;! (2) _Read_YFlash_CFG                                      1     1      0      89
-;!                                             24 COMRAM     1     1      0
+;! (2) _Read_YFlash_CFG                                      0     0      0      89
 ;!                         _EEPROMRead
 ;! ---------------------------------------------------------------------------------
-;! (3) _EEPROMRead                                           6     0      6      89
-;!                                             18 COMRAM     6     0      6
+;! (3) _EEPROMRead                                           4     1      3      89
+;!                                              0 COMRAM     4     1      3
 ;! ---------------------------------------------------------------------------------
-;! (4) ___ftmul                                             17    11      6     800
-;!                                             26 COMRAM    17    11      6
+;! (4) ___ftmul                                             17    11      6     535
+;!                                              8 COMRAM    17    11      6
 ;!                           ___ftpack
 ;! ---------------------------------------------------------------------------------
-;! (5) ___ftpack                                             8     3      5     312
-;!                                             18 COMRAM     8     3      5
+;! (5) ___ftpack                                             8     3      5     209
+;!                                              0 COMRAM     8     3      5
 ;! ---------------------------------------------------------------------------------
-;! (4) ___fttol                                             15    11      4     371
-;!                                             43 COMRAM    15    11      4
+;! (4) ___fttol                                             15    11      4     252
+;!                                             25 COMRAM    15    11      4
 ;!                            ___ftmul (ARG)
 ;! ---------------------------------------------------------------------------------
-;! (4) ___lwdiv                                              8     4      4     241
-;!                                             18 COMRAM     8     4      4
+;! (4) ___lwdiv                                              7     3      4     162
+;!                                              0 COMRAM     7     3      4
 ;! ---------------------------------------------------------------------------------
 ;! Estimated maximum stack depth 5
 ;! ---------------------------------------------------------------------------------
 ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
 ;! ---------------------------------------------------------------------------------
-;! (6) _IntServer                                           14    14      0       0
-;!                                              4 COMRAM    14    14      0
+;! (6) _IntServer                                            0     0      0       0
 ;!                      _TMR0IntServer
 ;!                      _TMR1IntServer
 ;!                        _ADIntServer
@@ -2499,8 +2430,7 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;! ---------------------------------------------------------------------------------
 ;! (9) _LED_Off_Disp                                         0     0      0       0
 ;! ---------------------------------------------------------------------------------
-;! (7) _ADIntServer                                          4     4      0       0
-;!                                              0 COMRAM     4     4      0
+;! (7) _ADIntServer                                          2     2      0       0
 ;! ---------------------------------------------------------------------------------
 ;! Estimated maximum stack depth 9
 ;! ---------------------------------------------------------------------------------
@@ -2518,8 +2448,6 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!     _CANSetID
 ;!     _CANFilterSet
 ;!     _CANErrClr
-;!     _GetAddr (ARG)
-;!       _GetLampBoardAddr
 ;!   _CANRecv
 ;!     _GetAddr
 ;!       _GetLampBoardAddr
@@ -2527,8 +2455,6 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!       _CANSetID
 ;!       _CANFilterSet
 ;!       _CANErrClr
-;!       _GetAddr (ARG)
-;!         _GetLampBoardAddr
 ;!   _CANDATAAnalyzing
 ;!     _CANSendConfirm
 ;!       _CANSend
@@ -2597,11 +2523,11 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!BITBANK2           100      0       0       9        0.0%
 ;!BANK2              100      0       0      10        0.0%
 ;!BITBANK1           100      0       0       7        0.0%
-;!BANK1              100      0      30       8       18.8%
+;!BANK1              100      0       0       8        0.0%
 ;!BITBANK0            A0      0       0       4        0.0%
-;!BANK0               A0     16      8E       5       88.8%
+;!BANK0               A0      0      92       5       91.3%
 ;!BITCOMRAM           5F      0       1       0        1.1%
-;!COMRAM              5F     3B      4D       1       81.1%
+;!COMRAM              5F     3B      5D       1       97.9%
 ;!BITBANK14           41      0       0      33        0.0%
 ;!BANK14              41      0       0      34        0.0%
 ;!BITSFR_2             0      0       0      40        0.0%
@@ -2612,15 +2538,15 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;!SFR                  0      0       0      40        0.0%
 ;!STACK                0      0       D       2        0.0%
 ;!NULL                 0      0       0       0        0.0%
-;!ABS                  0      0     10B       6        0.0%
-;!DATA                 0      0     398       3        0.0%
+;!ABS                  0      0      EF       6        0.0%
+;!DATA                 0      0     37C       3        0.0%
 ;!CODE                 0      0       0       0        0.0%
 
 	global	_main
 
 ;; *************** function _main *****************
 ;; Defined at:
-;;		line 786 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 786 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -2636,9 +2562,9 @@ ___fttol@exp1:	; 1 bytes @ 0x39
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          0       1       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        1 bytes
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        0 bytes
 ;; Hardware stack levels required when called:    9
 ;; This function calls:
 ;;		_delayms
@@ -2657,7 +2583,7 @@ psect	text0,class=CODE,space=0,reloc=2
 global __ptext0
 __ptext0:
 psect	text0
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	786
 	global	__size_of_main
 	__size_of_main	equ	__end_of_main-_main
@@ -2666,7 +2592,7 @@ _main:
 	opt	stack 22
 	line	789
 	
-l4931:
+l3145:
 ;YellowFlash.C: 789: delayms(500);
 	movlw	high(01F4h)
 	movwf	((c:?_delayms+1)),c
@@ -2675,158 +2601,100 @@ l4931:
 	call	_delayms	;wreg free
 	line	790
 	
-l4933:
+l3147:
 ;YellowFlash.C: 790: PORTInit();
 	call	_PORTInit	;wreg free
 	line	791
 	
-l4935:
+l3149:; BSR set to: 15
+
 ;YellowFlash.C: 791: IntManager();
 	call	_IntManager	;wreg free
 	line	792
 	
-l4937:
+l3151:; BSR set to: 15
+
 ;YellowFlash.C: 792: my_addr =GetAddr(0x06);
-	movlb	0	; () banked
-	movwf	(??_main+0+0)&0ffh
-	movlw	low(06h)
-	movwf	((c:?_GetAddr)),c
-	movlb	0	; () banked
-	movf	(??_main+0+0)&0ffh,w
-	call	_GetAddr	;wreg free
+	movlw	(06h)&0ffh
+	
+	call	_GetAddr
 	movwf	((c:_my_addr)),c
 	line	793
 	
-l4939:
-;YellowFlash.C: 793: CANInit(my_addr);
-	movff	(c:_my_addr),(c:?_CANInit)
-	call	_CANInit	;wreg free
-	line	794
-	
-l4941:
+l3153:; BSR set to: 15
+
 ;YellowFlash.C: 794: sta = 0X01;
-	movlb	0	; () banked
-	movwf	(??_main+0+0)&0ffh
-	movlw	low(01h)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_sta))&0ffh
-	movlb	0	; () banked
-	movf	(??_main+0+0)&0ffh,w
-	goto	l4943
+	movf	((c:_my_addr)),c,w
+	
+	call	_CANInit
 	line	795
-;YellowFlash.C: 795: while(1)
 	
-l592:
-	line	798
+l3155:
+;YellowFlash.C: 795: SWDTEN =1;
+	bsf	c:(32392/8),(32392)&7	;volatile
+	line	801
 	
-l4943:
-;YellowFlash.C: 797: {
-;YellowFlash.C: 798: CANInt =0;
-	movlb	(_CANInt/8) >> 8
-	bcf	(_CANInt/8),c,(_CANInt)&7
-	line	800
-	
-l4945:
-;YellowFlash.C: 800: if(CANRecv(CANRid,CANRdata,&CANRdlc))
+l3157:
+;YellowFlash.C: 801: if(CANRecv(CANRid,CANRdata,&CANRdlc))
 	movlb	0	; () banked
-	movlw	high(_CANRid)
-	movwf	((c:?_CANRecv+1)),c
-	movlb	0	; () banked
-	movlw	low(_CANRid)
+	movlw	low(_CANRdata)
 	movwf	((c:?_CANRecv)),c
-	movlb	0	; () banked
-	movlw	high(_CANRdata)
-	movwf	(1+((c:?_CANRecv)+02h)),c
-	movlb	0	; () banked
-	movlw	low(_CANRdata)
-	movwf	(0+((c:?_CANRecv)+02h)),c
-	movlw	high((c:_CANRdlc))
-	movwf	(1+((c:?_CANRecv)+04h)),c
 	movlw	low((c:_CANRdlc))
-	movwf	(0+((c:?_CANRecv)+04h)),c
-	call	_CANRecv	;wreg free
-	btfss	status,0
-	goto	u3841
-	goto	u3840
-u3841:
-	goto	l4949
-u3840:
-	line	803
+	movwf	(0+((c:?_CANRecv)+01h)),c
+	movlw	(_CANRid)&0ffh
 	
-l4947:
-;YellowFlash.C: 801: {
-;YellowFlash.C: 803: CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
-	movlb	0	; () banked
-	movlw	high(_CANRid)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((?_CANDATAAnalyzing+1))&0ffh
-	movlb	0	; () banked
-	movlw	low(_CANRid)
-	movlb	0	; () banked
-	movwf	((?_CANDATAAnalyzing))&0ffh
-	movlb	0	; () banked
-	movlw	high(_CANRdata)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	(1+(?_CANDATAAnalyzing+02h))&0ffh
-	movlb	0	; () banked
-	movlw	low(_CANRdata)
-	movlb	0	; () banked
-	movwf	(0+(?_CANDATAAnalyzing+02h))&0ffh
-	movff	(c:_CANRdlc),0+(?_CANDATAAnalyzing+04h)
-	call	_CANDATAAnalyzing	;wreg free
-	goto	l4949
+	call	_CANRecv
+	btfss	status,0
+	goto	u1261
+	goto	u1260
+u1261:
+	goto	l3161
+u1260:
 	line	804
 	
-l593:
+l3159:
+;YellowFlash.C: 802: {
+;YellowFlash.C: 804: CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
+	movlb	0	; () banked
+	movlw	low(_CANRdata)
+	movwf	((c:?_CANDATAAnalyzing)),c
+	movff	(c:_CANRdlc),0+((c:?_CANDATAAnalyzing)+01h)
+	movlw	(_CANRid)&0ffh
+	
+	call	_CANDATAAnalyzing
 	line	806
 	
-l4949:
-;YellowFlash.C: 804: }
-;YellowFlash.C: 806: if(force_status)
-	movf	((c:_force_status)),c,w
-	btfsc	status,2
-	goto	u3851
-	goto	u3850
-u3851:
-	goto	l4953
-u3850:
-	goto	l4943
+l3161:
+# 806 "G:\working\YellowFlashingController\YellowFlash.C"
+clrwdt ;# 
+psect	text0
 	line	807
 	
-l4951:
-;YellowFlash.C: 807: {}
-	goto	l4943
-	line	808
-	
-l594:
-	line	810
-	
-l4953:
-;YellowFlash.C: 808: else
-;YellowFlash.C: 809: {
-;YellowFlash.C: 810: HeartbeatTest();
-	call	_HeartbeatTest	;wreg free
-	goto	l4943
+l3163:
+;YellowFlash.C: 807: if(force_status)
+	movf	((c:_force_status)),c,w
+	btfsc	status,2
+	goto	u1271
+	goto	u1270
+u1271:
+	goto	l3167
+u1270:
+	goto	l3157
 	line	811
 	
-l595:
-	goto	l4943
-	line	813
-	
-l596:
-	line	795
-	goto	l4943
-	
-l597:
-	line	815
-	
-l598:
+l3167:
+;YellowFlash.C: 809: else
+;YellowFlash.C: 810: {
+;YellowFlash.C: 811: HeartbeatTest();
+	call	_HeartbeatTest	;wreg free
+	goto	l3157
 	global	start
 	goto	start
 	opt stack 0
+psect	text1,class=CODE,space=0,reloc=2
+global __ptext1
+__ptext1:
+	line	816
 GLOBAL	__end_of_main
 	__end_of_main:
 	signat	_main,88
@@ -2834,16 +2702,17 @@ GLOBAL	__end_of_main
 
 ;; *************** function _CANRecv *****************
 ;; Defined at:
-;;		line 259 in file "E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+;;		line 259 in file "G:\working\YellowFlashingController\CAN.H"
 ;; Parameters:    Size  Location     Type
-;;  id              2   27[COMRAM] PTR unsigned char 
+;;  id              1    wreg     PTR unsigned char 
 ;;		 -> CANRid(4), 
-;;  dat             2   29[COMRAM] PTR unsigned char 
+;;  dat             1    5[COMRAM] PTR unsigned char 
 ;;		 -> CANRdata(8), 
-;;  dlc             2   31[COMRAM] PTR unsigned char 
+;;  dlc             1    6[COMRAM] PTR unsigned char 
 ;;		 -> CANRdlc(1), 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  id              1    7[COMRAM] PTR unsigned char 
+;;		 -> CANRid(4), 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -2851,13 +2720,13 @@ GLOBAL	__end_of_main
 ;; Tracked objects:
 ;;		On entry : F/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         7       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        7 bytes
+;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        3 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    6
 ;; This function calls:
@@ -2867,604 +2736,622 @@ GLOBAL	__end_of_main
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text1,class=CODE,space=0,reloc=2
-global __ptext1
-__ptext1:
 psect	text1
-	file	"E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+	file	"G:\working\YellowFlashingController\CAN.H"
 	line	259
 	global	__size_of_CANRecv
 	__size_of_CANRecv	equ	__end_of_CANRecv-_CANRecv
 	
 _CANRecv:
 	opt	stack 24
+;CANRecv@id stored from wreg
 	line	262
+	movff	wreg,(c:CANRecv@id)
 	
-l3661:; BSR set to: 0
+l2637:; BSR set to: 0
 
 ;CAN.H: 262: if(RXB0IF ==1)
 	btfss	c:(31672/8),(31672)&7	;volatile
-	goto	u2561
-	goto	u2560
-u2561:
-	goto	l360
-u2560:
+	goto	u911
+	goto	u910
+u911:
+	goto	l362
+u910:
 	line	264
 	
-l3663:
+l2639:; BSR set to: 0
+
 ;CAN.H: 263: {
 ;CAN.H: 264: RXB0IF =0;
 	bcf	c:(31672/8),(31672)&7	;volatile
 	line	265
 	
-l3665:
+l2641:; BSR set to: 0
+
 ;CAN.H: 265: RXB0CON &= 0x7f;
 	bcf	(0+(7/8)+(c:3936)),c,(7)&7	;volatile
 	line	266
 	
-l3667:
+l2643:; BSR set to: 0
+
 ;CAN.H: 266: id[0] = RXB0SIDH;
-	movff	(c:CANRecv@id),fsr2l
-	movff	(c:CANRecv@id+1),fsr2h
+	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	(c:3937),indf2	;volatile
 
 	line	267
-	
-l3669:
 ;CAN.H: 267: id[1] = RXB0SIDL;
-	lfsr	2,01h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3938),indf2	;volatile
 
 	line	268
-	
-l3671:
 ;CAN.H: 268: id[2] = RXB0EIDH;
-	lfsr	2,02h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3939),indf2	;volatile
 
 	line	269
-	
-l3673:
 ;CAN.H: 269: id[3] = RXB0EIDL;
-	lfsr	2,03h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3940),indf2	;volatile
 
 	line	271
 	
-l3675:
+l2645:; BSR set to: 0
+
 ;CAN.H: 271: *dlc =RXB0DLC;
-	movff	(c:CANRecv@dlc),fsr2l
-	movff	(c:CANRecv@dlc+1),fsr2h
+	movf	((c:CANRecv@dlc)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	(c:3941),indf2	;volatile
 
 	line	273
 	
-l3677:
+l2647:; BSR set to: 0
+
 ;CAN.H: 273: dat[0] = RXB0D0;
-	movff	(c:CANRecv@dat),fsr2l
-	movff	(c:CANRecv@dat+1),fsr2h
+	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	(c:3942),indf2	;volatile
 
 	line	274
-	
-l3679:
 ;CAN.H: 274: dat[1] = RXB0D1;
-	lfsr	2,01h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3943),indf2	;volatile
 
 	line	275
-	
-l3681:
 ;CAN.H: 275: dat[2] = RXB0D2;
-	lfsr	2,02h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3944),indf2	;volatile
 
 	line	276
-	
-l3683:
 ;CAN.H: 276: dat[3] = RXB0D3;
-	lfsr	2,03h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3945),indf2	;volatile
 
 	line	277
-	
-l3685:
 ;CAN.H: 277: dat[4] = RXB0D4;
-	lfsr	2,04h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(04h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3946),indf2	;volatile
 
 	line	278
-	
-l3687:
 ;CAN.H: 278: dat[5] = RXB0D5;
-	lfsr	2,05h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(05h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3947),indf2	;volatile
 
 	line	279
-	
-l3689:
 ;CAN.H: 279: dat[6] = RXB0D6;
-	lfsr	2,06h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(06h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3948),indf2	;volatile
 
 	line	280
-	
-l3691:
 ;CAN.H: 280: dat[7] = RXB0D7;
-	lfsr	2,07h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(07h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movff	(c:3949),indf2	;volatile
 
 	line	281
 	
-l3693:
+l2649:
 ;CAN.H: 281: return 1;
 	bsf	status,0
-	goto	l361
-	
-l3695:
-	goto	l361
+	goto	l363
 	line	282
 	
-l360:
+l362:; BSR set to: 0
+
 	line	283
 ;CAN.H: 282: }
 ;CAN.H: 283: if(RXB1IF ==1)
 	btfss	c:(31673/8),(31673)&7	;volatile
-	goto	u2571
-	goto	u2570
-u2571:
-	goto	l362
-u2570:
+	goto	u921
+	goto	u920
+u921:
+	goto	l364
+u920:
 	line	285
 	
-l3697:
+l2653:; BSR set to: 0
+
 ;CAN.H: 284: {
 ;CAN.H: 285: RXB1IF =0;
 	bcf	c:(31673/8),(31673)&7	;volatile
 	line	286
 	
-l3699:
+l2655:; BSR set to: 0
+
 ;CAN.H: 286: RXB1CON &= 0x7f;
-	movlb	15	; () banked
 	movlb	15	; () banked
 	bcf	(0+(7/8)+(3888))&0ffh,(7)&7	;volatile
 	line	287
 	
-l3701:
+l2657:; BSR set to: 15
+
 ;CAN.H: 287: id[0] = RXB1SIDH;
-	movff	(c:CANRecv@id),fsr2l
-	movff	(c:CANRecv@id+1),fsr2h
-	movlb	15	; () banked
+	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	(3889),indf2	;volatile
 
 	line	288
 	
-l3703:
+l2659:; BSR set to: 15
+
 ;CAN.H: 288: id[1] = RXB1SIDL;
-	lfsr	2,01h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3890),indf2	;volatile
 
 	line	289
 	
-l3705:
+l2661:; BSR set to: 15
+
 ;CAN.H: 289: id[2] = RXB1EIDH;
-	lfsr	2,02h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3891),indf2	;volatile
 
 	line	290
 	
-l3707:
+l2663:; BSR set to: 15
+
 ;CAN.H: 290: id[3] = RXB1EIDL;
-	lfsr	2,03h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3892),indf2	;volatile
 
 	line	292
 	
-l3709:
+l2665:; BSR set to: 15
+
 ;CAN.H: 292: *dlc =RXB1DLC;
-	movff	(c:CANRecv@dlc),fsr2l
-	movff	(c:CANRecv@dlc+1),fsr2h
-	movlb	15	; () banked
+	movf	((c:CANRecv@dlc)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	(3893),indf2	;volatile
 
 	line	294
 	
-l3711:
+l2667:; BSR set to: 15
+
 ;CAN.H: 294: dat[0] = RXB1D0;
-	movff	(c:CANRecv@dat),fsr2l
-	movff	(c:CANRecv@dat+1),fsr2h
-	movlb	15	; () banked
+	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	(3894),indf2	;volatile
 
 	line	295
 	
-l3713:
+l2669:; BSR set to: 15
+
 ;CAN.H: 295: dat[1] = RXB1D1;
-	lfsr	2,01h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3895),indf2	;volatile
 
 	line	296
 	
-l3715:
+l2671:; BSR set to: 15
+
 ;CAN.H: 296: dat[2] = RXB1D2;
-	lfsr	2,02h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3896),indf2	;volatile
 
 	line	297
 	
-l3717:
+l2673:; BSR set to: 15
+
 ;CAN.H: 297: dat[3] = RXB1D3;
-	lfsr	2,03h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3897),indf2	;volatile
 
 	line	298
 	
-l3719:
+l2675:; BSR set to: 15
+
 ;CAN.H: 298: dat[4] = RXB1D4;
-	lfsr	2,04h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(04h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3898),indf2	;volatile
 
 	line	299
 	
-l3721:
+l2677:; BSR set to: 15
+
 ;CAN.H: 299: dat[5] = RXB1D5;
-	lfsr	2,05h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(05h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3899),indf2	;volatile
 
 	line	300
 	
-l3723:
+l2679:; BSR set to: 15
+
 ;CAN.H: 300: dat[6] = RXB1D6;
-	lfsr	2,06h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(06h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3900),indf2	;volatile
 
 	line	301
 	
-l3725:
+l2681:; BSR set to: 15
+
 ;CAN.H: 301: dat[7] = RXB1D7;
-	lfsr	2,07h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(07h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
-	movlb	15	; () banked
+	clrf	fsr2h
 	movff	(3901),indf2	;volatile
 
-	line	302
-	
-l3727:
-;CAN.H: 302: return 1;
-	bsf	status,0
-	goto	l361
-	
-l3729:
-	goto	l361
+	goto	l2649
 	line	304
 	
-l362:
+l364:; BSR set to: 0
+
 	line	305
 ;CAN.H: 304: }
 ;CAN.H: 305: if(TXB0IF ==1)
 	btfss	c:(31674/8),(31674)&7	;volatile
-	goto	u2581
-	goto	u2580
-u2581:
-	goto	l363
-u2580:
+	goto	u931
+	goto	u930
+u931:
+	goto	l365
+u930:
 	line	307
 	
-l3731:
+l2687:; BSR set to: 0
+
 ;CAN.H: 306: {
 ;CAN.H: 307: TXB0IF =0;
 	bcf	c:(31674/8),(31674)&7	;volatile
 	line	308
 	
-l363:
+l365:; BSR set to: 0
+
 	line	309
 ;CAN.H: 308: }
 ;CAN.H: 309: if(TXB1IF ==1)
 	btfss	c:(31675/8),(31675)&7	;volatile
-	goto	u2591
-	goto	u2590
-u2591:
-	goto	l364
-u2590:
+	goto	u941
+	goto	u940
+u941:
+	goto	l366
+u940:
 	line	311
 	
-l3733:
+l2689:; BSR set to: 0
+
 ;CAN.H: 310: {
 ;CAN.H: 311: TXB1IF =0;
 	bcf	c:(31675/8),(31675)&7	;volatile
 	line	312
 	
-l364:
+l366:; BSR set to: 0
+
 	line	313
 ;CAN.H: 312: }
 ;CAN.H: 313: if(TXB2IF ==1)
 	btfss	c:(31676/8),(31676)&7	;volatile
-	goto	u2601
-	goto	u2600
-u2601:
-	goto	l365
-u2600:
+	goto	u951
+	goto	u950
+u951:
+	goto	l367
+u950:
 	line	315
 	
-l3735:
+l2691:; BSR set to: 0
+
 ;CAN.H: 314: {
 ;CAN.H: 315: TXB2IF =0;
 	bcf	c:(31676/8),(31676)&7	;volatile
 	line	316
 	
-l365:
+l367:; BSR set to: 0
+
 	line	318
 ;CAN.H: 316: }
 ;CAN.H: 318: if(ERRIF ==1)
 	btfss	c:(31677/8),(31677)&7	;volatile
-	goto	u2611
-	goto	u2610
-u2611:
-	goto	l3771
-u2610:
+	goto	u961
+	goto	u960
+u961:
+	goto	l2723
+u960:
 	line	320
 	
-l3737:
+l2693:; BSR set to: 0
+
 ;CAN.H: 319: {
 ;CAN.H: 320: ERRIF =0;
 	bcf	c:(31677/8),(31677)&7	;volatile
 	line	322
 	
-l3739:
+l2695:; BSR set to: 0
+
 ;CAN.H: 322: id[0] = 0;
-	movff	(c:CANRecv@id),fsr2l
-	movff	(c:CANRecv@id+1),fsr2h
+	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	323
 	
-l3741:
+l2697:; BSR set to: 0
+
 ;CAN.H: 323: id[1] = 0;
-	lfsr	2,01h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	324
 	
-l3743:
+l2699:; BSR set to: 0
+
 ;CAN.H: 324: id[2] = 0;
-	lfsr	2,02h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	325
 	
-l3745:
+l2701:; BSR set to: 0
+
 ;CAN.H: 325: id[3] = 0;
-	lfsr	2,03h
 	movf	((c:CANRecv@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANRecv@id+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	327
 	
-l3747:
+l2703:; BSR set to: 0
+
 ;CAN.H: 327: *dlc =0;
-	movff	(c:CANRecv@dlc),fsr2l
-	movff	(c:CANRecv@dlc+1),fsr2h
+	movf	((c:CANRecv@dlc)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	329
 	
-l3749:
+l2705:; BSR set to: 0
+
 ;CAN.H: 329: dat[0] = 0;
-	movff	(c:CANRecv@dat),fsr2l
-	movff	(c:CANRecv@dat+1),fsr2h
+	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	330
 	
-l3751:
+l2707:; BSR set to: 0
+
 ;CAN.H: 330: dat[1] = 0;
-	lfsr	2,01h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	331
 	
-l3753:
+l2709:; BSR set to: 0
+
 ;CAN.H: 331: dat[2] = 0;
-	lfsr	2,02h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	332
 	
-l3755:
+l2711:; BSR set to: 0
+
 ;CAN.H: 332: dat[3] = 0;
-	lfsr	2,03h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	333
 	
-l3757:
+l2713:; BSR set to: 0
+
 ;CAN.H: 333: dat[4] = 0;
-	lfsr	2,04h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(04h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	334
 	
-l3759:
+l2715:; BSR set to: 0
+
 ;CAN.H: 334: dat[5] = 0;
-	lfsr	2,05h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(05h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	335
 	
-l3761:
+l2717:; BSR set to: 0
+
 ;CAN.H: 335: dat[6] = 0;
-	lfsr	2,06h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(06h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	336
 	
-l3763:
+l2719:; BSR set to: 0
+
 ;CAN.H: 336: dat[7] = 0;
-	lfsr	2,07h
 	movf	((c:CANRecv@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(07h)
 	addwf	fsr2l
-	movf	((c:CANRecv@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movlw	low(0)
 	movwf	indf2
 	line	338
 	
-l3765:
+l2721:; BSR set to: 0
+
 ;CAN.H: 338: CANInit(GetAddr(0x06));
-	movwf	(??_CANRecv+0+0)&0ffh,c
-	movlw	low(06h)
-	movwf	((c:?_GetAddr)),c
-	movf	(??_CANRecv+0+0)&0ffh,c,w
-	call	_GetAddr	;wreg free
-	movwf	((c:?_CANInit)),c
-	call	_CANInit	;wreg free
+	movlw	(06h)&0ffh
+	
+	call	_GetAddr
+	
+	call	_CANInit
 	line	340
 	
-l3767:
+l2723:
 ;CAN.H: 340: return 0;
 	bcf	status,0
-	goto	l361
-	
-l3769:
-	goto	l361
-	line	341
-	
-l366:
-	line	342
-	
-l3771:
-;CAN.H: 341: }
-;CAN.H: 342: return 0;
-	bcf	status,0
-	goto	l361
-	
-l3773:
 	line	343
 	
-l361:
+l363:
 	return
 	opt stack 0
 GLOBAL	__end_of_CANRecv
@@ -3474,25 +3361,26 @@ GLOBAL	__end_of_CANRecv
 
 ;; *************** function _GetAddr *****************
 ;; Defined at:
-;;		line 143 in file "E:\WorkSpace\YellowFlashingController20140317\TSC.H"
+;;		line 143 in file "G:\working\YellowFlashingController\TSC.H"
 ;; Parameters:    Size  Location     Type
-;;  board_type      1   22[COMRAM] unsigned char 
+;;  board_type      1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;  rel             1   24[COMRAM] unsigned char 
+;;  board_type      1    3[COMRAM] unsigned char 
+;;  rel             1    4[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;                  1    wreg      unsigned char 
 ;; Registers used:
 ;;		wreg, status,2, status,0, cstack
 ;; Tracked objects:
-;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On entry : 0/F
+;;		On exit  : 0/F
+;;		Unchanged: FFFFFFFF/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        3 bytes
+;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        2 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    5
 ;; This function calls:
@@ -3506,107 +3394,59 @@ psect	text2,class=CODE,space=0,reloc=2
 global __ptext2
 __ptext2:
 psect	text2
-	file	"E:\WorkSpace\YellowFlashingController20140317\TSC.H"
+	file	"G:\working\YellowFlashingController\TSC.H"
 	line	143
 	global	__size_of_GetAddr
 	__size_of_GetAddr	equ	__end_of_GetAddr-_GetAddr
 	
 _GetAddr:
 	opt	stack 24
+;GetAddr@board_type stored from wreg
+	movff	wreg,(c:GetAddr@board_type)
 	line	145
 	
-l3483:
+l2435:
 ;TSC.H: 144: unsigned char rel;
 ;TSC.H: 145: switch (board_type)
-	goto	l3495
-	line	147
-;TSC.H: 146: {
-;TSC.H: 147: case 0x01:
-	
-l316:
+	goto	l2445
 	line	148
 	
-l3485:
+l2437:
 ;TSC.H: 148: rel = 0x20;
-	movwf	(??_GetAddr+0+0)&0ffh,c
 	movlw	low(020h)
 	movwf	((c:GetAddr@rel)),c
-	movf	(??_GetAddr+0+0)&0ffh,c,w
 	line	149
 ;TSC.H: 149: break;
-	goto	l3497
-	line	150
-;TSC.H: 150: case 0x02:
-	
-l318:
+	goto	l2447
 	line	152
 	
-l3487:
+l2439:
 ;TSC.H: 152: rel = GetLampBoardAddr();
 	call	_GetLampBoardAddr	;wreg free
 	movwf	((c:GetAddr@rel)),c
 	line	153
 ;TSC.H: 153: break;
-	goto	l3497
-	line	154
-;TSC.H: 154: case 0x06:
-	
-l319:
+	goto	l2447
 	line	155
 	
-l3489:
+l2441:
 ;TSC.H: 155: rel= 0x2E;
-	movwf	(??_GetAddr+0+0)&0ffh,c
 	movlw	low(02Eh)
 	movwf	((c:GetAddr@rel)),c
-	movf	(??_GetAddr+0+0)&0ffh,c,w
-	goto	l3497
-	line	156
-;TSC.H: 156: case 0x03:
-	
-l320:
-	line	158
-;TSC.H: 158: break;
-	goto	l3497
-	line	159
-;TSC.H: 159: case 0x04:
-	
-l321:
-	line	161
-;TSC.H: 161: break;
-	goto	l3497
-	line	162
-;TSC.H: 162: case 0x05:
-	
-l322:
-	line	164
-;TSC.H: 164: break;
-	goto	l3497
+	goto	l2447
 	line	165
 ;TSC.H: 165: default:
 	
-l323:
+l325:
 	line	166
-	
-l3491:
 ;TSC.H: 166: rel = 0;
-	movwf	(??_GetAddr+0+0)&0ffh,c
-	movlw	low(0)
-	movwf	((c:GetAddr@rel)),c
-	movf	(??_GetAddr+0+0)&0ffh,c,w
+	clrf	((c:GetAddr@rel)),c
 	line	167
 ;TSC.H: 167: break;
-	goto	l3497
-	line	169
-	
-l3493:
-;TSC.H: 169: }
-	goto	l3497
+	goto	l2447
 	line	145
 	
-l315:
-	
-l3495:
+l2445:
 	movf	((c:GetAddr@board_type)),c,w
 	; Switch size 1, requested type "space"
 ; Number of cases is 6, Range of values is 1 to 6
@@ -3617,38 +3457,32 @@ l3495:
 
 	xorlw	1^0	; case 1
 	skipnz
-	goto	l3485
+	goto	l2437
 	xorlw	2^1	; case 2
 	skipnz
-	goto	l3487
+	goto	l2439
 	xorlw	3^2	; case 3
 	skipnz
-	goto	l3497
+	goto	l2447
 	xorlw	4^3	; case 4
 	skipnz
-	goto	l3497
+	goto	l2447
 	xorlw	5^4	; case 5
 	skipnz
-	goto	l3497
+	goto	l2447
 	xorlw	6^5	; case 6
 	skipnz
-	goto	l3489
-	goto	l3491
+	goto	l2441
+	goto	l325
 
-	line	169
-	
-l317:
 	line	170
 	
-l3497:
+l2447:
 ;TSC.H: 170: return rel;
 	movf	((c:GetAddr@rel)),c,w
-	goto	l324
-	
-l3499:
 	line	171
 	
-l324:
+l326:
 	return
 	opt stack 0
 GLOBAL	__end_of_GetAddr
@@ -3658,26 +3492,26 @@ GLOBAL	__end_of_GetAddr
 
 ;; *************** function _GetLampBoardAddr *****************
 ;; Defined at:
-;;		line 82 in file "E:\WorkSpace\YellowFlashingController20140317\TSC.H"
+;;		line 82 in file "G:\working\YellowFlashingController\TSC.H"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
-;;  i               2   19[COMRAM] unsigned int 
-;;  addr            1   21[COMRAM] unsigned char 
+;;  i               2    0[COMRAM] unsigned int 
+;;  addr            1    2[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;                  1    wreg      unsigned char 
 ;; Registers used:
 ;;		wreg, status,2, status,0
 ;; Tracked objects:
-;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On entry : 0/F
+;;		On exit  : 0/F
+;;		Unchanged: FFFFFFFF/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        4 bytes
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        3 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    4
 ;; This function calls:
@@ -3690,7 +3524,7 @@ psect	text3,class=CODE,space=0,reloc=2
 global __ptext3
 __ptext3:
 psect	text3
-	file	"E:\WorkSpace\YellowFlashingController20140317\TSC.H"
+	file	"G:\working\YellowFlashingController\TSC.H"
 	line	82
 	global	__size_of_GetLampBoardAddr
 	__size_of_GetLampBoardAddr	equ	__end_of_GetLampBoardAddr-_GetLampBoardAddr
@@ -3699,23 +3533,14 @@ _GetLampBoardAddr:
 	opt	stack 24
 	line	83
 	
-l3407:
-;TSC.H: 83: unsigned char addr = 0x00;
-	movwf	(??_GetLampBoardAddr+0+0)&0ffh,c
-	movlw	low(0)
-	movwf	((c:GetLampBoardAddr@addr)),c
-	movf	(??_GetLampBoardAddr+0+0)&0ffh,c,w
+l2363:
 	line	84
-	
-l3409:
 ;TSC.H: 84: unsigned int i=0;
-	movlw	high(0)
-	movwf	((c:GetLampBoardAddr@i+1)),c
-	movlw	low(0)
-	movwf	((c:GetLampBoardAddr@i)),c
+	clrf	((c:GetLampBoardAddr@i)),c
+	clrf	((c:GetLampBoardAddr@i+1)),c
 	line	86
 	
-l3411:
+l2365:
 ;TSC.H: 86: addr = (PORTB>>5) & 0x07;
 	swapf	((c:3969)),c,w	;volatile
 	rrncf	wreg
@@ -3724,55 +3549,30 @@ l3411:
 	movwf	((c:GetLampBoardAddr@addr)),c
 	line	89
 	
-l3413:
+l2367:
 ;TSC.H: 89: for(i=0;i<1000;i++)
-	movlw	high(0)
-	movwf	((c:GetLampBoardAddr@i+1)),c
-	movlw	low(0)
-	movwf	((c:GetLampBoardAddr@i)),c
+	clrf	((c:GetLampBoardAddr@i)),c
+	clrf	((c:GetLampBoardAddr@i+1)),c
 	
-l3415:
-	movlw	0E8h
-	subwf	((c:GetLampBoardAddr@i)),c,w
-	movlw	03h
-	subwfb	((c:GetLampBoardAddr@i+1)),c,w
-	btfss	status,0
-	goto	u2451
-	goto	u2450
-u2451:
-	goto	l3419
-u2450:
-	goto	l3423
-	
-l3417:
-	goto	l3423
-	line	90
-	
-l297:
-	line	89
-	
-l3419:
+l2371:
 ;TSC.H: 90: {;}
 	infsnz	((c:GetLampBoardAddr@i)),c
 	incf	((c:GetLampBoardAddr@i+1)),c
 	
-l3421:
+l2373:
 	movlw	0E8h
 	subwf	((c:GetLampBoardAddr@i)),c,w
 	movlw	03h
 	subwfb	((c:GetLampBoardAddr@i+1)),c,w
 	btfss	status,0
-	goto	u2461
-	goto	u2460
-u2461:
-	goto	l3419
-u2460:
-	goto	l3423
-	
-l298:
+	goto	u811
+	goto	u810
+u811:
+	goto	l2371
+u810:
 	line	92
 	
-l3423:
+l2375:
 ;TSC.H: 92: if(addr ==((PORTB>>5) & 0x07))
 	swapf	((c:3969)),c,w	;volatile
 	rrncf	wreg
@@ -3780,180 +3580,63 @@ l3423:
 	andlw	low(07h)
 	xorwf	((c:GetLampBoardAddr@addr)),c,w
 	btfss	status,2
-	goto	u2471
-	goto	u2470
-u2471:
-	goto	l3479
-u2470:
-	goto	l3477
-	line	94
-	
-l3425:
-;TSC.H: 93: {
-;TSC.H: 94: switch(addr)
-	goto	l3477
-	line	96
-;TSC.H: 95: {
-;TSC.H: 96: case 0:
-	
-l301:
+	goto	u821
+	goto	u820
+u821:
+	goto	l2431
+u820:
+	goto	l2429
 	line	97
 	
-l3427:
+l2379:
 ;TSC.H: 97: return 0x13;
 	movlw	(013h)&0ffh
-	goto	l302
-	
-l3429:
-	goto	l302
-	line	98
-	
-l3431:
-;TSC.H: 98: break;
-	goto	l302
-	line	99
-;TSC.H: 99: case 1:
-	
-l304:
+	goto	l304
 	line	100
 	
-l3433:
+l2385:
 ;TSC.H: 100: return 0x14;
 	movlw	(014h)&0ffh
-	goto	l302
-	
-l3435:
-	goto	l302
-	line	101
-	
-l3437:
-;TSC.H: 101: break;
-	goto	l302
-	line	102
-;TSC.H: 102: case 2:
-	
-l305:
+	goto	l304
 	line	103
 	
-l3439:
+l2391:
 ;TSC.H: 103: return 0x15;
 	movlw	(015h)&0ffh
-	goto	l302
-	
-l3441:
-	goto	l302
-	line	104
-	
-l3443:
-;TSC.H: 104: break;
-	goto	l302
-	line	105
-;TSC.H: 105: case 3:
-	
-l306:
+	goto	l304
 	line	106
 	
-l3445:
+l2397:
 ;TSC.H: 106: return 0x16;
 	movlw	(016h)&0ffh
-	goto	l302
-	
-l3447:
-	goto	l302
-	line	107
-	
-l3449:
-;TSC.H: 107: break;
-	goto	l302
-	line	108
-;TSC.H: 108: case 4:
-	
-l307:
+	goto	l304
 	line	109
 	
-l3451:
+l2403:
 ;TSC.H: 109: return 0x17;
 	movlw	(017h)&0ffh
-	goto	l302
-	
-l3453:
-	goto	l302
-	line	110
-	
-l3455:
-;TSC.H: 110: break;
-	goto	l302
-	line	111
-;TSC.H: 111: case 5:
-	
-l308:
+	goto	l304
 	line	112
 	
-l3457:
+l2409:
 ;TSC.H: 112: return 0x18;
 	movlw	(018h)&0ffh
-	goto	l302
-	
-l3459:
-	goto	l302
-	line	113
-	
-l3461:
-;TSC.H: 113: break;
-	goto	l302
-	line	114
-;TSC.H: 114: case 6:
-	
-l309:
+	goto	l304
 	line	115
 	
-l3463:
+l2415:
 ;TSC.H: 115: return 0x1a;
 	movlw	(01Ah)&0ffh
-	goto	l302
-	
-l3465:
-	goto	l302
-	line	116
-	
-l3467:
-;TSC.H: 116: break;
-	goto	l302
-	line	117
-;TSC.H: 117: case 7:
-	
-l310:
+	goto	l304
 	line	118
 	
-l3469:
+l2421:
 ;TSC.H: 118: return 0x1b;
 	movlw	(01Bh)&0ffh
-	goto	l302
-	
-l3471:
-	goto	l302
-	line	119
-	
-l3473:
-;TSC.H: 119: break;
-	goto	l302
-	line	120
-;TSC.H: 120: default:
-	
-l311:
-	line	121
-;TSC.H: 121: break;
-	goto	l302
-	line	123
-	
-l3475:
-;TSC.H: 123: }
-	goto	l302
+	goto	l304
 	line	94
 	
-l300:
-	
-l3477:
+l2429:
 	movf	((c:GetLampBoardAddr@addr)),c,w
 	; Switch size 1, requested type "space"
 ; Number of cases is 8, Range of values is 0 to 7
@@ -3964,56 +3647,40 @@ l3477:
 
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l3427
+	goto	l2379
 	xorlw	1^0	; case 1
 	skipnz
-	goto	l3433
+	goto	l2385
 	xorlw	2^1	; case 2
 	skipnz
-	goto	l3439
+	goto	l2391
 	xorlw	3^2	; case 3
 	skipnz
-	goto	l3445
+	goto	l2397
 	xorlw	4^3	; case 4
 	skipnz
-	goto	l3451
+	goto	l2403
 	xorlw	5^4	; case 5
 	skipnz
-	goto	l3457
+	goto	l2409
 	xorlw	6^5	; case 6
 	skipnz
-	goto	l3463
+	goto	l2415
 	xorlw	7^6	; case 7
 	skipnz
-	goto	l3469
-	goto	l302
+	goto	l2421
+	goto	l304
 
-	line	123
-	
-l303:
-	line	124
-;TSC.H: 124: }
-	goto	l302
-	line	125
-	
-l299:
 	line	127
 	
-l3479:
+l2431:
 ;TSC.H: 125: else
 ;TSC.H: 126: {
 ;TSC.H: 127: return 0xff;
 	movlw	(0FFh)&0ffh
-	goto	l302
-	
-l3481:
-	goto	l302
-	line	128
-	
-l312:
 	line	130
 	
-l302:
+l304:
 	return
 	opt stack 0
 GLOBAL	__end_of_GetLampBoardAddr
@@ -4023,25 +3690,25 @@ GLOBAL	__end_of_GetLampBoardAddr
 
 ;; *************** function _CANInit *****************
 ;; Defined at:
-;;		line 117 in file "E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+;;		line 117 in file "G:\working\YellowFlashingController\CAN.H"
 ;; Parameters:    Size  Location     Type
-;;  b_addr          1   25[COMRAM] unsigned char 
+;;  b_addr          1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  b_addr          1    3[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
 ;;		wreg, status,2, status,0, cstack
 ;; Tracked objects:
-;;		On entry : 0/0
+;;		On entry : 0/F
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        2 bytes
+;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        1 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    5
 ;; This function calls:
@@ -4057,16 +3724,18 @@ psect	text4,class=CODE,space=0,reloc=2
 global __ptext4
 __ptext4:
 psect	text4
-	file	"E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+	file	"G:\working\YellowFlashingController\CAN.H"
 	line	117
 	global	__size_of_CANInit
 	__size_of_CANInit	equ	__end_of_CANInit-_CANInit
 	
 _CANInit:
 	opt	stack 24
+;CANInit@b_addr stored from wreg
+	movff	wreg,(c:CANInit@b_addr)
 	line	118
 	
-l3577:
+l2549:
 ;CAN.H: 118: TRISB |= 0x08;
 	bsf	(0+(3/8)+(c:3987)),c,(3)&7	;volatile
 	line	119
@@ -4077,124 +3746,116 @@ l3577:
 	bsf	(0+(7/8)+(c:3951)),c,(7)&7	;volatile
 	line	123
 ;CAN.H: 123: while(!(CANSTAT & 0x80));
-	goto	l336
-	
-l337:
-	
-l336:
-	
-	btfss	((c:3950)),c,(7)&7	;volatile
-	goto	u2481
-	goto	u2480
-u2481:
-	goto	l336
-u2480:
-	goto	l3579
 	
 l338:
+	
+	btfss	((c:3950)),c,(7)&7	;volatile
+	goto	u831
+	goto	u830
+u831:
+	goto	l338
+u830:
 	line	126
 	
-l3579:
+l2551:
 ;CAN.H: 126: ECANCON &= 0x3f;
 	movlw	(03Fh)&0ffh
 	andwf	((c:3954)),c	;volatile
 	line	128
 	
-l3581:
+l2553:
 ;CAN.H: 128: BRGCON1 = 0x00;
-	movlw	low(0)
 	movlb	14	; () banked
-	movlb	14	; () banked
-	movwf	((3651))&0ffh	;volatile
+	clrf	((3651))&0ffh	;volatile
 	line	129
 	
-l3583:
+l2555:; BSR set to: 14
+
 ;CAN.H: 129: BRGCON2 = 0xd1;;
 	movlw	low(0D1h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3652))&0ffh	;volatile
 	line	130
 	
-l3585:
+l2557:; BSR set to: 14
+
 ;CAN.H: 130: BRGCON3 = 0xc1;
 	movlw	low(0C1h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3653))&0ffh	;volatile
 	line	131
 	
-l3587:
+l2559:; BSR set to: 14
+
 ;CAN.H: 131: CIOCON = 0x21;
 	movlw	low(021h)
 	movwf	((c:3952)),c	;volatile
 	line	133
+	
+l2561:; BSR set to: 14
+
 ;CAN.H: 133: RXB0CON |= 0x06;
 	movlw	(06h)&0ffh
 	iorwf	((c:3936)),c	;volatile
 	line	134
+	
+l2563:; BSR set to: 14
+
 ;CAN.H: 134: RXB1CON |= 0x06;
 	movlw	(06h)&0ffh
-	movlb	15	; () banked
 	movlb	15	; () banked
 	iorwf	((3888))&0ffh	;volatile
 	line	136
 	
-l3589:
+l2565:; BSR set to: 15
+
 ;CAN.H: 136: CANSetID(b_addr,0x03);
-	movff	(c:CANInit@b_addr),(c:?_CANSetID)
-	movwf	(??_CANInit+0+0)&0ffh,c
 	movlw	low(03h)
-	movwf	(0+((c:?_CANSetID)+01h)),c
-	movf	(??_CANInit+0+0)&0ffh,c,w
-	call	_CANSetID	;wreg free
+	movwf	((c:?_CANSetID)),c
+	movf	((c:CANInit@b_addr)),c,w
+	
+	call	_CANSetID
 	line	137
 	
-l3591:
+l2567:; BSR set to: 15
+
 ;CAN.H: 137: CANFilterSet(b_addr,0x03);
-	movff	(c:CANInit@b_addr),(c:?_CANFilterSet)
-	movwf	(??_CANInit+0+0)&0ffh,c
 	movlw	low(03h)
-	movwf	(0+((c:?_CANFilterSet)+01h)),c
-	movf	(??_CANInit+0+0)&0ffh,c,w
-	call	_CANFilterSet	;wreg free
+	movwf	((c:?_CANFilterSet)),c
+	movf	((c:CANInit@b_addr)),c,w
+	
+	call	_CANFilterSet
 	line	138
 	
-l3593:
+l2569:; BSR set to: 14
+
 ;CAN.H: 138: CANErrClr();
 	call	_CANErrClr	;wreg free
 	line	141
 	
-l3595:
+l2571:; BSR set to: 14
+
 ;CAN.H: 141: CIOCON=0X00;
-	movlw	low(0)
-	movwf	((c:3952)),c	;volatile
+	clrf	((c:3952)),c	;volatile
 	line	145
 	
-l3597:
+l2573:; BSR set to: 14
+
 ;CAN.H: 145: CANCON &= 0x1f;
 	movlw	(01Fh)&0ffh
 	andwf	((c:3951)),c	;volatile
 	line	146
 ;CAN.H: 146: while(CANSTAT&0XE0!=0){;}
-	goto	l339
-	
-l340:
-	
-l339:
-	
-	btfsc	((c:3950)),c,(0)&7	;volatile
-	goto	u2491
-	goto	u2490
-u2491:
-	goto	l339
-u2490:
-	goto	l342
 	
 l341:
+	
+	btfsc	((c:3950)),c,(0)&7	;volatile
+	goto	u841
+	goto	u840
+u841:
+	goto	l341
+u840:
 	line	152
 	
-l342:
+l344:
 	return
 	opt stack 0
 GLOBAL	__end_of_CANInit
@@ -4204,23 +3865,23 @@ GLOBAL	__end_of_CANInit
 
 ;; *************** function _CANFilterSet *****************
 ;; Defined at:
-;;		line 15 in file "E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+;;		line 15 in file "G:\working\YellowFlashingController\CAN.H"
 ;; Parameters:    Size  Location     Type
-;;  board_addr      1   18[COMRAM] unsigned char 
-;;  f_type          1   19[COMRAM] unsigned char 
+;;  board_addr      1    wreg     unsigned char 
+;;  f_type          1    0[COMRAM] unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  board_addr      1    1[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
 ;;		wreg, status,2, status,0
 ;; Tracked objects:
-;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On entry : F/F
+;;		On exit  : F/E
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;Total ram usage:        2 bytes
@@ -4236,235 +3897,249 @@ psect	text5,class=CODE,space=0,reloc=2
 global __ptext5
 __ptext5:
 psect	text5
-	file	"E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+	file	"G:\working\YellowFlashingController\CAN.H"
 	line	15
 	global	__size_of_CANFilterSet
 	__size_of_CANFilterSet	equ	__end_of_CANFilterSet-_CANFilterSet
 	
 _CANFilterSet:
 	opt	stack 24
+;CANFilterSet@board_addr stored from wreg
 	line	20
+	movff	wreg,(c:CANFilterSet@board_addr)
 	
-l3501:
+l2451:; BSR set to: 15
+
 ;CAN.H: 20: RXF0SIDH = 0;
-	movlw	low(0)
 	movlb	14	; () banked
-	movlb	14	; () banked
-	movwf	((3808))&0ffh	;volatile
+	clrf	((3808))&0ffh	;volatile
 	line	21
 	
-l3503:
+l2453:; BSR set to: 14
+
 ;CAN.H: 21: RXF0SIDH = (f_type<<5)|(0x10>>1);
 	swapf	((c:CANFilterSet@f_type)),c,w
 	rlncf	wreg
 	andlw	(0ffh shl 5) & 0ffh
 	iorlw	low(08h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3808))&0ffh	;volatile
 	line	22
 	
-l3505:
+l2455:; BSR set to: 14
+
 ;CAN.H: 22: RXF0SIDL = 0;
-	movlw	low(0)
-	movlb	14	; () banked
-	movlb	14	; () banked
-	movwf	((3809))&0ffh	;volatile
+	clrf	((3809))&0ffh	;volatile
 	line	23
 ;CAN.H: 23: RXF0SIDL = (0x10<<7)|(0x00<<5)|0x08|(board_addr>>4);
 	swapf	((c:CANFilterSet@board_addr)),c,w
 	andlw	(0ffh shr 4) & 0ffh
 	iorlw	low(08h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3809))&0ffh	;volatile
 	line	24
 	
-l3507:
+l2457:; BSR set to: 14
+
 ;CAN.H: 24: RXF0EIDH = 0;
-	movlw	low(0)
-	movlb	14	; () banked
-	movlb	14	; () banked
-	movwf	((3810))&0ffh	;volatile
+	clrf	((3810))&0ffh	;volatile
 	line	25
-	
-l3509:
 ;CAN.H: 25: RXF0EIDH = (board_addr<<4)|0x0f;
 	swapf	((c:CANFilterSet@board_addr)),c,w
 	andlw	(0ffh shl 4) & 0ffh
 	iorlw	low(0Fh)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3810))&0ffh	;volatile
 	line	26
+	
+l2459:; BSR set to: 14
+
 ;CAN.H: 26: RXF0EIDL = 0;
-	movlw	low(0)
-	movlb	14	; () banked
-	movlb	14	; () banked
-	movwf	((3811))&0ffh	;volatile
+	clrf	((3811))&0ffh	;volatile
 	line	27
 	
-l3511:
+l2461:; BSR set to: 14
+
 ;CAN.H: 27: RXF0EIDL = 0xF0|0x0f;
-	movlb	14	; () banked
-	movlb	14	; () banked
 	setf	((3811))&0ffh	;volatile
 	line	31
 	
-l3513:
+l2463:; BSR set to: 14
+
 ;CAN.H: 31: RXF1SIDH = RXF0SIDH;
 	movff	(3808),(3812)	;volatile
 	line	32
 	
-l3515:
+l2465:; BSR set to: 14
+
 ;CAN.H: 32: RXF1SIDL = RXF0SIDL;
 	movff	(3809),(3813)	;volatile
 	line	33
 	
-l3517:
+l2467:; BSR set to: 14
+
 ;CAN.H: 33: RXF1EIDH = RXF0EIDH;
 	movff	(3810),(3814)	;volatile
 	line	34
 	
-l3519:
+l2469:; BSR set to: 14
+
 ;CAN.H: 34: RXF1EIDL = RXF0EIDL;
 	movff	(3811),(3815)	;volatile
 	line	39
 	
-l3521:
+l2471:; BSR set to: 14
+
 ;CAN.H: 39: RXF2SIDH = RXF0SIDH;
 	movff	(3808),(3816)	;volatile
 	line	40
 	
-l3523:
+l2473:; BSR set to: 14
+
 ;CAN.H: 40: RXF2SIDL = RXF0SIDL;
 	movff	(3809),(3817)	;volatile
 	line	41
 	
-l3525:
+l2475:; BSR set to: 14
+
 ;CAN.H: 41: RXF2EIDH = RXF0EIDH;
 	movff	(3810),(3818)	;volatile
 	line	42
 	
-l3527:
+l2477:; BSR set to: 14
+
 ;CAN.H: 42: RXF2EIDL = RXF0EIDL;
 	movff	(3811),(3819)	;volatile
 	line	46
 	
-l3529:
+l2479:; BSR set to: 14
+
 ;CAN.H: 46: RXF3SIDH = RXF0SIDH;
 	movff	(3808),(3820)	;volatile
 	line	47
 	
-l3531:
+l2481:; BSR set to: 14
+
 ;CAN.H: 47: RXF3SIDL = RXF0SIDL;
 	movff	(3809),(3821)	;volatile
 	line	48
 	
-l3533:
+l2483:; BSR set to: 14
+
 ;CAN.H: 48: RXF3EIDH = RXF0EIDH;
 	movff	(3810),(3822)	;volatile
 	line	49
 	
-l3535:
+l2485:; BSR set to: 14
+
 ;CAN.H: 49: RXF3EIDL = RXF0EIDL;
 	movff	(3811),(3823)	;volatile
 	line	53
+	
+l2487:; BSR set to: 14
+
 ;CAN.H: 53: RXF4SIDH = 0x68;
 	movlw	low(068h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3824))&0ffh	;volatile
 	line	54
+	
+l2489:; BSR set to: 14
+
 ;CAN.H: 54: RXF4SIDL = 0x6a;
 	movlw	low(06Ah)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3825))&0ffh	;volatile
 	line	55
+	
+l2491:; BSR set to: 14
+
 ;CAN.H: 55: RXF4EIDH = 0x0f;
 	movlw	low(0Fh)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3826))&0ffh	;volatile
 	line	56
 	
-l3537:
+l2493:; BSR set to: 14
+
 ;CAN.H: 56: RXF4EIDL = 0xff;
-	movlb	14	; () banked
-	movlb	14	; () banked
 	setf	((3827))&0ffh	;volatile
 	line	59
 	
-l3539:
+l2495:; BSR set to: 14
+
 ;CAN.H: 59: RXF5SIDH = RXF0SIDH;
 	movff	(3808),(3828)	;volatile
 	line	60
 	
-l3541:
+l2497:; BSR set to: 14
+
 ;CAN.H: 60: RXF5SIDL = RXF0SIDL;
 	movff	(3809),(3829)	;volatile
 	line	61
 	
-l3543:
+l2499:; BSR set to: 14
+
 ;CAN.H: 61: RXF5EIDH = RXF0EIDH;
 	movff	(3810),(3830)	;volatile
 	line	62
 	
-l3545:
+l2501:; BSR set to: 14
+
 ;CAN.H: 62: RXF5EIDL = RXF0EIDL;
 	movff	(3811),(3831)	;volatile
 	line	65
+	
+l2503:; BSR set to: 14
+
 ;CAN.H: 65: RXM0SIDH = 0x1f;
 	movlw	low(01Fh)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3832))&0ffh	;volatile
 	line	66
+	
+l2505:; BSR set to: 14
+
 ;CAN.H: 66: RXM0SIDL = 0x83;
 	movlw	low(083h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3833))&0ffh	;volatile
 	line	67
+	
+l2507:; BSR set to: 14
+
 ;CAN.H: 67: RXM0EIDH = 0xf0;
 	movlw	low(0F0h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3834))&0ffh	;volatile
 	line	68
+	
+l2509:; BSR set to: 14
+
 ;CAN.H: 68: RXM0EIDL = 0x00;
-	movlw	low(0)
-	movlb	14	; () banked
-	movlb	14	; () banked
-	movwf	((3835))&0ffh	;volatile
+	clrf	((3835))&0ffh	;volatile
 	line	71
+	
+l2511:; BSR set to: 14
+
 ;CAN.H: 71: RXM1SIDH = 0x1f;
 	movlw	low(01Fh)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3836))&0ffh	;volatile
 	line	72
+	
+l2513:; BSR set to: 14
+
 ;CAN.H: 72: RXM1SIDL = 0xe3;
 	movlw	low(0E3h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3837))&0ffh	;volatile
 	line	73
+	
+l2515:; BSR set to: 14
+
 ;CAN.H: 73: RXM1EIDH = 0xf0;
 	movlw	low(0F0h)
-	movlb	14	; () banked
-	movlb	14	; () banked
 	movwf	((3838))&0ffh	;volatile
 	line	74
+	
+l2517:; BSR set to: 14
+
 ;CAN.H: 74: RXM1EIDL = 0x00;
-	movlw	low(0)
-	movlb	14	; () banked
-	movlb	14	; () banked
-	movwf	((3839))&0ffh	;volatile
+	clrf	((3839))&0ffh	;volatile
 	line	76
 	
-l327:
+l329:; BSR set to: 14
+
 	return
 	opt stack 0
 GLOBAL	__end_of_CANFilterSet
@@ -4474,7 +4149,7 @@ GLOBAL	__end_of_CANFilterSet
 
 ;; *************** function _CANErrClr *****************
 ;; Defined at:
-;;		line 80 in file "E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+;;		line 80 in file "G:\working\YellowFlashingController\CAN.H"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -4484,9 +4159,9 @@ GLOBAL	__end_of_CANFilterSet
 ;; Registers used:
 ;;		None
 ;; Tracked objects:
-;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On entry : F/E
+;;		On exit  : F/E
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -4505,16 +4180,18 @@ psect	text6,class=CODE,space=0,reloc=2
 global __ptext6
 __ptext6:
 psect	text6
-	file	"E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+	file	"G:\working\YellowFlashingController\CAN.H"
 	line	80
 	global	__size_of_CANErrClr
 	__size_of_CANErrClr	equ	__end_of_CANErrClr-_CANErrClr
 	
-_CANErrClr:
+_CANErrClr:; BSR set to: 14
+
 	opt	stack 24
 	line	83
 	
-l330:
+l332:; BSR set to: 14
+
 	return
 	opt stack 0
 GLOBAL	__end_of_CANErrClr
@@ -4524,23 +4201,23 @@ GLOBAL	__end_of_CANErrClr
 
 ;; *************** function _CANSetID *****************
 ;; Defined at:
-;;		line 89 in file "E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+;;		line 89 in file "G:\working\YellowFlashingController\CAN.H"
 ;; Parameters:    Size  Location     Type
-;;  board_addr      1   18[COMRAM] unsigned char 
-;;  f_type          1   19[COMRAM] unsigned char 
+;;  board_addr      1    wreg     unsigned char 
+;;  f_type          1    0[COMRAM] unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  board_addr      1    2[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
 ;;		wreg, status,2, status,0
 ;; Tracked objects:
-;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On entry : F/F
+;;		On exit  : F/F
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;Total ram usage:        3 bytes
@@ -4556,24 +4233,26 @@ psect	text7,class=CODE,space=0,reloc=2
 global __ptext7
 __ptext7:
 psect	text7
-	file	"E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+	file	"G:\working\YellowFlashingController\CAN.H"
 	line	89
 	global	__size_of_CANSetID
 	__size_of_CANSetID	equ	__end_of_CANSetID-_CANSetID
 	
-_CANSetID:
+_CANSetID:; BSR set to: 14
+
 	opt	stack 24
+;CANSetID@board_addr stored from wreg
 	line	91
+	movff	wreg,(c:CANSetID@board_addr)
 	
-l3547:
+l2519:; BSR set to: 15
+
 ;CAN.H: 91: TXB0SIDH = 0;
-	movlw	low(0)
-	movlb	15	; () banked
-	movlb	15	; () banked
-	movwf	((3873))&0ffh	;volatile
+	clrf	((3873))&0ffh	;volatile
 	line	92
 	
-l3549:
+l2521:; BSR set to: 15
+
 ;CAN.H: 92: TXB0SIDH = (f_type<<5)|(board_addr>>1);
 	movff	(c:CANSetID@board_addr),??_CANSetID+0+0
 	bcf	status,0
@@ -4583,99 +4262,96 @@ l3549:
 	rlncf	wreg
 	andlw	(0ffh shl 5) & 0ffh
 	iorwf	(??_CANSetID+0+0),c,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3873))&0ffh	;volatile
 	line	93
 	
-l3551:
+l2523:; BSR set to: 15
+
 ;CAN.H: 93: TXB0SIDL = 0;
-	movlw	low(0)
-	movlb	15	; () banked
-	movlb	15	; () banked
-	movwf	((3874))&0ffh	;volatile
+	clrf	((3874))&0ffh	;volatile
 	line	94
 ;CAN.H: 94: TXB0SIDL = (board_addr<<7)|(0x00<<5)|0x08|(0x10>>4);
 	rrncf	((c:CANSetID@board_addr)),c,w
 	andlw	(0ffh shl 7) & 0ffh
 	iorlw	low(09h)
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3874))&0ffh	;volatile
 	line	95
 	
-l3553:
+l2525:; BSR set to: 15
+
 ;CAN.H: 95: TXB0EIDH = 0;
-	movlw	low(0)
-	movlb	15	; () banked
-	movlb	15	; () banked
-	movwf	((3875))&0ffh	;volatile
+	clrf	((3875))&0ffh	;volatile
 	line	96
 	
-l3555:
+l2527:; BSR set to: 15
+
 ;CAN.H: 96: TXB0EIDH = (0x10<<4)|0x0f;
 	movlw	low(0Fh)
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3875))&0ffh	;volatile
 	line	97
 	
-l3557:
+l2529:; BSR set to: 15
+
 ;CAN.H: 97: TXB0EIDL = 0;
-	movlw	low(0)
-	movlb	15	; () banked
-	movlb	15	; () banked
-	movwf	((3876))&0ffh	;volatile
+	clrf	((3876))&0ffh	;volatile
 	line	98
 	
-l3559:
+l2531:; BSR set to: 15
+
 ;CAN.H: 98: TXB0EIDL = 0xF0|0x0f;
-	movlb	15	; () banked
-	movlb	15	; () banked
 	setf	((3876))&0ffh	;volatile
 	line	101
 	
-l3561:
+l2533:; BSR set to: 15
+
 ;CAN.H: 101: TXB1SIDH = TXB0SIDH;
 	movff	(3873),(3857)	;volatile
 	line	102
 	
-l3563:
+l2535:; BSR set to: 15
+
 ;CAN.H: 102: TXB1SIDL = TXB0SIDL;
 	movff	(3874),(3858)	;volatile
 	line	103
 	
-l3565:
+l2537:; BSR set to: 15
+
 ;CAN.H: 103: TXB1EIDH = TXB0EIDH;
 	movff	(3875),(3859)	;volatile
 	line	104
 	
-l3567:
+l2539:; BSR set to: 15
+
 ;CAN.H: 104: TXB1EIDL = TXB0EIDL;
 	movff	(3876),(3860)	;volatile
 	line	107
 	
-l3569:
+l2541:; BSR set to: 15
+
 ;CAN.H: 107: TXB2SIDH = TXB0SIDH;
 	movff	(3873),(3841)	;volatile
 	line	108
 	
-l3571:
+l2543:; BSR set to: 15
+
 ;CAN.H: 108: TXB2SIDL = TXB0SIDL;
 	movff	(3874),(3842)	;volatile
 	line	109
 	
-l3573:
+l2545:; BSR set to: 15
+
 ;CAN.H: 109: TXB2EIDH = TXB0EIDH;
 	movff	(3875),(3843)	;volatile
 	line	110
 	
-l3575:
+l2547:; BSR set to: 15
+
 ;CAN.H: 110: TXB2EIDL = TXB0EIDL;
 	movff	(3876),(3844)	;volatile
 	line	111
 	
-l333:
+l335:; BSR set to: 15
+
 	return
 	opt stack 0
 GLOBAL	__end_of_CANSetID
@@ -4685,11 +4361,11 @@ GLOBAL	__end_of_CANSetID
 
 ;; *************** function _delayms *****************
 ;; Defined at:
-;;		line 107 in file "E:\WorkSpace\YellowFlashingController20140317\mcu.h"
+;;		line 108 in file "G:\working\YellowFlashingController\mcu.h"
 ;; Parameters:    Size  Location     Type
-;;  ms              2   22[COMRAM] unsigned int 
+;;  ms              2    4[COMRAM] unsigned int 
 ;; Auto vars:     Size  Location     Type
-;;  i               2   24[COMRAM] unsigned int 
+;;  i               2    6[COMRAM] unsigned int 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -4697,7 +4373,7 @@ GLOBAL	__end_of_CANSetID
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFFF/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -4716,62 +4392,52 @@ psect	text8,class=CODE,space=0,reloc=2
 global __ptext8
 __ptext8:
 psect	text8
-	file	"E:\WorkSpace\YellowFlashingController20140317\mcu.h"
-	line	107
+	file	"G:\working\YellowFlashingController\mcu.h"
+	line	108
 	global	__size_of_delayms
 	__size_of_delayms	equ	__end_of_delayms-_delayms
 	
-_delayms:
+_delayms:; BSR set to: 15
+
 	opt	stack 25
-	line	111
-	
-l3833:
-;mcu.h: 108: unsigned int i;
-;mcu.h: 111: for(i=0;i<ms;i++)
-	movlw	high(0)
-	movwf	((c:delayms@i+1)),c
-	movlw	low(0)
-	movwf	((c:delayms@i)),c
-	goto	l3839
 	line	112
 	
-l390:
-	line	113
+l2785:
+;mcu.h: 109: unsigned int i;
+;mcu.h: 112: for(i=0;i<ms;i++)
+	clrf	((c:delayms@i)),c
+	clrf	((c:delayms@i+1)),c
+	goto	l2791
+	line	114
 	
-l3835:
-;mcu.h: 112: {
-;mcu.h: 113: delayus(997);
+l2787:
+;mcu.h: 113: {
+;mcu.h: 114: delayus(997);
 	movlw	high(03E5h)
 	movwf	((c:?_delayus+1)),c
 	movlw	low(03E5h)
 	movwf	((c:?_delayus)),c
 	call	_delayus	;wreg free
-	line	111
+	line	112
 	
-l3837:
+l2789:
 	infsnz	((c:delayms@i)),c
 	incf	((c:delayms@i+1)),c
-	goto	l3839
 	
-l389:
-	
-l3839:
+l2791:
 	movf	((c:delayms@ms)),c,w
 	subwf	((c:delayms@i)),c,w
 	movf	((c:delayms@ms+1)),c,w
 	subwfb	((c:delayms@i+1)),c,w
 	btfss	status,0
-	goto	u2661
-	goto	u2660
-u2661:
-	goto	l3835
-u2660:
-	goto	l392
+	goto	u1011
+	goto	u1010
+u1011:
+	goto	l2787
+u1010:
+	line	117
 	
-l391:
-	line	116
-	
-l392:
+l394:
 	return
 	opt stack 0
 GLOBAL	__end_of_delayms
@@ -4781,11 +4447,11 @@ GLOBAL	__end_of_delayms
 
 ;; *************** function _delayus *****************
 ;; Defined at:
-;;		line 91 in file "E:\WorkSpace\YellowFlashingController20140317\mcu.h"
+;;		line 92 in file "G:\working\YellowFlashingController\mcu.h"
 ;; Parameters:    Size  Location     Type
-;;  us              2   18[COMRAM] unsigned int 
+;;  us              2    0[COMRAM] unsigned int 
 ;; Auto vars:     Size  Location     Type
-;;  i               2   20[COMRAM] unsigned int 
+;;  i               2    2[COMRAM] unsigned int 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -4793,7 +4459,7 @@ GLOBAL	__end_of_delayms
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFFF/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -4812,65 +4478,50 @@ psect	text9,class=CODE,space=0,reloc=2
 global __ptext9
 __ptext9:
 psect	text9
-	file	"E:\WorkSpace\YellowFlashingController20140317\mcu.h"
-	line	91
+	file	"G:\working\YellowFlashingController\mcu.h"
+	line	92
 	global	__size_of_delayus
 	__size_of_delayus	equ	__end_of_delayus-_delayus
 	
 _delayus:
 	opt	stack 25
-	line	94
+	line	95
 	
-l3825:
-;mcu.h: 93: unsigned int i;
-;mcu.h: 94: us=us-5;
+l2777:
+;mcu.h: 94: unsigned int i;
+;mcu.h: 95: us=us-5;
 	movlw	low(0FFFBh)
-	addwf	((c:delayus@us)),c,w
-	
-	movwf	((c:delayus@us)),c
+	addwf	((c:delayus@us)),c
 	movlw	high(0FFFBh)
-	addwfc	((c:delayus@us+1)),c,w
-	movwf	1+((c:delayus@us)),c
-	line	96
-	
-l3827:
-;mcu.h: 96: for(i=0;i<us;i++)
-	movlw	high(0)
-	movwf	((c:delayus@i+1)),c
-	movlw	low(0)
-	movwf	((c:delayus@i)),c
-	goto	l3831
+	addwfc	((c:delayus@us+1)),c
 	line	97
 	
-l384:
-	line	96
+l2779:
+;mcu.h: 97: for(i=0;i<us;i++)
+	clrf	((c:delayus@i)),c
+	clrf	((c:delayus@i+1)),c
+	goto	l2783
 	
-l3829:
-;mcu.h: 97: {
-;mcu.h: 98: ;
+l2781:
+;mcu.h: 98: {
+;mcu.h: 99: ;
 	infsnz	((c:delayus@i)),c
 	incf	((c:delayus@i+1)),c
-	goto	l3831
 	
-l383:
-	
-l3831:
+l2783:
 	movf	((c:delayus@us)),c,w
 	subwf	((c:delayus@i)),c,w
 	movf	((c:delayus@us+1)),c,w
 	subwfb	((c:delayus@i+1)),c,w
 	btfss	status,0
-	goto	u2651
-	goto	u2650
-u2651:
-	goto	l3829
-u2650:
-	goto	l386
+	goto	u1001
+	goto	u1000
+u1001:
+	goto	l2781
+u1000:
+	line	103
 	
-l385:
-	line	102
-	
-l386:
+l388:
 	return
 	opt stack 0
 GLOBAL	__end_of_delayus
@@ -4880,7 +4531,7 @@ GLOBAL	__end_of_delayus
 
 ;; *************** function _PORTInit *****************
 ;; Defined at:
-;;		line 321 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 321 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -4891,8 +4542,8 @@ GLOBAL	__end_of_delayus
 ;;		wreg, status,2
 ;; Tracked objects:
 ;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On exit  : F/F
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -4911,7 +4562,7 @@ psect	text10,class=CODE,space=0,reloc=2
 global __ptext10
 __ptext10:
 psect	text10
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	321
 	global	__size_of_PORTInit
 	__size_of_PORTInit	equ	__end_of_PORTInit-_PORTInit
@@ -4920,7 +4571,7 @@ _PORTInit:
 	opt	stack 26
 	line	325
 	
-l3877:
+l2815:
 ;YellowFlash.C: 325: TRISB = 0xe0;
 	movlw	low(0E0h)
 	movwf	((c:3987)),c	;volatile
@@ -4933,34 +4584,39 @@ l3877:
 	movlw	low(0F3h)
 	movwf	((c:3989)),c	;volatile
 	line	329
+	
+l2817:
 ;YellowFlash.C: 329: ANCON1 = 0X00;
-	movlw	low(0)
 	movlb	15	; () banked
-	movlb	15	; () banked
-	movwf	((3932))&0ffh	;volatile
+	clrf	((3932))&0ffh	;volatile
 	line	330
 	
-l3879:
+l2819:; BSR set to: 15
+
 ;YellowFlash.C: 330: RC5=0;
 	bcf	c:(31765/8),(31765)&7	;volatile
 	line	331
 	
-l3881:
+l2821:; BSR set to: 15
+
 ;YellowFlash.C: 331: RC6=1;
 	bsf	c:(31766/8),(31766)&7	;volatile
 	line	332
 	
-l3883:
+l2823:; BSR set to: 15
+
 ;YellowFlash.C: 332: RC4=1;
 	bsf	c:(31764/8),(31764)&7	;volatile
 	line	333
 	
-l3885:
+l2825:; BSR set to: 15
+
 ;YellowFlash.C: 333: RD3=1;
 	bsf	c:(31771/8),(31771)&7	;volatile
 	line	363
 	
-l519:
+l521:; BSR set to: 15
+
 	return
 	opt stack 0
 GLOBAL	__end_of_PORTInit
@@ -4970,7 +4626,7 @@ GLOBAL	__end_of_PORTInit
 
 ;; *************** function _IntManager *****************
 ;; Defined at:
-;;		line 367 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 367 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -4980,9 +4636,9 @@ GLOBAL	__end_of_PORTInit
 ;; Registers used:
 ;;		wreg, status,2, status,0
 ;; Tracked objects:
-;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On entry : F/F
+;;		On exit  : F/F
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -5001,87 +4657,101 @@ psect	text11,class=CODE,space=0,reloc=2
 global __ptext11
 __ptext11:
 psect	text11
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	367
 	global	__size_of_IntManager
 	__size_of_IntManager	equ	__end_of_IntManager-_IntManager
 	
-_IntManager:
+_IntManager:; BSR set to: 15
+
 	opt	stack 26
 	line	369
 	
-l3887:
+l2827:; BSR set to: 15
+
 ;YellowFlash.C: 369: INTCON |= 0xc0;
 	movlw	(0C0h)&0ffh
 	iorwf	((c:4082)),c	;volatile
 	line	373
 	
-l3889:
+l2829:; BSR set to: 15
+
 ;YellowFlash.C: 373: TMR0IE = 1;
 	bsf	c:(32661/8),(32661)&7	;volatile
 	line	374
 	
-l3891:
+l2831:; BSR set to: 15
+
 ;YellowFlash.C: 374: TMR0IF = 0;
 	bcf	c:(32658/8),(32658)&7	;volatile
 	line	375
 	
-l3893:
+l2833:; BSR set to: 15
+
 ;YellowFlash.C: 375: T08BIT = 0;
 	bcf	c:(32430/8),(32430)&7	;volatile
 	line	376
 	
-l3895:
+l2835:; BSR set to: 15
+
 ;YellowFlash.C: 376: T0CS = 0;
 	bcf	c:(32429/8),(32429)&7	;volatile
 	line	378
 	
-l3897:
+l2837:; BSR set to: 15
+
 ;YellowFlash.C: 378: TMR0H = 0xd8;
 	movlw	low(0D8h)
 	movwf	((c:4055)),c	;volatile
 	line	379
 	
-l3899:
+l2839:; BSR set to: 15
+
 ;YellowFlash.C: 379: TMR0L = 0xef;
 	movlw	low(0EFh)
 	movwf	((c:4054)),c	;volatile
 	line	381
 	
-l3901:
+l2841:; BSR set to: 15
+
 ;YellowFlash.C: 381: TMR0ON = 1;
 	bsf	c:(32431/8),(32431)&7	;volatile
 	line	384
 	
-l3903:
+l2843:; BSR set to: 15
+
 ;YellowFlash.C: 384: TMR1IE = 1;
 	bsf	c:(31976/8),(31976)&7	;volatile
 	line	385
 	
-l3905:
+l2845:; BSR set to: 15
+
 ;YellowFlash.C: 385: TMR1IF = 0;
 	bcf	c:(31984/8),(31984)&7	;volatile
 	line	386
 	
-l3907:
+l2847:; BSR set to: 15
+
 ;YellowFlash.C: 386: T1CON = 0x00;
-	movlw	low(0)
-	movwf	((c:4045)),c	;volatile
+	clrf	((c:4045)),c	;volatile
 	line	388
 	
-l3909:
+l2849:; BSR set to: 15
+
 ;YellowFlash.C: 388: TMR1H = 0x3c;
 	movlw	low(03Ch)
 	movwf	((c:4047)),c	;volatile
 	line	389
 	
-l3911:
+l2851:; BSR set to: 15
+
 ;YellowFlash.C: 389: TMR1L = 0xaf;
 	movlw	low(0AFh)
 	movwf	((c:4046)),c	;volatile
 	line	397
 	
-l522:
+l524:; BSR set to: 15
+
 	return
 	opt stack 0
 GLOBAL	__end_of_IntManager
@@ -5091,15 +4761,16 @@ GLOBAL	__end_of_IntManager
 
 ;; *************** function _CANDATAAnalyzing *****************
 ;; Defined at:
-;;		line 552 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 552 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
-;;  id              2   12[BANK0 ] PTR unsigned char 
+;;  id              1    wreg     PTR unsigned char 
 ;;		 -> CANRid(4), 
-;;  dat             2   14[BANK0 ] PTR unsigned char 
+;;  dat             1   52[COMRAM] PTR unsigned char 
 ;;		 -> CANRdata(8), 
-;;  dlc             1   16[BANK0 ] unsigned char 
+;;  dlc             1   53[COMRAM] unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  id              1   58[COMRAM] PTR unsigned char 
+;;		 -> CANRid(4), 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -5109,11 +4780,11 @@ GLOBAL	__end_of_IntManager
 ;;		On exit  : 0/0
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         0       5       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          0       4       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         0       9       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        9 bytes
+;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         7       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        7 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    8
 ;; This function calls:
@@ -5132,137 +4803,84 @@ psect	text12,class=CODE,space=0,reloc=2
 global __ptext12
 __ptext12:
 psect	text12
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	552
 	global	__size_of_CANDATAAnalyzing
 	__size_of_CANDATAAnalyzing	equ	__end_of_CANDATAAnalyzing-_CANDATAAnalyzing
 	
-_CANDATAAnalyzing:
+_CANDATAAnalyzing:; BSR set to: 15
+
 	opt	stack 22
+;CANDATAAnalyzing@id stored from wreg
+	movff	wreg,(c:CANDATAAnalyzing@id)
 	line	559
 	
-l4773:; BSR set to: 0
+l2973:; BSR set to: 0
 
 ;YellowFlash.C: 559: switch (((dat[0] & 0xc0)>>6))
-	goto	l4787
+	goto	l2983
 	line	561
 ;YellowFlash.C: 560: {
 ;YellowFlash.C: 561: case 0x00:
 	
-l554:
+l556:; BSR set to: 0
+
 	line	562
-	
-l4775:
 ;YellowFlash.C: 562: f_r_mod = 0x00;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movwf	((c:_f_r_mod)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
+	clrf	((c:_f_r_mod)),c
 	line	563
 ;YellowFlash.C: 563: break;
-	goto	l4789
-	line	564
-;YellowFlash.C: 564: case 0x01:
-	
-l556:
+	goto	l2985
 	line	565
 	
-l4777:
+l2975:; BSR set to: 0
+
 ;YellowFlash.C: 565: f_r_mod = 0x01;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(01h)
 	movwf	((c:_f_r_mod)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	566
 ;YellowFlash.C: 566: break;
-	goto	l4789
-	line	567
-;YellowFlash.C: 567: case 0x02:
-	
-l557:
+	goto	l2985
 	line	568
 	
-l4779:
+l2977:; BSR set to: 0
+
 ;YellowFlash.C: 568: f_r_mod = 0x02;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(02h)
 	movwf	((c:_f_r_mod)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	569
 ;YellowFlash.C: 569: break;
-	goto	l4789
-	line	570
-;YellowFlash.C: 570: case 0x03:
-	
-l558:
+	goto	l2985
 	line	571
 	
-l4781:
+l2979:; BSR set to: 0
+
 ;YellowFlash.C: 571: f_r_mod = 0x03;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(03h)
 	movwf	((c:_f_r_mod)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	572
 ;YellowFlash.C: 572: break;
-	goto	l4789
-	line	573
-;YellowFlash.C: 573: default:
-	
-l559:
-	line	574
-	
-l4783:
-;YellowFlash.C: 574: f_r_mod = 0x00;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movwf	((c:_f_r_mod)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
-	line	575
-;YellowFlash.C: 575: break;
-	goto	l4789
-	line	576
-	
-l4785:
-;YellowFlash.C: 576: }
-	goto	l4789
+	goto	l2985
 	line	559
 	
-l553:
-	
-l4787:
-	movff	(CANDATAAnalyzing@dat),fsr2l
-	movff	(CANDATAAnalyzing@dat+1),fsr2h
-	movf	indf2,w
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	06h
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+1+0)&0ffh
-u3745:
-	movlb	0	; () banked
-	bcf	status,0
-	rrcf	((??_CANDATAAnalyzing+0+0))&0ffh
-	movlb	0	; () banked
-	decfsz	(??_CANDATAAnalyzing+1+0)&0ffh
-	goto	u3745
-	movlb	0	; () banked
-	movf	((??_CANDATAAnalyzing+0+0))&0ffh,w
-	andlw	low(03h)
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+2+0)&0ffh
-	clrf	(??_CANDATAAnalyzing+2+0+1)&0ffh
+l2983:; BSR set to: 0
 
+	movf	((c:CANDATAAnalyzing@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movf	indf2,w
+	movwf	(??_CANDATAAnalyzing+0+0)&0ffh,c
+	movlw	06h
+	movwf	(??_CANDATAAnalyzing+1+0)&0ffh,c
+u1135:
+	bcf	status,0
+	rrcf	((??_CANDATAAnalyzing+0+0)),c
+	decfsz	(??_CANDATAAnalyzing+1+0)&0ffh,c
+	goto	u1135
+	movlw	03h
+	andwf	((??_CANDATAAnalyzing+0+0)),c
+	movff	(??_CANDATAAnalyzing+0+0),??_CANDATAAnalyzing+2+0
+	clrf	(??_CANDATAAnalyzing+2+0+1)&0ffh,c
 	; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-switches
 ; Switch size 1, requested type "space"
 ; Number of cases is 1, Range of values is 0 to 0
@@ -5271,14 +4889,13 @@ u3745:
 ; simple_byte            4     3 (average)
 ;	Chosen strategy is simple_byte
 
-	movlb	0	; () banked
-	movf ??_CANDATAAnalyzing+2+1&0ffh,w
+	movf ??_CANDATAAnalyzing+2+1,c,w
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l5319
-	goto	l4783
+	goto	l3367
+	goto	l556
 	
-l5319:; BSR set to: 0
+l3367:; BSR set to: 0
 
 ; Switch size 1, requested type "space"
 ; Number of cases is 4, Range of values is 0 to 3
@@ -5287,165 +4904,125 @@ l5319:; BSR set to: 0
 ; simple_byte           13     7 (average)
 ;	Chosen strategy is simple_byte
 
-	movlb	0	; () banked
-	movf ??_CANDATAAnalyzing+2+0&0ffh,w
+	movf ??_CANDATAAnalyzing+2+0,c,w
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l4775
+	goto	l556
 	xorlw	1^0	; case 1
 	skipnz
-	goto	l4777
+	goto	l2975
 	xorlw	2^1	; case 2
 	skipnz
-	goto	l4779
+	goto	l2977
 	xorlw	3^2	; case 3
 	skipnz
-	goto	l4781
-	goto	l4783
+	goto	l2979
+	goto	l556
 
-	line	576
-	
-l555:
 	line	579
 	
-l4789:
+l2985:; BSR set to: 0
+
 ;YellowFlash.C: 579: if(((id[1]>>5)&0x03)==0x03)
-	movlb	0	; () banked
-	lfsr	2,01h
-	movlb	0	; () banked
-	movf	((CANDATAAnalyzing@id))&0ffh,w
+	movf	((c:CANDATAAnalyzing@id)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movlb	0	; () banked
-	movf	((CANDATAAnalyzing@id+1))&0ffh,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
+	movwf	(??_CANDATAAnalyzing+0+0)&0ffh,c
 	movlw	05h
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+1+0)&0ffh
-u3755:
-	movlb	0	; () banked
+	movwf	(??_CANDATAAnalyzing+1+0)&0ffh,c
+u1145:
 	bcf	status,0
-	rrcf	((??_CANDATAAnalyzing+0+0))&0ffh
-	movlb	0	; () banked
-	decfsz	(??_CANDATAAnalyzing+1+0)&0ffh
-	goto	u3755
-	movlb	0	; () banked
-	movf	((??_CANDATAAnalyzing+0+0))&0ffh,w
+	rrcf	((??_CANDATAAnalyzing+0+0)),c
+	decfsz	(??_CANDATAAnalyzing+1+0)&0ffh,c
+	goto	u1145
+	movf	((??_CANDATAAnalyzing+0+0)),c,w
 	andlw	low(03h)
 	xorlw	03h
 	btfss	status,2
-	goto	u3761
-	goto	u3760
-u3761:
-	goto	l4815
-u3760:
+	goto	u1151
+	goto	u1150
+u1151:
+	goto	l3007
+u1150:
 	line	581
 	
-l4791:
+l2987:; BSR set to: 0
+
 ;YellowFlash.C: 580: {
 ;YellowFlash.C: 581: if(force_status)
 	movf	((c:_force_status)),c,w
 	btfsc	status,2
-	goto	u3771
-	goto	u3770
-u3771:
-	goto	l4795
-u3770:
-	goto	l578
-	line	582
-	
-l4793:
-;YellowFlash.C: 582: {}
-	goto	l578
+	goto	u1161
+	goto	u1160
+u1161:
+	goto	l563
+u1160:
+	goto	l580
 	line	583
 	
-l561:
+l563:; BSR set to: 0
+
 	line	585
-	
-l4795:
 ;YellowFlash.C: 583: else
 ;YellowFlash.C: 584: {
 ;YellowFlash.C: 585: heartbeat=0;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_heartbeat))&0ffh
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
+	clrf	((c:_heartbeat)),c
 	line	586
-	
-l4797:
 ;YellowFlash.C: 586: TMR0ON = 1;
 	bsf	c:(32431/8),(32431)&7	;volatile
 	line	587
 	
-l4799:
+l2991:; BSR set to: 0
+
 ;YellowFlash.C: 587: T1CON |= 0x00;
 	movf	((c:4045)),c,w	;volatile
 	line	588
 	
-l4801:
+l2993:; BSR set to: 0
+
 ;YellowFlash.C: 588: turnoff=0x00;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movwf	((c:_turnoff)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
+	clrf	((c:_turnoff)),c
 	line	589
 	
-l4803:
+l2995:; BSR set to: 0
+
 ;YellowFlash.C: 589: switchmode=0;
 	movlb	(_switchmode/8) >> 8
 	bcf	(_switchmode/8),c,(_switchmode)&7
 	line	590
 	
-l4805:
+l2997:
 ;YellowFlash.C: 590: yflash_status=0x00;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movwf	((c:_yflash_status)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
+	clrf	((c:_yflash_status)),c
 	line	591
 	
-l4807:
+l2999:
 ;YellowFlash.C: 591: RC6=1;
 	bsf	c:(31766/8),(31766)&7	;volatile
 	line	592
 	
-l4809:
+l3001:
 ;YellowFlash.C: 592: RC4=1;
 	bsf	c:(31764/8),(31764)&7	;volatile
 	line	593
 	
-l4811:
+l3003:
 ;YellowFlash.C: 593: RD3=1;
 	bsf	c:(31771/8),(31771)&7	;volatile
 	line	594
 	
-l4813:
+l3005:
 ;YellowFlash.C: 594: RD2=0;
 	bcf	c:(31770/8),(31770)&7	;volatile
-	goto	l578
-	line	595
-	
-l562:
-	line	597
-;YellowFlash.C: 595: }
-;YellowFlash.C: 597: }
-	goto	l578
-	line	598
-	
-l560:
+	goto	l580
 	line	602
 	
-l4815:
+l3007:; BSR set to: 0
+
 ;YellowFlash.C: 598: else
 ;YellowFlash.C: 599: {
 ;YellowFlash.C: 602: if((f_r_mod ==0x02)&&((dat[0] & 0x3f)!=0x02))
@@ -5453,305 +5030,227 @@ l4815:
 	xorlw	2
 
 	btfss	status,2
-	goto	u3781
-	goto	u3780
-u3781:
-	goto	l4923
-u3780:
+	goto	u1171
+	goto	u1170
+u1171:
+	goto	l3109
+u1170:
 	
-l4817:
-	movff	(CANDATAAnalyzing@dat),fsr2l
-	movff	(CANDATAAnalyzing@dat+1),fsr2h
+l3009:; BSR set to: 0
+
+	movf	((c:CANDATAAnalyzing@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movf	indf2,w
 	andlw	low(03Fh)
 	xorlw	02h
 	btfsc	status,2
-	goto	u3791
-	goto	u3790
-u3791:
-	goto	l4923
-u3790:
+	goto	u1181
+	goto	u1180
+u1181:
+	goto	l3109
+u1180:
 	line	604
 	
-l4819:
+l3011:; BSR set to: 0
+
 ;YellowFlash.C: 603: {
 ;YellowFlash.C: 604: CANSendConfirm();
 	call	_CANSendConfirm	;wreg free
-	goto	l4923
-	line	605
-	
-l564:
-	line	608
-;YellowFlash.C: 605: }
-;YellowFlash.C: 608: switch ((dat[0] & 0x3f))
-	goto	l4923
-	line	610
-;YellowFlash.C: 609: {
-;YellowFlash.C: 610: case 0X00:
-	
-l566:
+	goto	l3109
 	line	612
 	
-l4821:
+l3013:
 ;YellowFlash.C: 612: if(f_r_mod ==0x01)
 	decf	((c:_f_r_mod)),c,w
 
 	btfss	status,2
-	goto	u3801
-	goto	u3800
-u3801:
-	goto	l4925
-u3800:
+	goto	u1191
+	goto	u1190
+u1191:
+	goto	l580
+u1190:
 	line	614
 	
-l4823:
+l3015:
 ;YellowFlash.C: 613: {
 ;YellowFlash.C: 614: CANSendID(0X00);
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movwf	((c:?_CANSendID)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
-	call	_CANSendID	;wreg free
-	goto	l4925
-	line	615
+	movlw	(0)&0ffh
 	
-l567:
-	line	616
-;YellowFlash.C: 615: }
-;YellowFlash.C: 616: break;
-	goto	l4925
-	line	617
-;YellowFlash.C: 617: case 0X01:
-	
-l569:
+	call	_CANSendID
+	goto	l580
 	line	619
 	
-l4825:
+l3017:
 ;YellowFlash.C: 619: CANWriteID(f_r_mod);
-	movff	(c:_f_r_mod),(c:?_CANWriteID)
-	call	_CANWriteID	;wreg free
+	movf	((c:_f_r_mod)),c,w
+	
+	call	_CANWriteID
 	line	620
 ;YellowFlash.C: 620: break;
-	goto	l4925
-	line	622
-;YellowFlash.C: 622: case 0x02:
-	
-l570:
+	goto	l580
 	line	623
 	
-l4827:
+l3019:
 ;YellowFlash.C: 623: CANSdlc=4;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(04h)
 	movwf	((c:_CANSdlc)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	624
 ;YellowFlash.C: 624: CANSdata[0]=0x02;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(02h)
 	movlb	0	; () banked
-	movlb	0	; () banked
 	movwf	((_CANSdata))&0ffh
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	625
-	
-l4829:
 ;YellowFlash.C: 625: eeprom_addr = 0x0009;
 	movlw	high(09h)
 	movwf	((c:_eeprom_addr+1)),c
 	movlw	low(09h)
 	movwf	((c:_eeprom_addr)),c
 	line	626
-	
-l4831:
 ;YellowFlash.C: 626: eeprom_num = 2;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	627
 	
-l4833:
+l3021:; BSR set to: 0
+
 ;YellowFlash.C: 627: EEPROMRead(&eeprom_addr,&eeprom_num,(CANSdata+1));
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMRead)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMRead)+02h)),c
-	movlb	0	; () banked
+	movwf	((c:?_EEPROMRead)),c
 	movlw	high(_CANSdata+01h)
-	movwf	(1+((c:?_EEPROMRead)+04h)),c
-	movlb	0	; () banked
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
 	movlw	low(_CANSdata+01h)
-	movwf	(0+((c:?_EEPROMRead)+04h)),c
-	call	_EEPROMRead	;wreg free
+	movwf	(0+((c:?_EEPROMRead)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMRead
 	line	628
 	
-l4835:
+l3023:
 ;YellowFlash.C: 628: CANSdata[3]=yflash_status;
 	movff	(c:_yflash_status),0+(_CANSdata+03h)
 	line	629
 	
-l4837:
+l3025:
 ;YellowFlash.C: 629: CANSend(CANSid,CANSdata,CANSdlc);
 	movlb	0	; () banked
-	movlw	high(_CANSid)
-	movwf	((c:?_CANSend+1)),c
-	movlb	0	; () banked
-	movlw	low(_CANSid)
-	movwf	((c:?_CANSend)),c
-	movlb	0	; () banked
-	movlw	high(_CANSdata)
-	movwf	(1+((c:?_CANSend)+02h)),c
-	movlb	0	; () banked
 	movlw	low(_CANSdata)
-	movwf	(0+((c:?_CANSend)+02h)),c
-	movff	(c:_CANSdlc),0+((c:?_CANSend)+04h)
-	call	_CANSend	;wreg free
+	movwf	((c:?_CANSend)),c
+	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
+	movlw	((c:_CANSid))&0ffh
+	
+	call	_CANSend
 	line	630
 ;YellowFlash.C: 630: break;
-	goto	l4925
-	line	632
-;YellowFlash.C: 632: case 0x03:
-	
-l571:
+	goto	l580
 	line	634
 	
-l4839:
+l3027:
 ;YellowFlash.C: 634: YFlashNewConfigure();
 	call	_YFlashNewConfigure	;wreg free
 	line	636
 	
-l4841:
+l3029:
 ;YellowFlash.C: 636: if(f_r_mod==0x01)
 	decf	((c:_f_r_mod)),c,w
 
 	btfss	status,2
-	goto	u3811
-	goto	u3810
-u3811:
-	goto	l4851
-u3810:
+	goto	u1201
+	goto	u1200
+u1201:
+	goto	l3039
+u1200:
 	line	638
 	
-l4843:
+l3031:
 ;YellowFlash.C: 637: {
 ;YellowFlash.C: 638: CANSdlc=3;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(03h)
 	movwf	((c:_CANSdlc)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	639
 ;YellowFlash.C: 639: CANSdata[0]=0x03;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(03h)
 	movlb	0	; () banked
-	movlb	0	; () banked
 	movwf	((_CANSdata))&0ffh
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	640
 	
-l4845:
+l3033:; BSR set to: 0
+
 ;YellowFlash.C: 640: CANSdata[1]=yflash_CFG[0];
 	movff	(c:_yflash_CFG),0+(_CANSdata+01h)
 	line	641
 	
-l4847:
+l3035:; BSR set to: 0
+
 ;YellowFlash.C: 641: CANSdata[2]=yflash_CFG[1];
 	movff	0+((c:_yflash_CFG)+01h),0+(_CANSdata+02h)
 	line	643
 	
-l4849:
+l3037:; BSR set to: 0
+
 ;YellowFlash.C: 643: CANSend(CANSid,CANSdata,CANSdlc);
-	movlb	0	; () banked
-	movlw	high(_CANSid)
-	movwf	((c:?_CANSend+1)),c
-	movlb	0	; () banked
-	movlw	low(_CANSid)
-	movwf	((c:?_CANSend)),c
-	movlb	0	; () banked
-	movlw	high(_CANSdata)
-	movwf	(1+((c:?_CANSend)+02h)),c
-	movlb	0	; () banked
 	movlw	low(_CANSdata)
-	movwf	(0+((c:?_CANSend)+02h)),c
-	movff	(c:_CANSdlc),0+((c:?_CANSend)+04h)
-	call	_CANSend	;wreg free
-	goto	l4851
-	line	644
+	movwf	((c:?_CANSend)),c
+	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
+	movlw	((c:_CANSid))&0ffh
 	
-l572:
+	call	_CANSend
 	line	646
 	
-l4851:
+l3039:
 ;YellowFlash.C: 644: }
 ;YellowFlash.C: 646: Read_YFlash_CFG();
 	call	_Read_YFlash_CFG	;wreg free
 	line	648
 	
-l4853:
+l3041:
 ;YellowFlash.C: 648: INTCON |= 0xc0;
 	movlw	(0C0h)&0ffh
 	iorwf	((c:4082)),c	;volatile
 	line	650
 	
-l4855:
+l3043:
 ;YellowFlash.C: 650: TMR0IE = 1;
 	bsf	c:(32661/8),(32661)&7	;volatile
 	line	651
 	
-l4857:
+l3045:
 ;YellowFlash.C: 651: TMR0IF = 0;
 	bcf	c:(32658/8),(32658)&7	;volatile
 	line	652
 	
-l4859:
+l3047:
 ;YellowFlash.C: 652: T08BIT = 0;
 	bcf	c:(32430/8),(32430)&7	;volatile
 	line	653
 	
-l4861:
+l3049:
 ;YellowFlash.C: 653: T0CS = 0;
 	bcf	c:(32429/8),(32429)&7	;volatile
 	line	655
 	
-l4863:
+l3051:
 ;YellowFlash.C: 655: TMR0H = 0xd8;
 	movlw	low(0D8h)
 	movwf	((c:4055)),c	;volatile
 	line	656
 	
-l4865:
+l3053:
 ;YellowFlash.C: 656: TMR0L = 0xef;
 	movlw	low(0EFh)
 	movwf	((c:4054)),c	;volatile
 	line	658
 	
-l4867:
+l3055:
 ;YellowFlash.C: 658: TMR0ON = 1;
 	bsf	c:(32431/8),(32431)&7	;volatile
 	line	660
 ;YellowFlash.C: 660: break;
-	goto	l4925
+	goto	l580
 	line	662
 ;YellowFlash.C: 662: case 0x04:
 	
-l573:
+l575:
 	line	663
 ;YellowFlash.C: 663: yflash_status=CANRdata[1];
 	movff	0+(_CANRdata+01h),(c:_yflash_status)
@@ -5760,281 +5259,203 @@ l573:
 	bsf	c:(31770/8),(31770)&7	;volatile
 	line	665
 	
-l4869:
+l3057:
 ;YellowFlash.C: 665: Read_YFlash_CFG();
 	call	_Read_YFlash_CFG	;wreg free
 	line	666
 	
-l4871:
+l3059:
 ;YellowFlash.C: 666: T1CON |= 0x01;
 	bsf	(0+(0/8)+(c:4045)),c,(0)&7	;volatile
 	line	667
 	
-l4873:
+l3061:
 ;YellowFlash.C: 667: turnoff=0x01;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(01h)
 	movwf	((c:_turnoff)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	668
 	
-l4875:
+l3063:
 ;YellowFlash.C: 668: switchmode=1;
 	movlb	(_switchmode/8) >> 8
 	bsf	(_switchmode/8),c,(_switchmode)&7
 	line	669
 	
-l4877:
+l3065:
 ;YellowFlash.C: 669: force_status=0x01;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(01h)
 	movwf	((c:_force_status)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	670
 	
-l4879:
+l3067:
 ;YellowFlash.C: 670: if(f_r_mod==0x01)
 	decf	((c:_f_r_mod)),c,w
 
 	btfss	status,2
-	goto	u3821
-	goto	u3820
-u3821:
-	goto	l4925
-u3820:
+	goto	u1211
+	goto	u1210
+u1211:
+	goto	l580
+u1210:
 	line	672
 	
-l4881:
+l3069:
 ;YellowFlash.C: 671: {
 ;YellowFlash.C: 672: CANSdlc=4;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(04h)
 	movwf	((c:_CANSdlc)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	673
 ;YellowFlash.C: 673: CANSdata[0]=0x02;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(02h)
 	movlb	0	; () banked
-	movlb	0	; () banked
 	movwf	((_CANSdata))&0ffh
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	674
 	
-l4883:
+l3071:; BSR set to: 0
+
 ;YellowFlash.C: 674: CANSdata[1]=yflash_CFG[0];
 	movff	(c:_yflash_CFG),0+(_CANSdata+01h)
 	line	675
 	
-l4885:
+l3073:; BSR set to: 0
+
 ;YellowFlash.C: 675: CANSdata[2]=yflash_CFG[1];
 	movff	0+((c:_yflash_CFG)+01h),0+(_CANSdata+02h)
 	line	676
 	
-l4887:
+l3075:; BSR set to: 0
+
 ;YellowFlash.C: 676: CANSdata[3]=yflash_status;
 	movff	(c:_yflash_status),0+(_CANSdata+03h)
 	line	677
 	
-l4889:
+l3077:; BSR set to: 0
+
 ;YellowFlash.C: 677: CANSend(CANSid,CANSdata,CANSdlc);
-	movlb	0	; () banked
-	movlw	high(_CANSid)
-	movwf	((c:?_CANSend+1)),c
-	movlb	0	; () banked
-	movlw	low(_CANSid)
-	movwf	((c:?_CANSend)),c
-	movlb	0	; () banked
-	movlw	high(_CANSdata)
-	movwf	(1+((c:?_CANSend)+02h)),c
-	movlb	0	; () banked
 	movlw	low(_CANSdata)
-	movwf	(0+((c:?_CANSend)+02h)),c
-	movff	(c:_CANSdlc),0+((c:?_CANSend)+04h)
-	call	_CANSend	;wreg free
-	goto	l4925
-	line	678
+	movwf	((c:?_CANSend)),c
+	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
+	movlw	((c:_CANSid))&0ffh
 	
-l574:
-	line	679
-;YellowFlash.C: 678: }
-;YellowFlash.C: 679: break;
-	goto	l4925
+	call	_CANSend
+	goto	l580
 	line	681
 ;YellowFlash.C: 681: case 0x05:
 	
-l575:
+l577:
 	line	682
-	
-l4891:
 ;YellowFlash.C: 682: yflash_status=0x00;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movwf	((c:_yflash_status)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
+	clrf	((c:_yflash_status)),c
 	line	683
 ;YellowFlash.C: 683: force_status=0x00;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movwf	((c:_force_status)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
+	clrf	((c:_force_status)),c
 	line	684
 	
-l4893:
+l3079:
 ;YellowFlash.C: 684: T1CON |= 0x00;
 	movf	((c:4045)),c,w	;volatile
 	line	685
 	
-l4895:
+l3081:
 ;YellowFlash.C: 685: TMR0ON = 1;
 	bsf	c:(32431/8),(32431)&7	;volatile
 	line	686
 	
-l4897:
+l3083:
 ;YellowFlash.C: 686: turnoff=0x00;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movwf	((c:_turnoff)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
+	clrf	((c:_turnoff)),c
 	line	687
 	
-l4899:
+l3085:
 ;YellowFlash.C: 687: switchmode=0;
 	movlb	(_switchmode/8) >> 8
 	bcf	(_switchmode/8),c,(_switchmode)&7
 	line	688
 	
-l4901:
+l3087:
 ;YellowFlash.C: 688: RC6=1;
 	bsf	c:(31766/8),(31766)&7	;volatile
 	line	689
 	
-l4903:
+l3089:
 ;YellowFlash.C: 689: RC4=1;
 	bsf	c:(31764/8),(31764)&7	;volatile
 	line	690
 	
-l4905:
+l3091:
 ;YellowFlash.C: 690: RD3=1;
 	bsf	c:(31771/8),(31771)&7	;volatile
 	line	691
 	
-l4907:
+l3093:
 ;YellowFlash.C: 691: RD2=0;
 	bcf	c:(31770/8),(31770)&7	;volatile
 	line	692
 	
-l4909:
+l3095:
 ;YellowFlash.C: 692: if(f_r_mod==0x01)
 	decf	((c:_f_r_mod)),c,w
 
 	btfss	status,2
-	goto	u3831
-	goto	u3830
-u3831:
-	goto	l4925
-u3830:
+	goto	u1221
+	goto	u1220
+u1221:
+	goto	l580
+u1220:
 	line	694
 	
-l4911:
+l3097:
 ;YellowFlash.C: 693: {
 ;YellowFlash.C: 694: CANSdlc=4;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(04h)
 	movwf	((c:_CANSdlc)),c
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	695
 ;YellowFlash.C: 695: CANSdata[0]=0x02;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
 	movlw	low(02h)
 	movlb	0	; () banked
-	movlb	0	; () banked
 	movwf	((_CANSdata))&0ffh
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
 	line	696
 	
-l4913:
+l3099:; BSR set to: 0
+
 ;YellowFlash.C: 696: CANSdata[1]=yflash_CFG[0];
 	movff	(c:_yflash_CFG),0+(_CANSdata+01h)
 	line	697
 	
-l4915:
+l3101:; BSR set to: 0
+
 ;YellowFlash.C: 697: CANSdata[2]=yflash_CFG[1];
 	movff	0+((c:_yflash_CFG)+01h),0+(_CANSdata+02h)
 	line	698
 	
-l4917:
+l3103:; BSR set to: 0
+
 ;YellowFlash.C: 698: CANSdata[3]=yflash_status;
 	movff	(c:_yflash_status),0+(_CANSdata+03h)
 	line	699
 	
-l4919:
+l3105:; BSR set to: 0
+
 ;YellowFlash.C: 699: CANSend(CANSid,CANSdata,CANSdlc);
-	movlb	0	; () banked
-	movlw	high(_CANSid)
-	movwf	((c:?_CANSend+1)),c
-	movlb	0	; () banked
-	movlw	low(_CANSid)
-	movwf	((c:?_CANSend)),c
-	movlb	0	; () banked
-	movlw	high(_CANSdata)
-	movwf	(1+((c:?_CANSend)+02h)),c
-	movlb	0	; () banked
 	movlw	low(_CANSdata)
-	movwf	(0+((c:?_CANSend)+02h)),c
-	movff	(c:_CANSdlc),0+((c:?_CANSend)+04h)
-	call	_CANSend	;wreg free
-	goto	l4925
-	line	700
+	movwf	((c:?_CANSend)),c
+	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
+	movlw	((c:_CANSid))&0ffh
 	
-l576:
-	line	701
-;YellowFlash.C: 700: }
-;YellowFlash.C: 701: break;
-	goto	l4925
-	line	702
-;YellowFlash.C: 702: default:
-	
-l577:
-	line	703
-;YellowFlash.C: 703: break;
-	goto	l4925
-	line	707
-	
-l4921:
-;YellowFlash.C: 707: }
-	goto	l4925
+	call	_CANSend
+	goto	l580
 	line	608
 	
-l565:
-	
-l4923:
-	movff	(CANDATAAnalyzing@dat),fsr2l
-	movff	(CANDATAAnalyzing@dat+1),fsr2h
+l3109:
+	movf	((c:CANDATAAnalyzing@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movf	indf2,w
-	andlw	low(03Fh)
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	clrf	(??_CANDATAAnalyzing+0+0+1)&0ffh
-
+	movwf	(??_CANDATAAnalyzing+0+0)&0ffh,c
+	movlw	03Fh
+	andwf	((??_CANDATAAnalyzing+0+0)),c
+	movff	(??_CANDATAAnalyzing+0+0),??_CANDATAAnalyzing+1+0
+	clrf	(??_CANDATAAnalyzing+1+0+1)&0ffh,c
 	; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-switches
 ; Switch size 1, requested type "space"
 ; Number of cases is 1, Range of values is 0 to 0
@@ -6043,15 +5464,13 @@ l4923:
 ; simple_byte            4     3 (average)
 ;	Chosen strategy is simple_byte
 
-	movlb	0	; () banked
-	movf ??_CANDATAAnalyzing+0+1&0ffh,w
+	movf ??_CANDATAAnalyzing+1+1,c,w
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l5321
-	goto	l4925
+	goto	l3369
+	goto	l580
 	
-l5321:; BSR set to: 0
-
+l3369:
 ; Switch size 1, requested type "space"
 ; Number of cases is 6, Range of values is 0 to 5
 ; switch strategies available:
@@ -6059,60 +5478,30 @@ l5321:; BSR set to: 0
 ; simple_byte           19    10 (average)
 ;	Chosen strategy is simple_byte
 
-	movlb	0	; () banked
-	movf ??_CANDATAAnalyzing+0+0&0ffh,w
+	movf ??_CANDATAAnalyzing+1+0,c,w
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l4821
+	goto	l3013
 	xorlw	1^0	; case 1
 	skipnz
-	goto	l4825
+	goto	l3017
 	xorlw	2^1	; case 2
 	skipnz
-	goto	l4827
+	goto	l3019
 	xorlw	3^2	; case 3
 	skipnz
-	goto	l4839
+	goto	l3027
 	xorlw	4^3	; case 4
 	skipnz
-	goto	l573
+	goto	l575
 	xorlw	5^4	; case 5
 	skipnz
-	goto	l4891
-	goto	l4925
+	goto	l577
+	goto	l580
 
-	line	707
-	
-l568:
-	line	709
-	
-l4925:
-;YellowFlash.C: 709: master_time_cont = 0x00;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(0)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_master_time_cont))&0ffh
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
-	line	710
-;YellowFlash.C: 710: sta = 0X03;
-	movlb	0	; () banked
-	movwf	(??_CANDATAAnalyzing+0+0)&0ffh
-	movlw	low(03h)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_sta))&0ffh
-	movlb	0	; () banked
-	movf	(??_CANDATAAnalyzing+0+0)&0ffh,w
-	goto	l578
-	line	711
-	
-l563:
 	line	713
 	
-l578:
+l580:
 	return
 	opt stack 0
 GLOBAL	__end_of_CANDATAAnalyzing
@@ -6122,25 +5511,25 @@ GLOBAL	__end_of_CANDATAAnalyzing
 
 ;; *************** function _CANSendConfirm *****************
 ;; Defined at:
-;;		line 403 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 403 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
-;;  i               1   24[COMRAM] unsigned char 
+;;  i               1    2[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
-;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
 ;; Tracked objects:
-;;		On entry : 0/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On entry : F/0
+;;		On exit  : F/F
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        2 bytes
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        1 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    5
 ;; This function calls:
@@ -6153,7 +5542,7 @@ psect	text13,class=CODE,space=0,reloc=2
 global __ptext13
 __ptext13:
 psect	text13
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	403
 	global	__size_of_CANSendConfirm
 	__size_of_CANSendConfirm	equ	__end_of_CANSendConfirm-_CANSendConfirm
@@ -6162,95 +5551,63 @@ _CANSendConfirm:
 	opt	stack 24
 	line	406
 	
-l3913:
+l2853:; BSR set to: 0
+
 ;YellowFlash.C: 404: unsigned char i;
 ;YellowFlash.C: 406: for(i=0;i<8;i++)
-	movwf	(??_CANSendConfirm+0+0)&0ffh,c
-	movlw	low(0)
-	movwf	((c:CANSendConfirm@i)),c
-	movf	(??_CANSendConfirm+0+0)&0ffh,c,w
-	
-l3915:
-	movlw	(08h-1)
-	cpfsgt	((c:CANSendConfirm@i)),c
-	goto	u2731
-	goto	u2730
-u2731:
-	goto	l3919
-u2730:
-	goto	l526
-	
-l3917:
-	goto	l526
-	line	407
-	
-l525:
+	clrf	((c:CANSendConfirm@i)),c
 	line	408
 	
-l3919:
+l2859:; BSR set to: 0
+
 ;YellowFlash.C: 407: {
 ;YellowFlash.C: 408: CANSdata[i] = CANRdata[i];
 	movf	((c:CANSendConfirm@i)),c,w
-	mullw	01h
-	movlb	0	; () banked
-	movlw	low(_CANRdata)
-	addwf	(prodl),c,w
-	movwf	c:fsr2l
-	clrf	1+c:fsr2l
-	movlb	0	; () banked
-	movlw	high(_CANRdata)
-	addwfc	1+c:fsr2l
+	addlw	low(_CANRdata)
+	movwf	fsr2l
+	clrf	fsr2h
 	movf	((c:CANSendConfirm@i)),c,w
-	mullw	01h
-	movlb	0	; () banked
-	movlw	low(_CANSdata)
-	addwf	(prodl),c,w
-	movwf	c:fsr1l
-	clrf	1+c:fsr1l
-	movlb	0	; () banked
-	movlw	high(_CANSdata)
-	addwfc	1+c:fsr1l
+	addlw	low(_CANSdata)
+	movwf	fsr1l
+	clrf	fsr1h
 	movff	indf2,indf1
 	line	406
 	
-l3921:
+l2861:; BSR set to: 0
+
 	incf	((c:CANSendConfirm@i)),c
 	
-l3923:
+l2863:; BSR set to: 0
+
 	movlw	(08h-1)
 	cpfsgt	((c:CANSendConfirm@i)),c
-	goto	u2741
-	goto	u2740
-u2741:
-	goto	l3919
-u2740:
+	goto	u1061
+	goto	u1060
+u1061:
+	goto	l2859
+u1060:
 	
-l526:
+l528:; BSR set to: 0
+
 	line	410
 ;YellowFlash.C: 409: }
 ;YellowFlash.C: 410: CANSdlc = CANRdlc;
 	movff	(c:_CANRdlc),(c:_CANSdlc)
 	line	411
 	
-l3925:
+l2865:; BSR set to: 0
+
 ;YellowFlash.C: 411: CANSend(CANSid,CANSdata,CANSdlc);
-	movlb	0	; () banked
-	movlw	high(_CANSid)
-	movwf	((c:?_CANSend+1)),c
-	movlb	0	; () banked
-	movlw	low(_CANSid)
-	movwf	((c:?_CANSend)),c
-	movlb	0	; () banked
-	movlw	high(_CANSdata)
-	movwf	(1+((c:?_CANSend)+02h)),c
-	movlb	0	; () banked
 	movlw	low(_CANSdata)
-	movwf	(0+((c:?_CANSend)+02h)),c
-	movff	(c:_CANSdlc),0+((c:?_CANSend)+04h)
-	call	_CANSend	;wreg free
+	movwf	((c:?_CANSend)),c
+	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
+	movlw	((c:_CANSid))&0ffh
+	
+	call	_CANSend
 	line	412
 	
-l527:
+l529:; BSR set to: 15
+
 	return
 	opt stack 0
 GLOBAL	__end_of_CANSendConfirm
@@ -6260,11 +5617,11 @@ GLOBAL	__end_of_CANSendConfirm
 
 ;; *************** function _CANWriteID *****************
 ;; Defined at:
-;;		line 434 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 434 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
-;;  fm              1   26[COMRAM] unsigned char 
+;;  fm              1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  fm              1    5[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -6274,11 +5631,11 @@ GLOBAL	__end_of_CANSendConfirm
 ;;		On exit  : 0/0
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        2 bytes
+;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        1 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    6
 ;; This function calls:
@@ -6292,77 +5649,65 @@ psect	text14,class=CODE,space=0,reloc=2
 global __ptext14
 __ptext14:
 psect	text14
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	434
 	global	__size_of_CANWriteID
 	__size_of_CANWriteID	equ	__end_of_CANWriteID-_CANWriteID
 	
-_CANWriteID:
+_CANWriteID:; BSR set to: 15
+
 	opt	stack 23
+;CANWriteID@fm stored from wreg
+	movff	wreg,(c:CANWriteID@fm)
 	line	435
 	
-l3943:
+l2881:
 ;YellowFlash.C: 435: eeprom_addr = 0x0000;
-	movlw	high(0)
-	movwf	((c:_eeprom_addr+1)),c
-	movlw	low(0)
-	movwf	((c:_eeprom_addr)),c
+	clrf	((c:_eeprom_addr)),c
+	clrf	((c:_eeprom_addr+1)),c
 	line	436
 	
-l3945:
+l2883:
 ;YellowFlash.C: 436: eeprom_num = 4;
-	movwf	(??_CANWriteID+0+0)&0ffh,c
 	movlw	low(04h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_CANWriteID+0+0)&0ffh,c,w
 	line	437
 	
-l3947:
+l2885:
 ;YellowFlash.C: 437: EEPROMWrite(&eeprom_addr,&eeprom_num,(CANRdata+1));
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMWrite)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMWrite)+02h)),c
+	movwf	((c:?_EEPROMWrite)),c
 	movlb	0	; () banked
 	movlw	high(_CANRdata+01h)
-	movwf	(1+((c:?_EEPROMWrite)+04h)),c
-	movlb	0	; () banked
+	movwf	(1+((c:?_EEPROMWrite)+01h)),c
 	movlw	low(_CANRdata+01h)
-	movwf	(0+((c:?_EEPROMWrite)+04h)),c
-	call	_EEPROMWrite	;wreg free
+	movwf	(0+((c:?_EEPROMWrite)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMWrite
 	line	438
 	
-l3949:
+l2887:
 ;YellowFlash.C: 438: if(fm==0x01)
 	decf	((c:CANWriteID@fm)),c,w
 
 	btfss	status,2
-	goto	u2761
-	goto	u2760
-u2761:
-	goto	l536
-u2760:
+	goto	u1081
+	goto	u1080
+u1081:
+	goto	l538
+u1080:
 	line	440
 	
-l3951:
+l2889:
 ;YellowFlash.C: 439: {
 ;YellowFlash.C: 440: CANSendID(0X01);
-	movwf	(??_CANWriteID+0+0)&0ffh,c
-	movlw	low(01h)
-	movwf	((c:?_CANSendID)),c
-	movf	(??_CANWriteID+0+0)&0ffh,c,w
-	call	_CANSendID	;wreg free
-	goto	l536
-	line	441
+	movlw	(01h)&0ffh
 	
-l535:
+	call	_CANSendID
 	line	442
 	
-l536:
+l538:
 	return
 	opt stack 0
 GLOBAL	__end_of_CANWriteID
@@ -6372,25 +5717,25 @@ GLOBAL	__end_of_CANWriteID
 
 ;; *************** function _CANSendID *****************
 ;; Defined at:
-;;		line 416 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 416 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
-;;  sm              1   24[COMRAM] unsigned char 
+;;  sm              1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  sm              1    4[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
 ;; Tracked objects:
 ;;		On entry : 0/0
-;;		On exit  : 0/0
+;;		On exit  : F/F
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        2 bytes
+;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        1 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    5
 ;; This function calls:
@@ -6405,115 +5750,86 @@ psect	text15,class=CODE,space=0,reloc=2
 global __ptext15
 __ptext15:
 psect	text15
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	416
 	global	__size_of_CANSendID
 	__size_of_CANSendID	equ	__end_of_CANSendID-_CANSendID
 	
 _CANSendID:
 	opt	stack 23
+;CANSendID@sm stored from wreg
 	line	418
+	movff	wreg,(c:CANSendID@sm)
 	
-l3927:
+l2867:
 ;YellowFlash.C: 418: CANSdlc = 4 + 1;
-	movwf	(??_CANSendID+0+0)&0ffh,c
 	movlw	low(05h)
 	movwf	((c:_CANSdlc)),c
-	movf	(??_CANSendID+0+0)&0ffh,c,w
 	line	420
 	
-l3929:
+l2869:
 ;YellowFlash.C: 420: if(sm == 0X00)
 	tstfsz	((c:CANSendID@sm)),c
-	goto	u2751
-	goto	u2750
-u2751:
-	goto	l3933
-u2750:
+	goto	u1071
+	goto	u1070
+u1071:
+	goto	l2873
+u1070:
 	line	421
 	
-l3931:
+l2871:
 ;YellowFlash.C: 421: CANSdata[0] = 0X00;
-	movwf	(??_CANSendID+0+0)&0ffh,c
-	movlw	low(0)
 	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_CANSdata))&0ffh
-	movf	(??_CANSendID+0+0)&0ffh,c,w
-	goto	l3935
-	line	422
-	
-l530:
+	clrf	((_CANSdata))&0ffh
+	goto	l2875
 	line	423
 	
-l3933:
+l2873:
 ;YellowFlash.C: 422: else
 ;YellowFlash.C: 423: CANSdata[0] = 0X01;
-	movwf	(??_CANSendID+0+0)&0ffh,c
 	movlw	low(01h)
 	movlb	0	; () banked
-	movlb	0	; () banked
 	movwf	((_CANSdata))&0ffh
-	movf	(??_CANSendID+0+0)&0ffh,c,w
-	goto	l3935
-	
-l531:
 	line	426
 	
-l3935:
+l2875:; BSR set to: 0
+
 ;YellowFlash.C: 426: eeprom_addr = 0x0000;
-	movlw	high(0)
-	movwf	((c:_eeprom_addr+1)),c
-	movlw	low(0)
-	movwf	((c:_eeprom_addr)),c
+	clrf	((c:_eeprom_addr)),c
+	clrf	((c:_eeprom_addr+1)),c
 	line	427
-	
-l3937:
 ;YellowFlash.C: 427: eeprom_num = 4;
-	movwf	(??_CANSendID+0+0)&0ffh,c
 	movlw	low(04h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_CANSendID+0+0)&0ffh,c,w
 	line	428
 	
-l3939:
+l2877:; BSR set to: 0
+
 ;YellowFlash.C: 428: EEPROMRead(&eeprom_addr,&eeprom_num,(CANSdata+1));
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMRead)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMRead)+02h)),c
-	movlb	0	; () banked
+	movwf	((c:?_EEPROMRead)),c
 	movlw	high(_CANSdata+01h)
-	movwf	(1+((c:?_EEPROMRead)+04h)),c
-	movlb	0	; () banked
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
 	movlw	low(_CANSdata+01h)
-	movwf	(0+((c:?_EEPROMRead)+04h)),c
-	call	_EEPROMRead	;wreg free
+	movwf	(0+((c:?_EEPROMRead)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMRead
 	line	429
 	
-l3941:
+l2879:
 ;YellowFlash.C: 429: CANSend(CANSid,CANSdata,CANSdlc);
 	movlb	0	; () banked
-	movlw	high(_CANSid)
-	movwf	((c:?_CANSend+1)),c
-	movlb	0	; () banked
-	movlw	low(_CANSid)
-	movwf	((c:?_CANSend)),c
-	movlb	0	; () banked
-	movlw	high(_CANSdata)
-	movwf	(1+((c:?_CANSend)+02h)),c
-	movlb	0	; () banked
 	movlw	low(_CANSdata)
-	movwf	(0+((c:?_CANSend)+02h)),c
-	movff	(c:_CANSdlc),0+((c:?_CANSend)+04h)
-	call	_CANSend	;wreg free
+	movwf	((c:?_CANSend)),c
+	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
+	movlw	((c:_CANSid))&0ffh
+	
+	call	_CANSend
 	line	430
 	
-l532:
+l534:; BSR set to: 15
+
 	return
 	opt stack 0
 GLOBAL	__end_of_CANSendID
@@ -6523,29 +5839,30 @@ GLOBAL	__end_of_CANSendID
 
 ;; *************** function _CANSend *****************
 ;; Defined at:
-;;		line 163 in file "E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+;;		line 163 in file "G:\working\YellowFlashingController\CAN.H"
 ;; Parameters:    Size  Location     Type
-;;  id              2   18[COMRAM] PTR unsigned char 
+;;  id              1    wreg     PTR unsigned char 
 ;;		 -> CANSid(4), 
-;;  dat             2   20[COMRAM] PTR unsigned char 
+;;  dat             1    0[COMRAM] PTR unsigned char 
 ;;		 -> CANSdata(8), 
-;;  dlc             1   22[COMRAM] unsigned char 
+;;  dlc             1    1[COMRAM] unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  id              1    0[COMRAM] PTR unsigned char 
+;;		 -> CANSid(4), 
 ;; Return value:  Size  Location     Type
 ;;                  1    wreg      unsigned char 
 ;; Registers used:
 ;;		wreg, fsr2l, fsr2h, status,2, status,0
 ;; Tracked objects:
 ;;		On entry : F/0
-;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		On exit  : F/F
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         5       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         5       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        5 bytes
+;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        2 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    4
 ;; This function calls:
@@ -6554,484 +5871,445 @@ GLOBAL	__end_of_CANSendID
 ;;		_CANSendConfirm
 ;;		_CANSendID
 ;;		_CANDATAAnalyzing
-;;		_CANSendTest
 ;; This function uses a non-reentrant model
 ;;
 psect	text16,class=CODE,space=0,reloc=2
 global __ptext16
 __ptext16:
 psect	text16
-	file	"E:\WorkSpace\YellowFlashingController20140317\CAN.H"
+	file	"G:\working\YellowFlashingController\CAN.H"
 	line	163
 	global	__size_of_CANSend
 	__size_of_CANSend	equ	__end_of_CANSend-_CANSend
 	
-_CANSend:
+_CANSend:; BSR set to: 15
+
 	opt	stack 25
 	line	165
 	
-l3599:; BSR set to: 0
+l2575:; BSR set to: 0
 
 ;CAN.H: 165: if(!(TXB0CON & 0x80))
 	movlb	15	; () banked
 	
-	movlb	15	; () banked
 	btfsc	((3872))&0ffh,(7)&7	;volatile
-	goto	u2501
-	goto	u2500
-u2501:
-	goto	l345
-u2500:
+	goto	u851
+	goto	u850
+u851:
+	goto	l347
+u850:
 	line	176
 	
-l3601:
+l2577:; BSR set to: 15
+
 ;CAN.H: 166: {
 ;CAN.H: 176: TXB0DLC = dlc;
 	movff	(c:CANSend@dlc),(3877)	;volatile
 	line	179
 	
-l3603:
+l2579:; BSR set to: 15
+
 ;CAN.H: 179: TXB0D0 = dat[0];
-	movff	(c:CANSend@dat),fsr2l
-	movff	(c:CANSend@dat+1),fsr2h
+	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3878))&0ffh	;volatile
 	line	180
 	
-l3605:
+l2581:; BSR set to: 15
+
 ;CAN.H: 180: TXB0D1 = dat[1];
-	lfsr	2,01h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3879))&0ffh	;volatile
 	line	181
 	
-l3607:
+l2583:; BSR set to: 15
+
 ;CAN.H: 181: TXB0D2 = dat[2];
-	lfsr	2,02h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3880))&0ffh	;volatile
 	line	182
 	
-l3609:
+l2585:; BSR set to: 15
+
 ;CAN.H: 182: TXB0D3 = dat[3];
-	lfsr	2,03h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3881))&0ffh	;volatile
 	line	183
 	
-l3611:
+l2587:; BSR set to: 15
+
 ;CAN.H: 183: TXB0D4 = dat[4];
-	lfsr	2,04h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(04h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3882))&0ffh	;volatile
 	line	184
 	
-l3613:
+l2589:; BSR set to: 15
+
 ;CAN.H: 184: TXB0D5 = dat[5];
-	lfsr	2,05h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(05h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3883))&0ffh	;volatile
 	line	185
 	
-l3615:
+l2591:; BSR set to: 15
+
 ;CAN.H: 185: TXB0D6 = dat[6];
-	lfsr	2,06h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(06h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3884))&0ffh	;volatile
 	line	186
 	
-l3617:
+l2593:; BSR set to: 15
+
 ;CAN.H: 186: TXB0D7 = dat[7];
-	lfsr	2,07h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(07h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3885))&0ffh	;volatile
 	line	189
 	
-l3619:
+l2595:; BSR set to: 15
+
 ;CAN.H: 189: TXB0CON |= 0x08;
-	movlb	15	; () banked
-	movlb	15	; () banked
 	bsf	(0+(3/8)+(3872))&0ffh,(3)&7	;volatile
 	line	190
 ;CAN.H: 190: while(TXB0CON&0x08);
-	goto	l346
 	
-l347:
+l348:; BSR set to: 15
+
 	
-l346:
-	movlb	15	; () banked
-	
-	movlb	15	; () banked
 	btfsc	((3872))&0ffh,(3)&7	;volatile
-	goto	u2511
-	goto	u2510
-u2511:
-	goto	l346
-u2510:
-	goto	l349
-	
-l348:
-	line	191
-;CAN.H: 191: return 0;
-;	Return value of _CANSend is never used
-	goto	l349
+	goto	u861
+	goto	u860
+u861:
+	goto	l348
+u860:
+	goto	l351
 	line	192
 	
-l345:
+l347:; BSR set to: 15
+
 	line	194
 ;CAN.H: 192: }
 ;CAN.H: 194: if(!(TXB1CON & 0x80))
-	movlb	15	; () banked
 	
-	movlb	15	; () banked
 	btfsc	((3856))&0ffh,(7)&7	;volatile
-	goto	u2521
-	goto	u2520
-u2521:
-	goto	l350
-u2520:
+	goto	u871
+	goto	u870
+u871:
+	goto	l352
+u870:
 	line	205
 	
-l3621:
+l2597:; BSR set to: 15
+
 ;CAN.H: 195: {
 ;CAN.H: 205: TXB1DLC = dlc;
 	movff	(c:CANSend@dlc),(3861)	;volatile
 	line	208
 	
-l3623:
+l2599:; BSR set to: 15
+
 ;CAN.H: 208: TXB1D0 = dat[0];
-	movff	(c:CANSend@dat),fsr2l
-	movff	(c:CANSend@dat+1),fsr2h
+	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3862))&0ffh	;volatile
 	line	209
 	
-l3625:
+l2601:; BSR set to: 15
+
 ;CAN.H: 209: TXB1D1 = dat[1];
-	lfsr	2,01h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3863))&0ffh	;volatile
 	line	210
 	
-l3627:
+l2603:; BSR set to: 15
+
 ;CAN.H: 210: TXB1D2 = dat[2];
-	lfsr	2,02h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3864))&0ffh	;volatile
 	line	211
 	
-l3629:
+l2605:; BSR set to: 15
+
 ;CAN.H: 211: TXB1D3 = dat[3];
-	lfsr	2,03h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3865))&0ffh	;volatile
 	line	212
 	
-l3631:
+l2607:; BSR set to: 15
+
 ;CAN.H: 212: TXB1D4 = dat[4];
-	lfsr	2,04h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(04h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3866))&0ffh	;volatile
 	line	213
 	
-l3633:
+l2609:; BSR set to: 15
+
 ;CAN.H: 213: TXB1D5 = dat[5];
-	lfsr	2,05h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(05h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3867))&0ffh	;volatile
 	line	214
 	
-l3635:
+l2611:; BSR set to: 15
+
 ;CAN.H: 214: TXB1D6 = dat[6];
-	lfsr	2,06h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(06h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3868))&0ffh	;volatile
 	line	215
 	
-l3637:
+l2613:; BSR set to: 15
+
 ;CAN.H: 215: TXB1D7 = dat[7];
-	lfsr	2,07h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(07h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3869))&0ffh	;volatile
 	line	218
 	
-l3639:
+l2615:; BSR set to: 15
+
 ;CAN.H: 218: TXB0CON |= 0x08;
-	movlb	15	; () banked
-	movlb	15	; () banked
 	bsf	(0+(3/8)+(3872))&0ffh,(3)&7	;volatile
 	line	219
 ;CAN.H: 219: while(TXB0CON&0x08);
-	goto	l351
 	
-l352:
+l353:; BSR set to: 15
+
 	
-l351:
-	movlb	15	; () banked
-	
-	movlb	15	; () banked
 	btfsc	((3872))&0ffh,(3)&7	;volatile
-	goto	u2531
-	goto	u2530
-u2531:
+	goto	u881
+	goto	u880
+u881:
+	goto	l353
+u880:
 	goto	l351
-u2530:
-	goto	l349
-	
-l353:
-	line	220
-;CAN.H: 220: return 1;
-;	Return value of _CANSend is never used
-	goto	l349
 	line	221
 	
-l350:
+l352:; BSR set to: 15
+
 	line	223
 ;CAN.H: 221: }
 ;CAN.H: 223: if(!(TXB2CON & 0x80))
-	movlb	15	; () banked
 	
-	movlb	15	; () banked
 	btfsc	((3840))&0ffh,(7)&7	;volatile
-	goto	u2541
-	goto	u2540
-u2541:
-	goto	l349
-u2540:
+	goto	u891
+	goto	u890
+u891:
+	goto	l351
+u890:
 	line	234
 	
-l3641:
+l2617:; BSR set to: 15
+
 ;CAN.H: 224: {
 ;CAN.H: 234: TXB2DLC = dlc;
 	movff	(c:CANSend@dlc),(3845)	;volatile
 	line	237
 	
-l3643:
+l2619:; BSR set to: 15
+
 ;CAN.H: 237: TXB2D0 = dat[0];
-	movff	(c:CANSend@dat),fsr2l
-	movff	(c:CANSend@dat+1),fsr2h
+	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3846))&0ffh	;volatile
 	line	238
 	
-l3645:
+l2621:; BSR set to: 15
+
 ;CAN.H: 238: TXB2D1 = dat[1];
-	lfsr	2,01h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(01h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3847))&0ffh	;volatile
 	line	239
 	
-l3647:
+l2623:; BSR set to: 15
+
 ;CAN.H: 239: TXB2D2 = dat[2];
-	lfsr	2,02h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(02h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3848))&0ffh	;volatile
 	line	240
 	
-l3649:
+l2625:; BSR set to: 15
+
 ;CAN.H: 240: TXB2D3 = dat[3];
-	lfsr	2,03h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(03h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3849))&0ffh	;volatile
 	line	241
 	
-l3651:
+l2627:; BSR set to: 15
+
 ;CAN.H: 241: TXB2D4 = dat[4];
-	lfsr	2,04h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(04h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3850))&0ffh	;volatile
 	line	242
 	
-l3653:
+l2629:; BSR set to: 15
+
 ;CAN.H: 242: TXB2D5 = dat[5];
-	lfsr	2,05h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(05h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3851))&0ffh	;volatile
 	line	243
 	
-l3655:
+l2631:; BSR set to: 15
+
 ;CAN.H: 243: TXB2D6 = dat[6];
-	lfsr	2,06h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(06h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3852))&0ffh	;volatile
 	line	244
 	
-l3657:
+l2633:; BSR set to: 15
+
 ;CAN.H: 244: TXB2D7 = dat[7];
-	lfsr	2,07h
 	movf	((c:CANSend@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	low(07h)
 	addwf	fsr2l
-	movf	((c:CANSend@dat+1)),c,w
-	addwfc	fsr2h
+	clrf	fsr2h
 	movf	indf2,w
-	movlb	15	; () banked
-	movlb	15	; () banked
 	movwf	((3853))&0ffh	;volatile
 	line	247
 	
-l3659:
+l2635:; BSR set to: 15
+
 ;CAN.H: 247: TXB2CON |= 0x08;
-	movlb	15	; () banked
-	movlb	15	; () banked
 	bsf	(0+(3/8)+(3840))&0ffh,(3)&7	;volatile
 	line	248
 ;CAN.H: 248: while(TXB2CON&0x08);
-	goto	l355
 	
-l356:
+l357:; BSR set to: 15
+
 	
-l355:
-	movlb	15	; () banked
-	
-	movlb	15	; () banked
 	btfsc	((3840))&0ffh,(3)&7	;volatile
-	goto	u2551
-	goto	u2550
-u2551:
-	goto	l355
-u2550:
-	goto	l349
-	
-l357:
-	line	249
-;CAN.H: 249: return 2;
-;	Return value of _CANSend is never used
-	goto	l349
-	line	250
-	
-l354:
+	goto	u901
+	goto	u900
+u901:
+	goto	l357
+u900:
 	line	252
-;CAN.H: 250: }
-;CAN.H: 251: return 0x03;
-;	Return value of _CANSend is never used
 	
-l349:
+l351:; BSR set to: 15
+
 	return
 	opt stack 0
 GLOBAL	__end_of_CANSend
@@ -7041,7 +6319,7 @@ GLOBAL	__end_of_CANSend
 
 ;; *************** function _YFlashNewConfigure *****************
 ;; Defined at:
-;;		line 500 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 500 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -7057,9 +6335,9 @@ GLOBAL	__end_of_CANSend
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        1 bytes
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        0 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    7
 ;; This function calls:
@@ -7074,92 +6352,86 @@ psect	text17,class=CODE,space=0,reloc=2
 global __ptext17
 __ptext17:
 psect	text17
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	500
 	global	__size_of_YFlashNewConfigure
 	__size_of_YFlashNewConfigure	equ	__end_of_YFlashNewConfigure-_YFlashNewConfigure
 	
-_YFlashNewConfigure:
+_YFlashNewConfigure:; BSR set to: 15
+
 	opt	stack 22
 	line	501
 	
-l4713:
+l2917:
 ;YellowFlash.C: 501: eeprom_addr = 0x0009;
 	movlw	high(09h)
 	movwf	((c:_eeprom_addr+1)),c
 	movlw	low(09h)
 	movwf	((c:_eeprom_addr)),c
 	line	502
-	
-l4715:
 ;YellowFlash.C: 502: eeprom_num = 2;
-	movwf	(??_YFlashNewConfigure+0+0)&0ffh,c
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_YFlashNewConfigure+0+0)&0ffh,c,w
 	line	503
 	
-l4717:
+l2919:
 ;YellowFlash.C: 503: EEPROMRead(&eeprom_addr,&eeprom_num,&yflash_CFG);
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMRead)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMRead)+02h)),c
-	movlw	high((c:_yflash_CFG))
-	movwf	(1+((c:?_EEPROMRead)+04h)),c
+	movwf	((c:?_EEPROMRead)),c
 	movlw	low((c:_yflash_CFG))
-	movwf	(0+((c:?_EEPROMRead)+04h)),c
-	call	_EEPROMRead	;wreg free
+	movwf	(0+((c:?_EEPROMRead)+01h)),c
+	movlw	high((c:_yflash_CFG))
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	0fh
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	__accesstop-1
+	cpfsgt	(0+((c:?_EEPROMRead)+01h)),c
+	clrf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMRead
 	line	506
 	
-l4719:
+l2921:
 ;YellowFlash.C: 506: if(((yflash_CFG[0]& 0xFF) != (CANRdata[1] & 0xFF)) || ((CANRdata[2] & 0x03)!= 0x00))
 	movf	((c:_yflash_CFG)),c,w
 	movlb	0	; () banked
 	lfsr	2,_CANRdata+01h
 	cpfseq	indf2
-	goto	u3701
-	goto	u3700
-u3701:
-	goto	l4723
-u3700:
+	goto	u1091
+	goto	u1090
+u1091:
+	goto	l2925
+u1090:
 	
-l4721:
-	movlb	0	; () banked
-	movlb	0	; () banked
+l2923:; BSR set to: 0
+
 	movf	(0+(_CANRdata+02h))&0ffh,w
 	andlw	low(03h)
 	btfsc	status,2
-	goto	u3711
-	goto	u3710
-u3711:
-	goto	l550
-u3710:
-	goto	l4723
-	
-l547:
+	goto	u1101
+	goto	u1100
+u1101:
+	goto	l552
+u1100:
 	line	508
 	
-l4723:
+l2925:; BSR set to: 0
+
 ;YellowFlash.C: 507: {
 ;YellowFlash.C: 508: if((yflash_CFG[0]& 0xFF) != (CANRdata[1] & 0xFF))
-	movlb	0	; () banked
-	movlb	0	; () banked
 	movf	(0+(_CANRdata+01h))&0ffh,w
 	xorwf	((c:_yflash_CFG)),c,w
 	btfsc	status,2
-	goto	u3721
-	goto	u3720
-u3721:
-	goto	l4731
-u3720:
+	goto	u1111
+	goto	u1110
+u1111:
+	goto	l2931
+u1110:
 	line	510
 	
-l4725:
+l2927:; BSR set to: 0
+
 ;YellowFlash.C: 509: {
 ;YellowFlash.C: 510: eeprom_addr = 0x0009;
 	movlw	high(09h)
@@ -7167,54 +6439,41 @@ l4725:
 	movlw	low(09h)
 	movwf	((c:_eeprom_addr)),c
 	line	511
-	
-l4727:
 ;YellowFlash.C: 511: eeprom_num = 1;
-	movwf	(??_YFlashNewConfigure+0+0)&0ffh,c
 	movlw	low(01h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_YFlashNewConfigure+0+0)&0ffh,c,w
 	line	512
 	
-l4729:
+l2929:; BSR set to: 0
+
 ;YellowFlash.C: 512: EEPROMWrite(&eeprom_addr,&eeprom_num,(CANRdata+1));
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMWrite)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMWrite)+02h)),c
-	movlb	0	; () banked
+	movwf	((c:?_EEPROMWrite)),c
 	movlw	high(_CANRdata+01h)
-	movwf	(1+((c:?_EEPROMWrite)+04h)),c
-	movlb	0	; () banked
+	movwf	(1+((c:?_EEPROMWrite)+01h)),c
 	movlw	low(_CANRdata+01h)
-	movwf	(0+((c:?_EEPROMWrite)+04h)),c
-	call	_EEPROMWrite	;wreg free
-	goto	l4731
-	line	513
+	movwf	(0+((c:?_EEPROMWrite)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
 	
-l548:
+	call	_EEPROMWrite
 	line	514
 	
-l4731:
+l2931:
 ;YellowFlash.C: 513: }
 ;YellowFlash.C: 514: if((CANRdata[2] & 0x03)!= 0x00)
-	movlb	0	; () banked
 	movlb	0	; () banked
 	movf	(0+(_CANRdata+02h))&0ffh,w
 	andlw	low(03h)
 	btfsc	status,2
-	goto	u3731
-	goto	u3730
-u3731:
-	goto	l4739
-u3730:
+	goto	u1121
+	goto	u1120
+u1121:
+	goto	l2937
+u1120:
 	line	516
 	
-l4733:
+l2933:; BSR set to: 0
+
 ;YellowFlash.C: 515: {
 ;YellowFlash.C: 516: eeprom_addr = 0x000a;
 	movlw	high(0Ah)
@@ -7222,39 +6481,26 @@ l4733:
 	movlw	low(0Ah)
 	movwf	((c:_eeprom_addr)),c
 	line	517
-	
-l4735:
 ;YellowFlash.C: 517: eeprom_num = 1;
-	movwf	(??_YFlashNewConfigure+0+0)&0ffh,c
 	movlw	low(01h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_YFlashNewConfigure+0+0)&0ffh,c,w
 	line	518
 	
-l4737:
+l2935:; BSR set to: 0
+
 ;YellowFlash.C: 518: EEPROMWrite(&eeprom_addr,&eeprom_num,(CANRdata+2));
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMWrite)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMWrite)+02h)),c
-	movlb	0	; () banked
+	movwf	((c:?_EEPROMWrite)),c
 	movlw	high(_CANRdata+02h)
-	movwf	(1+((c:?_EEPROMWrite)+04h)),c
-	movlb	0	; () banked
+	movwf	(1+((c:?_EEPROMWrite)+01h)),c
 	movlw	low(_CANRdata+02h)
-	movwf	(0+((c:?_EEPROMWrite)+04h)),c
-	call	_EEPROMWrite	;wreg free
-	goto	l4739
-	line	519
+	movwf	(0+((c:?_EEPROMWrite)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
 	
-l549:
+	call	_EEPROMWrite
 	line	521
 	
-l4739:
+l2937:
 ;YellowFlash.C: 519: }
 ;YellowFlash.C: 521: eeprom_addr = 0x0009;
 	movlw	high(09h)
@@ -7263,73 +6509,71 @@ l4739:
 	movwf	((c:_eeprom_addr)),c
 	line	522
 	
-l4741:
+l2939:
 ;YellowFlash.C: 522: eeprom_num = 2;
-	movwf	(??_YFlashNewConfigure+0+0)&0ffh,c
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_YFlashNewConfigure+0+0)&0ffh,c,w
 	line	523
+	
+l2941:
 ;YellowFlash.C: 523: EEPROMRead(&eeprom_addr,&eeprom_num,&yflash_CFG);
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMRead)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMRead)+02h)),c
-	movlw	high((c:_yflash_CFG))
-	movwf	(1+((c:?_EEPROMRead)+04h)),c
+	movwf	((c:?_EEPROMRead)),c
 	movlw	low((c:_yflash_CFG))
-	movwf	(0+((c:?_EEPROMRead)+04h)),c
-	call	_EEPROMRead	;wreg free
+	movwf	(0+((c:?_EEPROMRead)+01h)),c
+	movlw	high((c:_yflash_CFG))
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	0fh
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	__accesstop-1
+	cpfsgt	(0+((c:?_EEPROMRead)+01h)),c
+	clrf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMRead
 	line	525
 	
-l4743:
+l2943:
 ;YellowFlash.C: 525: rows=((yflash_CFG[0]&0xF0)>>4);
 	swapf	((c:_yflash_CFG)),c,w
 	andlw	(0ffh shr 4) & 0ffh
 	andlw	low(0Fh)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_rows))&0ffh
+	movwf	((c:_rows)),c
 	line	526
 	
-l4745:
+l2945:
 ;YellowFlash.C: 526: lines=(yflash_CFG[0]&0x0F);
 	movf	((c:_yflash_CFG)),c,w
 	andlw	low(0Fh)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_lines))&0ffh
+	movwf	((c:_lines)),c
 	line	527
 	
-l4747:
+l2947:
 ;YellowFlash.C: 527: CalculateTime25msCounter(rows,lines);
-	movff	(_rows),(?_CalculateTime25msCounter)
-	movff	(_lines),0+(?_CalculateTime25msCounter+01h)
-	call	_CalculateTime25msCounter	;wreg free
+	movff	(c:_lines),(c:?_CalculateTime25msCounter)
+	movf	((c:_rows)),c,w
+	
+	call	_CalculateTime25msCounter
 	line	529
 	
-l4749:
+l2949:
 ;YellowFlash.C: 529: time_counters=time_on_counter;
-	movff	(_time_on_counter),(c:_time_counters)
-	movff	(_time_on_counter+1),(c:_time_counters+1)
+	movff	(c:_time_on_counter),(c:_time_counters)
+	movff	(c:_time_on_counter+1),(c:_time_counters+1)
 	line	530
 	
-l4751:
+l2951:
 ;YellowFlash.C: 530: readwrite[0]=time_counters;
 	movff	(c:_time_counters),(c:_readwrite)
 	line	531
 	
-l4753:
+l2953:
 ;YellowFlash.C: 531: readwrite[1]=(time_counters>>8);
 	movf	((c:_time_counters+1)),c,w
 	movwf	(0+((c:_readwrite)+01h)),c
 	line	532
 	
-l4755:
+l2955:
 ;YellowFlash.C: 532: eeprom_addr = 0x0005;
 	movlw	high(05h)
 	movwf	((c:_eeprom_addr+1)),c
@@ -7337,49 +6581,48 @@ l4755:
 	movwf	((c:_eeprom_addr)),c
 	line	533
 	
-l4757:
+l2957:
 ;YellowFlash.C: 533: eeprom_num = 2;
-	movwf	(??_YFlashNewConfigure+0+0)&0ffh,c
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_YFlashNewConfigure+0+0)&0ffh,c,w
 	line	534
 	
-l4759:
+l2959:
 ;YellowFlash.C: 534: EEPROMWrite(&eeprom_addr,&eeprom_num,&readwrite);
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMWrite)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMWrite)+02h)),c
-	movlw	high((c:_readwrite))
-	movwf	(1+((c:?_EEPROMWrite)+04h)),c
+	movwf	((c:?_EEPROMWrite)),c
 	movlw	low((c:_readwrite))
-	movwf	(0+((c:?_EEPROMWrite)+04h)),c
-	call	_EEPROMWrite	;wreg free
+	movwf	(0+((c:?_EEPROMWrite)+01h)),c
+	movlw	high((c:_readwrite))
+	movwf	(1+((c:?_EEPROMWrite)+01h)),c
+	movlw	0fh
+	movwf	(1+((c:?_EEPROMWrite)+01h)),c
+	movlw	__accesstop-1
+	cpfsgt	(0+((c:?_EEPROMWrite)+01h)),c
+	clrf	(1+((c:?_EEPROMWrite)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMWrite
 	line	536
 	
-l4761:
+l2961:
 ;YellowFlash.C: 536: time_counters=time_off_counter;
-	movff	(_time_off_counter),(c:_time_counters)
-	movff	(_time_off_counter+1),(c:_time_counters+1)
+	movff	(c:_time_off_counter),(c:_time_counters)
+	movff	(c:_time_off_counter+1),(c:_time_counters+1)
 	line	537
 	
-l4763:
+l2963:
 ;YellowFlash.C: 537: readwrite[0]=time_counters;
 	movff	(c:_time_counters),(c:_readwrite)
 	line	538
 	
-l4765:
+l2965:
 ;YellowFlash.C: 538: readwrite[1]=(time_counters>>8);
 	movf	((c:_time_counters+1)),c,w
 	movwf	(0+((c:_readwrite)+01h)),c
 	line	539
 	
-l4767:
+l2967:
 ;YellowFlash.C: 539: eeprom_addr = 0x0007;
 	movlw	high(07h)
 	movwf	((c:_eeprom_addr+1)),c
@@ -7387,36 +6630,31 @@ l4767:
 	movwf	((c:_eeprom_addr)),c
 	line	540
 	
-l4769:
+l2969:
 ;YellowFlash.C: 540: eeprom_num = 2;
-	movwf	(??_YFlashNewConfigure+0+0)&0ffh,c
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_YFlashNewConfigure+0+0)&0ffh,c,w
 	line	541
 	
-l4771:
+l2971:
 ;YellowFlash.C: 541: EEPROMWrite(&eeprom_addr,&eeprom_num,&readwrite);
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMWrite)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMWrite)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMWrite)+02h)),c
-	movlw	high((c:_readwrite))
-	movwf	(1+((c:?_EEPROMWrite)+04h)),c
+	movwf	((c:?_EEPROMWrite)),c
 	movlw	low((c:_readwrite))
-	movwf	(0+((c:?_EEPROMWrite)+04h)),c
-	call	_EEPROMWrite	;wreg free
-	goto	l550
-	line	547
+	movwf	(0+((c:?_EEPROMWrite)+01h)),c
+	movlw	high((c:_readwrite))
+	movwf	(1+((c:?_EEPROMWrite)+01h)),c
+	movlw	0fh
+	movwf	(1+((c:?_EEPROMWrite)+01h)),c
+	movlw	__accesstop-1
+	cpfsgt	(0+((c:?_EEPROMWrite)+01h)),c
+	clrf	(1+((c:?_EEPROMWrite)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
 	
-l545:
+	call	_EEPROMWrite
 	line	548
 	
-l550:
+l552:
 	return
 	opt stack 0
 GLOBAL	__end_of_YFlashNewConfigure
@@ -7426,16 +6664,17 @@ GLOBAL	__end_of_YFlashNewConfigure
 
 ;; *************** function _EEPROMWrite *****************
 ;; Defined at:
-;;		line 57 in file "E:\WorkSpace\YellowFlashingController20140317\mcu.h"
+;;		line 58 in file "G:\working\YellowFlashingController\mcu.h"
 ;; Parameters:    Size  Location     Type
-;;  addr            2   18[COMRAM] PTR unsigned char 
+;;  addr            1    wreg     PTR unsigned char 
 ;;		 -> eeprom_addr(2), 
-;;  num             2   20[COMRAM] PTR unsigned char 
+;;  num             1    0[COMRAM] PTR unsigned char 
 ;;		 -> eeprom_num(1), 
-;;  dat             2   22[COMRAM] PTR unsigned char 
+;;  dat             2    1[COMRAM] PTR unsigned char 
 ;;		 -> readwrite(2), CANRdata(8), 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  addr            1    3[COMRAM] PTR unsigned char 
+;;		 -> eeprom_addr(2), 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -7445,11 +6684,11 @@ GLOBAL	__end_of_YFlashNewConfigure
 ;;		On exit  : 0/0
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Params:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        6 bytes
+;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        4 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    4
 ;; This function calls:
@@ -7463,152 +6702,144 @@ psect	text18,class=CODE,space=0,reloc=2
 global __ptext18
 __ptext18:
 psect	text18
-	file	"E:\WorkSpace\YellowFlashingController20140317\mcu.h"
-	line	57
+	file	"G:\working\YellowFlashingController\mcu.h"
+	line	58
 	global	__size_of_EEPROMWrite
 	__size_of_EEPROMWrite	equ	__end_of_EEPROMWrite-_EEPROMWrite
 	
 _EEPROMWrite:
 	opt	stack 24
-	line	58
+;EEPROMWrite@addr stored from wreg
+	movff	wreg,(c:EEPROMWrite@addr)
+	line	59
 	
-l3795:
-;mcu.h: 58: INTCON &= 0x3f;
+l2749:
+;mcu.h: 59: INTCON &= 0x3f;
 	movlw	(03Fh)&0ffh
 	andwf	((c:4082)),c	;volatile
-	line	59
-;mcu.h: 59: while((*num)--)
-	goto	l3821
+	line	60
+;mcu.h: 60: while((*num)--)
+	goto	l2773
 	
-l375:
-	line	61
-	
-l3797:
-;mcu.h: 60: {
-;mcu.h: 61: EEADRH = (*addr)>>8;
-	movlw	low(0)
-	movwf	((c:3957)),c	;volatile
+l377:
 	line	62
-	
-l3799:
-;mcu.h: 62: EEADR = (*addr);
-	movff	(c:EEPROMWrite@addr),fsr2l
-	movff	(c:EEPROMWrite@addr+1),fsr2h
-	movf	indf2,w
-	movwf	((c:3956)),c	;volatile
+;mcu.h: 61: {
+;mcu.h: 62: EEADRH = (*addr)>>8;
+	clrf	((c:3957)),c	;volatile
 	line	63
 	
-l3801:
-;mcu.h: 63: (*addr)++;
-	movff	(c:EEPROMWrite@addr),fsr2l
-	movff	(c:EEPROMWrite@addr+1),fsr2h
-	incf	indf2
-
+l2751:
+;mcu.h: 63: EEADR = (*addr);
+	movf	((c:EEPROMWrite@addr)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movf	indf2,w
+	movwf	((c:3956)),c	;volatile
 	line	64
 	
-l3803:
-;mcu.h: 64: EEDATA = (*dat);
+l2753:
+;mcu.h: 64: (*addr)++;
+	movf	((c:EEPROMWrite@addr)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	incf	indf2
+
+	line	65
+	
+l2755:
+;mcu.h: 65: EEDATA = (*dat);
 	movff	(c:EEPROMWrite@dat),fsr2l
 	movff	(c:EEPROMWrite@dat+1),fsr2h
 	movf	indf2,w
 	movwf	((c:3955)),c	;volatile
-	line	65
+	line	66
 	
-l3805:
-;mcu.h: 65: dat++;
+l2757:
+;mcu.h: 66: dat++;
 	infsnz	((c:EEPROMWrite@dat)),c
 	incf	((c:EEPROMWrite@dat+1)),c
-	line	67
+	line	68
 	
-l3807:
-;mcu.h: 67: EECON1 &= 0x3f;
+l2759:
+;mcu.h: 68: EECON1 &= 0x3f;
 	movlw	(03Fh)&0ffh
 	andwf	((c:3967)),c	;volatile
-	line	69
+	line	70
 	
-l3809:
-;mcu.h: 69: EECON1 |= 0x04;
+l2761:
+;mcu.h: 70: EECON1 |= 0x04;
 	bsf	(0+(2/8)+(c:3967)),c,(2)&7	;volatile
-	line	74
-	
-l3811:
-;mcu.h: 74: EECON2 = 0x55;
-	movlw	low(055h)
-	movwf	((c:3966)),c	;volatile
 	line	75
 	
-l3813:
-;mcu.h: 75: EECON2 = 0xaa;
+l2763:
+;mcu.h: 75: EECON2 = 0x55;
+	movlw	low(055h)
+	movwf	((c:3966)),c	;volatile
+	line	76
+	
+l2765:
+;mcu.h: 76: EECON2 = 0xaa;
 	movlw	low(0AAh)
 	movwf	((c:3966)),c	;volatile
-	line	77
+	line	78
 	
-l3815:
-;mcu.h: 77: EECON1 |= 0x02;
+l2767:
+;mcu.h: 78: EECON1 |= 0x02;
 	bsf	(0+(1/8)+(c:3967)),c,(1)&7	;volatile
-	line	79
+	line	80
 	
-l3817:
-# 79 "E:\WorkSpace\YellowFlashingController20140317\mcu.h"
+l2769:
+# 80 "G:\working\YellowFlashingController\mcu.h"
 NOP ;# 
 psect	text18
-	line	80
-;mcu.h: 80: while(EECON1 & 0x02);
-	goto	l376
-	
-l377:
-	
-l376:
-	
-	btfsc	((c:3967)),c,(1)&7	;volatile
-	goto	u2631
-	goto	u2630
-u2631:
-	goto	l376
-u2630:
+	line	81
+;mcu.h: 81: while(EECON1 & 0x02);
 	
 l378:
-	line	81
-# 81 "E:\WorkSpace\YellowFlashingController20140317\mcu.h"
-NOP ;# 
-psect	text18
-	line	82
 	
-l3819:
-;mcu.h: 82: EECON1 &= 0x04;
-	movlw	(04h)&0ffh
-	andwf	((c:3967)),c	;volatile
-	goto	l3821
-	line	84
-	
-l374:
-	line	59
-	
-l3821:
-	movlw	(0FFh)&0ffh
-	movff	(c:EEPROMWrite@num),fsr2l
-	movff	(c:EEPROMWrite@num+1),fsr2h
-	decf	indf2
-
-	cpfseq	indf2
-	goto	u2641
-	goto	u2640
-u2641:
-	goto	l3797
-u2640:
-	goto	l3823
-	
-l379:
-	line	86
-	
-l3823:
-;mcu.h: 84: }
-;mcu.h: 86: INTCON &= 0xc0;
-	movlw	(0C0h)&0ffh
-	andwf	((c:4082)),c	;volatile
-	line	87
+	btfsc	((c:3967)),c,(1)&7	;volatile
+	goto	u981
+	goto	u980
+u981:
+	goto	l378
+u980:
 	
 l380:
+	line	82
+# 82 "G:\working\YellowFlashingController\mcu.h"
+NOP ;# 
+psect	text18
+	line	83
+	
+l2771:
+;mcu.h: 83: EECON1 &= 0x04;
+	movlw	(04h)&0ffh
+	andwf	((c:3967)),c	;volatile
+	line	60
+	
+l2773:
+	movf	((c:EEPROMWrite@num)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	decf	indf2
+
+	movlw	(0FFh)&0ffh
+	cpfseq	indf2
+	goto	u991
+	goto	u990
+u991:
+	goto	l377
+u990:
+	line	87
+	
+l2775:
+;mcu.h: 85: }
+;mcu.h: 87: INTCON &= 0xc0;
+	movlw	(0C0h)&0ffh
+	andwf	((c:4082)),c	;volatile
+	line	88
+	
+l382:
 	return
 	opt stack 0
 GLOBAL	__end_of_EEPROMWrite
@@ -7618,13 +6849,14 @@ GLOBAL	__end_of_EEPROMWrite
 
 ;; *************** function _CalculateTime25msCounter *****************
 ;; Defined at:
-;;		line 158 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 158 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
-;;  row             1    0[BANK0 ] unsigned char 
-;;  line            1    1[BANK0 ] unsigned char 
+;;  row             1    wreg     unsigned char 
+;;  line            1   40[COMRAM] unsigned char 
 ;; Auto vars:     Size  Location     Type
-;;  j               2   10[BANK0 ] int 
-;;  i               2    8[BANK0 ] int 
+;;  row             1   47[COMRAM] unsigned char 
+;;  j               2   50[COMRAM] int 
+;;  i               2   48[COMRAM] int 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -7632,12 +6864,12 @@ GLOBAL	__end_of_EEPROMWrite
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         0       2       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       4       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          0       6       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         0      12       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         5       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Temps:          6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:        12       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;Total ram usage:       12 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    6
@@ -7653,115 +6885,51 @@ psect	text19,class=CODE,space=0,reloc=2
 global __ptext19
 __ptext19:
 psect	text19
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	158
 	global	__size_of_CalculateTime25msCounter
 	__size_of_CalculateTime25msCounter	equ	__end_of_CalculateTime25msCounter-_CalculateTime25msCounter
 	
 _CalculateTime25msCounter:
 	opt	stack 22
+;CalculateTime25msCounter@row stored from wreg
 	line	160
+	movff	wreg,(c:CalculateTime25msCounter@row)
 	
-l4689:
+l2793:
 ;YellowFlash.C: 159: int i,j;
 ;YellowFlash.C: 160: for(i=0;i<10;i++)
-	movlw	high(0)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((CalculateTime25msCounter@i+1))&0ffh
-	movlw	low(0)
-	movlb	0	; () banked
-	movwf	((CalculateTime25msCounter@i))&0ffh
-	
-l4691:
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@i+1))&0ffh,w
-	xorlw	80h
-	addlw	-((0)^80h)
-	movlw	0Ah
-	btfsc	status,2
-	subwf	((CalculateTime25msCounter@i))&0ffh,w
-	btfss	status,0
-	goto	u3641
-	goto	u3640
-u3641:
-	goto	l4695
-u3640:
-	goto	l4711
-	
-l4693:
-	goto	l4711
+	clrf	((c:CalculateTime25msCounter@i)),c
+	clrf	((c:CalculateTime25msCounter@i+1)),c
 	line	161
 	
-l473:
+l475:
 	line	162
-	
-l4695:
 ;YellowFlash.C: 161: {
 ;YellowFlash.C: 162: for(j=0;j<16;j++)
-	movlw	high(0)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((CalculateTime25msCounter@j+1))&0ffh
-	movlw	low(0)
-	movlb	0	; () banked
-	movwf	((CalculateTime25msCounter@j))&0ffh
-	
-l4697:
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@j+1))&0ffh,w
-	xorlw	80h
-	addlw	-((0)^80h)
-	movlw	010h
-	btfsc	status,2
-	subwf	((CalculateTime25msCounter@j))&0ffh,w
-	btfss	status,0
-	goto	u3651
-	goto	u3650
-u3651:
-	goto	l4701
-u3650:
-	goto	l4707
-	
-l4699:
-	goto	l4707
-	line	163
-	
-l475:
+	clrf	((c:CalculateTime25msCounter@j)),c
+	clrf	((c:CalculateTime25msCounter@j+1)),c
 	line	164
 	
-l4701:
+l2803:
 ;YellowFlash.C: 163: {
 ;YellowFlash.C: 164: time_on[i][j]=period[i]*cycledutyon[j];
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@j))&0ffh,w
+	movf	((c:CalculateTime25msCounter@j)),c,w
 	mullw	03h
+	movf	(prodl),c,w
 	movlb	0	; () banked
-	movlw	low(_cycledutyon)
-	addwf	(prodl),c,w
-	movwf	c:fsr2l
-	clrf	1+c:fsr2l
-	movlb	0	; () banked
-	movlw	high(_cycledutyon)
-	addwfc	1+c:fsr2l
+	addlw	low(_cycledutyon)
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	postinc2,0+((c:?___ftmul)+03h)
 	movff	postinc2,1+((c:?___ftmul)+03h)
 	movff	postdec2,2+((c:?___ftmul)+03h)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@i))&0ffh,w
+	movf	((c:CalculateTime25msCounter@i)),c,w
 	mullw	03h
-	movlb	0	; () banked
-	movlw	low(_period)
-	addwf	(prodl),c,w
-	movwf	c:fsr2l
-	clrf	1+c:fsr2l
-	movlb	0	; () banked
-	movlw	high(_period)
-	addwfc	1+c:fsr2l
+	movf	(prodl),c,w
+	addlw	low(_period)
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	postinc2,(c:?___ftmul)
 	movff	postinc2,(c:?___ftmul+1)
 	movff	postdec2,(c:?___ftmul+2)
@@ -7771,80 +6939,52 @@ l4701:
 	movff	2+?___ftmul,(c:?___fttol+2)
 	call	___fttol	;wreg free
 	bcf	status,0
-	movlb	0	; () banked
-	movlb	0	; () banked
-	rlcf	((CalculateTime25msCounter@j))&0ffh,w
-	movlb	0	; () banked
-	movwf	(??_CalculateTime25msCounter+0+0)&0ffh
-	movlb	0	; () banked
-	movlb	0	; () banked
-	rlcf	((CalculateTime25msCounter@j+1))&0ffh,w
-	movlb	0	; () banked
-	movwf	1+(??_CalculateTime25msCounter+0+0)&0ffh
-	movlb	0	; () banked
-	movff	(CalculateTime25msCounter@i),??_CalculateTime25msCounter+2+0
-	movlb	0	; () banked
-	movff	(CalculateTime25msCounter@i+1),??_CalculateTime25msCounter+2+0+1
+	rlcf	((c:CalculateTime25msCounter@j)),c,w
+	movwf	(??_CalculateTime25msCounter+0+0)&0ffh,c
+	rlcf	((c:CalculateTime25msCounter@j+1)),c,w
+	movwf	1+(??_CalculateTime25msCounter+0+0)&0ffh,c
+	movff	(c:CalculateTime25msCounter@i),??_CalculateTime25msCounter+2+0
+	movff	(c:CalculateTime25msCounter@i+1),??_CalculateTime25msCounter+2+0+1
 	movlw	05h
-u3665:
+u1025:
 	bcf	status,0
-	movlb	0	; () banked
-	rlcf	(??_CalculateTime25msCounter+2+0)&0ffh
-	rlcf	(??_CalculateTime25msCounter+2+1)&0ffh
+	rlcf	(??_CalculateTime25msCounter+2+0),c
+	rlcf	(??_CalculateTime25msCounter+2+1),c
 	decfsz	wreg
-	goto	u3665
+	goto	u1025
 	movlw	low(_time_on)
-	movlb	0	; () banked
-	addwf	(??_CalculateTime25msCounter+2+0)&0ffh,w
-	movlb	0	; () banked
-	movwf	(??_CalculateTime25msCounter+4+0)&0ffh
+	addwf	(??_CalculateTime25msCounter+2+0),c,w
+	movwf	(??_CalculateTime25msCounter+4+0)&0ffh,c
 	movlw	high(_time_on)
-	movlb	0	; () banked
-	addwfc	(??_CalculateTime25msCounter+2+1)&0ffh,w
-	movlb	0	; () banked
-	movwf	1+(??_CalculateTime25msCounter+4+0)&0ffh
-	movlb	0	; () banked
-	movf	(??_CalculateTime25msCounter+0+0)&0ffh,w
-	movlb	0	; () banked
-	addwf	(??_CalculateTime25msCounter+4+0)&0ffh,w
+	addwfc	(??_CalculateTime25msCounter+2+1),c,w
+	movwf	1+(??_CalculateTime25msCounter+4+0)&0ffh,c
+	movf	(??_CalculateTime25msCounter+0+0),c,w
+	addwf	(??_CalculateTime25msCounter+4+0),c,w
 	movwf	c:fsr2l
-	movlb	0	; () banked
-	movf	(??_CalculateTime25msCounter+0+1)&0ffh,w
-	movlb	0	; () banked
-	addwfc	(??_CalculateTime25msCounter+4+1)&0ffh,w
+	movf	(??_CalculateTime25msCounter+0+1),c,w
+	addwfc	(??_CalculateTime25msCounter+4+1),c,w
 	movwf	1+c:fsr2l
 	movff	0+?___fttol,postinc2
 	movff	1+?___fttol,postdec2
 
 	line	165
 ;YellowFlash.C: 165: time_off[i][j]=period[i]*cycledutyoff[j];
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@j))&0ffh,w
+	movf	((c:CalculateTime25msCounter@j)),c,w
 	mullw	03h
-	movlb	1	; () banked
-	movlw	low(_cycledutyoff)
-	addwf	(prodl),c,w
-	movwf	c:fsr2l
-	clrf	1+c:fsr2l
-	movlb	1	; () banked
-	movlw	high(_cycledutyoff)
-	addwfc	1+c:fsr2l
+	movf	(prodl),c,w
+	movlb	0	; () banked
+	addlw	low(_cycledutyoff)
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	postinc2,0+((c:?___ftmul)+03h)
 	movff	postinc2,1+((c:?___ftmul)+03h)
 	movff	postdec2,2+((c:?___ftmul)+03h)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@i))&0ffh,w
+	movf	((c:CalculateTime25msCounter@i)),c,w
 	mullw	03h
-	movlb	0	; () banked
-	movlw	low(_period)
-	addwf	(prodl),c,w
-	movwf	c:fsr2l
-	clrf	1+c:fsr2l
-	movlb	0	; () banked
-	movlw	high(_period)
-	addwfc	1+c:fsr2l
+	movf	(prodl),c,w
+	addlw	low(_period)
+	movwf	fsr2l
+	clrf	fsr2h
 	movff	postinc2,(c:?___ftmul)
 	movff	postinc2,(c:?___ftmul+1)
 	movff	postdec2,(c:?___ftmul+2)
@@ -7854,132 +6994,93 @@ u3665:
 	movff	2+?___ftmul,(c:?___fttol+2)
 	call	___fttol	;wreg free
 	bcf	status,0
-	movlb	0	; () banked
-	movlb	0	; () banked
-	rlcf	((CalculateTime25msCounter@j))&0ffh,w
-	movlb	0	; () banked
-	movwf	(??_CalculateTime25msCounter+0+0)&0ffh
-	movlb	0	; () banked
-	movlb	0	; () banked
-	rlcf	((CalculateTime25msCounter@j+1))&0ffh,w
-	movlb	0	; () banked
-	movwf	1+(??_CalculateTime25msCounter+0+0)&0ffh
-	movlb	0	; () banked
-	movff	(CalculateTime25msCounter@i),??_CalculateTime25msCounter+2+0
-	movlb	0	; () banked
-	movff	(CalculateTime25msCounter@i+1),??_CalculateTime25msCounter+2+0+1
+	rlcf	((c:CalculateTime25msCounter@j)),c,w
+	movwf	(??_CalculateTime25msCounter+0+0)&0ffh,c
+	rlcf	((c:CalculateTime25msCounter@j+1)),c,w
+	movwf	1+(??_CalculateTime25msCounter+0+0)&0ffh,c
+	movff	(c:CalculateTime25msCounter@i),??_CalculateTime25msCounter+2+0
+	movff	(c:CalculateTime25msCounter@i+1),??_CalculateTime25msCounter+2+0+1
 	movlw	05h
-u3675:
+u1035:
 	bcf	status,0
-	movlb	0	; () banked
-	rlcf	(??_CalculateTime25msCounter+2+0)&0ffh
-	rlcf	(??_CalculateTime25msCounter+2+1)&0ffh
+	rlcf	(??_CalculateTime25msCounter+2+0),c
+	rlcf	(??_CalculateTime25msCounter+2+1),c
 	decfsz	wreg
-	goto	u3675
+	goto	u1035
 	movlw	low(_time_off)
-	movlb	0	; () banked
-	addwf	(??_CalculateTime25msCounter+2+0)&0ffh,w
-	movlb	0	; () banked
-	movwf	(??_CalculateTime25msCounter+4+0)&0ffh
+	addwf	(??_CalculateTime25msCounter+2+0),c,w
+	movwf	(??_CalculateTime25msCounter+4+0)&0ffh,c
 	movlw	high(_time_off)
-	movlb	0	; () banked
-	addwfc	(??_CalculateTime25msCounter+2+1)&0ffh,w
-	movlb	0	; () banked
-	movwf	1+(??_CalculateTime25msCounter+4+0)&0ffh
-	movlb	0	; () banked
-	movf	(??_CalculateTime25msCounter+0+0)&0ffh,w
-	movlb	0	; () banked
-	addwf	(??_CalculateTime25msCounter+4+0)&0ffh,w
+	addwfc	(??_CalculateTime25msCounter+2+1),c,w
+	movwf	1+(??_CalculateTime25msCounter+4+0)&0ffh,c
+	movf	(??_CalculateTime25msCounter+0+0),c,w
+	addwf	(??_CalculateTime25msCounter+4+0),c,w
 	movwf	c:fsr2l
-	movlb	0	; () banked
-	movf	(??_CalculateTime25msCounter+0+1)&0ffh,w
-	movlb	0	; () banked
-	addwfc	(??_CalculateTime25msCounter+4+1)&0ffh,w
+	movf	(??_CalculateTime25msCounter+0+1),c,w
+	addwfc	(??_CalculateTime25msCounter+4+1),c,w
 	movwf	1+c:fsr2l
 	movff	0+?___fttol,postinc2
 	movff	1+?___fttol,postdec2
 
 	line	162
 	
-l4703:
-	movlb	0	; () banked
-	movlb	0	; () banked
-	infsnz	((CalculateTime25msCounter@j))&0ffh
-	incf	((CalculateTime25msCounter@j+1))&0ffh
+l2805:
+	infsnz	((c:CalculateTime25msCounter@j)),c
+	incf	((c:CalculateTime25msCounter@j+1)),c
 	
-l4705:
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@j+1))&0ffh,w
+l2807:
+	movf	((c:CalculateTime25msCounter@j+1)),c,w
 	xorlw	80h
 	addlw	-((0)^80h)
 	movlw	010h
 	btfsc	status,2
-	subwf	((CalculateTime25msCounter@j))&0ffh,w
+	subwf	((c:CalculateTime25msCounter@j)),c,w
 	btfss	status,0
-	goto	u3681
-	goto	u3680
-u3681:
-	goto	l4701
-u3680:
-	goto	l4707
-	
-l476:
+	goto	u1041
+	goto	u1040
+u1041:
+	goto	l2803
+u1040:
 	line	160
 	
-l4707:
-	movlb	0	; () banked
-	movlb	0	; () banked
-	infsnz	((CalculateTime25msCounter@i))&0ffh
-	incf	((CalculateTime25msCounter@i+1))&0ffh
+l2809:
+	infsnz	((c:CalculateTime25msCounter@i)),c
+	incf	((c:CalculateTime25msCounter@i+1)),c
 	
-l4709:
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@i+1))&0ffh,w
+l2811:
+	movf	((c:CalculateTime25msCounter@i+1)),c,w
 	xorlw	80h
 	addlw	-((0)^80h)
 	movlw	0Ah
 	btfsc	status,2
-	subwf	((CalculateTime25msCounter@i))&0ffh,w
+	subwf	((c:CalculateTime25msCounter@i)),c,w
 	btfss	status,0
-	goto	u3691
-	goto	u3690
-u3691:
-	goto	l4695
-u3690:
-	goto	l4711
-	
-l474:
+	goto	u1051
+	goto	u1050
+u1051:
+	goto	l475
+u1050:
 	line	168
 	
-l4711:
+l2813:
 ;YellowFlash.C: 166: }
 ;YellowFlash.C: 167: }
 ;YellowFlash.C: 168: time_on_counter=time_on[line][row]/25;
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@line))&0ffh,w
+	movf	((c:CalculateTime25msCounter@line)),c,w
 	mullw	020h
 	movlw	low(_time_on)
 	addwf	(prodl),c,w
-	movlb	0	; () banked
-	movwf	(??_CalculateTime25msCounter+0+0)&0ffh
+	movwf	(??_CalculateTime25msCounter+0+0)&0ffh,c
 	movlw	high(_time_on)
 	addwfc	prod+1,w
-	movlb	0	; () banked
-	movwf	1+(??_CalculateTime25msCounter+0+0)&0ffh
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@row))&0ffh,w
+	movwf	1+(??_CalculateTime25msCounter+0+0)&0ffh,c
+	movf	((c:CalculateTime25msCounter@row)),c,w
 	mullw	02h
 	movf	(prodl),c,w
-	movlb	0	; () banked
-	addwf	(??_CalculateTime25msCounter+0+0)&0ffh,w
+	addwf	(??_CalculateTime25msCounter+0+0),c,w
 	movwf	c:fsr2l
 	movf	(prodh),c,w
-	movlb	0	; () banked
-	addwfc	(??_CalculateTime25msCounter+0+1)&0ffh,w
+	addwfc	(??_CalculateTime25msCounter+0+1),c,w
 	movwf	1+c:fsr2l
 	movff	postinc2,(c:?___lwdiv)
 	movff	postdec2,(c:?___lwdiv+1)
@@ -7988,33 +7089,25 @@ l4711:
 	movlw	low(019h)
 	movwf	(0+((c:?___lwdiv)+02h)),c
 	call	___lwdiv	;wreg free
-	movff	0+?___lwdiv,(_time_on_counter)
-	movff	1+?___lwdiv,(_time_on_counter+1)
+	movff	0+?___lwdiv,(c:_time_on_counter)
+	movff	1+?___lwdiv,(c:_time_on_counter+1)
 	line	169
 ;YellowFlash.C: 169: time_off_counter=time_off[line][row]/25;
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@line))&0ffh,w
+	movf	((c:CalculateTime25msCounter@line)),c,w
 	mullw	020h
 	movlw	low(_time_off)
 	addwf	(prodl),c,w
-	movlb	0	; () banked
-	movwf	(??_CalculateTime25msCounter+0+0)&0ffh
+	movwf	(??_CalculateTime25msCounter+0+0)&0ffh,c
 	movlw	high(_time_off)
 	addwfc	prod+1,w
-	movlb	0	; () banked
-	movwf	1+(??_CalculateTime25msCounter+0+0)&0ffh
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((CalculateTime25msCounter@row))&0ffh,w
+	movwf	1+(??_CalculateTime25msCounter+0+0)&0ffh,c
+	movf	((c:CalculateTime25msCounter@row)),c,w
 	mullw	02h
 	movf	(prodl),c,w
-	movlb	0	; () banked
-	addwf	(??_CalculateTime25msCounter+0+0)&0ffh,w
+	addwf	(??_CalculateTime25msCounter+0+0),c,w
 	movwf	c:fsr2l
 	movf	(prodh),c,w
-	movlb	0	; () banked
-	addwfc	(??_CalculateTime25msCounter+0+1)&0ffh,w
+	addwfc	(??_CalculateTime25msCounter+0+1),c,w
 	movwf	1+c:fsr2l
 	movff	postinc2,(c:?___lwdiv)
 	movff	postdec2,(c:?___lwdiv+1)
@@ -8023,11 +7116,11 @@ l4711:
 	movlw	low(019h)
 	movwf	(0+((c:?___lwdiv)+02h)),c
 	call	___lwdiv	;wreg free
-	movff	0+?___lwdiv,(_time_off_counter)
-	movff	1+?___lwdiv,(_time_off_counter+1)
+	movff	0+?___lwdiv,(c:_time_off_counter)
+	movff	1+?___lwdiv,(c:_time_off_counter+1)
 	line	170
 	
-l477:
+l479:
 	return
 	opt stack 0
 GLOBAL	__end_of_CalculateTime25msCounter
@@ -8037,7 +7130,7 @@ GLOBAL	__end_of_CalculateTime25msCounter
 
 ;; *************** function _HeartbeatTest *****************
 ;; Defined at:
-;;		line 752 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 752 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -8047,15 +7140,15 @@ GLOBAL	__end_of_CalculateTime25msCounter
 ;; Registers used:
 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
 ;; Tracked objects:
-;;		On entry : 0/0
+;;		On entry : 0/F
 ;;		On exit  : 0/0
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        1 bytes
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        0 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    6
 ;; This function calls:
@@ -8068,7 +7161,7 @@ psect	text20,class=CODE,space=0,reloc=2
 global __ptext20
 __ptext20:
 psect	text20
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	752
 	global	__size_of_HeartbeatTest
 	__size_of_HeartbeatTest	equ	__end_of_HeartbeatTest-_HeartbeatTest
@@ -8077,144 +7170,106 @@ _HeartbeatTest:
 	opt	stack 24
 	line	754
 	
-l4215:
+l3119:
 ;YellowFlash.C: 754: if(time5ms == 1)
 	movlb	(_time5ms/8) >> 8
 	btfss	(_time5ms/8),c,(_time5ms)&7
-	goto	u2931
-	goto	u2930
-u2931:
-	goto	l589
-u2930:
+	goto	u1231
+	goto	u1230
+u1231:
+	goto	l591
+u1230:
 	line	756
 	
-l4217:
+l3121:
 ;YellowFlash.C: 755: {
 ;YellowFlash.C: 756: time5ms = 0;
 	movlb	(_time5ms/8) >> 8
 	bcf	(_time5ms/8),c,(_time5ms)&7
 	line	757
 	
-l4219:
+l3123:
 ;YellowFlash.C: 757: t500ms_count++;
-	movlb	0	; () banked
-	movlb	0	; () banked
-	incf	((_t500ms_count))&0ffh
+	incf	((c:_t500ms_count)),c
 	line	758
 	
-l4221:
+l3125:
 ;YellowFlash.C: 758: if(t500ms_count>=100)
 	movlw	(064h-1)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	cpfsgt	((_t500ms_count))&0ffh
-	goto	u2941
-	goto	u2940
-u2941:
-	goto	l589
-u2940:
+	cpfsgt	((c:_t500ms_count)),c
+	goto	u1241
+	goto	u1240
+u1241:
+	goto	l591
+u1240:
 	line	760
 	
-l4223:
+l3127:
 ;YellowFlash.C: 759: {
 ;YellowFlash.C: 760: t500ms_count=0;
-	movwf	(??_HeartbeatTest+0+0)&0ffh,c
-	movlw	low(0)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_t500ms_count))&0ffh
-	movf	(??_HeartbeatTest+0+0)&0ffh,c,w
+	clrf	((c:_t500ms_count)),c
 	line	761
 	
-l4225:
+l3129:
 ;YellowFlash.C: 761: heartbeat++;
-	movlb	0	; () banked
-	movlb	0	; () banked
-	incf	((_heartbeat))&0ffh
+	incf	((c:_heartbeat)),c
 	line	763
 	
-l4227:
+l3131:
 ;YellowFlash.C: 763: if(heartbeat>=4)
 	movlw	(04h-1)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	cpfsgt	((_heartbeat))&0ffh
-	goto	u2951
-	goto	u2950
-u2951:
-	goto	l589
-u2950:
+	cpfsgt	((c:_heartbeat)),c
+	goto	u1251
+	goto	u1250
+u1251:
+	goto	l591
+u1250:
 	line	765
 	
-l4229:
+l3133:
 ;YellowFlash.C: 764: {
 ;YellowFlash.C: 765: heartbeat=0;
-	movwf	(??_HeartbeatTest+0+0)&0ffh,c
-	movlw	low(0)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_heartbeat))&0ffh
-	movf	(??_HeartbeatTest+0+0)&0ffh,c,w
+	clrf	((c:_heartbeat)),c
 	line	766
-	
-l4231:
 ;YellowFlash.C: 766: RD2=1;
 	bsf	c:(31770/8),(31770)&7	;volatile
 	line	767
-	
-l4233:
 ;YellowFlash.C: 767: TMR0ON = 0;
 	bcf	c:(32431/8),(32431)&7	;volatile
 	line	768
-	
-l4235:
 ;YellowFlash.C: 768: TMR0IF = 0;
 	bcf	c:(32658/8),(32658)&7	;volatile
 	line	769
+	
+l3135:
 ;YellowFlash.C: 769: yflash_status=0x06;
-	movwf	(??_HeartbeatTest+0+0)&0ffh,c
 	movlw	low(06h)
 	movwf	((c:_yflash_status)),c
-	movf	(??_HeartbeatTest+0+0)&0ffh,c,w
 	line	770
 	
-l4237:
+l3137:
 ;YellowFlash.C: 770: Read_YFlash_CFG();
 	call	_Read_YFlash_CFG	;wreg free
 	line	771
 	
-l4239:
+l3139:
 ;YellowFlash.C: 771: T1CON |= 0x01;
 	bsf	(0+(0/8)+(c:4045)),c,(0)&7	;volatile
 	line	772
 	
-l4241:
+l3141:
 ;YellowFlash.C: 772: turnoff=0x01;
-	movwf	(??_HeartbeatTest+0+0)&0ffh,c
 	movlw	low(01h)
 	movwf	((c:_turnoff)),c
-	movf	(??_HeartbeatTest+0+0)&0ffh,c,w
 	line	773
 	
-l4243:
+l3143:
 ;YellowFlash.C: 773: switchmode=1;
 	movlb	(_switchmode/8) >> 8
 	bsf	(_switchmode/8),c,(_switchmode)&7
-	goto	l589
-	line	775
-	
-l588:
-	goto	l589
-	line	778
-	
-l587:
-	goto	l589
-	line	781
-	
-l586:
 	line	783
 	
-l589:
+l591:
 	return
 	opt stack 0
 GLOBAL	__end_of_HeartbeatTest
@@ -8224,7 +7279,7 @@ GLOBAL	__end_of_HeartbeatTest
 
 ;; *************** function _Read_YFlash_CFG *****************
 ;; Defined at:
-;;		line 448 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 448 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -8240,9 +7295,9 @@ GLOBAL	__end_of_HeartbeatTest
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        1 bytes
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        0 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    5
 ;; This function calls:
@@ -8256,7 +7311,7 @@ psect	text21,class=CODE,space=0,reloc=2
 global __ptext21
 __ptext21:
 psect	text21
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	448
 	global	__size_of_Read_YFlash_CFG
 	__size_of_Read_YFlash_CFG	equ	__end_of_Read_YFlash_CFG-_Read_YFlash_CFG
@@ -8265,68 +7320,58 @@ _Read_YFlash_CFG:
 	opt	stack 24
 	line	449
 	
-l3953:
+l2891:
 ;YellowFlash.C: 449: eeprom_addr = 0x0005;
 	movlw	high(05h)
 	movwf	((c:_eeprom_addr+1)),c
 	movlw	low(05h)
 	movwf	((c:_eeprom_addr)),c
 	line	450
-	
-l3955:
 ;YellowFlash.C: 450: eeprom_num = 2;
-	movwf	(??_Read_YFlash_CFG+0+0)&0ffh,c
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_Read_YFlash_CFG+0+0)&0ffh,c,w
 	line	451
 	
-l3957:
+l2893:
 ;YellowFlash.C: 451: EEPROMRead(&eeprom_addr,&eeprom_num,&readwrite);
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMRead)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMRead)+02h)),c
-	movlw	high((c:_readwrite))
-	movwf	(1+((c:?_EEPROMRead)+04h)),c
+	movwf	((c:?_EEPROMRead)),c
 	movlw	low((c:_readwrite))
-	movwf	(0+((c:?_EEPROMRead)+04h)),c
-	call	_EEPROMRead	;wreg free
+	movwf	(0+((c:?_EEPROMRead)+01h)),c
+	movlw	high((c:_readwrite))
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	0fh
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	__accesstop-1
+	cpfsgt	(0+((c:?_EEPROMRead)+01h)),c
+	clrf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMRead
 	line	452
 	
-l3959:
+l2895:
 ;YellowFlash.C: 452: time_on_counter=readwrite[0];
-	movlb	0	; () banked
-	movff	(c:_readwrite),(_time_on_counter)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	clrf	((_time_on_counter+1))&0ffh
+	movff	(c:_readwrite),(c:_time_on_counter)
+	clrf	((c:_time_on_counter+1)),c
 	line	453
 	
-l3961:
+l2897:
 ;YellowFlash.C: 453: time_counters=readwrite[1];
 	movff	0+((c:_readwrite)+01h),(c:_time_counters)
 	clrf	((c:_time_counters+1)),c
 	line	455
 	
-l3963:
+l2899:
 ;YellowFlash.C: 455: time_on_counter|=time_counters;
 	movf	((c:_time_counters)),c,w
-	movlb	0	; () banked
-	movlb	0	; () banked
-	iorwf	((_time_on_counter))&0ffh
+	iorwf	((c:_time_on_counter)),c
 	movf	((c:_time_counters+1)),c,w
-	movlb	0	; () banked
-	movlb	0	; () banked
-	iorwf	((_time_on_counter+1))&0ffh
+	iorwf	((c:_time_on_counter+1)),c
 
 	line	458
 	
-l3965:
+l2901:
 ;YellowFlash.C: 458: eeprom_addr = 0x0007;
 	movlw	high(07h)
 	movwf	((c:_eeprom_addr+1)),c
@@ -8334,98 +7379,87 @@ l3965:
 	movwf	((c:_eeprom_addr)),c
 	line	459
 	
-l3967:
+l2903:
 ;YellowFlash.C: 459: eeprom_num = 2;
-	movwf	(??_Read_YFlash_CFG+0+0)&0ffh,c
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_Read_YFlash_CFG+0+0)&0ffh,c,w
 	line	460
 	
-l3969:
+l2905:
 ;YellowFlash.C: 460: EEPROMRead(&eeprom_addr,&eeprom_num,&readwrite);
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMRead)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMRead)+02h)),c
-	movlw	high((c:_readwrite))
-	movwf	(1+((c:?_EEPROMRead)+04h)),c
+	movwf	((c:?_EEPROMRead)),c
 	movlw	low((c:_readwrite))
-	movwf	(0+((c:?_EEPROMRead)+04h)),c
-	call	_EEPROMRead	;wreg free
+	movwf	(0+((c:?_EEPROMRead)+01h)),c
+	movlw	high((c:_readwrite))
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	0fh
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	__accesstop-1
+	cpfsgt	(0+((c:?_EEPROMRead)+01h)),c
+	clrf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMRead
 	line	461
 	
-l3971:
+l2907:
 ;YellowFlash.C: 461: time_off_counter=readwrite[0];
-	movlb	0	; () banked
-	movff	(c:_readwrite),(_time_off_counter)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	clrf	((_time_off_counter+1))&0ffh
+	movff	(c:_readwrite),(c:_time_off_counter)
+	clrf	((c:_time_off_counter+1)),c
 	line	462
 	
-l3973:
+l2909:
 ;YellowFlash.C: 462: time_counters=readwrite[1];
 	movff	0+((c:_readwrite)+01h),(c:_time_counters)
 	clrf	((c:_time_counters+1)),c
 	line	464
+	
+l2911:
 ;YellowFlash.C: 464: time_off_counter|=time_counters;
 	movf	((c:_time_counters)),c,w
-	movlb	0	; () banked
-	movlb	0	; () banked
-	iorwf	((_time_off_counter))&0ffh
+	iorwf	((c:_time_off_counter)),c
 	movf	((c:_time_counters+1)),c,w
-	movlb	0	; () banked
-	movlb	0	; () banked
-	iorwf	((_time_off_counter+1))&0ffh
+	iorwf	((c:_time_off_counter+1)),c
 
 	line	467
-	
-l3975:
 ;YellowFlash.C: 467: eeprom_addr = 0x0009;
 	movlw	high(09h)
 	movwf	((c:_eeprom_addr+1)),c
 	movlw	low(09h)
 	movwf	((c:_eeprom_addr)),c
 	line	468
-	
-l3977:
 ;YellowFlash.C: 468: eeprom_num = 2;
-	movwf	(??_Read_YFlash_CFG+0+0)&0ffh,c
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
-	movf	(??_Read_YFlash_CFG+0+0)&0ffh,c,w
 	line	469
 	
-l3979:
+l2913:
 ;YellowFlash.C: 469: EEPROMRead(&eeprom_addr,&eeprom_num,&yflash_CFG);
-	movlw	high((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead+1)),c
-	movlw	low((c:_eeprom_addr))
-	movwf	((c:?_EEPROMRead)),c
-	movlw	high((c:_eeprom_num))
-	movwf	(1+((c:?_EEPROMRead)+02h)),c
 	movlw	low((c:_eeprom_num))
-	movwf	(0+((c:?_EEPROMRead)+02h)),c
-	movlw	high((c:_yflash_CFG))
-	movwf	(1+((c:?_EEPROMRead)+04h)),c
+	movwf	((c:?_EEPROMRead)),c
 	movlw	low((c:_yflash_CFG))
-	movwf	(0+((c:?_EEPROMRead)+04h)),c
-	call	_EEPROMRead	;wreg free
+	movwf	(0+((c:?_EEPROMRead)+01h)),c
+	movlw	high((c:_yflash_CFG))
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	0fh
+	movwf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	__accesstop-1
+	cpfsgt	(0+((c:?_EEPROMRead)+01h)),c
+	clrf	(1+((c:?_EEPROMRead)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
+	
+	call	_EEPROMRead
 	line	470
 	
-l3981:
+l2915:
 ;YellowFlash.C: 470: run_mode=(yflash_CFG[1]&0x03);
 	movf	(0+((c:_yflash_CFG)+01h)),c,w
 	andlw	low(03h)
 	movwf	((c:_run_mode)),c
 	line	471
 	
-l539:
+l541:
 	return
 	opt stack 0
 GLOBAL	__end_of_Read_YFlash_CFG
@@ -8435,16 +7469,17 @@ GLOBAL	__end_of_Read_YFlash_CFG
 
 ;; *************** function _EEPROMRead *****************
 ;; Defined at:
-;;		line 32 in file "E:\WorkSpace\YellowFlashingController20140317\mcu.h"
+;;		line 33 in file "G:\working\YellowFlashingController\mcu.h"
 ;; Parameters:    Size  Location     Type
-;;  addr            2   18[COMRAM] PTR unsigned char 
+;;  addr            1    wreg     PTR unsigned char 
 ;;		 -> eeprom_addr(2), 
-;;  num             2   20[COMRAM] PTR unsigned char 
+;;  num             1    0[COMRAM] PTR unsigned char 
 ;;		 -> eeprom_num(1), 
-;;  dat             2   22[COMRAM] PTR unsigned char 
+;;  dat             2    1[COMRAM] PTR unsigned char 
 ;;		 -> yflash_CFG(2), readwrite(2), CANSdata(8), 
 ;; Auto vars:     Size  Location     Type
-;;		None
+;;  addr            1    3[COMRAM] PTR unsigned char 
+;;		 -> eeprom_addr(2), 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
@@ -8454,11 +7489,11 @@ GLOBAL	__end_of_Read_YFlash_CFG
 ;;		On exit  : 0/0
 ;;		Unchanged: 0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
-;;      Params:         6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Params:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        6 bytes
+;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        4 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    4
 ;; This function calls:
@@ -8474,99 +7509,98 @@ psect	text22,class=CODE,space=0,reloc=2
 global __ptext22
 __ptext22:
 psect	text22
-	file	"E:\WorkSpace\YellowFlashingController20140317\mcu.h"
-	line	32
+	file	"G:\working\YellowFlashingController\mcu.h"
+	line	33
 	global	__size_of_EEPROMRead
 	__size_of_EEPROMRead	equ	__end_of_EEPROMRead-_EEPROMRead
 	
 _EEPROMRead:
 	opt	stack 24
-	line	33
-;mcu.h: 33: do
-	
-l369:
-	line	35
-	
-l3775:
-;mcu.h: 34: {
-;mcu.h: 35: EEADRH = (*addr)>>8;
-	movlw	low(0)
-	movwf	((c:3957)),c	;volatile
+;EEPROMRead@addr stored from wreg
 	line	36
+	movff	wreg,(c:EEPROMRead@addr)
+	line	34
+;mcu.h: 34: do
 	
-l3777:
-;mcu.h: 36: EEADR = (*addr);
-	movff	(c:EEPROMRead@addr),fsr2l
-	movff	(c:EEPROMRead@addr+1),fsr2h
-	movf	indf2,w
-	movwf	((c:3956)),c	;volatile
+l371:
+	line	36
+;mcu.h: 35: {
+;mcu.h: 36: EEADRH = (*addr)>>8;
+	clrf	((c:3957)),c	;volatile
 	line	37
 	
-l3779:
-;mcu.h: 37: (*addr)++;
-	movff	(c:EEPROMRead@addr),fsr2l
-	movff	(c:EEPROMRead@addr+1),fsr2h
+l2731:
+;mcu.h: 37: EEADR = (*addr);
+	movf	((c:EEPROMRead@addr)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movf	indf2,w
+	movwf	((c:3956)),c	;volatile
+	line	38
+	
+l2733:
+;mcu.h: 38: (*addr)++;
+	movf	((c:EEPROMRead@addr)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	incf	indf2
 
-	line	39
+	line	40
 	
-l3781:
-;mcu.h: 39: EEDATA = 0;
-	movlw	low(0)
-	movwf	((c:3955)),c	;volatile
-	line	41
+l2735:
+;mcu.h: 40: EEDATA = 0;
+	clrf	((c:3955)),c	;volatile
+	line	42
 	
-l3783:
-;mcu.h: 41: EECON1 &= 0x3f;
+l2737:
+;mcu.h: 42: EECON1 &= 0x3f;
 	movlw	(03Fh)&0ffh
 	andwf	((c:3967)),c	;volatile
-	line	44
-	
-l3785:
-;mcu.h: 44: EECON1 |= 0x01;
-	bsf	(0+(0/8)+(c:3967)),c,(0)&7	;volatile
 	line	45
 	
-l3787:
-# 45 "E:\WorkSpace\YellowFlashingController20140317\mcu.h"
+l2739:
+;mcu.h: 45: EECON1 |= 0x01;
+	bsf	(0+(0/8)+(c:3967)),c,(0)&7	;volatile
+	line	46
+	
+l2741:
+# 46 "G:\working\YellowFlashingController\mcu.h"
 NOP ;# 
 psect	text22
-	line	47
+	line	48
 	
-l3789:
-;mcu.h: 47: (*dat) = EEDATA;
+l2743:
+;mcu.h: 48: (*dat) = EEDATA;
 	movff	(c:EEPROMRead@dat),fsr2l
 	movff	(c:EEPROMRead@dat+1),fsr2h
 	movff	(c:3955),indf2	;volatile
 
-	line	48
+	line	49
 	
-l3791:
-;mcu.h: 48: dat++;
+l2745:
+;mcu.h: 49: dat++;
 	infsnz	((c:EEPROMRead@dat)),c
 	incf	((c:EEPROMRead@dat+1)),c
-	line	50
+	line	51
 	
-l3793:
-;mcu.h: 49: }
-;mcu.h: 50: while((*num)--);
-	movlw	(0FFh)&0ffh
-	movff	(c:EEPROMRead@num),fsr2l
-	movff	(c:EEPROMRead@num+1),fsr2h
+l2747:
+;mcu.h: 50: }
+;mcu.h: 51: while((*num)--);
+	movf	((c:EEPROMRead@num)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
 	decf	indf2
 
+	movlw	(0FFh)&0ffh
 	cpfseq	indf2
-	goto	u2621
-	goto	u2620
-u2621:
-	goto	l369
-u2620:
+	goto	u971
+	goto	u970
+u971:
 	goto	l371
+u970:
+	line	53
 	
-l370:
-	line	52
-	
-l371:
+l373:
 	return
 	opt stack 0
 GLOBAL	__end_of_EEPROMRead
@@ -8576,23 +7610,23 @@ GLOBAL	__end_of_EEPROMRead
 
 ;; *************** function ___ftmul *****************
 ;; Defined at:
-;;		line 52 in file "C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftmul.c"
+;;		line 52 in file "d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftmul.c"
 ;; Parameters:    Size  Location     Type
-;;  f1              3   26[COMRAM] float 
-;;  f2              3   29[COMRAM] float 
+;;  f1              3    8[COMRAM] float 
+;;  f2              3   11[COMRAM] float 
 ;; Auto vars:     Size  Location     Type
-;;  f3_as_produc    3   38[COMRAM] unsigned um
-;;  sign            1   42[COMRAM] unsigned char 
-;;  cntr            1   41[COMRAM] unsigned char 
-;;  exp             1   37[COMRAM] unsigned char 
+;;  f3_as_produc    3   20[COMRAM] unsigned um
+;;  sign            1   24[COMRAM] unsigned char 
+;;  cntr            1   23[COMRAM] unsigned char 
+;;  exp             1   19[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
-;;                  3   26[COMRAM] float 
+;;                  3    8[COMRAM] float 
 ;; Registers used:
 ;;		wreg, status,2, status,0, cstack
 ;; Tracked objects:
 ;;		On entry : F/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -8605,14 +7639,14 @@ GLOBAL	__end_of_EEPROMRead
 ;;		___ftpack
 ;; This function is called by:
 ;;		_CalculateTime25msCounter
-;;		___asftmul
 ;; This function uses a non-reentrant model
 ;;
 psect	text23,class=CODE,space=0,reloc=2
 global __ptext23
 __ptext23:
 psect	text23
-	file	"C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftmul.c"
+	file	"d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftmul.c"
+	line	52
 	global	__size_of___ftmul
 	__size_of___ftmul	equ	__end_of___ftmul-___ftmul
 	
@@ -8620,7 +7654,7 @@ ___ftmul:
 	opt	stack 22
 	line	56
 	
-l5155:; BSR set to: 0
+l3201:; BSR set to: 0
 
 	movlw	(0Fh)&0ffh
 	movwf	(??___ftmul+0+0)&0ffh,c
@@ -8629,42 +7663,34 @@ l5155:; BSR set to: 0
 	movff	(c:___ftmul@f1+2),??___ftmul+1+0+2
 	incf	((??___ftmul+0+0)),c,w
 	movwf	(??___ftmul+4+0)&0ffh,c
-	goto	u4240
-u4245:
+	goto	u1350
+u1355:
 	bcf	status,0
 	rrcf	(??___ftmul+1+2),c
 	rrcf	(??___ftmul+1+1),c
 	rrcf	(??___ftmul+1+0),c
-u4240:
+u1350:
 	decfsz	(??___ftmul+4+0)&0ffh,c
-	goto	u4245
+	goto	u1355
 	movf	(??___ftmul+1+0),c,w
 	movwf	((c:___ftmul@exp)),c
 	tstfsz	((c:___ftmul@exp))&0ffh
-	goto	u4251
-	goto	u4250
-u4251:
-	goto	l5161
-u4250:
+	goto	u1361
+	goto	u1360
+u1361:
+	goto	l3205
+u1360:
 	line	57
 	
-l5157:
-	movlw	low(float24(0.0000000000000000))
-	movwf	((c:?___ftmul)),c
-	movlw	high(float24(0.0000000000000000))
-	movwf	((c:?___ftmul+1)),c
-	movlw	low highword(float24(0.0000000000000000))
-	movwf	((c:?___ftmul+2)),c
+l3203:
+	clrf	((c:?___ftmul)),c
+	clrf	((c:?___ftmul+1)),c
+	clrf	((c:?___ftmul+2)),c
 
-	goto	l931
-	
-l5159:
-	goto	l931
-	
-l930:
+	goto	l933
 	line	58
 	
-l5161:
+l3205:
 	movlw	(0Fh)&0ffh
 	movwf	(??___ftmul+0+0)&0ffh,c
 	movff	(c:___ftmul@f2),??___ftmul+1+0
@@ -8672,48 +7698,40 @@ l5161:
 	movff	(c:___ftmul@f2+2),??___ftmul+1+0+2
 	incf	((??___ftmul+0+0)),c,w
 	movwf	(??___ftmul+4+0)&0ffh,c
-	goto	u4260
-u4265:
+	goto	u1370
+u1375:
 	bcf	status,0
 	rrcf	(??___ftmul+1+2),c
 	rrcf	(??___ftmul+1+1),c
 	rrcf	(??___ftmul+1+0),c
-u4260:
+u1370:
 	decfsz	(??___ftmul+4+0)&0ffh,c
-	goto	u4265
+	goto	u1375
 	movf	(??___ftmul+1+0),c,w
 	movwf	((c:___ftmul@sign)),c
 	tstfsz	((c:___ftmul@sign))&0ffh
-	goto	u4271
-	goto	u4270
-u4271:
-	goto	l5167
-u4270:
+	goto	u1381
+	goto	u1380
+u1381:
+	goto	l3209
+u1380:
 	line	59
 	
-l5163:
-	movlw	low(float24(0.0000000000000000))
-	movwf	((c:?___ftmul)),c
-	movlw	high(float24(0.0000000000000000))
-	movwf	((c:?___ftmul+1)),c
-	movlw	low highword(float24(0.0000000000000000))
-	movwf	((c:?___ftmul+2)),c
+l3207:
+	clrf	((c:?___ftmul)),c
+	clrf	((c:?___ftmul+1)),c
+	clrf	((c:?___ftmul+2)),c
 
-	goto	l931
-	
-l5165:
-	goto	l931
-	
-l932:
+	goto	l933
 	line	60
 	
-l5167:
+l3209:
 	movf	((c:___ftmul@sign)),c,w
 	addlw	low(07Bh)
 	addwf	((c:___ftmul@exp)),c
 	line	61
 	
-l5169:
+l3211:
 	movff	0+2+(c:___ftmul@f1),(c:___ftmul@sign)
 	line	62
 	movf	(0+2+(c:___ftmul@f2))&0ffh,w
@@ -8723,15 +7741,15 @@ l5169:
 	andwf	((c:___ftmul@sign)),c
 	line	64
 	
-l5171:
+l3213:
 	bsf	(0+(15/8)+(c:___ftmul@f1)),c,(15)&7
 	line	66
 	
-l5173:
+l3215:
 	bsf	(0+(15/8)+(c:___ftmul@f2)),c,(15)&7
 	line	67
 	
-l5175:
+l3217:
 	movlw	low(0FFFFh)
 	andwf	((c:___ftmul@f2)),c
 	movlw	high(0FFFFh)
@@ -8741,38 +7759,29 @@ l5175:
 
 	line	68
 	
-l5177:
-	movlw	low(0)
-	movwf	((c:___ftmul@f3_as_product)),c
-	movlw	high(0)
-	movwf	((c:___ftmul@f3_as_product+1)),c
-	movlw	low highword(0)
-	movwf	((c:___ftmul@f3_as_product+2)),c
+l3219:
+	clrf	((c:___ftmul@f3_as_product)),c
+	clrf	((c:___ftmul@f3_as_product+1)),c
+	clrf	((c:___ftmul@f3_as_product+2)),c
 
 	line	69
 	
-l5179:
-	movwf	(??___ftmul+0+0)&0ffh,c
+l3221:
 	movlw	low(07h)
 	movwf	((c:___ftmul@cntr)),c
-	movf	(??___ftmul+0+0)&0ffh,c,w
-	goto	l5181
-	line	70
-	
-l933:
 	line	71
 	
-l5181:
+l3223:
 	
 	btfss	((c:___ftmul@f1)),c,(0)&7
-	goto	u4281
-	goto	u4280
-u4281:
-	goto	l5185
-u4280:
+	goto	u1391
+	goto	u1390
+u1391:
+	goto	l3227
+u1390:
 	line	72
 	
-l5183:
+l3225:
 	movf	((c:___ftmul@f2)),c,w
 	addwf	((c:___ftmul@f3_as_product)),c
 	movf	((c:___ftmul@f2+1)),c,w
@@ -8780,12 +7789,9 @@ l5183:
 	movf	((c:___ftmul@f2+2)),c,w
 	addwfc	((c:___ftmul@f3_as_product+2)),c
 
-	goto	l5185
-	
-l934:
 	line	73
 	
-l5185:
+l3227:
 	bcf	status,0
 	rrcf	((c:___ftmul@f1+2)),c
 	rrcf	((c:___ftmul@f1+1)),c
@@ -8797,37 +7803,28 @@ l5185:
 	rlcf	((c:___ftmul@f2+2)),c
 	line	75
 	
-l5187:
+l3229:
 	decfsz	((c:___ftmul@cntr)),c
 	
-	goto	l5181
-	goto	l5189
-	
-l935:
+	goto	l3223
 	line	76
 	
-l5189:
-	movwf	(??___ftmul+0+0)&0ffh,c
+l3231:
 	movlw	low(09h)
 	movwf	((c:___ftmul@cntr)),c
-	movf	(??___ftmul+0+0)&0ffh,c,w
-	goto	l5191
-	line	77
-	
-l936:
 	line	78
 	
-l5191:
+l3233:
 	
 	btfss	((c:___ftmul@f1)),c,(0)&7
-	goto	u4291
-	goto	u4290
-u4291:
-	goto	l5195
-u4290:
+	goto	u1401
+	goto	u1400
+u1401:
+	goto	l3237
+u1400:
 	line	79
 	
-l5193:
+l3235:
 	movf	((c:___ftmul@f2)),c,w
 	addwf	((c:___ftmul@f3_as_product)),c
 	movf	((c:___ftmul@f2+1)),c,w
@@ -8835,12 +7832,9 @@ l5193:
 	movf	((c:___ftmul@f2+2)),c,w
 	addwfc	((c:___ftmul@f3_as_product+2)),c
 
-	goto	l5195
-	
-l937:
 	line	80
 	
-l5195:
+l3237:
 	bcf	status,0
 	rrcf	((c:___ftmul@f1+2)),c
 	rrcf	((c:___ftmul@f1+1)),c
@@ -8852,16 +7846,13 @@ l5195:
 	rrcf	((c:___ftmul@f3_as_product)),c
 	line	82
 	
-l5197:
+l3239:
 	decfsz	((c:___ftmul@cntr)),c
 	
-	goto	l5191
-	goto	l5199
-	
-l938:
+	goto	l3233
 	line	83
 	
-l5199:
+l3241:
 	movff	(c:___ftmul@f3_as_product),(c:?___ftpack)
 	movff	(c:___ftmul@f3_as_product+1),(c:?___ftpack+1)
 	movff	(c:___ftmul@f3_as_product+2),(c:?___ftpack+2)
@@ -8871,12 +7862,9 @@ l5199:
 	movff	0+?___ftpack,(c:?___ftmul)
 	movff	1+?___ftpack,(c:?___ftmul+1)
 	movff	2+?___ftpack,(c:?___ftmul+2)
-	goto	l931
-	
-l5201:
 	line	84
 	
-l931:
+l933:
 	return
 	opt stack 0
 GLOBAL	__end_of___ftmul
@@ -8886,21 +7874,21 @@ GLOBAL	__end_of___ftmul
 
 ;; *************** function ___ftpack *****************
 ;; Defined at:
-;;		line 63 in file "C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\float.c"
+;;		line 63 in file "d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\float.c"
 ;; Parameters:    Size  Location     Type
-;;  arg             3   18[COMRAM] unsigned um
-;;  exp             1   21[COMRAM] unsigned char 
-;;  sign            1   22[COMRAM] unsigned char 
+;;  arg             3    0[COMRAM] unsigned um
+;;  exp             1    3[COMRAM] unsigned char 
+;;  sign            1    4[COMRAM] unsigned char 
 ;; Auto vars:     Size  Location     Type
 ;;		None
 ;; Return value:  Size  Location     Type
-;;                  3   18[COMRAM] float 
+;;                  3    0[COMRAM] float 
 ;; Registers used:
 ;;		wreg, status,2, status,0
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFFF/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         5       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -8913,23 +7901,13 @@ GLOBAL	__end_of___ftmul
 ;;		Nothing
 ;; This function is called by:
 ;;		___ftmul
-;;		___abtoft
-;;		___altoft
-;;		___attoft
-;;		___awtoft
-;;		___ftadd
-;;		___ftdiv
-;;		___lbtoft
-;;		___lltoft
-;;		___lttoft
-;;		___lwtoft
 ;; This function uses a non-reentrant model
 ;;
 psect	text24,class=CODE,space=0,reloc=2
 global __ptext24
 __ptext24:
 psect	text24
-	file	"C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\float.c"
+	file	"d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\float.c"
 	line	63
 	global	__size_of___ftpack
 	__size_of___ftpack	equ	__end_of___ftpack-___ftpack
@@ -8938,64 +7916,45 @@ ___ftpack:
 	opt	stack 22
 	line	64
 	
-l4967:
+l3169:
 	movf	((c:___ftpack@exp)),c,w
 	btfsc	status,2
-	goto	u3871
-	goto	u3870
-u3871:
-	goto	l4971
-u3870:
+	goto	u1281
+	goto	u1280
+u1281:
+	goto	l848
+u1280:
 	
-l4969:
+l3171:
 	movf	((c:___ftpack@arg)),c,w
 	iorwf	((c:___ftpack@arg+1)),c,w
 	iorwf	((c:___ftpack@arg+2)),c,w
 	btfss	status,2
-	goto	u3881
-	goto	u3880
-u3881:
-	goto	l4977
-u3880:
-	goto	l4971
+	goto	u1291
+	goto	u1290
+u1291:
+	goto	l3175
+u1290:
 	
-l846:
+l848:
 	line	65
-	
-l4971:
-	movlw	low(float24(0.0000000000000000))
-	movwf	((c:?___ftpack)),c
-	movlw	high(float24(0.0000000000000000))
-	movwf	((c:?___ftpack+1)),c
-	movlw	low highword(float24(0.0000000000000000))
-	movwf	((c:?___ftpack+2)),c
+	clrf	((c:?___ftpack)),c
+	clrf	((c:?___ftpack+1)),c
+	clrf	((c:?___ftpack+2)),c
 
-	goto	l847
-	
-l4973:
-	goto	l847
-	
-l844:
-	line	66
-	goto	l4977
-	
-l849:
+	goto	l849
 	line	67
 	
-l4975:
+l3173:
 	incf	((c:___ftpack@exp)),c
 	line	68
 	bcf	status,0
 	rrcf	((c:___ftpack@arg+2)),c
 	rrcf	((c:___ftpack@arg+1)),c
 	rrcf	((c:___ftpack@arg)),c
-	goto	l4977
-	line	69
-	
-l848:
 	line	66
 	
-l4977:
+l3175:
 	movlw	low(0FE0000h)
 	andwf	((c:___ftpack@arg)),c,w
 	movwf	(??___ftpack+0+0)&0ffh,c
@@ -9010,25 +7969,19 @@ l4977:
 	iorwf	(??___ftpack+0+1),c,w
 	iorwf	(??___ftpack+0+2),c,w
 	btfss	status,2
-	goto	u3891
-	goto	u3890
-u3891:
-	goto	l4975
-u3890:
-	goto	l4983
-	
-l850:
-	line	70
-	goto	l4983
-	
-l852:
+	goto	u1301
+	goto	u1300
+u1301:
+	goto	l3173
+u1300:
+	goto	l3181
 	line	71
 	
-l4979:
+l3177:
 	incf	((c:___ftpack@exp)),c
 	line	72
 	
-l4981:
+l3179:
 	movlw	low(01h)
 	addwf	((c:___ftpack@arg)),c
 	movlw	high(01h)
@@ -9041,13 +7994,9 @@ l4981:
 	rrcf	((c:___ftpack@arg+2)),c
 	rrcf	((c:___ftpack@arg+1)),c
 	rrcf	((c:___ftpack@arg)),c
-	goto	l4983
-	line	74
-	
-l851:
 	line	70
 	
-l4983:
+l3181:
 	movlw	low(0FF0000h)
 	andwf	((c:___ftpack@arg)),c,w
 	movwf	(??___ftpack+0+0)&0ffh,c
@@ -9062,65 +8011,54 @@ l4983:
 	iorwf	(??___ftpack+0+1),c,w
 	iorwf	(??___ftpack+0+2),c,w
 	btfss	status,2
-	goto	u3901
-	goto	u3900
-u3901:
-	goto	l4979
-u3900:
-	goto	l4987
-	
-l853:
-	line	75
-	goto	l4987
-	
-l855:
+	goto	u1311
+	goto	u1310
+u1311:
+	goto	l3177
+u1310:
+	goto	l3185
 	line	76
 	
-l4985:
+l3183:
 	decf	((c:___ftpack@exp)),c
 	line	77
 	bcf	status,0
 	rlcf	((c:___ftpack@arg)),c
 	rlcf	((c:___ftpack@arg+1)),c
 	rlcf	((c:___ftpack@arg+2)),c
-	goto	l4987
-	line	78
-	
-l854:
 	line	75
 	
-l4987:
+l3185:
 	
 	btfss	((c:___ftpack@arg+1)),c,(15)&7
-	goto	u3911
-	goto	u3910
-u3911:
-	goto	l4985
-u3910:
+	goto	u1321
+	goto	u1320
+u1321:
+	goto	l3183
+u1320:
 	
-l856:
+l858:
 	line	79
 	
 	btfsc	((c:___ftpack@exp)),c,(0)&7
-	goto	u3921
-	goto	u3920
-u3921:
-	goto	l4991
-u3920:
+	goto	u1331
+	goto	u1330
+u1331:
+	goto	l3189
+u1330:
 	line	80
 	
-l4989:
+l3187:
 	bcf	(0+(15/8)+(c:___ftpack@arg)),c,(15)&7
-	goto	l4991
-	
-l857:
 	line	81
 	
-l4991:
+l3189:
 	bcf status,0
 	rrcf	((c:___ftpack@exp)),c
 
 	line	82
+	
+l3191:
 	movf	((c:___ftpack@exp)),c,w
 	movwf	(??___ftpack+0+0+2)&0ffh,c
 	clrf	(??___ftpack+0+0+1)&0ffh,c
@@ -9134,33 +8072,27 @@ l4991:
 
 	line	83
 	
-l4993:
+l3193:
 	movf	((c:___ftpack@sign)),c,w
 	btfsc	status,2
-	goto	u3931
-	goto	u3930
-u3931:
-	goto	l4997
-u3930:
+	goto	u1341
+	goto	u1340
+u1341:
+	goto	l3197
+u1340:
 	line	84
 	
-l4995:
+l3195:
 	bsf	(0+(23/8)+(c:___ftpack@arg)),c,(23)&7
-	goto	l4997
-	
-l858:
 	line	85
 	
-l4997:
+l3197:
 	movff	(c:___ftpack@arg),(c:?___ftpack)
 	movff	(c:___ftpack@arg+1),(c:?___ftpack+1)
 	movff	(c:___ftpack@arg+2),(c:?___ftpack+2)
-	goto	l847
-	
-l4999:
 	line	86
 	
-l847:
+l849:
 	return
 	opt stack 0
 GLOBAL	__end_of___ftpack
@@ -9170,21 +8102,21 @@ GLOBAL	__end_of___ftpack
 
 ;; *************** function ___fttol *****************
 ;; Defined at:
-;;		line 45 in file "C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fttol.c"
+;;		line 45 in file "d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fttol.c"
 ;; Parameters:    Size  Location     Type
-;;  f1              3   43[COMRAM] float 
+;;  f1              3   25[COMRAM] float 
 ;; Auto vars:     Size  Location     Type
-;;  lval            4   53[COMRAM] unsigned long 
-;;  exp1            1   57[COMRAM] unsigned char 
-;;  sign1           1   52[COMRAM] unsigned char 
+;;  lval            4   35[COMRAM] unsigned long 
+;;  exp1            1   39[COMRAM] unsigned char 
+;;  sign1           1   34[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
-;;                  4   43[COMRAM] long 
+;;                  4   25[COMRAM] long 
 ;; Registers used:
 ;;		wreg, status,2, status,0
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -9203,7 +8135,7 @@ psect	text25,class=CODE,space=0,reloc=2
 global __ptext25
 __ptext25:
 psect	text25
-	file	"C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fttol.c"
+	file	"d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fttol.c"
 	line	45
 	global	__size_of___fttol
 	__size_of___fttol	equ	__end_of___fttol-___fttol
@@ -9212,7 +8144,7 @@ ___fttol:
 	opt	stack 23
 	line	49
 	
-l5209:
+l3245:
 	movlw	(0Fh)&0ffh
 	movwf	(??___fttol+0+0)&0ffh,c
 	movff	(c:___fttol@f1),??___fttol+1+0
@@ -9220,43 +8152,35 @@ l5209:
 	movff	(c:___fttol@f1+2),??___fttol+1+0+2
 	incf	((??___fttol+0+0)),c,w
 	movwf	(??___fttol+4+0)&0ffh,c
-	goto	u4300
-u4305:
+	goto	u1410
+u1415:
 	bcf	status,0
 	rrcf	(??___fttol+1+2),c
 	rrcf	(??___fttol+1+1),c
 	rrcf	(??___fttol+1+0),c
-u4300:
+u1410:
 	decfsz	(??___fttol+4+0)&0ffh,c
-	goto	u4305
+	goto	u1415
 	movf	(??___fttol+1+0),c,w
 	movwf	((c:___fttol@exp1)),c
 	tstfsz	((c:___fttol@exp1))&0ffh
-	goto	u4311
-	goto	u4310
-u4311:
-	goto	l5215
-u4310:
+	goto	u1421
+	goto	u1420
+u1421:
+	goto	l3249
+u1420:
 	line	50
 	
-l5211:
-	movlw	low(0)
-	movwf	((c:?___fttol)),c
-	movlw	high(0)
-	movwf	((c:?___fttol+1)),c
-	movlw	low highword(0)
-	movwf	((c:?___fttol+2)),c
-	movlw	high highword(0)
-	movwf	((c:?___fttol+3)),c
-	goto	l951
-	
-l5213:
-	goto	l951
-	
-l950:
+l3247:
+	clrf	((c:?___fttol)),c
+	clrf	((c:?___fttol+1)),c
+	clrf	((c:?___fttol+2)),c
+	clrf	((c:?___fttol+3)),c
+
+	goto	l953
 	line	51
 	
-l5215:
+l3249:
 	movlw	(017h)&0ffh
 	movwf	(??___fttol+0+0)&0ffh,c
 	movff	(c:___fttol@f1),??___fttol+1+0
@@ -9264,24 +8188,24 @@ l5215:
 	movff	(c:___fttol@f1+2),??___fttol+1+0+2
 	incf	((??___fttol+0+0)),c,w
 	movwf	(??___fttol+4+0)&0ffh,c
-	goto	u4320
-u4325:
+	goto	u1430
+u1435:
 	bcf	status,0
 	rrcf	(??___fttol+1+2),c
 	rrcf	(??___fttol+1+1),c
 	rrcf	(??___fttol+1+0),c
-u4320:
+u1430:
 	decfsz	(??___fttol+4+0)&0ffh,c
-	goto	u4325
+	goto	u1435
 	movf	(??___fttol+1+0),c,w
 	movwf	((c:___fttol@sign1)),c
 	line	52
 	
-l5217:
+l3251:
 	bsf	(0+(15/8)+(c:___fttol@f1)),c,(15)&7
 	line	53
 	
-l5219:
+l3253:
 	movlw	low(0FFFFh)
 	andwf	((c:___fttol@f1)),c
 	movlw	high(0FFFFh)
@@ -9291,7 +8215,7 @@ l5219:
 
 	line	54
 	
-l5221:
+l3255:
 	movf	((c:___fttol@f1)),c,w
 	movwf	((c:___fttol@lval)),c
 	movf	((c:___fttol@f1+1)),c,w
@@ -9303,54 +8227,34 @@ l5221:
 	clrf	3+((c:___fttol@lval)),c
 	line	55
 	
-l5223:
+l3257:
 	movlw	(08Eh)&0ffh
 	subwf	((c:___fttol@exp1)),c
 	line	56
 	
-l5225:
+l3259:
 	btfss	((c:___fttol@exp1)),c,7
-	goto	u4331
-	goto	u4330
-u4331:
-	goto	l5237
-u4330:
+	goto	u1441
+	goto	u1440
+u1441:
+	goto	l3269
+u1440:
 	line	57
 	
-l5227:
+l3261:
 	movf	((c:___fttol@exp1)),c,w
 	xorlw	80h
 	addlw	-((-15)^80h)
 	btfsc	status,0
-	goto	u4341
-	goto	u4340
-u4341:
-	goto	l5233
-u4340:
-	line	58
-	
-l5229:
-	movlw	low(0)
-	movwf	((c:?___fttol)),c
-	movlw	high(0)
-	movwf	((c:?___fttol+1)),c
-	movlw	low highword(0)
-	movwf	((c:?___fttol+2)),c
-	movlw	high highword(0)
-	movwf	((c:?___fttol+3)),c
-	goto	l951
-	
-l5231:
-	goto	l951
-	
-l953:
-	goto	l5233
-	line	59
-	
-l954:
+	goto	u1451
+	goto	u1450
+u1451:
+	goto	l3265
+u1450:
+	goto	l3247
 	line	60
 	
-l5233:
+l3265:
 	bcf	status,0
 	rrcf	((c:___fttol@lval+3)),c
 	rrcf	((c:___fttol@lval+2)),c
@@ -9358,51 +8262,25 @@ l5233:
 	rrcf	((c:___fttol@lval)),c
 	line	61
 	
-l5235:
+l3267:
 	incfsz	((c:___fttol@exp1)),c
 	
-	goto	l5233
-	goto	l5247
-	
-l955:
-	line	62
-	goto	l5247
-	
-l952:
+	goto	l3265
+	goto	l3277
 	line	63
 	
-l5237:
+l3269:
 	movlw	(018h-1)
 	cpfsgt	((c:___fttol@exp1)),c
-	goto	u4351
-	goto	u4350
-u4351:
-	goto	l5245
-u4350:
-	line	64
-	
-l5239:
-	movlw	low(0)
-	movwf	((c:?___fttol)),c
-	movlw	high(0)
-	movwf	((c:?___fttol+1)),c
-	movlw	low highword(0)
-	movwf	((c:?___fttol+2)),c
-	movlw	high highword(0)
-	movwf	((c:?___fttol+3)),c
-	goto	l951
-	
-l5241:
-	goto	l951
-	
-l957:
-	line	65
-	goto	l5245
-	
-l959:
+	goto	u1461
+	goto	u1460
+u1461:
+	goto	l3275
+u1460:
+	goto	l3247
 	line	66
 	
-l5243:
+l3273:
 	bcf	status,0
 	rlcf	((c:___fttol@lval)),c
 	rlcf	((c:___fttol@lval+1)),c
@@ -9410,39 +8288,28 @@ l5243:
 	rlcf	((c:___fttol@lval+3)),c
 	line	67
 	decf	((c:___fttol@exp1)),c
-	goto	l5245
-	line	68
-	
-l958:
 	line	65
 	
-l5245:
+l3275:
 	tstfsz	((c:___fttol@exp1)),c
-	goto	u4361
-	goto	u4360
-u4361:
-	goto	l5243
-u4360:
-	goto	l5247
-	
-l960:
-	goto	l5247
-	line	69
-	
-l956:
+	goto	u1471
+	goto	u1470
+u1471:
+	goto	l3273
+u1470:
 	line	70
 	
-l5247:
+l3277:
 	movf	((c:___fttol@sign1)),c,w
 	btfsc	status,2
-	goto	u4371
-	goto	u4370
-u4371:
-	goto	l5251
-u4370:
+	goto	u1481
+	goto	u1480
+u1481:
+	goto	l3281
+u1480:
 	line	71
 	
-l5249:
+l3279:
 	comf	((c:___fttol@lval+3)),c
 	comf	((c:___fttol@lval+2)),c
 	comf	((c:___fttol@lval+1)),c
@@ -9451,22 +8318,16 @@ l5249:
 	addwfc	((c:___fttol@lval+1)),c
 	addwfc	((c:___fttol@lval+2)),c
 	addwfc	((c:___fttol@lval+3)),c
-	goto	l5251
-	
-l961:
 	line	72
 	
-l5251:
+l3281:
 	movff	(c:___fttol@lval),(c:?___fttol)
 	movff	(c:___fttol@lval+1),(c:?___fttol+1)
 	movff	(c:___fttol@lval+2),(c:?___fttol+2)
 	movff	(c:___fttol@lval+3),(c:?___fttol+3)
-	goto	l951
-	
-l5253:
 	line	73
 	
-l951:
+l953:
 	return
 	opt stack 0
 GLOBAL	__end_of___fttol
@@ -9476,27 +8337,27 @@ GLOBAL	__end_of___fttol
 
 ;; *************** function ___lwdiv *****************
 ;; Defined at:
-;;		line 10 in file "C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c"
+;;		line 10 in file "d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c"
 ;; Parameters:    Size  Location     Type
-;;  dividend        2   18[COMRAM] unsigned int 
-;;  divisor         2   20[COMRAM] unsigned int 
+;;  dividend        2    0[COMRAM] unsigned int 
+;;  divisor         2    2[COMRAM] unsigned int 
 ;; Auto vars:     Size  Location     Type
-;;  quotient        2   24[COMRAM] unsigned int 
-;;  counter         1   23[COMRAM] unsigned char 
+;;  quotient        2    4[COMRAM] unsigned int 
+;;  counter         1    6[COMRAM] unsigned char 
 ;; Return value:  Size  Location     Type
-;;                  2   18[COMRAM] unsigned int 
+;;                  2    0[COMRAM] unsigned int 
 ;; Registers used:
 ;;		wreg, status,2, status,0
 ;; Tracked objects:
-;;		On entry : F/0
+;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFFF/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         8       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        8 bytes
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         7       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        7 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    4
 ;; This function calls:
@@ -9509,7 +8370,7 @@ psect	text26,class=CODE,space=0,reloc=2
 global __ptext26
 __ptext26:
 psect	text26
-	file	"C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c"
+	file	"d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c"
 	line	10
 	global	__size_of___lwdiv
 	__size_of___lwdiv	equ	__end_of___lwdiv-___lwdiv
@@ -9518,86 +8379,68 @@ ___lwdiv:
 	opt	stack 23
 	line	14
 	
-l5273:; BSR set to: 0
-
-	movlw	high(0)
-	movwf	((c:___lwdiv@quotient+1)),c
-	movlw	low(0)
-	movwf	((c:___lwdiv@quotient)),c
+l3285:
+	clrf	((c:___lwdiv@quotient)),c
+	clrf	((c:___lwdiv@quotient+1)),c
 	line	15
 	
-l5275:
+l3287:
 	movf	((c:___lwdiv@divisor+1)),c,w
 	iorwf ((c:___lwdiv@divisor)),c,w
 
 	btfsc	status,2
-	goto	u4391
-	goto	u4390
-u4391:
-	goto	l1059
-u4390:
+	goto	u1491
+	goto	u1490
+u1491:
+	goto	l1061
+u1490:
 	line	16
 	
-l5277:
-	movwf	(??___lwdiv+0+0)&0ffh,c
+l3289:
 	movlw	low(01h)
 	movwf	((c:___lwdiv@counter)),c
-	movf	(??___lwdiv+0+0)&0ffh,c,w
 	line	17
-	goto	l5281
-	
-l1061:
+	goto	l3293
 	line	18
 	
-l5279:
+l3291:
 	bcf	status,0
 	rlcf	((c:___lwdiv@divisor)),c
 	rlcf	((c:___lwdiv@divisor+1)),c
 	line	19
 	incf	((c:___lwdiv@counter)),c
-	goto	l5281
-	line	20
-	
-l1060:
 	line	17
 	
-l5281:
+l3293:
 	
 	btfss	((c:___lwdiv@divisor+1)),c,(15)&7
-	goto	u4401
-	goto	u4400
-u4401:
-	goto	l5279
-u4400:
-	goto	l5283
-	
-l1062:
-	goto	l5283
-	line	21
-	
-l1063:
+	goto	u1501
+	goto	u1500
+u1501:
+	goto	l3291
+u1500:
 	line	22
 	
-l5283:
+l3295:
 	bcf	status,0
 	rlcf	((c:___lwdiv@quotient)),c
 	rlcf	((c:___lwdiv@quotient+1)),c
 	line	23
 	
-l5285:
+l3297:
 	movf	((c:___lwdiv@divisor)),c,w
 	subwf	((c:___lwdiv@dividend)),c,w
 	movf	((c:___lwdiv@divisor+1)),c,w
 	subwfb	((c:___lwdiv@dividend+1)),c,w
 	btfss	status,0
-	goto	u4411
-	goto	u4410
-u4411:
-	goto	l5291
-u4410:
+	goto	u1511
+	goto	u1510
+u1511:
+	goto	l3303
+u1510:
 	line	24
 	
-l5287:
+l3299:
 	movf	((c:___lwdiv@divisor)),c,w
 	subwf	((c:___lwdiv@dividend)),c
 	movf	((c:___lwdiv@divisor+1)),c,w
@@ -9605,36 +8448,29 @@ l5287:
 
 	line	25
 	
-l5289:
+l3301:
 	bsf	(0+(0/8)+(c:___lwdiv@quotient)),c,(0)&7
-	goto	l5291
-	line	26
-	
-l1064:
 	line	27
 	
-l5291:
+l3303:
 	bcf	status,0
 	rrcf	((c:___lwdiv@divisor+1)),c
 	rrcf	((c:___lwdiv@divisor)),c
 	line	28
 	
-l5293:
+l3305:
 	decfsz	((c:___lwdiv@counter)),c
 	
-	goto	l5283
-	goto	l1059
-	
-l1065:
+	goto	l3295
 	line	29
 	
-l1059:
+l1061:
 	line	30
 	movff	(c:___lwdiv@quotient),(c:?___lwdiv)
 	movff	(c:___lwdiv@quotient+1),(c:?___lwdiv+1)
 	line	31
 	
-l1066:
+l1068:
 	return
 	opt stack 0
 GLOBAL	__end_of___lwdiv
@@ -9644,7 +8480,7 @@ GLOBAL	__end_of___lwdiv
 
 ;; *************** function _IntServer *****************
 ;; Defined at:
-;;		line 287 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 287 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -9656,13 +8492,13 @@ GLOBAL	__end_of___lwdiv
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:         14       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:        14       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:       14 bytes
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        0 bytes
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    3
 ;; This function calls:
@@ -9677,166 +8513,112 @@ psect	intcode,class=CODE,space=0,reloc=2
 global __pintcode
 __pintcode:
 psect	intcode
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	287
 	global	__size_of_IntServer
 	__size_of_IntServer	equ	__end_of_IntServer-_IntServer
 	
 _IntServer:
 	opt	stack 22
-	movff	pclat+0,??_IntServer+0
-	movff	pclat+1,??_IntServer+1
-	movff	fsr0l+0,??_IntServer+2
-	movff	fsr0h+0,??_IntServer+3
-	movff	fsr1l+0,??_IntServer+4
-	movff	fsr1h+0,??_IntServer+5
-	movff	fsr2l+0,??_IntServer+6
-	movff	fsr2h+0,??_IntServer+7
-	movff	prodl+0,??_IntServer+8
-	movff	prodh+0,??_IntServer+9
-	movff	tblptrl+0,??_IntServer+10
-	movff	tblptrh+0,??_IntServer+11
-	movff	tblptru+0,??_IntServer+12
-	movff	tablat+0,??_IntServer+13
 	line	290
 	
-i2l4647:
+i2l2287:
 ;YellowFlash.C: 290: if(TMR0IE && TMR0IF)
 	btfss	c:(32661/8),(32661)&7	;volatile
-	goto	i2u357_41
-	goto	i2u357_40
-i2u357_41:
-	goto	i2l4655
-i2u357_40:
+	goto	i2u75_41
+	goto	i2u75_40
+i2u75_41:
+	goto	i2l2295
+i2u75_40:
 	
-i2l4649:
+i2l2289:
 	btfss	c:(32658/8),(32658)&7	;volatile
-	goto	i2u358_41
-	goto	i2u358_40
-i2u358_41:
-	goto	i2l4655
-i2u358_40:
+	goto	i2u76_41
+	goto	i2u76_40
+i2u76_41:
+	goto	i2l2295
+i2u76_40:
 	line	293
 	
-i2l4651:
+i2l2291:
 ;YellowFlash.C: 291: {
 ;YellowFlash.C: 293: TMR0IF = 0;
 	bcf	c:(32658/8),(32658)&7	;volatile
 	line	294
 	
-i2l4653:
+i2l2293:
 ;YellowFlash.C: 294: TMR0IntServer();
 	call	_TMR0IntServer	;wreg free
-	goto	i2l4655
-	line	295
-	
-i2l512:
 	line	297
 	
-i2l4655:
+i2l2295:
 ;YellowFlash.C: 295: }
 ;YellowFlash.C: 297: if(TMR1IE && TMR1IF)
 	btfss	c:(31976/8),(31976)&7	;volatile
-	goto	i2u359_41
-	goto	i2u359_40
-i2u359_41:
-	goto	i2l4663
-i2u359_40:
+	goto	i2u77_41
+	goto	i2u77_40
+i2u77_41:
+	goto	i2l2303
+i2u77_40:
 	
-i2l4657:
+i2l2297:
 	btfss	c:(31984/8),(31984)&7	;volatile
-	goto	i2u360_41
-	goto	i2u360_40
-i2u360_41:
-	goto	i2l4663
-i2u360_40:
+	goto	i2u78_41
+	goto	i2u78_40
+i2u78_41:
+	goto	i2l2303
+i2u78_40:
 	line	300
 	
-i2l4659:
+i2l2299:
 ;YellowFlash.C: 298: {
 ;YellowFlash.C: 300: TMR1IF = 0;
 	bcf	c:(31984/8),(31984)&7	;volatile
 	line	301
 	
-i2l4661:
+i2l2301:
 ;YellowFlash.C: 301: TMR1IntServer();
 	call	_TMR1IntServer	;wreg free
-	goto	i2l4663
-	line	302
-	
-i2l513:
 	line	305
 	
-i2l4663:
-;YellowFlash.C: 302: }
-;YellowFlash.C: 305: if((CANSTAT & 0x0e)!= 0x00)
-	movf	((c:3950)),c,w	;volatile
-	andlw	low(0Eh)
-	btfsc	status,2
-	goto	i2u361_41
-	goto	i2u361_40
-i2u361_41:
-	goto	i2l514
-i2u361_40:
-	line	307
-	
-i2l4665:
+i2l2303:
 ;YellowFlash.C: 306: {
 ;YellowFlash.C: 307: CANInt=1;
-	movlb	(_CANInt/8) >> 8
-	bsf	(_CANInt/8),c,(_CANInt)&7
+	movf	((c:3950)),c,w	;volatile
 	line	308
 	
-i2l514:
+i2l516:
 	line	309
 ;YellowFlash.C: 308: }
 ;YellowFlash.C: 309: if(ADIE && ADIF)
 	btfss	c:(31982/8),(31982)&7	;volatile
-	goto	i2u362_41
-	goto	i2u362_40
-i2u362_41:
-	goto	i2l516
-i2u362_40:
+	goto	i2u79_41
+	goto	i2u79_40
+i2u79_41:
+	goto	i2l518
+i2u79_40:
 	
-i2l4667:
+i2l2305:
 	btfss	c:(31990/8),(31990)&7	;volatile
-	goto	i2u363_41
-	goto	i2u363_40
-i2u363_41:
-	goto	i2l516
-i2u363_40:
+	goto	i2u80_41
+	goto	i2u80_40
+i2u80_41:
+	goto	i2l518
+i2u80_40:
 	line	311
 	
-i2l4669:
+i2l2307:
 ;YellowFlash.C: 310: {
 ;YellowFlash.C: 311: ADIF = 0;
 	bcf	c:(31990/8),(31990)&7	;volatile
 	line	312
 	
-i2l4671:
+i2l2309:
 ;YellowFlash.C: 312: ADIntServer();
 	call	_ADIntServer	;wreg free
-	goto	i2l516
-	line	314
-	
-i2l515:
 	line	315
 	
-i2l516:
-	movff	??_IntServer+13,tablat+0
-	movff	??_IntServer+12,tblptru+0
-	movff	??_IntServer+11,tblptrh+0
-	movff	??_IntServer+10,tblptrl+0
-	movff	??_IntServer+9,prodh+0
-	movff	??_IntServer+8,prodl+0
-	movff	??_IntServer+7,fsr2h+0
-	movff	??_IntServer+6,fsr2l+0
-	movff	??_IntServer+5,fsr1h+0
-	movff	??_IntServer+4,fsr1l+0
-	movff	??_IntServer+3,fsr0h+0
-	movff	??_IntServer+2,fsr0l+0
-	movff	??_IntServer+1,pclat+1
-	movff	??_IntServer+0,pclat+0
+i2l518:
 	retfie f
 	opt stack 0
 GLOBAL	__end_of_IntServer
@@ -9846,7 +8628,7 @@ GLOBAL	__end_of_IntServer
 
 ;; *************** function _TMR0IntServer *****************
 ;; Defined at:
-;;		line 241 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 241 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -9858,7 +8640,7 @@ GLOBAL	__end_of_IntServer
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -9876,7 +8658,7 @@ psect	text28,class=CODE,space=0,reloc=2
 global __ptext28
 __ptext28:
 psect	text28
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	241
 	global	__size_of_TMR0IntServer
 	__size_of_TMR0IntServer	equ	__end_of_TMR0IntServer-_TMR0IntServer
@@ -9885,7 +8667,7 @@ _TMR0IntServer:
 	opt	stack 24
 	line	243
 	
-i2l1775:
+i2l1771:
 ;YellowFlash.C: 243: TMR0H = 0xd8;
 	movlw	low(0D8h)
 	movwf	((c:4055)),c	;volatile
@@ -9895,13 +8677,13 @@ i2l1775:
 	movwf	((c:4054)),c	;volatile
 	line	248
 	
-i2l1777:
+i2l1773:
 ;YellowFlash.C: 248: time5ms = 1;
 	movlb	(_time5ms/8) >> 8
 	bsf	(_time5ms/8),c,(_time5ms)&7
 	line	249
 	
-i2l502:
+i2l504:
 	return
 	opt stack 0
 GLOBAL	__end_of_TMR0IntServer
@@ -9911,7 +8693,7 @@ GLOBAL	__end_of_TMR0IntServer
 
 ;; *************** function _TMR1IntServer *****************
 ;; Defined at:
-;;		line 253 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 253 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -9923,7 +8705,7 @@ GLOBAL	__end_of_TMR0IntServer
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -9942,7 +8724,7 @@ psect	text29,class=CODE,space=0,reloc=2
 global __ptext29
 __ptext29:
 psect	text29
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	253
 	global	__size_of_TMR1IntServer
 	__size_of_TMR1IntServer	equ	__end_of_TMR1IntServer-_TMR1IntServer
@@ -9951,7 +8733,7 @@ _TMR1IntServer:
 	opt	stack 22
 	line	255
 	
-i2l4637:
+i2l2277:
 ;YellowFlash.C: 255: TMR1H = 0x3c;
 	movlw	low(03Ch)
 	movwf	((c:4047)),c	;volatile
@@ -9961,58 +8743,39 @@ i2l4637:
 	movwf	((c:4046)),c	;volatile
 	line	259
 	
-i2l4639:
+i2l2279:
 ;YellowFlash.C: 259: t1_cont++;
-	movlb	0	; () banked
-	movlb	0	; () banked
-	infsnz	((_t1_cont))&0ffh
-	incf	((_t1_cont+1))&0ffh
+	infsnz	((c:_t1_cont)),c
+	incf	((c:_t1_cont+1)),c
 	line	268
 	
-i2l4641:
+i2l2281:
 ;YellowFlash.C: 268: if(t1_cont>=time_counter)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((_time_counter))&0ffh,w
-	movlb	0	; () banked
-	movlb	0	; () banked
-	subwf	((_t1_cont))&0ffh,w
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movf	((_time_counter+1))&0ffh,w
-	movlb	0	; () banked
-	movlb	0	; () banked
-	subwfb	((_t1_cont+1))&0ffh,w
+	movf	((c:_time_counter)),c,w
+	subwf	((c:_t1_cont)),c,w
+	movf	((c:_time_counter+1)),c,w
+	subwfb	((c:_t1_cont+1)),c,w
 	btfss	status,0
-	goto	i2u356_41
-	goto	i2u356_40
-i2u356_41:
-	goto	i2l506
-i2u356_40:
+	goto	i2u74_41
+	goto	i2u74_40
+i2u74_41:
+	goto	i2l508
+i2u74_40:
 	line	270
 	
-i2l4643:
+i2l2283:
 ;YellowFlash.C: 269: {
 ;YellowFlash.C: 270: t1_cont=0;
-	movlw	high(0)
-	movlb	0	; () banked
-	movlb	0	; () banked
-	movwf	((_t1_cont+1))&0ffh
-	movlw	low(0)
-	movlb	0	; () banked
-	movwf	((_t1_cont))&0ffh
+	clrf	((c:_t1_cont)),c
+	clrf	((c:_t1_cont+1)),c
 	line	271
 	
-i2l4645:
+i2l2285:
 ;YellowFlash.C: 271: YellowFlash();
 	call	_YellowFlash	;wreg free
-	goto	i2l506
-	line	272
-	
-i2l505:
 	line	274
 	
-i2l506:
+i2l508:
 	return
 	opt stack 0
 GLOBAL	__end_of_TMR1IntServer
@@ -10022,7 +8785,7 @@ GLOBAL	__end_of_TMR1IntServer
 
 ;; *************** function _YellowFlash *****************
 ;; Defined at:
-;;		line 224 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 224 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -10034,7 +8797,7 @@ GLOBAL	__end_of_TMR1IntServer
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -10054,7 +8817,7 @@ psect	text30,class=CODE,space=0,reloc=2
 global __ptext30
 __ptext30:
 psect	text30
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	224
 	global	__size_of_YellowFlash
 	__size_of_YellowFlash	equ	__end_of_YellowFlash-_YellowFlash
@@ -10063,57 +8826,46 @@ _YellowFlash:
 	opt	stack 22
 	line	225
 	
-i2l4629:
+i2l2269:
 ;YellowFlash.C: 225: if(turnoff)
 	movf	((c:_turnoff)),c,w
 	btfsc	status,2
-	goto	i2u354_41
-	goto	i2u354_40
-i2u354_41:
-	goto	i2l499
-i2u354_40:
+	goto	i2u72_41
+	goto	i2u72_40
+i2u72_41:
+	goto	i2l501
+i2u72_40:
 	line	227
 	
-i2l4631:
+i2l2271:
 ;YellowFlash.C: 226: {
 ;YellowFlash.C: 227: if(switchmode)
 	movlb	(_switchmode/8) >> 8
 	btfss	(_switchmode/8),c,(_switchmode)&7
-	goto	i2u355_41
-	goto	i2u355_40
-i2u355_41:
-	goto	i2l4635
-i2u355_40:
+	goto	i2u73_41
+	goto	i2u73_40
+i2u73_41:
+	goto	i2l2275
+i2u73_40:
 	line	229
 	
-i2l4633:
+i2l2273:
 ;YellowFlash.C: 228: {
 ;YellowFlash.C: 229: LED_On_Disp();
 	call	_LED_On_Disp	;wreg free
 	line	230
 ;YellowFlash.C: 230: }
-	goto	i2l499
-	line	231
-	
-i2l497:
+	goto	i2l501
 	line	233
 	
-i2l4635:
+i2l2275:
 ;YellowFlash.C: 231: else
 ;YellowFlash.C: 232: {
 ;YellowFlash.C: 233: LED_Off_Disp();
 	call	_LED_Off_Disp	;wreg free
-	goto	i2l499
-	line	234
-	
-i2l498:
-	goto	i2l499
-	line	235
-	
-i2l496:
 	line	236
 	
-i2l499:
+i2l501:
 	return
 	opt stack 0
 GLOBAL	__end_of_YellowFlash
@@ -10123,7 +8875,7 @@ GLOBAL	__end_of_YellowFlash
 
 ;; *************** function _LED_On_Disp *****************
 ;; Defined at:
-;;		line 174 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 174 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -10135,7 +8887,7 @@ GLOBAL	__end_of_YellowFlash
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -10153,7 +8905,7 @@ psect	text31,class=CODE,space=0,reloc=2
 global __ptext31
 __ptext31:
 psect	text31
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	174
 	global	__size_of_LED_On_Disp
 	__size_of_LED_On_Disp	equ	__end_of_LED_On_Disp-_LED_On_Disp
@@ -10162,14 +8914,14 @@ _LED_On_Disp:
 	opt	stack 22
 	line	175
 	
-i2l3865:
+i2l1759:
 ;YellowFlash.C: 175: switch(run_mode)
-	goto	i2l3869
+	goto	i2l1763
 	line	180
 ;YellowFlash.C: 176: {
 ;YellowFlash.C: 180: case 0x01:
 	
-i2l481:
+i2l483:
 	line	181
 ;YellowFlash.C: 181: RC6=0;
 	bcf	c:(31766/8),(31766)&7	;volatile
@@ -10181,11 +8933,11 @@ i2l481:
 	bcf	c:(31771/8),(31771)&7	;volatile
 	line	184
 ;YellowFlash.C: 184: break;
-	goto	i2l482
+	goto	i2l484
 	line	186
 ;YellowFlash.C: 186: case 0x02:
 	
-i2l483:
+i2l485:
 	line	187
 ;YellowFlash.C: 187: RC6=1;
 	bsf	c:(31766/8),(31766)&7	;volatile
@@ -10197,24 +8949,10 @@ i2l483:
 	bcf	c:(31771/8),(31771)&7	;volatile
 	line	190
 ;YellowFlash.C: 190: break;
-	goto	i2l482
-	line	191
-;YellowFlash.C: 191: default:
-	
-i2l484:
-	line	192
-;YellowFlash.C: 192: break;
-	goto	i2l482
-	line	193
-	
-i2l3867:
-;YellowFlash.C: 193: }
-	goto	i2l482
+	goto	i2l484
 	line	175
 	
-i2l480:
-	
-i2l3869:
+i2l1763:
 	movf	((c:_run_mode)),c,w
 	; Switch size 1, requested type "space"
 ; Number of cases is 2, Range of values is 1 to 2
@@ -10225,26 +8963,26 @@ i2l3869:
 
 	xorlw	1^0	; case 1
 	skipnz
-	goto	i2l481
+	goto	i2l483
 	xorlw	2^1	; case 2
 	skipnz
-	goto	i2l483
-	goto	i2l482
+	goto	i2l485
+	goto	i2l484
 
 	line	193
 	
-i2l482:
+i2l484:
 	line	195
 ;YellowFlash.C: 195: time_counter=time_on_counter;
-	movff	(_time_on_counter),(_time_counter)
-	movff	(_time_on_counter+1),(_time_counter+1)
+	movff	(c:_time_on_counter),(c:_time_counter)
+	movff	(c:_time_on_counter+1),(c:_time_counter+1)
 	line	196
 ;YellowFlash.C: 196: switchmode=0;
 	movlb	(_switchmode/8) >> 8
 	bcf	(_switchmode/8),c,(_switchmode)&7
 	line	197
 	
-i2l485:
+i2l487:
 	return
 	opt stack 0
 GLOBAL	__end_of_LED_On_Disp
@@ -10254,7 +8992,7 @@ GLOBAL	__end_of_LED_On_Disp
 
 ;; *************** function _LED_Off_Disp *****************
 ;; Defined at:
-;;		line 199 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 199 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -10266,7 +9004,7 @@ GLOBAL	__end_of_LED_On_Disp
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
@@ -10284,7 +9022,7 @@ psect	text32,class=CODE,space=0,reloc=2
 global __ptext32
 __ptext32:
 psect	text32
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	199
 	global	__size_of_LED_Off_Disp
 	__size_of_LED_Off_Disp	equ	__end_of_LED_Off_Disp-_LED_Off_Disp
@@ -10293,14 +9031,14 @@ _LED_Off_Disp:
 	opt	stack 22
 	line	200
 	
-i2l3871:
+i2l1765:
 ;YellowFlash.C: 200: switch(run_mode)
-	goto	i2l3875
+	goto	i2l1769
 	line	204
 ;YellowFlash.C: 201: {
 ;YellowFlash.C: 204: case 0x01:
 	
-i2l489:
+i2l491:
 	line	205
 ;YellowFlash.C: 205: RC6=1;
 	bsf	c:(31766/8),(31766)&7	;volatile
@@ -10312,11 +9050,11 @@ i2l489:
 	bsf	c:(31771/8),(31771)&7	;volatile
 	line	208
 ;YellowFlash.C: 208: break;
-	goto	i2l490
+	goto	i2l492
 	line	209
 ;YellowFlash.C: 209: case 0x02:
 	
-i2l491:
+i2l493:
 	line	210
 ;YellowFlash.C: 210: RC6=0;
 	bcf	c:(31766/8),(31766)&7	;volatile
@@ -10328,24 +9066,10 @@ i2l491:
 	bsf	c:(31771/8),(31771)&7	;volatile
 	line	213
 ;YellowFlash.C: 213: break;
-	goto	i2l490
-	line	214
-;YellowFlash.C: 214: default:
-	
-i2l492:
-	line	215
-;YellowFlash.C: 215: break;
-	goto	i2l490
-	line	216
-	
-i2l3873:
-;YellowFlash.C: 216: }
-	goto	i2l490
+	goto	i2l492
 	line	200
 	
-i2l488:
-	
-i2l3875:
+i2l1769:
 	movf	((c:_run_mode)),c,w
 	; Switch size 1, requested type "space"
 ; Number of cases is 2, Range of values is 1 to 2
@@ -10356,26 +9080,26 @@ i2l3875:
 
 	xorlw	1^0	; case 1
 	skipnz
-	goto	i2l489
+	goto	i2l491
 	xorlw	2^1	; case 2
 	skipnz
-	goto	i2l491
-	goto	i2l490
+	goto	i2l493
+	goto	i2l492
 
 	line	216
 	
-i2l490:
+i2l492:
 	line	217
 ;YellowFlash.C: 217: time_counter=time_off_counter;
-	movff	(_time_off_counter),(_time_counter)
-	movff	(_time_off_counter+1),(_time_counter+1)
+	movff	(c:_time_off_counter),(c:_time_counter)
+	movff	(c:_time_off_counter+1),(c:_time_counter+1)
 	line	218
 ;YellowFlash.C: 218: switchmode=1;
 	movlb	(_switchmode/8) >> 8
 	bsf	(_switchmode/8),c,(_switchmode)&7
 	line	219
 	
-i2l493:
+i2l495:
 	return
 	opt stack 0
 GLOBAL	__end_of_LED_Off_Disp
@@ -10385,25 +9109,25 @@ GLOBAL	__end_of_LED_Off_Disp
 
 ;; *************** function _ADIntServer *****************
 ;; Defined at:
-;;		line 278 in file "E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+;;		line 278 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
-;;  adrel           2    2[COMRAM] unsigned int 
+;;  adrel           2    0        unsigned int 
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
-;;		wreg, status,2, status,0
+;;		wreg
 ;; Tracked objects:
 ;;		On entry : 0/0
 ;;		On exit  : 0/0
-;;		Unchanged: 0/0
+;;		Unchanged: FFFFFFFF/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-;;Total ram usage:        4 bytes
+;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+;;Total ram usage:        0 bytes
 ;; Hardware stack levels used:    1
 ;; This function calls:
 ;;		Nothing
@@ -10415,38 +9139,22 @@ psect	text33,class=CODE,space=0,reloc=2
 global __ptext33
 __ptext33:
 psect	text33
-	file	"E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C"
+	file	"G:\working\YellowFlashingController\YellowFlash.C"
 	line	278
 	global	__size_of_ADIntServer
 	__size_of_ADIntServer	equ	__end_of_ADIntServer-_ADIntServer
 	
 _ADIntServer:
 	opt	stack 24
-	line	279
-	
-i2l1779:
-;YellowFlash.C: 279: unsigned int adrel=0x0000;
-	movlw	high(0)
-	movwf	((c:ADIntServer@adrel+1)),c
-	movlw	low(0)
-	movwf	((c:ADIntServer@adrel)),c
 	line	281
 	
-i2l1781:
+i2l1775:
 ;YellowFlash.C: 281: adrel = (ADRESH<<8)|ADRESL;
+	movf	((c:4036)),c,w	;volatile
 	movf	((c:4035)),c,w	;volatile
-	movff	(c:4036),??_ADIntServer+0+0	;volatile
-	clrf	(??_ADIntServer+0+0+1)&0ffh,c
-	movff	??_ADIntServer+0+0,??_ADIntServer+0+1
-	clrf	(??_ADIntServer+0+0),c
-	iorwf	(??_ADIntServer+0+0),c,w
-	
-	movwf	((c:ADIntServer@adrel)),c
-	movf	(??_ADIntServer+0+1),c,w
-	movwf	1+((c:ADIntServer@adrel)),c
 	line	282
 	
-i2l509:
+i2l511:
 	return
 	opt stack 0
 GLOBAL	__end_of_ADIntServer

@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"12002 C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
+"12002 d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
 [v _PORTB `Vuc ~T0 0 e@3969 ]
 "6417
 [v _RXF0SIDH `Vuc ~T0 0 e@3808 ]
@@ -294,8 +294,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "18041
 [v _RD2 `Vb ~T0 0 e@31770 ]
 [p mainexit ]
+"19863
+[v _SWDTEN `Vb ~T0 0 e@32392 ]
 [; ;PIC18F45K80.h: 17: extern volatile unsigned char RXERRCNT @ 0xE41;
-"19 C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
+"19 d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
 [; ;PIC18F45K80.h: 19: asm("RXERRCNT equ 0E41h");
 [; <" RXERRCNT equ 0E41h ;# ">
 [; ;PIC18F45K80.h: 22: extern volatile union {
@@ -17722,7 +17724,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 186: extern void _delay(unsigned long);
 [; ;pic18.h: 188: extern void _delaywdt(unsigned long);
 [; ;pic18.h: 190: extern void _delay3(unsigned char);
-"82 E:\WorkSpace\YellowFlashingController20140317\TSC.H
+"82 G:\working\YellowFlashingController\TSC.H
 [v _GetLampBoardAddr `(uc ~T0 1 ef ]
 {
 [; ;TSC.H: 81: unsigned char GetLampBoardAddr(void)
@@ -17985,7 +17987,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "171
 [e :UE 2743 ]
 }
-"15 E:\WorkSpace\YellowFlashingController20140317\CAN.H
+"15 G:\working\YellowFlashingController\CAN.H
 [v _CANFilterSet `(v ~T0 1 ef2`uc`uc ]
 {
 [; ;CAN.H: 14: void CANFilterSet(unsigned char board_addr,unsigned char f_type)
@@ -18656,230 +18658,232 @@ Version 3.2 HI-TECH Software Intermediate Code
 "343
 [e :UE 2776 ]
 }
-"4 E:\WorkSpace\YellowFlashingController20140317\mcu.h
+"4 G:\working\YellowFlashingController\mcu.h
 [p x XINST=OFF ]
 "5
 [p x FOSC=HS1 ]
 "7
 [p x WRTD=OFF ]
 "8
-[p x WDTEN=OFF ]
+[p x WDTEN=ON ]
 "9
-[p x PLLCFG=OFF ]
+[p x WDTPS=256 ]
 "10
+[p x PLLCFG=OFF ]
+"11
 [p x SOSCSEL=DIG ]
-[; ;mcu.h: 23: void delayms(unsigned int ms);
-[; ;mcu.h: 24: void delayus(unsigned int us);
-"32
+[; ;mcu.h: 24: void delayms(unsigned int ms);
+[; ;mcu.h: 25: void delayus(unsigned int us);
+"33
 [v _EEPROMRead `(v ~T0 1 ef3`*uc`*uc`*uc ]
 {
-[; ;mcu.h: 31: void EEPROMRead(unsigned char *addr,unsigned char *num,unsigned char *dat)
-[; ;mcu.h: 32: {
+[; ;mcu.h: 32: void EEPROMRead(unsigned char *addr,unsigned char *num,unsigned char *dat)
+[; ;mcu.h: 33: {
 [e :U _EEPROMRead ]
 [v _addr `*uc ~T0 1 r1 ]
 [v _num `*uc ~T0 1 r2 ]
 [v _dat `*uc ~T0 1 r3 ]
 [f ]
-[; ;mcu.h: 33: do
-"33
-[e :U 2786 ]
-[; ;mcu.h: 34: {
+[; ;mcu.h: 34: do
 "34
-{
-[; ;mcu.h: 35: EEADRH = (*addr)>>8;
+[e :U 2786 ]
+[; ;mcu.h: 35: {
 "35
-[e = _EEADRH -> >> -> *U _addr `i -> 8 `i `uc ]
-[; ;mcu.h: 36: EEADR = (*addr);
+{
+[; ;mcu.h: 36: EEADRH = (*addr)>>8;
 "36
-[e = _EEADR *U _addr ]
-[; ;mcu.h: 37: (*addr)++;
+[e = _EEADRH -> >> -> *U _addr `i -> 8 `i `uc ]
+[; ;mcu.h: 37: EEADR = (*addr);
 "37
+[e = _EEADR *U _addr ]
+[; ;mcu.h: 38: (*addr)++;
+"38
 [e ++ *U _addr -> -> 1 `i `uc ]
-[; ;mcu.h: 39: EEDATA = 0;
-"39
+[; ;mcu.h: 40: EEDATA = 0;
+"40
 [e = _EEDATA -> -> 0 `i `uc ]
-[; ;mcu.h: 41: EECON1 &= 0x3f;
-"41
+[; ;mcu.h: 42: EECON1 &= 0x3f;
+"42
 [e =& _EECON1 -> -> 63 `i `uc ]
-[; ;mcu.h: 44: EECON1 |= 0x01;
-"44
-[e =| _EECON1 -> -> 1 `i `uc ]
-[; ;mcu.h: 45: asm("NOP");
+[; ;mcu.h: 45: EECON1 |= 0x01;
 "45
+[e =| _EECON1 -> -> 1 `i `uc ]
+[; ;mcu.h: 46: asm("NOP");
+"46
 [; <" NOP ;# ">
-[; ;mcu.h: 47: (*dat) = EEDATA;
-"47
-[e = *U _dat _EEDATA ]
-[; ;mcu.h: 48: dat++;
+[; ;mcu.h: 48: (*dat) = EEDATA;
 "48
-[e ++ _dat * -> -> 1 `i `x -> -> # *U _dat `i `x ]
+[e = *U _dat _EEDATA ]
+[; ;mcu.h: 49: dat++;
 "49
-}
-[; ;mcu.h: 49: }
-[; ;mcu.h: 50: while((*num)--);
+[e ++ _dat * -> -> 1 `i `x -> -> # *U _dat `i `x ]
 "50
+}
+[; ;mcu.h: 50: }
+[; ;mcu.h: 51: while((*num)--);
+"51
 [e $ != -> -- *U _num -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 2786  ]
 [e :U 2785 ]
-[; ;mcu.h: 52: }
-"52
+[; ;mcu.h: 53: }
+"53
 [e :UE 2783 ]
 }
-"57
+"58
 [v _EEPROMWrite `(v ~T0 1 ef3`*uc`*uc`*uc ]
 {
-[; ;mcu.h: 56: void EEPROMWrite(unsigned char *addr,unsigned char *num,unsigned char *dat)
-[; ;mcu.h: 57: {
+[; ;mcu.h: 57: void EEPROMWrite(unsigned char *addr,unsigned char *num,unsigned char *dat)
+[; ;mcu.h: 58: {
 [e :U _EEPROMWrite ]
 [v _addr `*uc ~T0 1 r1 ]
 [v _num `*uc ~T0 1 r2 ]
 [v _dat `*uc ~T0 1 r3 ]
 [f ]
-[; ;mcu.h: 58: INTCON &= 0x3f;
-"58
-[e =& _INTCON -> -> 63 `i `uc ]
-[; ;mcu.h: 59: while((*num)--)
+[; ;mcu.h: 59: INTCON &= 0x3f;
 "59
+[e =& _INTCON -> -> 63 `i `uc ]
+[; ;mcu.h: 60: while((*num)--)
+"60
 [e $U 2788  ]
 [e :U 2789 ]
-[; ;mcu.h: 60: {
-"60
-{
-[; ;mcu.h: 61: EEADRH = (*addr)>>8;
+[; ;mcu.h: 61: {
 "61
-[e = _EEADRH -> >> -> *U _addr `i -> 8 `i `uc ]
-[; ;mcu.h: 62: EEADR = (*addr);
+{
+[; ;mcu.h: 62: EEADRH = (*addr)>>8;
 "62
-[e = _EEADR *U _addr ]
-[; ;mcu.h: 63: (*addr)++;
+[e = _EEADRH -> >> -> *U _addr `i -> 8 `i `uc ]
+[; ;mcu.h: 63: EEADR = (*addr);
 "63
-[e ++ *U _addr -> -> 1 `i `uc ]
-[; ;mcu.h: 64: EEDATA = (*dat);
+[e = _EEADR *U _addr ]
+[; ;mcu.h: 64: (*addr)++;
 "64
-[e = _EEDATA *U _dat ]
-[; ;mcu.h: 65: dat++;
+[e ++ *U _addr -> -> 1 `i `uc ]
+[; ;mcu.h: 65: EEDATA = (*dat);
 "65
+[e = _EEDATA *U _dat ]
+[; ;mcu.h: 66: dat++;
+"66
 [e ++ _dat * -> -> 1 `i `x -> -> # *U _dat `i `x ]
-[; ;mcu.h: 67: EECON1 &= 0x3f;
-"67
+[; ;mcu.h: 68: EECON1 &= 0x3f;
+"68
 [e =& _EECON1 -> -> 63 `i `uc ]
-[; ;mcu.h: 69: EECON1 |= 0x04;
-"69
+[; ;mcu.h: 70: EECON1 |= 0x04;
+"70
 [e =| _EECON1 -> -> 4 `i `uc ]
-[; ;mcu.h: 74: EECON2 = 0x55;
-"74
-[e = _EECON2 -> -> 85 `i `uc ]
-[; ;mcu.h: 75: EECON2 = 0xaa;
+[; ;mcu.h: 75: EECON2 = 0x55;
 "75
+[e = _EECON2 -> -> 85 `i `uc ]
+[; ;mcu.h: 76: EECON2 = 0xaa;
+"76
 [e = _EECON2 -> -> 170 `i `uc ]
-[; ;mcu.h: 77: EECON1 |= 0x02;
-"77
+[; ;mcu.h: 78: EECON1 |= 0x02;
+"78
 [e =| _EECON1 -> -> 2 `i `uc ]
-[; ;mcu.h: 79: asm("NOP");
-"79
-[; <" NOP ;# ">
-[; ;mcu.h: 80: while(EECON1 & 0x02);
+[; ;mcu.h: 80: asm("NOP");
 "80
+[; <" NOP ;# ">
+[; ;mcu.h: 81: while(EECON1 & 0x02);
+"81
 [e $U 2791  ]
 [e :U 2792 ]
 [e :U 2791 ]
 [e $ != & -> _EECON1 `i -> 2 `i -> 0 `i 2792  ]
 [e :U 2793 ]
-[; ;mcu.h: 81: asm("NOP");
-"81
-[; <" NOP ;# ">
-[; ;mcu.h: 82: EECON1 &= 0x04;
+[; ;mcu.h: 82: asm("NOP");
 "82
+[; <" NOP ;# ">
+[; ;mcu.h: 83: EECON1 &= 0x04;
+"83
 [e =& _EECON1 -> -> 4 `i `uc ]
-"84
+"85
 }
 [e :U 2788 ]
-"59
+"60
 [e $ != -> -- *U _num -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 2789  ]
 [e :U 2790 ]
-[; ;mcu.h: 84: }
-[; ;mcu.h: 86: INTCON &= 0xc0;
-"86
-[e =& _INTCON -> -> 192 `i `uc ]
-[; ;mcu.h: 87: }
+[; ;mcu.h: 85: }
+[; ;mcu.h: 87: INTCON &= 0xc0;
 "87
+[e =& _INTCON -> -> 192 `i `uc ]
+[; ;mcu.h: 88: }
+"88
 [e :UE 2787 ]
 }
-"91
+"92
 [v _delayus `(v ~T0 1 ef1`ui ]
 {
-[; ;mcu.h: 90: void delayus(unsigned int us)
-[; ;mcu.h: 91: {
+[; ;mcu.h: 91: void delayus(unsigned int us)
+[; ;mcu.h: 92: {
 [e :U _delayus ]
 [v _us `ui ~T0 1 r1 ]
 [f ]
-"93
-[v _i `ui ~T0 1 a ]
-[; ;mcu.h: 93: unsigned int i;
-[; ;mcu.h: 94: us=us-5;
 "94
+[v _i `ui ~T0 1 a ]
+[; ;mcu.h: 94: unsigned int i;
+[; ;mcu.h: 95: us=us-5;
+"95
 [e = _us - _us -> -> 5 `i `ui ]
-[; ;mcu.h: 96: for(i=0;i<us;i++)
-"96
+[; ;mcu.h: 97: for(i=0;i<us;i++)
+"97
 {
 [e = _i -> -> 0 `i `ui ]
 [e $U 2798  ]
-"97
+"98
 [e :U 2795 ]
-[; ;mcu.h: 97: {
+[; ;mcu.h: 98: {
 {
-[; ;mcu.h: 98: ;
-"99
+[; ;mcu.h: 99: ;
+"100
 }
-"96
+"97
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 2798 ]
 [e $ < _i _us 2795  ]
 [e :U 2796 ]
-"99
+"100
 }
-[; ;mcu.h: 99: }
-[; ;mcu.h: 102: }
-"102
+[; ;mcu.h: 100: }
+[; ;mcu.h: 103: }
+"103
 [e :UE 2794 ]
 }
-"107
+"108
 [v _delayms `(v ~T0 1 ef1`ui ]
 {
-[; ;mcu.h: 106: void delayms(unsigned int ms)
-[; ;mcu.h: 107: {
+[; ;mcu.h: 107: void delayms(unsigned int ms)
+[; ;mcu.h: 108: {
 [e :U _delayms ]
 [v _ms `ui ~T0 1 r1 ]
 [f ]
-"108
+"109
 [v _i `ui ~T0 1 a ]
-[; ;mcu.h: 108: unsigned int i;
-[; ;mcu.h: 111: for(i=0;i<ms;i++)
-"111
+[; ;mcu.h: 109: unsigned int i;
+[; ;mcu.h: 112: for(i=0;i<ms;i++)
+"112
 {
 [e = _i -> -> 0 `i `ui ]
 [e $U 2803  ]
-"112
-[e :U 2800 ]
-[; ;mcu.h: 112: {
-{
-[; ;mcu.h: 113: delayus(997);
 "113
-[e ( _delayus (1 -> -> 997 `i `ui ]
+[e :U 2800 ]
+[; ;mcu.h: 113: {
+{
+[; ;mcu.h: 114: delayus(997);
 "114
+[e ( _delayus (1 -> -> 997 `i `ui ]
+"115
 }
-"111
+"112
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 2803 ]
 [e $ < _i _ms 2800  ]
 [e :U 2801 ]
-"114
+"115
 }
-[; ;mcu.h: 114: }
-[; ;mcu.h: 116: }
-"116
+[; ;mcu.h: 115: }
+[; ;mcu.h: 117: }
+"117
 [e :UE 2799 ]
 }
-"44 E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C
+"44 G:\working\YellowFlashingController\YellowFlash.C
 [v _time5ms `b ~T0 1 e ]
 [i _time5ms
 -> 0 `i
@@ -20579,57 +20583,63 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;YellowFlash.C: 794: sta = 0X01;
 "794
 [e = _sta -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 795: while(1)
+[; ;YellowFlash.C: 795: SWDTEN =1;
 "795
+[e = _SWDTEN -> -> 1 `i `b ]
+[; ;YellowFlash.C: 796: while(1)
+"796
 [e :U 2888 ]
-[; ;YellowFlash.C: 797: {
-"797
-{
-[; ;YellowFlash.C: 798: CANInt =0;
+[; ;YellowFlash.C: 798: {
 "798
-[e = _CANInt -> -> 0 `i `b ]
-[; ;YellowFlash.C: 800: if(CANRecv(CANRid,CANRdata,&CANRdlc))
-"800
-[e $ ! ( _CANRecv (3 , , &U _CANRid &U _CANRdata &U _CANRdlc 2890  ]
-[; ;YellowFlash.C: 801: {
-"801
 {
-[; ;YellowFlash.C: 803: CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
-"803
-[e ( _CANDATAAnalyzing (3 , , &U _CANRid &U _CANRdata _CANRdlc ]
+[; ;YellowFlash.C: 799: CANInt =0;
+"799
+[e = _CANInt -> -> 0 `i `b ]
+[; ;YellowFlash.C: 801: if(CANRecv(CANRid,CANRdata,&CANRdlc))
+"801
+[e $ ! ( _CANRecv (3 , , &U _CANRid &U _CANRdata &U _CANRdlc 2890  ]
+[; ;YellowFlash.C: 802: {
+"802
+{
+[; ;YellowFlash.C: 804: CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
 "804
+[e ( _CANDATAAnalyzing (3 , , &U _CANRid &U _CANRdata _CANRdlc ]
+"805
 }
 [e :U 2890 ]
-[; ;YellowFlash.C: 804: }
-[; ;YellowFlash.C: 806: if(force_status)
+[; ;YellowFlash.C: 805: }
+[; ;YellowFlash.C: 806: asm(" clrwdt");
 "806
-[e $ ! != -> _force_status `i -> -> -> 0 `i `uc `i 2891  ]
-[; ;YellowFlash.C: 807: {}
+[; <"  clrwdt ;# ">
+[; ;YellowFlash.C: 807: if(force_status)
 "807
+[e $ ! != -> _force_status `i -> -> -> 0 `i `uc `i 2891  ]
+[; ;YellowFlash.C: 808: {}
+"808
 {
 }
 [e $U 2892  ]
-"808
-[e :U 2891 ]
-[; ;YellowFlash.C: 808: else
-[; ;YellowFlash.C: 809: {
 "809
-{
-[; ;YellowFlash.C: 810: HeartbeatTest();
+[e :U 2891 ]
+[; ;YellowFlash.C: 809: else
+[; ;YellowFlash.C: 810: {
 "810
-[e ( _HeartbeatTest ..  ]
+{
+[; ;YellowFlash.C: 811: HeartbeatTest();
 "811
+[e ( _HeartbeatTest ..  ]
+"812
 }
 [e :U 2892 ]
-"813
+"814
 }
 [e :U 2887 ]
-"795
+"796
 [e $U 2888  ]
 [e :U 2889 ]
-[; ;YellowFlash.C: 811: }
-[; ;YellowFlash.C: 813: }
-[; ;YellowFlash.C: 815: }
-"815
+[; ;YellowFlash.C: 812: }
+[; ;YellowFlash.C: 814: }
+[; ;YellowFlash.C: 816: }
+"816
 [e :UE 2886 ]
 }

@@ -792,6 +792,7 @@ void main(void)
 	my_addr =GetAddr(MYTYPE);
 	CANInit(my_addr);
 	sta = STA_MECH_ON;
+	SWDTEN =true; //使能看门狗
 	while(1)
 	
 		{
@@ -802,7 +803,7 @@ void main(void)
 							//解析数据帧
 							CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
 						}
-			
+					CLRWDT();//喂狗
 					if(force_status) //强制黄闪启动时不关心心跳包
 						{}
 					else

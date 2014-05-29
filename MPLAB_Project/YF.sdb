@@ -1,135 +1,135 @@
-[p LITE_MODE AUTOSTATIC LFSROK ]
+[p PRO_MODE GLOBOPT AUTOSTATIC LFSROK SPACEOPT ]
 [d version 1.1 ]
 [d edition pro ]
 [d chip 18F45K80 ]
-"88 E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C
+"88 G:\working\YellowFlashingController\YellowFlash.C
 [v F19171 `[16]ui  16a t 32 ]
 [v F19173 `[16]ui  16a t 32 ]
 "287
 [v F19231 `(v  1 t 0 ]
-"5 ../../common/abdiv.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\abdiv.c
 [v ___abdiv `(c  1 e 1 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\abmod.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\abmod.c
 [v ___abmod `(c  1 e 1 0 ]
-"32 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\abtofl.c
+"32 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\abtofl.c
 [v ___abtofl `(d  1 e 3 0 ]
-"34 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\abtoft.c
+"34 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\abtoft.c
 [v ___abtoft `(f  1 e 3 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\aldiv.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\aldiv.c
 [v ___aldiv `(l  1 e 4 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\almod.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\almod.c
 [v ___almod `(l  1 e 4 0 ]
-"37 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\altofl.c
+"37 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\altofl.c
 [v ___altofl `(d  1 e 3 0 ]
-"43 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\altoft.c
+"43 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\altoft.c
 [v ___altoft `(f  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asfladd.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asfladd.c
 [v ___asfladd `(d  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asfldiv.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asfldiv.c
 [v ___asfldiv `(d  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asflmul.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asflmul.c
 [v ___asflmul `(d  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asflsub.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asflsub.c
 [v ___asflsub `(d  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asftadd.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asftadd.c
 [v ___asftadd `(f  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asftdiv.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asftdiv.c
 [v ___asftdiv `(f  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asftmul.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asftmul.c
 [v ___asftmul `(f  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asftsub.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\asftsub.c
 [v ___asftsub `(f  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\aslmul.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\aslmul.c
 [v ___aslmul `(ul  1 e 4 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\atdiv.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\atdiv.c
 [v ___atdiv `(m  1 e 3 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\atmod.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\atmod.c
 [v ___atmod `(m  1 e 3 0 ]
-"38 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\attofl.c
+"38 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\attofl.c
 [v ___attofl `(d  1 e 3 0 ]
-"38 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\attoft.c
+"38 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\attoft.c
 [v ___attoft `(f  1 e 3 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\awdiv.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\awdiv.c
 [v ___awdiv `(i  1 e 2 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\awmod.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\awmod.c
 [v ___awmod `(i  1 e 2 0 ]
-"32 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\awtofl.c
+"32 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\awtofl.c
 [v ___awtofl `(d  1 e 3 0 ]
-"33 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\awtoft.c
+"33 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\awtoft.c
 [v ___awtoft `(f  1 e 3 0 ]
-"3 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\bmul.c
+"3 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\bmul.c
 [v ___bmul `(uc  1 e 1 0 ]
-"64 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\double.c
+"64 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\double.c
 [v ___flpack `(d  1 e 3 0 ]
-"89 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fladd.c
+"89 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fladd.c
 [v ___fladd `(d  1 e 3 0 ]
-"50 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fldiv.c
+"50 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fldiv.c
 [v ___fldiv `(d  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\flge.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\flge.c
 [v ___flge `(b  1 e 0 0 ]
-"51 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\flmul.c
+"51 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\flmul.c
 [v ___flmul `(d  1 e 3 0 ]
-"16 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\flneg.c
+"16 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\flneg.c
 [v ___flneg `(d  1 e 3 0 ]
-"63 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\float.c
+"63 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\float.c
 [v ___ftpack `(f  1 e 3 0 ]
-"22 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\flsub.c
+"22 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\flsub.c
 [v ___flsub `(d  1 e 3 0 ]
-"44 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fltol.c
+"44 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fltol.c
 [v ___fltol `(l  1 e 4 0 ]
-"87 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftadd.c
+"87 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftadd.c
 [v ___ftadd `(f  1 e 3 0 ]
-"50 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftdiv.c
+"50 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftdiv.c
 [v ___ftdiv `(f  1 e 3 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftge.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftge.c
 [v ___ftge `(b  1 e 0 0 ]
-"52 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftmul.c
+"52 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftmul.c
 [v ___ftmul `(f  1 e 3 0 ]
-"16 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftneg.c
+"16 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftneg.c
 [v ___ftneg `(f  1 e 3 0 ]
-"22 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftsub.c
+"22 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftsub.c
 [v ___ftsub `(f  1 e 3 0 ]
-"45 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fttol.c
+"45 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fttol.c
 [v ___fttol `(l  1 e 4 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lbdiv.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lbdiv.c
 [v ___lbdiv `(uc  1 e 1 0 ]
-"5 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lbmod.c
+"5 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lbmod.c
 [v ___lbmod `(uc  1 e 1 0 ]
-"28 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lbtofl.c
+"28 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lbtofl.c
 [v ___lbtofl `(d  1 e 3 0 ]
-"28 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lbtoft.c
+"28 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lbtoft.c
 [v ___lbtoft `(f  1 e 3 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lldiv.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lldiv.c
 [v ___lldiv `(ul  1 e 4 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\llmod.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\llmod.c
 [v ___llmod `(ul  1 e 4 0 ]
-"31 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lltofl.c
+"31 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lltofl.c
 [v ___lltofl `(d  1 e 3 0 ]
-"36 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lltoft.c
+"36 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lltoft.c
 [v ___lltoft `(f  1 e 3 0 ]
-"3 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lmul.c
+"3 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lmul.c
 [v ___lmul `(ul  1 e 4 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ltdiv.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ltdiv.c
 [v ___ltdiv `(um  1 e 3 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ltmod.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ltmod.c
 [v ___ltmod `(um  1 e 3 0 ]
-"31 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lttofl.c
+"31 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lttofl.c
 [v ___lttofl `(d  1 e 3 0 ]
-"31 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lttoft.c
+"31 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lttoft.c
 [v ___lttoft `(f  1 e 3 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c
 [v ___lwdiv `(ui  1 e 2 0 ]
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwmod.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwmod.c
 [v ___lwmod `(ui  1 e 2 0 ]
-"29 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwtofl.c
+"29 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwtofl.c
 [v ___lwtofl `(d  1 e 3 0 ]
-"29 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwtoft.c
+"29 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwtoft.c
 [v ___lwtoft `(f  1 e 3 0 ]
-"3 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\tmul.c
+"3 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\tmul.c
 [v ___tmul `(um  1 e 3 0 ]
-"3 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\wmul.c
+"3 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\wmul.c
 [v ___wmul `(ui  1 e 2 0 ]
-"15 E:\WorkSpace\YellowFlashingController20140317\CAN.H
+"15 G:\working\YellowFlashingController\CAN.H
 [v _CANFilterSet `(v  1 e 0 0 ]
 "80
 [v _CANErrClr `(v  1 e 0 0 ]
@@ -141,19 +141,19 @@
 [v _CANSend `(uc  1 e 1 0 ]
 "259
 [v _CANRecv `(b  1 e 0 0 ]
-"32 E:\WorkSpace\YellowFlashingController20140317\mcu.h
+"33 G:\working\YellowFlashingController\mcu.h
 [v _EEPROMRead `(v  1 e 0 0 ]
-"57
+"58
 [v _EEPROMWrite `(v  1 e 0 0 ]
-"91
+"92
 [v _delayus `(v  1 e 0 0 ]
-"107
+"108
 [v _delayms `(v  1 e 0 0 ]
-"82 E:\WorkSpace\YellowFlashingController20140317\TSC.H
+"82 G:\working\YellowFlashingController\TSC.H
 [v _GetLampBoardAddr `(uc  1 e 1 0 ]
 "143
 [v _GetAddr `(uc  1 e 1 0 ]
-"158 E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C
+"158 G:\working\YellowFlashingController\YellowFlash.C
 [v _CalculateTime25msCounter `(v  1 e 0 0 ]
 "174
 [v _LED_On_Disp `(v  1 e 0 0 ]
@@ -193,7 +193,7 @@
 [v _HeartbeatTest `(v  1 e 0 0 ]
 "786
 [v _main `(v  1 e 0 0 ]
-"61 C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
+"61 d:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
 [v _BRGCON1 `Vuc  1 e 1 @3651 ]
 "84
 [v _BRGCON2 `Vuc  1 e 1 @3652 ]
@@ -467,6 +467,8 @@
 [v _RXB0IF `Vb  1 e 0 @31672 ]
 "18545
 [v _RXB1IF `Vb  1 e 0 @31673 ]
+"19863
+[v _SWDTEN `Vb  1 e 0 @32392 ]
 "19869
 [v _T08BIT `Vb  1 e 0 @32430 ]
 "19871
@@ -487,10 +489,8 @@
 [v _TXB1IF `Vb  1 e 0 @31675 ]
 "20781
 [v _TXB2IF `Vb  1 e 0 @31676 ]
-"44 E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C
+"44 G:\working\YellowFlashingController\YellowFlash.C
 [v _time5ms `b  1 e 0 0 ]
-"45
-[v _CANInt `b  1 e 0 0 ]
 "77
 [v _f_r_mod `uc  1 e 1 0 ]
 "83
@@ -536,18 +536,8 @@
 [v _eeprom_num `uc  1 e 1 0 ]
 "118
 [v _my_addr `uc  1 e 1 0 ]
-"119
-[v _my_config `uc  1 e 1 0 ]
 "120
 [v _t1_cont `ui  1 e 2 0 ]
-"121
-[v _sta `uc  1 e 1 0 ]
-"122
-[v _led_data0 `uc  1 e 1 0 ]
-[v _led_data1 `uc  1 e 1 0 ]
-"124
-[v _can_time_cont `uc  1 e 1 0 ]
-[v _master_time_cont `uc  1 e 1 0 ]
 "126
 [v _t500ms_count `uc  1 e 1 0 ]
 "127
@@ -562,45 +552,49 @@
 "786
 [v _main `(v  1 e 0 0 ]
 {
-"815
+"816
 } 0
-"259 E:\WorkSpace\YellowFlashingController20140317\CAN.H
+"259 G:\working\YellowFlashingController\CAN.H
 [v _CANRecv `(b  1 e 0 0 ]
 {
-[v CANRecv@id `*.0uc  1 p 2 27 ]
-[v CANRecv@dat `*.0uc  1 p 2 29 ]
-[v CANRecv@dlc `*.auc  1 p 2 31 ]
+[v CANRecv@id `*.0uc  1 a 1 wreg ]
+[v CANRecv@id `*.0uc  1 a 1 wreg ]
+[v CANRecv@dat `*.0uc  1 p 1 5 ]
+[v CANRecv@dlc `*.auc  1 p 1 6 ]
 "343
 } 0
-"143 E:\WorkSpace\YellowFlashingController20140317\TSC.H
+"143 G:\working\YellowFlashingController\TSC.H
 [v _GetAddr `(uc  1 e 1 0 ]
 {
+[v GetAddr@board_type `uc  1 a 1 wreg ]
 "144
-[v GetAddr@rel `uc  1 a 1 24 ]
+[v GetAddr@rel `uc  1 a 1 4 ]
 "143
-[v GetAddr@board_type `uc  1 p 1 22 ]
+[v GetAddr@board_type `uc  1 a 1 wreg ]
 "171
 } 0
 "82
 [v _GetLampBoardAddr `(uc  1 e 1 0 ]
 {
 "84
-[v GetLampBoardAddr@i `ui  1 a 2 19 ]
+[v GetLampBoardAddr@i `ui  1 a 2 0 ]
 "83
-[v GetLampBoardAddr@addr `uc  1 a 1 21 ]
+[v GetLampBoardAddr@addr `uc  1 a 1 2 ]
 "130
 } 0
-"117 E:\WorkSpace\YellowFlashingController20140317\CAN.H
+"117 G:\working\YellowFlashingController\CAN.H
 [v _CANInit `(v  1 e 0 0 ]
 {
-[v CANInit@b_addr `uc  1 p 1 25 ]
+[v CANInit@b_addr `uc  1 a 1 wreg ]
+[v CANInit@b_addr `uc  1 a 1 wreg ]
 "152
 } 0
 "15
 [v _CANFilterSet `(v  1 e 0 0 ]
 {
-[v CANFilterSet@board_addr `uc  1 p 1 18 ]
-[v CANFilterSet@f_type `uc  1 p 1 19 ]
+[v CANFilterSet@board_addr `uc  1 a 1 wreg ]
+[v CANFilterSet@board_addr `uc  1 a 1 wreg ]
+[v CANFilterSet@f_type `uc  1 p 1 0 ]
 "76
 } 0
 "80
@@ -611,29 +605,30 @@
 "89
 [v _CANSetID `(v  1 e 0 0 ]
 {
-[v CANSetID@board_addr `uc  1 p 1 18 ]
-[v CANSetID@f_type `uc  1 p 1 19 ]
+[v CANSetID@board_addr `uc  1 a 1 wreg ]
+[v CANSetID@board_addr `uc  1 a 1 wreg ]
+[v CANSetID@f_type `uc  1 p 1 0 ]
 "111
 } 0
-"107 E:\WorkSpace\YellowFlashingController20140317\mcu.h
+"108 G:\working\YellowFlashingController\mcu.h
 [v _delayms `(v  1 e 0 0 ]
 {
+"109
+[v delayms@i `ui  1 a 2 6 ]
 "108
-[v delayms@i `ui  1 a 2 24 ]
-"107
-[v delayms@ms `ui  1 p 2 22 ]
-"116
+[v delayms@ms `ui  1 p 2 4 ]
+"117
 } 0
-"91
+"92
 [v _delayus `(v  1 e 0 0 ]
 {
-"93
-[v delayus@i `ui  1 a 2 20 ]
-"91
-[v delayus@us `ui  1 p 2 18 ]
-"102
+"94
+[v delayus@i `ui  1 a 2 2 ]
+"92
+[v delayus@us `ui  1 p 2 0 ]
+"103
 } 0
-"321 E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C
+"321 G:\working\YellowFlashingController\YellowFlash.C
 [v _PORTInit `(v  1 e 0 0 ]
 {
 "363
@@ -646,60 +641,66 @@
 "552
 [v _CANDATAAnalyzing `(v  1 e 0 0 ]
 {
-[v CANDATAAnalyzing@id `*.0uc  1 p 2 12 ]
-[v CANDATAAnalyzing@dat `*.0uc  1 p 2 14 ]
-[v CANDATAAnalyzing@dlc `uc  1 p 1 16 ]
+[v CANDATAAnalyzing@id `*.0uc  1 a 1 wreg ]
+[v CANDATAAnalyzing@id `*.0uc  1 a 1 wreg ]
+[v CANDATAAnalyzing@dat `*.0uc  1 p 1 52 ]
+[v CANDATAAnalyzing@dlc `uc  1 p 1 53 ]
 "713
 } 0
 "403
 [v _CANSendConfirm `(v  1 e 0 0 ]
 {
 "404
-[v CANSendConfirm@i `uc  1 a 1 24 ]
+[v CANSendConfirm@i `uc  1 a 1 2 ]
 "412
 } 0
 "434
 [v _CANWriteID `(v  1 e 0 0 ]
 {
-[v CANWriteID@fm `uc  1 p 1 26 ]
+[v CANWriteID@fm `uc  1 a 1 wreg ]
+[v CANWriteID@fm `uc  1 a 1 wreg ]
 "442
 } 0
 "416
 [v _CANSendID `(v  1 e 0 0 ]
 {
-[v CANSendID@sm `uc  1 p 1 24 ]
+[v CANSendID@sm `uc  1 a 1 wreg ]
+[v CANSendID@sm `uc  1 a 1 wreg ]
 "430
 } 0
-"163 E:\WorkSpace\YellowFlashingController20140317\CAN.H
+"163 G:\working\YellowFlashingController\CAN.H
 [v _CANSend `(uc  1 e 1 0 ]
 {
-[v CANSend@id `*.0uc  1 p 2 18 ]
-[v CANSend@dat `*.0uc  1 p 2 20 ]
-[v CANSend@dlc `uc  1 p 1 22 ]
+[v CANSend@id `*.auc  1 a 1 wreg ]
+[v CANSend@id `*.auc  1 a 1 wreg ]
+[v CANSend@dat `*.0uc  1 p 1 0 ]
+[v CANSend@dlc `uc  1 p 1 1 ]
 "252
 } 0
-"500 E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C
+"500 G:\working\YellowFlashingController\YellowFlash.C
 [v _YFlashNewConfigure `(v  1 e 0 0 ]
 {
 "548
 } 0
-"57 E:\WorkSpace\YellowFlashingController20140317\mcu.h
+"58 G:\working\YellowFlashingController\mcu.h
 [v _EEPROMWrite `(v  1 e 0 0 ]
 {
-[v EEPROMWrite@addr `*.auc  1 p 2 18 ]
-[v EEPROMWrite@num `*.auc  1 p 2 20 ]
-[v EEPROMWrite@dat `*.buc  1 p 2 22 ]
-"87
+[v EEPROMWrite@addr `*.auc  1 a 1 wreg ]
+[v EEPROMWrite@addr `*.auc  1 a 1 wreg ]
+[v EEPROMWrite@num `*.auc  1 p 1 0 ]
+[v EEPROMWrite@dat `*.buc  1 p 2 1 ]
+"88
 } 0
-"158 E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C
+"158 G:\working\YellowFlashingController\YellowFlash.C
 [v _CalculateTime25msCounter `(v  1 e 0 0 ]
 {
+[v CalculateTime25msCounter@row `uc  1 a 1 wreg ]
 "159
-[v CalculateTime25msCounter@j `i  1 a 2 10 ]
-[v CalculateTime25msCounter@i `i  1 a 2 8 ]
+[v CalculateTime25msCounter@j `i  1 a 2 50 ]
+[v CalculateTime25msCounter@i `i  1 a 2 48 ]
 "158
-[v CalculateTime25msCounter@row `uc  1 p 1 0 ]
-[v CalculateTime25msCounter@line `uc  1 p 1 1 ]
+[v CalculateTime25msCounter@row `uc  1 a 1 wreg ]
+[v CalculateTime25msCounter@line `uc  1 p 1 40 ]
 "170
 } 0
 "752
@@ -712,61 +713,62 @@
 {
 "471
 } 0
-"32 E:\WorkSpace\YellowFlashingController20140317\mcu.h
+"33 G:\working\YellowFlashingController\mcu.h
 [v _EEPROMRead `(v  1 e 0 0 ]
 {
-[v EEPROMRead@addr `*.auc  1 p 2 18 ]
-[v EEPROMRead@num `*.auc  1 p 2 20 ]
-[v EEPROMRead@dat `*.buc  1 p 2 22 ]
-"52
+[v EEPROMRead@addr `*.auc  1 a 1 wreg ]
+[v EEPROMRead@addr `*.auc  1 a 1 wreg ]
+[v EEPROMRead@num `*.auc  1 p 1 0 ]
+[v EEPROMRead@dat `*.buc  1 p 2 1 ]
+"53
 } 0
-"52 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftmul.c
+"52 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\ftmul.c
 [v ___ftmul `(f  1 e 3 0 ]
 {
 "54
-[v ___ftmul@f3_as_product `um  1 a 3 38 ]
+[v ___ftmul@f3_as_product `um  1 a 3 20 ]
 "53
-[v ___ftmul@sign `uc  1 a 1 42 ]
-[v ___ftmul@cntr `uc  1 a 1 41 ]
-[v ___ftmul@exp `uc  1 a 1 37 ]
+[v ___ftmul@sign `uc  1 a 1 24 ]
+[v ___ftmul@cntr `uc  1 a 1 23 ]
+[v ___ftmul@exp `uc  1 a 1 19 ]
 "52
-[v ___ftmul@f1 `f  1 p 3 26 ]
-[v ___ftmul@f2 `f  1 p 3 29 ]
+[v ___ftmul@f1 `f  1 p 3 8 ]
+[v ___ftmul@f2 `f  1 p 3 11 ]
 "84
 } 0
-"63 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\float.c
+"63 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\float.c
 [v ___ftpack `(f  1 e 3 0 ]
 {
-[v ___ftpack@arg `um  1 p 3 18 ]
-[v ___ftpack@exp `uc  1 p 1 21 ]
-[v ___ftpack@sign `uc  1 p 1 22 ]
+[v ___ftpack@arg `um  1 p 3 0 ]
+[v ___ftpack@exp `uc  1 p 1 3 ]
+[v ___ftpack@sign `uc  1 p 1 4 ]
 "86
 } 0
-"45 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fttol.c
+"45 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\fttol.c
 [v ___fttol `(l  1 e 4 0 ]
 {
 "47
-[v ___fttol@lval `ul  1 a 4 53 ]
+[v ___fttol@lval `ul  1 a 4 35 ]
 "46
-[v ___fttol@exp1 `uc  1 a 1 57 ]
-[v ___fttol@sign1 `uc  1 a 1 52 ]
+[v ___fttol@exp1 `uc  1 a 1 39 ]
+[v ___fttol@sign1 `uc  1 a 1 34 ]
 "45
-[v ___fttol@f1 `f  1 p 3 43 ]
+[v ___fttol@f1 `f  1 p 3 25 ]
 "73
 } 0
-"10 C:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c
+"10 d:\Program Files\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c
 [v ___lwdiv `(ui  1 e 2 0 ]
 {
 "11
-[v ___lwdiv@quotient `ui  1 a 2 24 ]
+[v ___lwdiv@quotient `ui  1 a 2 4 ]
 "12
-[v ___lwdiv@counter `uc  1 a 1 23 ]
+[v ___lwdiv@counter `uc  1 a 1 6 ]
 "10
-[v ___lwdiv@dividend `ui  1 p 2 18 ]
-[v ___lwdiv@divisor `ui  1 p 2 20 ]
+[v ___lwdiv@dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor `ui  1 p 2 2 ]
 "31
 } 0
-"287 E:\WorkSpace\YellowFlashingController20140317\YellowFlash.C
+"287 G:\working\YellowFlashingController\YellowFlash.C
 [v _IntServer `I(v  1 e 0 0 ]
 {
 "315
@@ -799,7 +801,5 @@
 "278
 [v _ADIntServer `(v  1 e 0 0 ]
 {
-"279
-[v ADIntServer@adrel `ui  1 a 2 2 ]
 "282
 } 0

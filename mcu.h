@@ -5,7 +5,8 @@
 #pragma config FOSC=HS1   //使用外部高速晶振
 //#pragma config FOSC=INTIO2   //使用内部振荡器
 #pragma config WRTD = OFF //不保护EEPROM
-#pragma config WDTEN=OFF   //系统看门狗
+#pragma config WDTEN=ON   //系统看门狗
+#pragma config WDTPS=256 //1:256 1.024s益出
 #pragma config PLLCFG=OFF //不使用PLL
 #pragma config SOSCSEL=DIG //不使用SOSC
 

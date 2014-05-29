@@ -1,6 +1,7 @@
 
 	; HI-TECH C Compiler for PIC18 MCUs V9.80
 	; Copyright (C) 1984-2011 HI-TECH Software
+	;Serial no. HCPIC18P-909890
 
 	; Auto-generated runtime startup code for final link stage.
 
@@ -143,13 +144,13 @@ start:
 
 ; Config register CONFIG2H @ 0x300003
 ;	Watchdog Postscaler
-;	WDTPS = 0x1F, unprogrammed default
+;	WDTPS = 256, 1:256
 ;	Watchdog Timer
-;	WDTEN = OFF, WDT disabled in hardware; SWDTEN bit disabled
+;	WDTEN = ON, WDT controlled by SWDTEN bit setting
 
 	psect	config,class=CONFIG,delta=1
 		org 0x3
-		db 0x7C
+		db 0x22
 
 ; Config register CONFIG6H @ 0x30000B
 ;	Table Write Protect Boot
