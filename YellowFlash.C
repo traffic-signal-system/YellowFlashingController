@@ -36,7 +36,10 @@
 
 //#define ABC 0x97
 //#define EFG 0x01
-
+#define YEAR	  0x14//程序版本信息中的年
+#define MONTH	  0x07//程序版本信息中的月
+#define DAY		  0x02//程序版本信息中的日
+const unsigned char board_version[5]={MYTYPE,YEAR,MONTH,DAY,0};//板卡程序版本
 
 
 
@@ -71,6 +74,8 @@ bit CANInt = false; //CAN中断标志位
 #define CANMSYFCONFIG 0x03//主板下发配置数据给黄闪器
 #define FORCEENTERYFLASH 0x04  //强制进入黄闪命令
 #define FORCEQUITYFLASH 0x05   //强制退出黄闪
+
+#define CANCOMRVER    0xff //读取程序版本
 
 
 
@@ -546,6 +551,22 @@ void YFlashNewConfigure(void)
 
 			}
 }
+/////////////////////////////////////////////////////////////////////////////////////
+void CANReadVersion()
+{
+	
+	CANSdlc = 6;	
+	CANSdata[0] =CANCOMRVER;
+	CANSdata[1]=board_version[0];
+	CANSdata[2]=board_version[1];
+	CANSdata[3]=board_version[2];
+	CANSdata[4]=board_version[3];
+	CANSdata[5]=board_version[4];
+	
+	CANSend(CANSid,CANSdata,CANSdlc);
+}
+
+
 //////////////////////////////////////////////////////////////////////////////////
 //CAN数据解析
 void CANDATAAnalyzing(unsigned char id[],unsigned char dat[],unsigned char dlc)
@@ -574,7 +595,9 @@ void CANDATAAnalyzing(unsigned char id[],unsigned char dat[],unsigned char dlc)
 			f_r_mod = CANNOREPLY;//该帧不需要回复
 			break;
 		}
-
+	if(dat[0]==CANCOMRVER)//主板读取板卡程序版本
+			CANReadVersion();
+			
 	//判断是否是心跳报
 	if(((id[1]>>5)&CAN_FMOD_HB)==CAN_FMOD_HB)
 		{	
@@ -699,7 +722,7 @@ void CANDATAAnalyzing(unsigned char id[],unsigned char dat[],unsigned char dlc)
 									CANSend(CANSid,CANSdata,CANSdlc);
 								}
 							break;
-				default:
+						default:
 							break;
 
 

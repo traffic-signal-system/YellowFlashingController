@@ -1,7 +1,7 @@
 
 	; HI-TECH C Compiler for PIC18 MCUs V9.80
 	; Copyright (C) 1984-2011 HI-TECH Software
-	;Serial no. HCPIC18P-909890
+	;Serial no. HCPIC18P-23445123
 
 	; Auto-generated runtime startup code for final link stage.
 
