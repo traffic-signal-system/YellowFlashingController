@@ -189,11 +189,11 @@
 [v _CANReadVersion `(v  1 e 0 0 ]
 "573
 [v _CANDATAAnalyzing `(v  1 e 0 0 ]
-"744
+"742
 [v _DoTimeout `(v  1 e 0 0 ]
-"777
+"775
 [v _HeartbeatTest `(v  1 e 0 0 ]
-"811
+"809
 [v _main `(v  1 e 0 0 ]
 "61 D:\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
 [v _BRGCON1 `Vuc  1 e 1 @3651 ]
@@ -553,10 +553,10 @@
 [v _yflash_status `uc  1 e 1 0 ]
 "135
 [v _force_status `uc  1 e 1 0 ]
-"811
+"809
 [v _main `(v  1 e 0 0 ]
 {
-"841
+"839
 } 0
 "259 G:\working\YellowFlashingController\CAN.H
 [v _CANRecv `(b  1 e 0 0 ]
@@ -649,7 +649,7 @@
 [v CANDATAAnalyzing@id `*.0uc  1 a 1 wreg ]
 [v CANDATAAnalyzing@dat `*.0uc  1 p 1 52 ]
 [v CANDATAAnalyzing@dlc `uc  1 p 1 53 ]
-"738
+"736
 } 0
 "408
 [v _CANSendConfirm `(v  1 e 0 0 ]
@@ -712,10 +712,10 @@
 [v CANSend@dlc `uc  1 p 1 1 ]
 "252
 } 0
-"777 G:\working\YellowFlashingController\YellowFlash.C
+"775 G:\working\YellowFlashingController\YellowFlash.C
 [v _HeartbeatTest `(v  1 e 0 0 ]
 {
-"808
+"806
 } 0
 "453
 [v _Read_YFlash_CFG `(v  1 e 0 0 ]

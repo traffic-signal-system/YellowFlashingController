@@ -1,7 +1,7 @@
 
 
 HI-TECH Software PIC18 Macro Assembler V9.80 build 11162 
-                                                                                                           Wed Jul 02 17:11:09 2014
+                                                                                                           Sat Aug 02 11:41:55 2014
 
 
      1                           
@@ -118,7 +118,7 @@ HI-TECH Software PIC18 Macro Assembler V9.80 build 11162
    112  00004E                     start:
    113                           	psect	end_init
    114                           	global start_initialization
-   115  00004E  EFCB  F00C         	goto start_initialization	;jump to C runtime clear & initialization
+   115  00004E  EFD0  F00C         	goto start_initialization	;jump to C runtime clear & initialization
    116                           
    117                           ; Config register CONFIG1L @ 0x300000
    118                           ;	LF-INTOSC Low-power Enable bit
@@ -172,9 +172,9 @@ HI-TECH Software PIC18 Macro Assembler V9.80 build 11162
 
 
 HI-TECH Software PICC-18 Macro Assembler V9.80 build 11162 
-Symbol Table                                                                                               Wed Jul 02 17:11:09 2014
+Symbol Table                                                                                               Sat Aug 02 11:41:55 2014
 
-                __S1 0E41                 _main 1B3A                 start 004E                __HRAM 0000  
+                __S1 0E41                 _main 1B44                 start 004E                __HRAM 0000  
               __LRAM 0001         __mediumconst 0000           __accesstop 000060              __ramtop 0F00  
-start_initialization 1996          __smallconst 0F00             intlevel0 0000             intlevel1 0000  
+start_initialization 19A0          __smallconst 0F00             intlevel0 0000             intlevel1 0000  
            intlevel2 0000             intlevel3 0000             reset_vec 0000  

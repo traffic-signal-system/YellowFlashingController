@@ -22437,7 +22437,7 @@ delayus(997);
 }
 
 # 42 "G:\working\YellowFlashingController\YellowFlash.C"
-const unsigned char board_version[5]={0x06,0x14,0x07,0x02,0};
+const unsigned char board_version[5]={0x06,14,8,2,0};
 
 
 
@@ -22886,6 +22886,8 @@ default:
 f_r_mod = 0x00;
 break;
 }
+if(dat[0]==0xff)
+CANReadVersion();
 
 
 if(((id[1]>>5)&0x03)==0x03)
@@ -23011,10 +23013,6 @@ CANSdata[3]=yflash_status;
 CANSend(CANSid,CANSdata,CANSdlc);
 }
 break;
-
-case 0xff:
-CANReadVersion();
-break;
 default:
 break;
 
@@ -23052,7 +23050,7 @@ sta = 0X05;
 
 }
 
-# 776
+# 774
 void HeartbeatTest()
 {
 

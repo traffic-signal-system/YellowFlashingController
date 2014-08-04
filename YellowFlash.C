@@ -36,9 +36,9 @@
 
 //#define ABC 0x97
 //#define EFG 0x01
-#define YEAR	  0x14//程序版本信息中的年
-#define MONTH	  0x07//程序版本信息中的月
-#define DAY		  0x02//程序版本信息中的日
+#define YEAR	  14//程序版本信息中的年
+#define MONTH	  8//程序版本信息中的月
+#define DAY		  2//程序版本信息中的日
 const unsigned char board_version[5]={MYTYPE,YEAR,MONTH,DAY,0};//板卡程序版本
 
 

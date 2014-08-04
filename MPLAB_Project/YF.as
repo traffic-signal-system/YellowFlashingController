@@ -1048,6 +1048,7 @@ TOSU equ 0FFFh ;#
 	FNCALL	_CANInit,_CANFilterSet
 	FNCALL	_CANInit,_CANErrClr
 	FNCALL	_delayms,_delayus
+	FNCALL	_CANDATAAnalyzing,_CANReadVersion
 	FNCALL	_CANDATAAnalyzing,_CANSendConfirm
 	FNCALL	_CANDATAAnalyzing,_CANSendID
 	FNCALL	_CANDATAAnalyzing,_CANWriteID
@@ -1055,7 +1056,6 @@ TOSU equ 0FFFh ;#
 	FNCALL	_CANDATAAnalyzing,_CANSend
 	FNCALL	_CANDATAAnalyzing,_YFlashNewConfigure
 	FNCALL	_CANDATAAnalyzing,_Read_YFlash_CFG
-	FNCALL	_CANDATAAnalyzing,_CANReadVersion
 	FNCALL	_CANSendConfirm,_CANSend
 	FNCALL	_CANWriteID,_EEPROMWrite
 	FNCALL	_CANWriteID,_CANSendID
@@ -1254,8 +1254,8 @@ __psmallconst:
 	line	42
 _board_version:
 	db	low(06h)
-	db	low(014h)
-	db	low(07h)
+	db	low(0Eh)
+	db	low(08h)
 	db	low(02h)
 	db	low(0)
 	global	_board_version
@@ -2321,7 +2321,7 @@ CANDATAAnalyzing@id:	; 1 bytes @ 0x3A
 ;! ---------------------------------------------------------------------------------
 ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
 ;! ---------------------------------------------------------------------------------
-;! (0) _main                                                 0     0      0    6816
+;! (0) _main                                                 0     0      0    6838
 ;!                            _delayms
 ;!                           _PORTInit
 ;!                         _IntManager
@@ -2368,8 +2368,9 @@ CANDATAAnalyzing@id:	; 1 bytes @ 0x3A
 ;! ---------------------------------------------------------------------------------
 ;! (1) _IntManager                                           0     0      0       0
 ;! ---------------------------------------------------------------------------------
-;! (1) _CANDATAAnalyzing                                     7     5      2    5142
+;! (1) _CANDATAAnalyzing                                     7     5      2    5164
 ;!                                             52 COMRAM     7     5      2
+;!                     _CANReadVersion
 ;!                     _CANSendConfirm
 ;!                          _CANSendID
 ;!                         _CANWriteID
@@ -2377,7 +2378,6 @@ CANDATAAnalyzing@id:	; 1 bytes @ 0x3A
 ;!                            _CANSend
 ;!                 _YFlashNewConfigure
 ;!                    _Read_YFlash_CFG
-;!                     _CANReadVersion
 ;! ---------------------------------------------------------------------------------
 ;! (2) _CANSendConfirm                                       1     1      0     684
 ;!                                              2 COMRAM     1     1      0
@@ -2411,7 +2411,7 @@ CANDATAAnalyzing@id:	; 1 bytes @ 0x3A
 ;!                                              2 COMRAM     1     1      0
 ;!                            _CANSend
 ;! ---------------------------------------------------------------------------------
-;! (3) _CANSend                                              3     1      2     594
+;! (2) _CANSend                                              3     1      2     594
 ;!                                              0 COMRAM     2     0      2
 ;! ---------------------------------------------------------------------------------
 ;! (1) _HeartbeatTest                                        0     0      0      89
@@ -2485,6 +2485,8 @@ CANDATAAnalyzing@id:	; 1 bytes @ 0x3A
 ;!       _CANFilterSet
 ;!       _CANErrClr
 ;!   _CANDATAAnalyzing
+;!     _CANReadVersion
+;!       _CANSend
 ;!     _CANSendConfirm
 ;!       _CANSend
 ;!     _CANSendID
@@ -2509,8 +2511,6 @@ CANDATAAnalyzing@id:	; 1 bytes @ 0x3A
 ;!         ___lwdiv
 ;!     _Read_YFlash_CFG
 ;!       _EEPROMRead
-;!     _CANReadVersion
-;!       _CANSend
 ;!   _HeartbeatTest
 ;!     _Read_YFlash_CFG
 ;!       _EEPROMRead
@@ -2577,7 +2577,7 @@ CANDATAAnalyzing@id:	; 1 bytes @ 0x3A
 
 ;; *************** function _main *****************
 ;; Defined at:
-;;		line 811 in file "G:\working\YellowFlashingController\YellowFlash.C"
+;;		line 809 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -2615,58 +2615,58 @@ global __ptext0
 __ptext0:
 psect	text0
 	file	"G:\working\YellowFlashingController\YellowFlash.C"
-	line	811
+	line	809
 	global	__size_of_main
 	__size_of_main	equ	__end_of_main-_main
 	
 _main:
 	opt	stack 22
-	line	814
+	line	812
 	
-l3199:
-;YellowFlash.C: 814: delayms(500);
+l3203:
+;YellowFlash.C: 812: delayms(500);
 	movlw	high(01F4h)
 	movwf	((c:?_delayms+1)),c
 	movlw	low(01F4h)
 	movwf	((c:?_delayms)),c
 	call	_delayms	;wreg free
+	line	813
+	
+l3205:
+;YellowFlash.C: 813: PORTInit();
+	call	_PORTInit	;wreg free
+	line	814
+	
+l3207:; BSR set to: 15
+
+;YellowFlash.C: 814: IntManager();
+	call	_IntManager	;wreg free
 	line	815
 	
-l3201:
-;YellowFlash.C: 815: PORTInit();
-	call	_PORTInit	;wreg free
-	line	816
-	
-l3203:; BSR set to: 15
+l3209:; BSR set to: 15
 
-;YellowFlash.C: 816: IntManager();
-	call	_IntManager	;wreg free
-	line	817
-	
-l3205:; BSR set to: 15
-
-;YellowFlash.C: 817: my_addr =GetAddr(0x06);
+;YellowFlash.C: 815: my_addr =GetAddr(0x06);
 	movlw	(06h)&0ffh
 	
 	call	_GetAddr
 	movwf	((c:_my_addr)),c
-	line	818
+	line	816
 	
-l3207:; BSR set to: 15
+l3211:; BSR set to: 15
 
-;YellowFlash.C: 819: sta = 0X01;
+;YellowFlash.C: 817: sta = 0X01;
 	movf	((c:_my_addr)),c,w
 	
 	call	_CANInit
-	line	820
+	line	818
 	
-l3209:
-;YellowFlash.C: 820: SWDTEN =1;
+l3213:
+;YellowFlash.C: 818: SWDTEN =1;
 	bsf	c:(32392/8),(32392)&7	;volatile
-	line	826
+	line	824
 	
-l3211:
-;YellowFlash.C: 826: if(CANRecv(CANRid,CANRdata,&CANRdlc))
+l3215:
+;YellowFlash.C: 824: if(CANRecv(CANRid,CANRdata,&CANRdlc))
 	movlb	0	; () banked
 	movlw	low(_CANRdata)
 	movwf	((c:?_CANRecv)),c
@@ -2676,16 +2676,16 @@ l3211:
 	
 	call	_CANRecv
 	btfss	status,0
-	goto	u1261
-	goto	u1260
-u1261:
-	goto	l3215
-u1260:
-	line	829
+	goto	u1281
+	goto	u1280
+u1281:
+	goto	l3219
+u1280:
+	line	827
 	
-l3213:
-;YellowFlash.C: 827: {
-;YellowFlash.C: 829: CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
+l3217:
+;YellowFlash.C: 825: {
+;YellowFlash.C: 827: CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
 	movlb	0	; () banked
 	movlw	low(_CANRdata)
 	movwf	((c:?_CANDATAAnalyzing)),c
@@ -2693,39 +2693,39 @@ l3213:
 	movlw	(_CANRid)&0ffh
 	
 	call	_CANDATAAnalyzing
-	line	831
+	line	829
 	
-l3215:
-# 831 "G:\working\YellowFlashingController\YellowFlash.C"
+l3219:
+# 829 "G:\working\YellowFlashingController\YellowFlash.C"
 clrwdt ;# 
 psect	text0
-	line	832
-	
-l3217:
-;YellowFlash.C: 832: if(force_status)
-	movf	((c:_force_status)),c,w
-	btfsc	status,2
-	goto	u1271
-	goto	u1270
-u1271:
-	goto	l3221
-u1270:
-	goto	l3211
-	line	836
+	line	830
 	
 l3221:
-;YellowFlash.C: 834: else
-;YellowFlash.C: 835: {
-;YellowFlash.C: 836: HeartbeatTest();
+;YellowFlash.C: 830: if(force_status)
+	movf	((c:_force_status)),c,w
+	btfsc	status,2
+	goto	u1291
+	goto	u1290
+u1291:
+	goto	l3225
+u1290:
+	goto	l3215
+	line	834
+	
+l3225:
+;YellowFlash.C: 832: else
+;YellowFlash.C: 833: {
+;YellowFlash.C: 834: HeartbeatTest();
 	call	_HeartbeatTest	;wreg free
-	goto	l3211
+	goto	l3215
 	global	start
 	goto	start
 	opt stack 0
 psect	text1,class=CODE,space=0,reloc=2
 global __ptext1
 __ptext1:
-	line	841
+	line	839
 GLOBAL	__end_of_main
 	__end_of_main:
 	signat	_main,88
@@ -2779,31 +2779,31 @@ _CANRecv:
 	line	262
 	movff	wreg,(c:CANRecv@id)
 	
-l2661:; BSR set to: 0
+l2663:; BSR set to: 0
 
 ;CAN.H: 262: if(RXB0IF ==1)
 	btfss	c:(31672/8),(31672)&7	;volatile
-	goto	u911
-	goto	u910
-u911:
+	goto	u921
+	goto	u920
+u921:
 	goto	l362
-u910:
+u920:
 	line	264
 	
-l2663:; BSR set to: 0
+l2665:; BSR set to: 0
 
 ;CAN.H: 263: {
 ;CAN.H: 264: RXB0IF =0;
 	bcf	c:(31672/8),(31672)&7	;volatile
 	line	265
 	
-l2665:; BSR set to: 0
+l2667:; BSR set to: 0
 
 ;CAN.H: 265: RXB0CON &= 0x7f;
 	bcf	(0+(7/8)+(c:3936)),c,(7)&7	;volatile
 	line	266
 	
-l2667:; BSR set to: 0
+l2669:; BSR set to: 0
 
 ;CAN.H: 266: id[0] = RXB0SIDH;
 	movf	((c:CANRecv@id)),c,w
@@ -2843,7 +2843,7 @@ l2667:; BSR set to: 0
 
 	line	271
 	
-l2669:; BSR set to: 0
+l2671:; BSR set to: 0
 
 ;CAN.H: 271: *dlc =RXB0DLC;
 	movf	((c:CANRecv@dlc)),c,w
@@ -2853,7 +2853,7 @@ l2669:; BSR set to: 0
 
 	line	273
 	
-l2671:; BSR set to: 0
+l2673:; BSR set to: 0
 
 ;CAN.H: 273: dat[0] = RXB0D0;
 	movf	((c:CANRecv@dat)),c,w
@@ -2933,7 +2933,7 @@ l2671:; BSR set to: 0
 
 	line	281
 	
-l2673:
+l2675:
 ;CAN.H: 281: return 1;
 	bsf	status,0
 	goto	l363
@@ -2945,28 +2945,28 @@ l362:; BSR set to: 0
 ;CAN.H: 282: }
 ;CAN.H: 283: if(RXB1IF ==1)
 	btfss	c:(31673/8),(31673)&7	;volatile
-	goto	u921
-	goto	u920
-u921:
+	goto	u931
+	goto	u930
+u931:
 	goto	l364
-u920:
+u930:
 	line	285
 	
-l2677:; BSR set to: 0
+l2679:; BSR set to: 0
 
 ;CAN.H: 284: {
 ;CAN.H: 285: RXB1IF =0;
 	bcf	c:(31673/8),(31673)&7	;volatile
 	line	286
 	
-l2679:; BSR set to: 0
+l2681:; BSR set to: 0
 
 ;CAN.H: 286: RXB1CON &= 0x7f;
 	movlb	15	; () banked
 	bcf	(0+(7/8)+(3888))&0ffh,(7)&7	;volatile
 	line	287
 	
-l2681:; BSR set to: 15
+l2683:; BSR set to: 15
 
 ;CAN.H: 287: id[0] = RXB1SIDH;
 	movf	((c:CANRecv@id)),c,w
@@ -2976,7 +2976,7 @@ l2681:; BSR set to: 15
 
 	line	288
 	
-l2683:; BSR set to: 15
+l2685:; BSR set to: 15
 
 ;CAN.H: 288: id[1] = RXB1SIDL;
 	movf	((c:CANRecv@id)),c,w
@@ -2989,7 +2989,7 @@ l2683:; BSR set to: 15
 
 	line	289
 	
-l2685:; BSR set to: 15
+l2687:; BSR set to: 15
 
 ;CAN.H: 289: id[2] = RXB1EIDH;
 	movf	((c:CANRecv@id)),c,w
@@ -3002,7 +3002,7 @@ l2685:; BSR set to: 15
 
 	line	290
 	
-l2687:; BSR set to: 15
+l2689:; BSR set to: 15
 
 ;CAN.H: 290: id[3] = RXB1EIDL;
 	movf	((c:CANRecv@id)),c,w
@@ -3015,7 +3015,7 @@ l2687:; BSR set to: 15
 
 	line	292
 	
-l2689:; BSR set to: 15
+l2691:; BSR set to: 15
 
 ;CAN.H: 292: *dlc =RXB1DLC;
 	movf	((c:CANRecv@dlc)),c,w
@@ -3025,7 +3025,7 @@ l2689:; BSR set to: 15
 
 	line	294
 	
-l2691:; BSR set to: 15
+l2693:; BSR set to: 15
 
 ;CAN.H: 294: dat[0] = RXB1D0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3035,7 +3035,7 @@ l2691:; BSR set to: 15
 
 	line	295
 	
-l2693:; BSR set to: 15
+l2695:; BSR set to: 15
 
 ;CAN.H: 295: dat[1] = RXB1D1;
 	movf	((c:CANRecv@dat)),c,w
@@ -3048,7 +3048,7 @@ l2693:; BSR set to: 15
 
 	line	296
 	
-l2695:; BSR set to: 15
+l2697:; BSR set to: 15
 
 ;CAN.H: 296: dat[2] = RXB1D2;
 	movf	((c:CANRecv@dat)),c,w
@@ -3061,7 +3061,7 @@ l2695:; BSR set to: 15
 
 	line	297
 	
-l2697:; BSR set to: 15
+l2699:; BSR set to: 15
 
 ;CAN.H: 297: dat[3] = RXB1D3;
 	movf	((c:CANRecv@dat)),c,w
@@ -3074,7 +3074,7 @@ l2697:; BSR set to: 15
 
 	line	298
 	
-l2699:; BSR set to: 15
+l2701:; BSR set to: 15
 
 ;CAN.H: 298: dat[4] = RXB1D4;
 	movf	((c:CANRecv@dat)),c,w
@@ -3087,7 +3087,7 @@ l2699:; BSR set to: 15
 
 	line	299
 	
-l2701:; BSR set to: 15
+l2703:; BSR set to: 15
 
 ;CAN.H: 299: dat[5] = RXB1D5;
 	movf	((c:CANRecv@dat)),c,w
@@ -3100,7 +3100,7 @@ l2701:; BSR set to: 15
 
 	line	300
 	
-l2703:; BSR set to: 15
+l2705:; BSR set to: 15
 
 ;CAN.H: 300: dat[6] = RXB1D6;
 	movf	((c:CANRecv@dat)),c,w
@@ -3113,7 +3113,7 @@ l2703:; BSR set to: 15
 
 	line	301
 	
-l2705:; BSR set to: 15
+l2707:; BSR set to: 15
 
 ;CAN.H: 301: dat[7] = RXB1D7;
 	movf	((c:CANRecv@dat)),c,w
@@ -3124,7 +3124,7 @@ l2705:; BSR set to: 15
 	clrf	fsr2h
 	movff	(3901),indf2	;volatile
 
-	goto	l2673
+	goto	l2675
 	line	304
 	
 l364:; BSR set to: 0
@@ -3133,14 +3133,14 @@ l364:; BSR set to: 0
 ;CAN.H: 304: }
 ;CAN.H: 305: if(TXB0IF ==1)
 	btfss	c:(31674/8),(31674)&7	;volatile
-	goto	u931
-	goto	u930
-u931:
+	goto	u941
+	goto	u940
+u941:
 	goto	l365
-u930:
+u940:
 	line	307
 	
-l2711:; BSR set to: 0
+l2713:; BSR set to: 0
 
 ;CAN.H: 306: {
 ;CAN.H: 307: TXB0IF =0;
@@ -3153,14 +3153,14 @@ l365:; BSR set to: 0
 ;CAN.H: 308: }
 ;CAN.H: 309: if(TXB1IF ==1)
 	btfss	c:(31675/8),(31675)&7	;volatile
-	goto	u941
-	goto	u940
-u941:
+	goto	u951
+	goto	u950
+u951:
 	goto	l366
-u940:
+u950:
 	line	311
 	
-l2713:; BSR set to: 0
+l2715:; BSR set to: 0
 
 ;CAN.H: 310: {
 ;CAN.H: 311: TXB1IF =0;
@@ -3173,14 +3173,14 @@ l366:; BSR set to: 0
 ;CAN.H: 312: }
 ;CAN.H: 313: if(TXB2IF ==1)
 	btfss	c:(31676/8),(31676)&7	;volatile
-	goto	u951
-	goto	u950
-u951:
+	goto	u961
+	goto	u960
+u961:
 	goto	l367
-u950:
+u960:
 	line	315
 	
-l2715:; BSR set to: 0
+l2717:; BSR set to: 0
 
 ;CAN.H: 314: {
 ;CAN.H: 315: TXB2IF =0;
@@ -3193,21 +3193,21 @@ l367:; BSR set to: 0
 ;CAN.H: 316: }
 ;CAN.H: 318: if(ERRIF ==1)
 	btfss	c:(31677/8),(31677)&7	;volatile
-	goto	u961
-	goto	u960
-u961:
-	goto	l2747
-u960:
+	goto	u971
+	goto	u970
+u971:
+	goto	l2749
+u970:
 	line	320
 	
-l2717:; BSR set to: 0
+l2719:; BSR set to: 0
 
 ;CAN.H: 319: {
 ;CAN.H: 320: ERRIF =0;
 	bcf	c:(31677/8),(31677)&7	;volatile
 	line	322
 	
-l2719:; BSR set to: 0
+l2721:; BSR set to: 0
 
 ;CAN.H: 322: id[0] = 0;
 	movf	((c:CANRecv@id)),c,w
@@ -3217,7 +3217,7 @@ l2719:; BSR set to: 0
 	movwf	indf2
 	line	323
 	
-l2721:; BSR set to: 0
+l2723:; BSR set to: 0
 
 ;CAN.H: 323: id[1] = 0;
 	movf	((c:CANRecv@id)),c,w
@@ -3230,7 +3230,7 @@ l2721:; BSR set to: 0
 	movwf	indf2
 	line	324
 	
-l2723:; BSR set to: 0
+l2725:; BSR set to: 0
 
 ;CAN.H: 324: id[2] = 0;
 	movf	((c:CANRecv@id)),c,w
@@ -3243,7 +3243,7 @@ l2723:; BSR set to: 0
 	movwf	indf2
 	line	325
 	
-l2725:; BSR set to: 0
+l2727:; BSR set to: 0
 
 ;CAN.H: 325: id[3] = 0;
 	movf	((c:CANRecv@id)),c,w
@@ -3256,7 +3256,7 @@ l2725:; BSR set to: 0
 	movwf	indf2
 	line	327
 	
-l2727:; BSR set to: 0
+l2729:; BSR set to: 0
 
 ;CAN.H: 327: *dlc =0;
 	movf	((c:CANRecv@dlc)),c,w
@@ -3266,7 +3266,7 @@ l2727:; BSR set to: 0
 	movwf	indf2
 	line	329
 	
-l2729:; BSR set to: 0
+l2731:; BSR set to: 0
 
 ;CAN.H: 329: dat[0] = 0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3276,7 +3276,7 @@ l2729:; BSR set to: 0
 	movwf	indf2
 	line	330
 	
-l2731:; BSR set to: 0
+l2733:; BSR set to: 0
 
 ;CAN.H: 330: dat[1] = 0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3289,7 +3289,7 @@ l2731:; BSR set to: 0
 	movwf	indf2
 	line	331
 	
-l2733:; BSR set to: 0
+l2735:; BSR set to: 0
 
 ;CAN.H: 331: dat[2] = 0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3302,7 +3302,7 @@ l2733:; BSR set to: 0
 	movwf	indf2
 	line	332
 	
-l2735:; BSR set to: 0
+l2737:; BSR set to: 0
 
 ;CAN.H: 332: dat[3] = 0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3315,7 +3315,7 @@ l2735:; BSR set to: 0
 	movwf	indf2
 	line	333
 	
-l2737:; BSR set to: 0
+l2739:; BSR set to: 0
 
 ;CAN.H: 333: dat[4] = 0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3328,7 +3328,7 @@ l2737:; BSR set to: 0
 	movwf	indf2
 	line	334
 	
-l2739:; BSR set to: 0
+l2741:; BSR set to: 0
 
 ;CAN.H: 334: dat[5] = 0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3341,7 +3341,7 @@ l2739:; BSR set to: 0
 	movwf	indf2
 	line	335
 	
-l2741:; BSR set to: 0
+l2743:; BSR set to: 0
 
 ;CAN.H: 335: dat[6] = 0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3354,7 +3354,7 @@ l2741:; BSR set to: 0
 	movwf	indf2
 	line	336
 	
-l2743:; BSR set to: 0
+l2745:; BSR set to: 0
 
 ;CAN.H: 336: dat[7] = 0;
 	movf	((c:CANRecv@dat)),c,w
@@ -3367,7 +3367,7 @@ l2743:; BSR set to: 0
 	movwf	indf2
 	line	338
 	
-l2745:; BSR set to: 0
+l2747:; BSR set to: 0
 
 ;CAN.H: 338: CANInit(GetAddr(0x06));
 	movlw	(06h)&0ffh
@@ -3377,7 +3377,7 @@ l2745:; BSR set to: 0
 	call	_CANInit
 	line	340
 	
-l2747:
+l2749:
 ;CAN.H: 340: return 0;
 	bcf	status,0
 	line	343
@@ -3436,35 +3436,35 @@ _GetAddr:
 	movff	wreg,(c:GetAddr@board_type)
 	line	145
 	
-l2459:
+l2461:
 ;TSC.H: 144: unsigned char rel;
 ;TSC.H: 145: switch (board_type)
-	goto	l2469
+	goto	l2471
 	line	148
 	
-l2461:
+l2463:
 ;TSC.H: 148: rel = 0x20;
 	movlw	low(020h)
 	movwf	((c:GetAddr@rel)),c
 	line	149
 ;TSC.H: 149: break;
-	goto	l2471
+	goto	l2473
 	line	152
 	
-l2463:
+l2465:
 ;TSC.H: 152: rel = GetLampBoardAddr();
 	call	_GetLampBoardAddr	;wreg free
 	movwf	((c:GetAddr@rel)),c
 	line	153
 ;TSC.H: 153: break;
-	goto	l2471
+	goto	l2473
 	line	155
 	
-l2465:
+l2467:
 ;TSC.H: 155: rel= 0x2E;
 	movlw	low(02Eh)
 	movwf	((c:GetAddr@rel)),c
-	goto	l2471
+	goto	l2473
 	line	165
 ;TSC.H: 165: default:
 	
@@ -3474,10 +3474,10 @@ l325:
 	clrf	((c:GetAddr@rel)),c
 	line	167
 ;TSC.H: 167: break;
-	goto	l2471
+	goto	l2473
 	line	145
 	
-l2469:
+l2471:
 	movf	((c:GetAddr@board_type)),c,w
 	; Switch size 1, requested type "space"
 ; Number of cases is 6, Range of values is 1 to 6
@@ -3488,27 +3488,27 @@ l2469:
 
 	xorlw	1^0	; case 1
 	skipnz
-	goto	l2461
+	goto	l2463
 	xorlw	2^1	; case 2
 	skipnz
-	goto	l2463
+	goto	l2465
 	xorlw	3^2	; case 3
 	skipnz
-	goto	l2471
+	goto	l2473
 	xorlw	4^3	; case 4
 	skipnz
-	goto	l2471
+	goto	l2473
 	xorlw	5^4	; case 5
 	skipnz
-	goto	l2471
+	goto	l2473
 	xorlw	6^5	; case 6
 	skipnz
-	goto	l2465
+	goto	l2467
 	goto	l325
 
 	line	170
 	
-l2471:
+l2473:
 ;TSC.H: 170: return rel;
 	movf	((c:GetAddr@rel)),c,w
 	line	171
@@ -3564,14 +3564,14 @@ _GetLampBoardAddr:
 	opt	stack 24
 	line	83
 	
-l2387:
+l2389:
 	line	84
 ;TSC.H: 84: unsigned int i=0;
 	clrf	((c:GetLampBoardAddr@i)),c
 	clrf	((c:GetLampBoardAddr@i+1)),c
 	line	86
 	
-l2389:
+l2391:
 ;TSC.H: 86: addr = (PORTB>>5) & 0x07;
 	swapf	((c:3969)),c,w	;volatile
 	rrncf	wreg
@@ -3580,30 +3580,30 @@ l2389:
 	movwf	((c:GetLampBoardAddr@addr)),c
 	line	89
 	
-l2391:
+l2393:
 ;TSC.H: 89: for(i=0;i<1000;i++)
 	clrf	((c:GetLampBoardAddr@i)),c
 	clrf	((c:GetLampBoardAddr@i+1)),c
 	
-l2395:
+l2397:
 ;TSC.H: 90: {;}
 	infsnz	((c:GetLampBoardAddr@i)),c
 	incf	((c:GetLampBoardAddr@i+1)),c
 	
-l2397:
+l2399:
 	movlw	0E8h
 	subwf	((c:GetLampBoardAddr@i)),c,w
 	movlw	03h
 	subwfb	((c:GetLampBoardAddr@i+1)),c,w
 	btfss	status,0
-	goto	u811
-	goto	u810
-u811:
-	goto	l2395
-u810:
+	goto	u821
+	goto	u820
+u821:
+	goto	l2397
+u820:
 	line	92
 	
-l2399:
+l2401:
 ;TSC.H: 92: if(addr ==((PORTB>>5) & 0x07))
 	swapf	((c:3969)),c,w	;volatile
 	rrncf	wreg
@@ -3611,63 +3611,63 @@ l2399:
 	andlw	low(07h)
 	xorwf	((c:GetLampBoardAddr@addr)),c,w
 	btfss	status,2
-	goto	u821
-	goto	u820
-u821:
+	goto	u831
+	goto	u830
+u831:
+	goto	l2457
+u830:
 	goto	l2455
-u820:
-	goto	l2453
 	line	97
 	
-l2403:
+l2405:
 ;TSC.H: 97: return 0x13;
 	movlw	(013h)&0ffh
 	goto	l304
 	line	100
 	
-l2409:
+l2411:
 ;TSC.H: 100: return 0x14;
 	movlw	(014h)&0ffh
 	goto	l304
 	line	103
 	
-l2415:
+l2417:
 ;TSC.H: 103: return 0x15;
 	movlw	(015h)&0ffh
 	goto	l304
 	line	106
 	
-l2421:
+l2423:
 ;TSC.H: 106: return 0x16;
 	movlw	(016h)&0ffh
 	goto	l304
 	line	109
 	
-l2427:
+l2429:
 ;TSC.H: 109: return 0x17;
 	movlw	(017h)&0ffh
 	goto	l304
 	line	112
 	
-l2433:
+l2435:
 ;TSC.H: 112: return 0x18;
 	movlw	(018h)&0ffh
 	goto	l304
 	line	115
 	
-l2439:
+l2441:
 ;TSC.H: 115: return 0x1a;
 	movlw	(01Ah)&0ffh
 	goto	l304
 	line	118
 	
-l2445:
+l2447:
 ;TSC.H: 118: return 0x1b;
 	movlw	(01Bh)&0ffh
 	goto	l304
 	line	94
 	
-l2453:
+l2455:
 	movf	((c:GetLampBoardAddr@addr)),c,w
 	; Switch size 1, requested type "space"
 ; Number of cases is 8, Range of values is 0 to 7
@@ -3678,33 +3678,33 @@ l2453:
 
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l2403
+	goto	l2405
 	xorlw	1^0	; case 1
 	skipnz
-	goto	l2409
+	goto	l2411
 	xorlw	2^1	; case 2
 	skipnz
-	goto	l2415
+	goto	l2417
 	xorlw	3^2	; case 3
 	skipnz
-	goto	l2421
+	goto	l2423
 	xorlw	4^3	; case 4
 	skipnz
-	goto	l2427
+	goto	l2429
 	xorlw	5^4	; case 5
 	skipnz
-	goto	l2433
+	goto	l2435
 	xorlw	6^5	; case 6
 	skipnz
-	goto	l2439
+	goto	l2441
 	xorlw	7^6	; case 7
 	skipnz
-	goto	l2445
+	goto	l2447
 	goto	l304
 
 	line	127
 	
-l2455:
+l2457:
 ;TSC.H: 125: else
 ;TSC.H: 126: {
 ;TSC.H: 127: return 0xff;
@@ -3766,7 +3766,7 @@ _CANInit:
 	movff	wreg,(c:CANInit@b_addr)
 	line	118
 	
-l2573:
+l2575:
 ;CAN.H: 118: TRISB |= 0x08;
 	bsf	(0+(3/8)+(c:3987)),c,(3)&7	;volatile
 	line	119
@@ -3781,54 +3781,54 @@ l2573:
 l338:
 	
 	btfss	((c:3950)),c,(7)&7	;volatile
-	goto	u831
-	goto	u830
-u831:
+	goto	u841
+	goto	u840
+u841:
 	goto	l338
-u830:
+u840:
 	line	126
 	
-l2575:
+l2577:
 ;CAN.H: 126: ECANCON &= 0x3f;
 	movlw	(03Fh)&0ffh
 	andwf	((c:3954)),c	;volatile
 	line	128
 	
-l2577:
+l2579:
 ;CAN.H: 128: BRGCON1 = 0x00;
 	movlb	14	; () banked
 	clrf	((3651))&0ffh	;volatile
 	line	129
 	
-l2579:; BSR set to: 14
+l2581:; BSR set to: 14
 
 ;CAN.H: 129: BRGCON2 = 0xd1;;
 	movlw	low(0D1h)
 	movwf	((3652))&0ffh	;volatile
 	line	130
 	
-l2581:; BSR set to: 14
+l2583:; BSR set to: 14
 
 ;CAN.H: 130: BRGCON3 = 0xc1;
 	movlw	low(0C1h)
 	movwf	((3653))&0ffh	;volatile
 	line	131
 	
-l2583:; BSR set to: 14
+l2585:; BSR set to: 14
 
 ;CAN.H: 131: CIOCON = 0x21;
 	movlw	low(021h)
 	movwf	((c:3952)),c	;volatile
 	line	133
 	
-l2585:; BSR set to: 14
+l2587:; BSR set to: 14
 
 ;CAN.H: 133: RXB0CON |= 0x06;
 	movlw	(06h)&0ffh
 	iorwf	((c:3936)),c	;volatile
 	line	134
 	
-l2587:; BSR set to: 14
+l2589:; BSR set to: 14
 
 ;CAN.H: 134: RXB1CON |= 0x06;
 	movlw	(06h)&0ffh
@@ -3836,7 +3836,7 @@ l2587:; BSR set to: 14
 	iorwf	((3888))&0ffh	;volatile
 	line	136
 	
-l2589:; BSR set to: 15
+l2591:; BSR set to: 15
 
 ;CAN.H: 136: CANSetID(b_addr,0x03);
 	movlw	low(03h)
@@ -3846,7 +3846,7 @@ l2589:; BSR set to: 15
 	call	_CANSetID
 	line	137
 	
-l2591:; BSR set to: 15
+l2593:; BSR set to: 15
 
 ;CAN.H: 137: CANFilterSet(b_addr,0x03);
 	movlw	low(03h)
@@ -3856,19 +3856,19 @@ l2591:; BSR set to: 15
 	call	_CANFilterSet
 	line	138
 	
-l2593:; BSR set to: 14
+l2595:; BSR set to: 14
 
 ;CAN.H: 138: CANErrClr();
 	call	_CANErrClr	;wreg free
 	line	141
 	
-l2595:; BSR set to: 14
+l2597:; BSR set to: 14
 
 ;CAN.H: 141: CIOCON=0X00;
 	clrf	((c:3952)),c	;volatile
 	line	145
 	
-l2597:; BSR set to: 14
+l2599:; BSR set to: 14
 
 ;CAN.H: 145: CANCON &= 0x1f;
 	movlw	(01Fh)&0ffh
@@ -3879,11 +3879,11 @@ l2597:; BSR set to: 14
 l341:
 	
 	btfsc	((c:3950)),c,(0)&7	;volatile
-	goto	u841
-	goto	u840
-u841:
+	goto	u851
+	goto	u850
+u851:
 	goto	l341
-u840:
+u850:
 	line	152
 	
 l344:
@@ -3939,14 +3939,14 @@ _CANFilterSet:
 	line	20
 	movff	wreg,(c:CANFilterSet@board_addr)
 	
-l2475:; BSR set to: 15
+l2477:; BSR set to: 15
 
 ;CAN.H: 20: RXF0SIDH = 0;
 	movlb	14	; () banked
 	clrf	((3808))&0ffh	;volatile
 	line	21
 	
-l2477:; BSR set to: 14
+l2479:; BSR set to: 14
 
 ;CAN.H: 21: RXF0SIDH = (f_type<<5)|(0x10>>1);
 	swapf	((c:CANFilterSet@f_type)),c,w
@@ -3956,7 +3956,7 @@ l2477:; BSR set to: 14
 	movwf	((3808))&0ffh	;volatile
 	line	22
 	
-l2479:; BSR set to: 14
+l2481:; BSR set to: 14
 
 ;CAN.H: 22: RXF0SIDL = 0;
 	clrf	((3809))&0ffh	;volatile
@@ -3968,7 +3968,7 @@ l2479:; BSR set to: 14
 	movwf	((3809))&0ffh	;volatile
 	line	24
 	
-l2481:; BSR set to: 14
+l2483:; BSR set to: 14
 
 ;CAN.H: 24: RXF0EIDH = 0;
 	clrf	((3810))&0ffh	;volatile
@@ -3980,190 +3980,190 @@ l2481:; BSR set to: 14
 	movwf	((3810))&0ffh	;volatile
 	line	26
 	
-l2483:; BSR set to: 14
+l2485:; BSR set to: 14
 
 ;CAN.H: 26: RXF0EIDL = 0;
 	clrf	((3811))&0ffh	;volatile
 	line	27
 	
-l2485:; BSR set to: 14
+l2487:; BSR set to: 14
 
 ;CAN.H: 27: RXF0EIDL = 0xF0|0x0f;
 	setf	((3811))&0ffh	;volatile
 	line	31
 	
-l2487:; BSR set to: 14
+l2489:; BSR set to: 14
 
 ;CAN.H: 31: RXF1SIDH = RXF0SIDH;
 	movff	(3808),(3812)	;volatile
 	line	32
 	
-l2489:; BSR set to: 14
+l2491:; BSR set to: 14
 
 ;CAN.H: 32: RXF1SIDL = RXF0SIDL;
 	movff	(3809),(3813)	;volatile
 	line	33
 	
-l2491:; BSR set to: 14
+l2493:; BSR set to: 14
 
 ;CAN.H: 33: RXF1EIDH = RXF0EIDH;
 	movff	(3810),(3814)	;volatile
 	line	34
 	
-l2493:; BSR set to: 14
+l2495:; BSR set to: 14
 
 ;CAN.H: 34: RXF1EIDL = RXF0EIDL;
 	movff	(3811),(3815)	;volatile
 	line	39
 	
-l2495:; BSR set to: 14
+l2497:; BSR set to: 14
 
 ;CAN.H: 39: RXF2SIDH = RXF0SIDH;
 	movff	(3808),(3816)	;volatile
 	line	40
 	
-l2497:; BSR set to: 14
+l2499:; BSR set to: 14
 
 ;CAN.H: 40: RXF2SIDL = RXF0SIDL;
 	movff	(3809),(3817)	;volatile
 	line	41
 	
-l2499:; BSR set to: 14
+l2501:; BSR set to: 14
 
 ;CAN.H: 41: RXF2EIDH = RXF0EIDH;
 	movff	(3810),(3818)	;volatile
 	line	42
 	
-l2501:; BSR set to: 14
+l2503:; BSR set to: 14
 
 ;CAN.H: 42: RXF2EIDL = RXF0EIDL;
 	movff	(3811),(3819)	;volatile
 	line	46
 	
-l2503:; BSR set to: 14
+l2505:; BSR set to: 14
 
 ;CAN.H: 46: RXF3SIDH = RXF0SIDH;
 	movff	(3808),(3820)	;volatile
 	line	47
 	
-l2505:; BSR set to: 14
+l2507:; BSR set to: 14
 
 ;CAN.H: 47: RXF3SIDL = RXF0SIDL;
 	movff	(3809),(3821)	;volatile
 	line	48
 	
-l2507:; BSR set to: 14
+l2509:; BSR set to: 14
 
 ;CAN.H: 48: RXF3EIDH = RXF0EIDH;
 	movff	(3810),(3822)	;volatile
 	line	49
 	
-l2509:; BSR set to: 14
+l2511:; BSR set to: 14
 
 ;CAN.H: 49: RXF3EIDL = RXF0EIDL;
 	movff	(3811),(3823)	;volatile
 	line	53
 	
-l2511:; BSR set to: 14
+l2513:; BSR set to: 14
 
 ;CAN.H: 53: RXF4SIDH = 0x68;
 	movlw	low(068h)
 	movwf	((3824))&0ffh	;volatile
 	line	54
 	
-l2513:; BSR set to: 14
+l2515:; BSR set to: 14
 
 ;CAN.H: 54: RXF4SIDL = 0x6a;
 	movlw	low(06Ah)
 	movwf	((3825))&0ffh	;volatile
 	line	55
 	
-l2515:; BSR set to: 14
+l2517:; BSR set to: 14
 
 ;CAN.H: 55: RXF4EIDH = 0x0f;
 	movlw	low(0Fh)
 	movwf	((3826))&0ffh	;volatile
 	line	56
 	
-l2517:; BSR set to: 14
+l2519:; BSR set to: 14
 
 ;CAN.H: 56: RXF4EIDL = 0xff;
 	setf	((3827))&0ffh	;volatile
 	line	59
 	
-l2519:; BSR set to: 14
+l2521:; BSR set to: 14
 
 ;CAN.H: 59: RXF5SIDH = RXF0SIDH;
 	movff	(3808),(3828)	;volatile
 	line	60
 	
-l2521:; BSR set to: 14
+l2523:; BSR set to: 14
 
 ;CAN.H: 60: RXF5SIDL = RXF0SIDL;
 	movff	(3809),(3829)	;volatile
 	line	61
 	
-l2523:; BSR set to: 14
+l2525:; BSR set to: 14
 
 ;CAN.H: 61: RXF5EIDH = RXF0EIDH;
 	movff	(3810),(3830)	;volatile
 	line	62
 	
-l2525:; BSR set to: 14
+l2527:; BSR set to: 14
 
 ;CAN.H: 62: RXF5EIDL = RXF0EIDL;
 	movff	(3811),(3831)	;volatile
 	line	65
 	
-l2527:; BSR set to: 14
+l2529:; BSR set to: 14
 
 ;CAN.H: 65: RXM0SIDH = 0x1f;
 	movlw	low(01Fh)
 	movwf	((3832))&0ffh	;volatile
 	line	66
 	
-l2529:; BSR set to: 14
+l2531:; BSR set to: 14
 
 ;CAN.H: 66: RXM0SIDL = 0x83;
 	movlw	low(083h)
 	movwf	((3833))&0ffh	;volatile
 	line	67
 	
-l2531:; BSR set to: 14
+l2533:; BSR set to: 14
 
 ;CAN.H: 67: RXM0EIDH = 0xf0;
 	movlw	low(0F0h)
 	movwf	((3834))&0ffh	;volatile
 	line	68
 	
-l2533:; BSR set to: 14
+l2535:; BSR set to: 14
 
 ;CAN.H: 68: RXM0EIDL = 0x00;
 	clrf	((3835))&0ffh	;volatile
 	line	71
 	
-l2535:; BSR set to: 14
+l2537:; BSR set to: 14
 
 ;CAN.H: 71: RXM1SIDH = 0x1f;
 	movlw	low(01Fh)
 	movwf	((3836))&0ffh	;volatile
 	line	72
 	
-l2537:; BSR set to: 14
+l2539:; BSR set to: 14
 
 ;CAN.H: 72: RXM1SIDL = 0xe3;
 	movlw	low(0E3h)
 	movwf	((3837))&0ffh	;volatile
 	line	73
 	
-l2539:; BSR set to: 14
+l2541:; BSR set to: 14
 
 ;CAN.H: 73: RXM1EIDH = 0xf0;
 	movlw	low(0F0h)
 	movwf	((3838))&0ffh	;volatile
 	line	74
 	
-l2541:; BSR set to: 14
+l2543:; BSR set to: 14
 
 ;CAN.H: 74: RXM1EIDL = 0x00;
 	clrf	((3839))&0ffh	;volatile
@@ -4276,13 +4276,13 @@ _CANSetID:; BSR set to: 14
 	line	91
 	movff	wreg,(c:CANSetID@board_addr)
 	
-l2543:; BSR set to: 15
+l2545:; BSR set to: 15
 
 ;CAN.H: 91: TXB0SIDH = 0;
 	clrf	((3873))&0ffh	;volatile
 	line	92
 	
-l2545:; BSR set to: 15
+l2547:; BSR set to: 15
 
 ;CAN.H: 92: TXB0SIDH = (f_type<<5)|(board_addr>>1);
 	movff	(c:CANSetID@board_addr),??_CANSetID+0+0
@@ -4296,7 +4296,7 @@ l2545:; BSR set to: 15
 	movwf	((3873))&0ffh	;volatile
 	line	93
 	
-l2547:; BSR set to: 15
+l2549:; BSR set to: 15
 
 ;CAN.H: 93: TXB0SIDL = 0;
 	clrf	((3874))&0ffh	;volatile
@@ -4308,74 +4308,74 @@ l2547:; BSR set to: 15
 	movwf	((3874))&0ffh	;volatile
 	line	95
 	
-l2549:; BSR set to: 15
+l2551:; BSR set to: 15
 
 ;CAN.H: 95: TXB0EIDH = 0;
 	clrf	((3875))&0ffh	;volatile
 	line	96
 	
-l2551:; BSR set to: 15
+l2553:; BSR set to: 15
 
 ;CAN.H: 96: TXB0EIDH = (0x10<<4)|0x0f;
 	movlw	low(0Fh)
 	movwf	((3875))&0ffh	;volatile
 	line	97
 	
-l2553:; BSR set to: 15
+l2555:; BSR set to: 15
 
 ;CAN.H: 97: TXB0EIDL = 0;
 	clrf	((3876))&0ffh	;volatile
 	line	98
 	
-l2555:; BSR set to: 15
+l2557:; BSR set to: 15
 
 ;CAN.H: 98: TXB0EIDL = 0xF0|0x0f;
 	setf	((3876))&0ffh	;volatile
 	line	101
 	
-l2557:; BSR set to: 15
+l2559:; BSR set to: 15
 
 ;CAN.H: 101: TXB1SIDH = TXB0SIDH;
 	movff	(3873),(3857)	;volatile
 	line	102
 	
-l2559:; BSR set to: 15
+l2561:; BSR set to: 15
 
 ;CAN.H: 102: TXB1SIDL = TXB0SIDL;
 	movff	(3874),(3858)	;volatile
 	line	103
 	
-l2561:; BSR set to: 15
+l2563:; BSR set to: 15
 
 ;CAN.H: 103: TXB1EIDH = TXB0EIDH;
 	movff	(3875),(3859)	;volatile
 	line	104
 	
-l2563:; BSR set to: 15
+l2565:; BSR set to: 15
 
 ;CAN.H: 104: TXB1EIDL = TXB0EIDL;
 	movff	(3876),(3860)	;volatile
 	line	107
 	
-l2565:; BSR set to: 15
+l2567:; BSR set to: 15
 
 ;CAN.H: 107: TXB2SIDH = TXB0SIDH;
 	movff	(3873),(3841)	;volatile
 	line	108
 	
-l2567:; BSR set to: 15
+l2569:; BSR set to: 15
 
 ;CAN.H: 108: TXB2SIDL = TXB0SIDL;
 	movff	(3874),(3842)	;volatile
 	line	109
 	
-l2569:; BSR set to: 15
+l2571:; BSR set to: 15
 
 ;CAN.H: 109: TXB2EIDH = TXB0EIDH;
 	movff	(3875),(3843)	;volatile
 	line	110
 	
-l2571:; BSR set to: 15
+l2573:; BSR set to: 15
 
 ;CAN.H: 110: TXB2EIDL = TXB0EIDL;
 	movff	(3876),(3844)	;volatile
@@ -4433,15 +4433,15 @@ _delayms:; BSR set to: 15
 	opt	stack 25
 	line	112
 	
-l2809:
+l2811:
 ;mcu.h: 109: unsigned int i;
 ;mcu.h: 112: for(i=0;i<ms;i++)
 	clrf	((c:delayms@i)),c
 	clrf	((c:delayms@i+1)),c
-	goto	l2815
+	goto	l2817
 	line	114
 	
-l2811:
+l2813:
 ;mcu.h: 113: {
 ;mcu.h: 114: delayus(997);
 	movlw	high(03E5h)
@@ -4451,21 +4451,21 @@ l2811:
 	call	_delayus	;wreg free
 	line	112
 	
-l2813:
+l2815:
 	infsnz	((c:delayms@i)),c
 	incf	((c:delayms@i+1)),c
 	
-l2815:
+l2817:
 	movf	((c:delayms@ms)),c,w
 	subwf	((c:delayms@i)),c,w
 	movf	((c:delayms@ms+1)),c,w
 	subwfb	((c:delayms@i+1)),c,w
 	btfss	status,0
-	goto	u1011
-	goto	u1010
-u1011:
-	goto	l2811
-u1010:
+	goto	u1021
+	goto	u1020
+u1021:
+	goto	l2813
+u1020:
 	line	117
 	
 l394:
@@ -4518,7 +4518,7 @@ _delayus:
 	opt	stack 25
 	line	95
 	
-l2801:
+l2803:
 ;mcu.h: 94: unsigned int i;
 ;mcu.h: 95: us=us-5;
 	movlw	low(0FFFBh)
@@ -4527,29 +4527,29 @@ l2801:
 	addwfc	((c:delayus@us+1)),c
 	line	97
 	
-l2803:
+l2805:
 ;mcu.h: 97: for(i=0;i<us;i++)
 	clrf	((c:delayus@i)),c
 	clrf	((c:delayus@i+1)),c
-	goto	l2807
+	goto	l2809
 	
-l2805:
+l2807:
 ;mcu.h: 98: {
 ;mcu.h: 99: ;
 	infsnz	((c:delayus@i)),c
 	incf	((c:delayus@i+1)),c
 	
-l2807:
+l2809:
 	movf	((c:delayus@us)),c,w
 	subwf	((c:delayus@i)),c,w
 	movf	((c:delayus@us+1)),c,w
 	subwfb	((c:delayus@i+1)),c,w
 	btfss	status,0
-	goto	u1001
-	goto	u1000
-u1001:
-	goto	l2805
-u1000:
+	goto	u1011
+	goto	u1010
+u1011:
+	goto	l2807
+u1010:
 	line	103
 	
 l388:
@@ -4602,7 +4602,7 @@ _PORTInit:
 	opt	stack 26
 	line	330
 	
-l2851:
+l2853:
 ;YellowFlash.C: 330: TRISB = 0xe0;
 	movlw	low(0E0h)
 	movwf	((c:3987)),c	;volatile
@@ -4616,31 +4616,31 @@ l2851:
 	movwf	((c:3989)),c	;volatile
 	line	334
 	
-l2853:
+l2855:
 ;YellowFlash.C: 334: ANCON1 = 0X00;
 	movlb	15	; () banked
 	clrf	((3932))&0ffh	;volatile
 	line	335
 	
-l2855:; BSR set to: 15
+l2857:; BSR set to: 15
 
 ;YellowFlash.C: 335: RC5=0;
 	bcf	c:(31765/8),(31765)&7	;volatile
 	line	336
 	
-l2857:; BSR set to: 15
+l2859:; BSR set to: 15
 
 ;YellowFlash.C: 336: RC6=1;
 	bsf	c:(31766/8),(31766)&7	;volatile
 	line	337
 	
-l2859:; BSR set to: 15
+l2861:; BSR set to: 15
 
 ;YellowFlash.C: 337: RC4=1;
 	bsf	c:(31764/8),(31764)&7	;volatile
 	line	338
 	
-l2861:; BSR set to: 15
+l2863:; BSR set to: 15
 
 ;YellowFlash.C: 338: RD3=1;
 	bsf	c:(31771/8),(31771)&7	;volatile
@@ -4698,83 +4698,83 @@ _IntManager:; BSR set to: 15
 	opt	stack 26
 	line	374
 	
-l2863:; BSR set to: 15
+l2865:; BSR set to: 15
 
 ;YellowFlash.C: 374: INTCON |= 0xc0;
 	movlw	(0C0h)&0ffh
 	iorwf	((c:4082)),c	;volatile
 	line	378
 	
-l2865:; BSR set to: 15
+l2867:; BSR set to: 15
 
 ;YellowFlash.C: 378: TMR0IE = 1;
 	bsf	c:(32661/8),(32661)&7	;volatile
 	line	379
 	
-l2867:; BSR set to: 15
+l2869:; BSR set to: 15
 
 ;YellowFlash.C: 379: TMR0IF = 0;
 	bcf	c:(32658/8),(32658)&7	;volatile
 	line	380
 	
-l2869:; BSR set to: 15
+l2871:; BSR set to: 15
 
 ;YellowFlash.C: 380: T08BIT = 0;
 	bcf	c:(32430/8),(32430)&7	;volatile
 	line	381
 	
-l2871:; BSR set to: 15
+l2873:; BSR set to: 15
 
 ;YellowFlash.C: 381: T0CS = 0;
 	bcf	c:(32429/8),(32429)&7	;volatile
 	line	383
 	
-l2873:; BSR set to: 15
+l2875:; BSR set to: 15
 
 ;YellowFlash.C: 383: TMR0H = 0xd8;
 	movlw	low(0D8h)
 	movwf	((c:4055)),c	;volatile
 	line	384
 	
-l2875:; BSR set to: 15
+l2877:; BSR set to: 15
 
 ;YellowFlash.C: 384: TMR0L = 0xef;
 	movlw	low(0EFh)
 	movwf	((c:4054)),c	;volatile
 	line	386
 	
-l2877:; BSR set to: 15
+l2879:; BSR set to: 15
 
 ;YellowFlash.C: 386: TMR0ON = 1;
 	bsf	c:(32431/8),(32431)&7	;volatile
 	line	389
 	
-l2879:; BSR set to: 15
+l2881:; BSR set to: 15
 
 ;YellowFlash.C: 389: TMR1IE = 1;
 	bsf	c:(31976/8),(31976)&7	;volatile
 	line	390
 	
-l2881:; BSR set to: 15
+l2883:; BSR set to: 15
 
 ;YellowFlash.C: 390: TMR1IF = 0;
 	bcf	c:(31984/8),(31984)&7	;volatile
 	line	391
 	
-l2883:; BSR set to: 15
+l2885:; BSR set to: 15
 
 ;YellowFlash.C: 391: T1CON = 0x00;
 	clrf	((c:4045)),c	;volatile
 	line	393
 	
-l2885:; BSR set to: 15
+l2887:; BSR set to: 15
 
 ;YellowFlash.C: 393: TMR1H = 0x3c;
 	movlw	low(03Ch)
 	movwf	((c:4047)),c	;volatile
 	line	394
 	
-l2887:; BSR set to: 15
+l2889:; BSR set to: 15
 
 ;YellowFlash.C: 394: TMR1L = 0xaf;
 	movlw	low(0AFh)
@@ -4819,6 +4819,7 @@ GLOBAL	__end_of_IntManager
 ;; Hardware stack levels used:    1
 ;; Hardware stack levels required when called:    8
 ;; This function calls:
+;;		_CANReadVersion
 ;;		_CANSendConfirm
 ;;		_CANSendID
 ;;		_CANWriteID
@@ -4826,7 +4827,6 @@ GLOBAL	__end_of_IntManager
 ;;		_CANSend
 ;;		_YFlashNewConfigure
 ;;		_Read_YFlash_CFG
-;;		_CANReadVersion
 ;; This function is called by:
 ;;		_main
 ;; This function uses a non-reentrant model
@@ -4847,10 +4847,10 @@ _CANDATAAnalyzing:; BSR set to: 15
 	movff	wreg,(c:CANDATAAnalyzing@id)
 	line	580
 	
-l3025:; BSR set to: 0
+l3027:; BSR set to: 0
 
 ;YellowFlash.C: 580: switch (((dat[0] & 0xc0)>>6))
-	goto	l3035
+	goto	l3037
 	line	582
 ;YellowFlash.C: 581: {
 ;YellowFlash.C: 582: case 0x00:
@@ -4862,40 +4862,40 @@ l561:; BSR set to: 0
 	clrf	((c:_f_r_mod)),c
 	line	584
 ;YellowFlash.C: 584: break;
-	goto	l3037
+	goto	l3039
 	line	586
 	
-l3027:; BSR set to: 0
+l3029:; BSR set to: 0
 
 ;YellowFlash.C: 586: f_r_mod = 0x01;
 	movlw	low(01h)
 	movwf	((c:_f_r_mod)),c
 	line	587
 ;YellowFlash.C: 587: break;
-	goto	l3037
+	goto	l3039
 	line	589
 	
-l3029:; BSR set to: 0
+l3031:; BSR set to: 0
 
 ;YellowFlash.C: 589: f_r_mod = 0x02;
 	movlw	low(02h)
 	movwf	((c:_f_r_mod)),c
 	line	590
 ;YellowFlash.C: 590: break;
-	goto	l3037
+	goto	l3039
 	line	592
 	
-l3031:; BSR set to: 0
+l3033:; BSR set to: 0
 
 ;YellowFlash.C: 592: f_r_mod = 0x03;
 	movlw	low(03h)
 	movwf	((c:_f_r_mod)),c
 	line	593
 ;YellowFlash.C: 593: break;
-	goto	l3037
+	goto	l3039
 	line	580
 	
-l3035:; BSR set to: 0
+l3037:; BSR set to: 0
 
 	movf	((c:CANDATAAnalyzing@dat)),c,w
 	movwf	fsr2l
@@ -4904,11 +4904,11 @@ l3035:; BSR set to: 0
 	movwf	(??_CANDATAAnalyzing+0+0)&0ffh,c
 	movlw	06h
 	movwf	(??_CANDATAAnalyzing+1+0)&0ffh,c
-u1135:
+u1145:
 	bcf	status,0
 	rrcf	((??_CANDATAAnalyzing+0+0)),c
 	decfsz	(??_CANDATAAnalyzing+1+0)&0ffh,c
-	goto	u1135
+	goto	u1145
 	movlw	03h
 	andwf	((??_CANDATAAnalyzing+0+0)),c
 	movff	(??_CANDATAAnalyzing+0+0),??_CANDATAAnalyzing+2+0
@@ -4924,10 +4924,10 @@ u1135:
 	movf ??_CANDATAAnalyzing+2+1,c,w
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l3463
+	goto	l3467
 	goto	l561
 	
-l3463:; BSR set to: 0
+l3467:; BSR set to: 0
 
 ; Switch size 1, requested type "space"
 ; Number of cases is 4, Range of values is 0 to 3
@@ -4942,20 +4942,40 @@ l3463:; BSR set to: 0
 	goto	l561
 	xorlw	1^0	; case 1
 	skipnz
-	goto	l3027
+	goto	l3029
 	xorlw	2^1	; case 2
 	skipnz
-	goto	l3029
+	goto	l3031
 	xorlw	3^2	; case 3
 	skipnz
-	goto	l3031
+	goto	l3033
 	goto	l561
 
-	line	600
+	line	598
 	
-l3037:; BSR set to: 0
+l3039:; BSR set to: 0
 
-;YellowFlash.C: 600: if(((id[1]>>5)&0x03)==0x03)
+;YellowFlash.C: 598: if(dat[0]==0xff)
+	movf	((c:CANDATAAnalyzing@dat)),c,w
+	movwf	fsr2l
+	clrf	fsr2h
+	movlw	(0FFh)&0ffh
+	cpfseq	indf2
+	goto	u1151
+	goto	u1150
+u1151:
+	goto	l3043
+u1150:
+	line	599
+	
+l3041:; BSR set to: 0
+
+;YellowFlash.C: 599: CANReadVersion();
+	call	_CANReadVersion	;wreg free
+	line	602
+	
+l3043:
+;YellowFlash.C: 602: if(((id[1]>>5)&0x03)==0x03)
 	movf	((c:CANDATAAnalyzing@id)),c,w
 	movwf	fsr2l
 	clrf	fsr2h
@@ -4966,110 +4986,103 @@ l3037:; BSR set to: 0
 	movwf	(??_CANDATAAnalyzing+0+0)&0ffh,c
 	movlw	05h
 	movwf	(??_CANDATAAnalyzing+1+0)&0ffh,c
-u1145:
+u1165:
 	bcf	status,0
 	rrcf	((??_CANDATAAnalyzing+0+0)),c
 	decfsz	(??_CANDATAAnalyzing+1+0)&0ffh,c
-	goto	u1145
+	goto	u1165
 	movf	((??_CANDATAAnalyzing+0+0)),c,w
 	andlw	low(03h)
 	xorlw	03h
 	btfss	status,2
-	goto	u1151
-	goto	u1150
-u1151:
-	goto	l3059
-u1150:
-	line	602
-	
-l3039:; BSR set to: 0
-
-;YellowFlash.C: 601: {
-;YellowFlash.C: 602: if(force_status)
-	movf	((c:_force_status)),c,w
-	btfsc	status,2
-	goto	u1161
-	goto	u1160
-u1161:
-	goto	l568
-u1160:
-	goto	l586
+	goto	u1171
+	goto	u1170
+u1171:
+	goto	l3065
+u1170:
 	line	604
 	
-l568:; BSR set to: 0
-
+l3045:
+;YellowFlash.C: 603: {
+;YellowFlash.C: 604: if(force_status)
+	movf	((c:_force_status)),c,w
+	btfsc	status,2
+	goto	u1181
+	goto	u1180
+u1181:
+	goto	l569
+u1180:
+	goto	l586
 	line	606
-;YellowFlash.C: 604: else
-;YellowFlash.C: 605: {
-;YellowFlash.C: 606: heartbeat=0;
-	clrf	((c:_heartbeat)),c
-	line	607
-;YellowFlash.C: 607: TMR0ON = 1;
-	bsf	c:(32431/8),(32431)&7	;volatile
+	
+l569:
 	line	608
-	
-l3043:; BSR set to: 0
-
-;YellowFlash.C: 608: T1CON |= 0x00;
-	movf	((c:4045)),c,w	;volatile
+;YellowFlash.C: 606: else
+;YellowFlash.C: 607: {
+;YellowFlash.C: 608: heartbeat=0;
+	clrf	((c:_heartbeat)),c
 	line	609
-	
-l3045:; BSR set to: 0
-
-;YellowFlash.C: 609: turnoff=0x00;
-	clrf	((c:_turnoff)),c
+;YellowFlash.C: 609: TMR0ON = 1;
+	bsf	c:(32431/8),(32431)&7	;volatile
 	line	610
 	
-l3047:; BSR set to: 0
-
-;YellowFlash.C: 610: switchmode=0;
-	movlb	(_switchmode/8) >> 8
-	bcf	(_switchmode/8),c,(_switchmode)&7
+l3049:
+;YellowFlash.C: 610: T1CON |= 0x00;
+	movf	((c:4045)),c,w	;volatile
 	line	611
 	
-l3049:
-;YellowFlash.C: 611: yflash_status=0x00;
-	clrf	((c:_yflash_status)),c
+l3051:
+;YellowFlash.C: 611: turnoff=0x00;
+	clrf	((c:_turnoff)),c
 	line	612
 	
-l3051:
-;YellowFlash.C: 612: RC6=1;
-	bsf	c:(31766/8),(31766)&7	;volatile
+l3053:
+;YellowFlash.C: 612: switchmode=0;
+	movlb	(_switchmode/8) >> 8
+	bcf	(_switchmode/8),c,(_switchmode)&7
 	line	613
 	
-l3053:
-;YellowFlash.C: 613: RC4=1;
-	bsf	c:(31764/8),(31764)&7	;volatile
+l3055:
+;YellowFlash.C: 613: yflash_status=0x00;
+	clrf	((c:_yflash_status)),c
 	line	614
 	
-l3055:
-;YellowFlash.C: 614: RD3=1;
-	bsf	c:(31771/8),(31771)&7	;volatile
+l3057:
+;YellowFlash.C: 614: RC6=1;
+	bsf	c:(31766/8),(31766)&7	;volatile
 	line	615
 	
-l3057:
-;YellowFlash.C: 615: RD2=0;
+l3059:
+;YellowFlash.C: 615: RC4=1;
+	bsf	c:(31764/8),(31764)&7	;volatile
+	line	616
+	
+l3061:
+;YellowFlash.C: 616: RD3=1;
+	bsf	c:(31771/8),(31771)&7	;volatile
+	line	617
+	
+l3063:
+;YellowFlash.C: 617: RD2=0;
 	bcf	c:(31770/8),(31770)&7	;volatile
 	goto	l586
-	line	623
+	line	625
 	
-l3059:; BSR set to: 0
-
-;YellowFlash.C: 619: else
-;YellowFlash.C: 620: {
-;YellowFlash.C: 623: if((f_r_mod ==0x02)&&((dat[0] & 0x3f)!=0x02))
+l3065:
+;YellowFlash.C: 621: else
+;YellowFlash.C: 622: {
+;YellowFlash.C: 625: if((f_r_mod ==0x02)&&((dat[0] & 0x3f)!=0x02))
 	movf	((c:_f_r_mod)),c,w
 	xorlw	2
 
 	btfss	status,2
-	goto	u1171
-	goto	u1170
-u1171:
-	goto	l3163
-u1170:
+	goto	u1191
+	goto	u1190
+u1191:
+	goto	l3167
+u1190:
 	
-l3061:; BSR set to: 0
-
+l3067:
 	movf	((c:CANDATAAnalyzing@dat)),c,w
 	movwf	fsr2l
 	clrf	fsr2h
@@ -5077,243 +5090,22 @@ l3061:; BSR set to: 0
 	andlw	low(03Fh)
 	xorlw	02h
 	btfsc	status,2
-	goto	u1181
-	goto	u1180
-u1181:
-	goto	l3163
-u1180:
-	line	625
-	
-l3063:; BSR set to: 0
-
-;YellowFlash.C: 624: {
-;YellowFlash.C: 625: CANSendConfirm();
-	call	_CANSendConfirm	;wreg free
-	goto	l3163
-	line	633
-	
-l3065:
-;YellowFlash.C: 633: if(f_r_mod ==0x01)
-	decf	((c:_f_r_mod)),c,w
-
-	btfss	status,2
-	goto	u1191
-	goto	u1190
-u1191:
-	goto	l586
-u1190:
-	line	635
-	
-l3067:
-;YellowFlash.C: 634: {
-;YellowFlash.C: 635: CANSendID(0X00);
-	movlw	(0)&0ffh
-	
-	call	_CANSendID
-	goto	l586
-	line	640
-	
-l3069:
-;YellowFlash.C: 640: CANWriteID(f_r_mod);
-	movf	((c:_f_r_mod)),c,w
-	
-	call	_CANWriteID
-	line	641
-;YellowFlash.C: 641: break;
-	goto	l586
-	line	644
-	
-l3071:
-;YellowFlash.C: 644: CANSdlc=4;
-	movlw	low(04h)
-	movwf	((c:_CANSdlc)),c
-	line	645
-;YellowFlash.C: 645: CANSdata[0]=0x02;
-	movlw	low(02h)
-	movwf	((c:_CANSdata)),c
-	line	646
-;YellowFlash.C: 646: eeprom_addr = 0x0009;
-	movlw	high(09h)
-	movwf	((c:_eeprom_addr+1)),c
-	movlw	low(09h)
-	movwf	((c:_eeprom_addr)),c
-	line	647
-;YellowFlash.C: 647: eeprom_num = 2;
-	movlw	low(02h)
-	movwf	((c:_eeprom_num)),c
-	line	648
-	
-l3073:
-;YellowFlash.C: 648: EEPROMRead(&eeprom_addr,&eeprom_num,(CANSdata+1));
-	movlw	low((c:_eeprom_num))
-	movwf	((c:?_EEPROMRead)),c
-	movlw	low((c:_CANSdata)+01h)
-	movwf	(0+((c:?_EEPROMRead)+01h)),c
-	movlw	((c:_eeprom_addr))&0ffh
-	
-	call	_EEPROMRead
-	line	649
-	
-l3075:
-;YellowFlash.C: 649: CANSdata[3]=yflash_status;
-	movff	(c:_yflash_status),0+((c:_CANSdata)+03h)
-	line	650
-	
-l3077:
-;YellowFlash.C: 650: CANSend(CANSid,CANSdata,CANSdlc);
-	movlw	low((c:_CANSdata))
-	movwf	((c:?_CANSend)),c
-	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
-	movlb	0	; () banked
-	movlw	(_CANSid)&0ffh
-	
-	call	_CANSend
-	line	651
-;YellowFlash.C: 651: break;
-	goto	l586
-	line	655
-	
-l3079:
-;YellowFlash.C: 655: YFlashNewConfigure();
-	call	_YFlashNewConfigure	;wreg free
-	line	657
-	
-l3081:
-;YellowFlash.C: 657: if(f_r_mod==0x01)
-	decf	((c:_f_r_mod)),c,w
-
-	btfss	status,2
 	goto	u1201
 	goto	u1200
 u1201:
-	goto	l3091
+	goto	l3167
 u1200:
-	line	659
+	line	627
 	
-l3083:
-;YellowFlash.C: 658: {
-;YellowFlash.C: 659: CANSdlc=3;
-	movlw	low(03h)
-	movwf	((c:_CANSdlc)),c
-	line	660
-;YellowFlash.C: 660: CANSdata[0]=0x03;
-	movlw	low(03h)
-	movwf	((c:_CANSdata)),c
-	line	661
+l3069:
+;YellowFlash.C: 626: {
+;YellowFlash.C: 627: CANSendConfirm();
+	call	_CANSendConfirm	;wreg free
+	goto	l3167
+	line	635
 	
-l3085:
-;YellowFlash.C: 661: CANSdata[1]=yflash_CFG[0];
-	movff	(c:_yflash_CFG),0+((c:_CANSdata)+01h)
-	line	662
-	
-l3087:
-;YellowFlash.C: 662: CANSdata[2]=yflash_CFG[1];
-	movff	0+((c:_yflash_CFG)+01h),0+((c:_CANSdata)+02h)
-	line	664
-	
-l3089:
-;YellowFlash.C: 664: CANSend(CANSid,CANSdata,CANSdlc);
-	movlw	low((c:_CANSdata))
-	movwf	((c:?_CANSend)),c
-	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
-	movlb	0	; () banked
-	movlw	(_CANSid)&0ffh
-	
-	call	_CANSend
-	line	667
-	
-l3091:
-;YellowFlash.C: 665: }
-;YellowFlash.C: 667: Read_YFlash_CFG();
-	call	_Read_YFlash_CFG	;wreg free
-	line	669
-	
-l3093:
-;YellowFlash.C: 669: INTCON |= 0xc0;
-	movlw	(0C0h)&0ffh
-	iorwf	((c:4082)),c	;volatile
-	line	671
-	
-l3095:
-;YellowFlash.C: 671: TMR0IE = 1;
-	bsf	c:(32661/8),(32661)&7	;volatile
-	line	672
-	
-l3097:
-;YellowFlash.C: 672: TMR0IF = 0;
-	bcf	c:(32658/8),(32658)&7	;volatile
-	line	673
-	
-l3099:
-;YellowFlash.C: 673: T08BIT = 0;
-	bcf	c:(32430/8),(32430)&7	;volatile
-	line	674
-	
-l3101:
-;YellowFlash.C: 674: T0CS = 0;
-	bcf	c:(32429/8),(32429)&7	;volatile
-	line	676
-	
-l3103:
-;YellowFlash.C: 676: TMR0H = 0xd8;
-	movlw	low(0D8h)
-	movwf	((c:4055)),c	;volatile
-	line	677
-	
-l3105:
-;YellowFlash.C: 677: TMR0L = 0xef;
-	movlw	low(0EFh)
-	movwf	((c:4054)),c	;volatile
-	line	679
-	
-l3107:
-;YellowFlash.C: 679: TMR0ON = 1;
-	bsf	c:(32431/8),(32431)&7	;volatile
-	line	681
-;YellowFlash.C: 681: break;
-	goto	l586
-	line	683
-;YellowFlash.C: 683: case 0x04:
-	
-l580:
-	line	684
-;YellowFlash.C: 684: yflash_status=CANRdata[1];
-	movff	0+(_CANRdata+01h),(c:_yflash_status)
-	line	685
-;YellowFlash.C: 685: RD2=1;
-	bsf	c:(31770/8),(31770)&7	;volatile
-	line	686
-	
-l3109:
-;YellowFlash.C: 686: Read_YFlash_CFG();
-	call	_Read_YFlash_CFG	;wreg free
-	line	687
-	
-l3111:
-;YellowFlash.C: 687: T1CON |= 0x01;
-	bsf	(0+(0/8)+(c:4045)),c,(0)&7	;volatile
-	line	688
-	
-l3113:
-;YellowFlash.C: 688: turnoff=0x01;
-	movlw	low(01h)
-	movwf	((c:_turnoff)),c
-	line	689
-	
-l3115:
-;YellowFlash.C: 689: switchmode=1;
-	movlb	(_switchmode/8) >> 8
-	bsf	(_switchmode/8),c,(_switchmode)&7
-	line	690
-	
-l3117:
-;YellowFlash.C: 690: force_status=0x01;
-	movlw	low(01h)
-	movwf	((c:_force_status)),c
-	line	691
-	
-l3119:
-;YellowFlash.C: 691: if(f_r_mod==0x01)
+l3071:
+;YellowFlash.C: 635: if(f_r_mod ==0x01)
 	decf	((c:_f_r_mod)),c,w
 
 	btfss	status,2
@@ -5322,36 +5114,65 @@ l3119:
 u1211:
 	goto	l586
 u1210:
-	line	693
+	line	637
 	
-l3121:
-;YellowFlash.C: 692: {
-;YellowFlash.C: 693: CANSdlc=4;
+l3073:
+;YellowFlash.C: 636: {
+;YellowFlash.C: 637: CANSendID(0X00);
+	movlw	(0)&0ffh
+	
+	call	_CANSendID
+	goto	l586
+	line	642
+	
+l3075:
+;YellowFlash.C: 642: CANWriteID(f_r_mod);
+	movf	((c:_f_r_mod)),c,w
+	
+	call	_CANWriteID
+	line	643
+;YellowFlash.C: 643: break;
+	goto	l586
+	line	646
+	
+l3077:
+;YellowFlash.C: 646: CANSdlc=4;
 	movlw	low(04h)
 	movwf	((c:_CANSdlc)),c
-	line	694
-;YellowFlash.C: 694: CANSdata[0]=0x02;
+	line	647
+;YellowFlash.C: 647: CANSdata[0]=0x02;
 	movlw	low(02h)
 	movwf	((c:_CANSdata)),c
-	line	695
+	line	648
+;YellowFlash.C: 648: eeprom_addr = 0x0009;
+	movlw	high(09h)
+	movwf	((c:_eeprom_addr+1)),c
+	movlw	low(09h)
+	movwf	((c:_eeprom_addr)),c
+	line	649
+;YellowFlash.C: 649: eeprom_num = 2;
+	movlw	low(02h)
+	movwf	((c:_eeprom_num)),c
+	line	650
 	
-l3123:
-;YellowFlash.C: 695: CANSdata[1]=yflash_CFG[0];
-	movff	(c:_yflash_CFG),0+((c:_CANSdata)+01h)
-	line	696
+l3079:
+;YellowFlash.C: 650: EEPROMRead(&eeprom_addr,&eeprom_num,(CANSdata+1));
+	movlw	low((c:_eeprom_num))
+	movwf	((c:?_EEPROMRead)),c
+	movlw	low((c:_CANSdata)+01h)
+	movwf	(0+((c:?_EEPROMRead)+01h)),c
+	movlw	((c:_eeprom_addr))&0ffh
 	
-l3125:
-;YellowFlash.C: 696: CANSdata[2]=yflash_CFG[1];
-	movff	0+((c:_yflash_CFG)+01h),0+((c:_CANSdata)+02h)
-	line	697
+	call	_EEPROMRead
+	line	651
 	
-l3127:
-;YellowFlash.C: 697: CANSdata[3]=yflash_status;
+l3081:
+;YellowFlash.C: 651: CANSdata[3]=yflash_status;
 	movff	(c:_yflash_status),0+((c:_CANSdata)+03h)
-	line	698
+	line	652
 	
-l3129:
-;YellowFlash.C: 698: CANSend(CANSid,CANSdata,CANSdlc);
+l3083:
+;YellowFlash.C: 652: CANSend(CANSid,CANSdata,CANSdlc);
 	movlw	low((c:_CANSdata))
 	movwf	((c:?_CANSend)),c
 	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
@@ -5359,100 +5180,190 @@ l3129:
 	movlw	(_CANSid)&0ffh
 	
 	call	_CANSend
+	line	653
+;YellowFlash.C: 653: break;
 	goto	l586
-	line	702
-;YellowFlash.C: 702: case 0x05:
+	line	657
 	
-l582:
-	line	703
-;YellowFlash.C: 703: yflash_status=0x00;
-	clrf	((c:_yflash_status)),c
-	line	704
-;YellowFlash.C: 704: force_status=0x00;
-	clrf	((c:_force_status)),c
-	line	705
+l3085:
+;YellowFlash.C: 657: YFlashNewConfigure();
+	call	_YFlashNewConfigure	;wreg free
+	line	659
 	
-l3131:
-;YellowFlash.C: 705: T1CON |= 0x00;
-	movf	((c:4045)),c,w	;volatile
-	line	706
-	
-l3133:
-;YellowFlash.C: 706: TMR0ON = 1;
-	bsf	c:(32431/8),(32431)&7	;volatile
-	line	707
-	
-l3135:
-;YellowFlash.C: 707: turnoff=0x00;
-	clrf	((c:_turnoff)),c
-	line	708
-	
-l3137:
-;YellowFlash.C: 708: switchmode=0;
-	movlb	(_switchmode/8) >> 8
-	bcf	(_switchmode/8),c,(_switchmode)&7
-	line	709
-	
-l3139:
-;YellowFlash.C: 709: RC6=1;
-	bsf	c:(31766/8),(31766)&7	;volatile
-	line	710
-	
-l3141:
-;YellowFlash.C: 710: RC4=1;
-	bsf	c:(31764/8),(31764)&7	;volatile
-	line	711
-	
-l3143:
-;YellowFlash.C: 711: RD3=1;
-	bsf	c:(31771/8),(31771)&7	;volatile
-	line	712
-	
-l3145:
-;YellowFlash.C: 712: RD2=0;
-	bcf	c:(31770/8),(31770)&7	;volatile
-	line	713
-	
-l3147:
-;YellowFlash.C: 713: if(f_r_mod==0x01)
+l3087:
+;YellowFlash.C: 659: if(f_r_mod==0x01)
 	decf	((c:_f_r_mod)),c,w
 
 	btfss	status,2
 	goto	u1221
 	goto	u1220
 u1221:
-	goto	l586
+	goto	l3097
 u1220:
-	line	715
+	line	661
 	
-l3149:
-;YellowFlash.C: 714: {
-;YellowFlash.C: 715: CANSdlc=4;
+l3089:
+;YellowFlash.C: 660: {
+;YellowFlash.C: 661: CANSdlc=3;
+	movlw	low(03h)
+	movwf	((c:_CANSdlc)),c
+	line	662
+;YellowFlash.C: 662: CANSdata[0]=0x03;
+	movlw	low(03h)
+	movwf	((c:_CANSdata)),c
+	line	663
+	
+l3091:
+;YellowFlash.C: 663: CANSdata[1]=yflash_CFG[0];
+	movff	(c:_yflash_CFG),0+((c:_CANSdata)+01h)
+	line	664
+	
+l3093:
+;YellowFlash.C: 664: CANSdata[2]=yflash_CFG[1];
+	movff	0+((c:_yflash_CFG)+01h),0+((c:_CANSdata)+02h)
+	line	666
+	
+l3095:
+;YellowFlash.C: 666: CANSend(CANSid,CANSdata,CANSdlc);
+	movlw	low((c:_CANSdata))
+	movwf	((c:?_CANSend)),c
+	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
+	movlb	0	; () banked
+	movlw	(_CANSid)&0ffh
+	
+	call	_CANSend
+	line	669
+	
+l3097:
+;YellowFlash.C: 667: }
+;YellowFlash.C: 669: Read_YFlash_CFG();
+	call	_Read_YFlash_CFG	;wreg free
+	line	671
+	
+l3099:
+;YellowFlash.C: 671: INTCON |= 0xc0;
+	movlw	(0C0h)&0ffh
+	iorwf	((c:4082)),c	;volatile
+	line	673
+	
+l3101:
+;YellowFlash.C: 673: TMR0IE = 1;
+	bsf	c:(32661/8),(32661)&7	;volatile
+	line	674
+	
+l3103:
+;YellowFlash.C: 674: TMR0IF = 0;
+	bcf	c:(32658/8),(32658)&7	;volatile
+	line	675
+	
+l3105:
+;YellowFlash.C: 675: T08BIT = 0;
+	bcf	c:(32430/8),(32430)&7	;volatile
+	line	676
+	
+l3107:
+;YellowFlash.C: 676: T0CS = 0;
+	bcf	c:(32429/8),(32429)&7	;volatile
+	line	678
+	
+l3109:
+;YellowFlash.C: 678: TMR0H = 0xd8;
+	movlw	low(0D8h)
+	movwf	((c:4055)),c	;volatile
+	line	679
+	
+l3111:
+;YellowFlash.C: 679: TMR0L = 0xef;
+	movlw	low(0EFh)
+	movwf	((c:4054)),c	;volatile
+	line	681
+	
+l3113:
+;YellowFlash.C: 681: TMR0ON = 1;
+	bsf	c:(32431/8),(32431)&7	;volatile
+	line	683
+;YellowFlash.C: 683: break;
+	goto	l586
+	line	685
+;YellowFlash.C: 685: case 0x04:
+	
+l581:
+	line	686
+;YellowFlash.C: 686: yflash_status=CANRdata[1];
+	movff	0+(_CANRdata+01h),(c:_yflash_status)
+	line	687
+;YellowFlash.C: 687: RD2=1;
+	bsf	c:(31770/8),(31770)&7	;volatile
+	line	688
+	
+l3115:
+;YellowFlash.C: 688: Read_YFlash_CFG();
+	call	_Read_YFlash_CFG	;wreg free
+	line	689
+	
+l3117:
+;YellowFlash.C: 689: T1CON |= 0x01;
+	bsf	(0+(0/8)+(c:4045)),c,(0)&7	;volatile
+	line	690
+	
+l3119:
+;YellowFlash.C: 690: turnoff=0x01;
+	movlw	low(01h)
+	movwf	((c:_turnoff)),c
+	line	691
+	
+l3121:
+;YellowFlash.C: 691: switchmode=1;
+	movlb	(_switchmode/8) >> 8
+	bsf	(_switchmode/8),c,(_switchmode)&7
+	line	692
+	
+l3123:
+;YellowFlash.C: 692: force_status=0x01;
+	movlw	low(01h)
+	movwf	((c:_force_status)),c
+	line	693
+	
+l3125:
+;YellowFlash.C: 693: if(f_r_mod==0x01)
+	decf	((c:_f_r_mod)),c,w
+
+	btfss	status,2
+	goto	u1231
+	goto	u1230
+u1231:
+	goto	l586
+u1230:
+	line	695
+	
+l3127:
+;YellowFlash.C: 694: {
+;YellowFlash.C: 695: CANSdlc=4;
 	movlw	low(04h)
 	movwf	((c:_CANSdlc)),c
-	line	716
-;YellowFlash.C: 716: CANSdata[0]=0x02;
+	line	696
+;YellowFlash.C: 696: CANSdata[0]=0x02;
 	movlw	low(02h)
 	movwf	((c:_CANSdata)),c
-	line	717
+	line	697
 	
-l3151:
-;YellowFlash.C: 717: CANSdata[1]=yflash_CFG[0];
+l3129:
+;YellowFlash.C: 697: CANSdata[1]=yflash_CFG[0];
 	movff	(c:_yflash_CFG),0+((c:_CANSdata)+01h)
-	line	718
+	line	698
 	
-l3153:
-;YellowFlash.C: 718: CANSdata[2]=yflash_CFG[1];
+l3131:
+;YellowFlash.C: 698: CANSdata[2]=yflash_CFG[1];
 	movff	0+((c:_yflash_CFG)+01h),0+((c:_CANSdata)+02h)
-	line	719
+	line	699
 	
-l3155:
-;YellowFlash.C: 719: CANSdata[3]=yflash_status;
+l3133:
+;YellowFlash.C: 699: CANSdata[3]=yflash_status;
 	movff	(c:_yflash_status),0+((c:_CANSdata)+03h)
-	line	720
+	line	700
 	
-l3157:
-;YellowFlash.C: 720: CANSend(CANSid,CANSdata,CANSdlc);
+l3135:
+;YellowFlash.C: 700: CANSend(CANSid,CANSdata,CANSdlc);
 	movlw	low((c:_CANSdata))
 	movwf	((c:?_CANSend)),c
 	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
@@ -5461,17 +5372,110 @@ l3157:
 	
 	call	_CANSend
 	goto	l586
-	line	725
+	line	704
+;YellowFlash.C: 704: case 0x05:
+	
+l583:
+	line	705
+;YellowFlash.C: 705: yflash_status=0x00;
+	clrf	((c:_yflash_status)),c
+	line	706
+;YellowFlash.C: 706: force_status=0x00;
+	clrf	((c:_force_status)),c
+	line	707
+	
+l3137:
+;YellowFlash.C: 707: T1CON |= 0x00;
+	movf	((c:4045)),c,w	;volatile
+	line	708
+	
+l3139:
+;YellowFlash.C: 708: TMR0ON = 1;
+	bsf	c:(32431/8),(32431)&7	;volatile
+	line	709
+	
+l3141:
+;YellowFlash.C: 709: turnoff=0x00;
+	clrf	((c:_turnoff)),c
+	line	710
+	
+l3143:
+;YellowFlash.C: 710: switchmode=0;
+	movlb	(_switchmode/8) >> 8
+	bcf	(_switchmode/8),c,(_switchmode)&7
+	line	711
+	
+l3145:
+;YellowFlash.C: 711: RC6=1;
+	bsf	c:(31766/8),(31766)&7	;volatile
+	line	712
+	
+l3147:
+;YellowFlash.C: 712: RC4=1;
+	bsf	c:(31764/8),(31764)&7	;volatile
+	line	713
+	
+l3149:
+;YellowFlash.C: 713: RD3=1;
+	bsf	c:(31771/8),(31771)&7	;volatile
+	line	714
+	
+l3151:
+;YellowFlash.C: 714: RD2=0;
+	bcf	c:(31770/8),(31770)&7	;volatile
+	line	715
+	
+l3153:
+;YellowFlash.C: 715: if(f_r_mod==0x01)
+	decf	((c:_f_r_mod)),c,w
+
+	btfss	status,2
+	goto	u1241
+	goto	u1240
+u1241:
+	goto	l586
+u1240:
+	line	717
+	
+l3155:
+;YellowFlash.C: 716: {
+;YellowFlash.C: 717: CANSdlc=4;
+	movlw	low(04h)
+	movwf	((c:_CANSdlc)),c
+	line	718
+;YellowFlash.C: 718: CANSdata[0]=0x02;
+	movlw	low(02h)
+	movwf	((c:_CANSdata)),c
+	line	719
+	
+l3157:
+;YellowFlash.C: 719: CANSdata[1]=yflash_CFG[0];
+	movff	(c:_yflash_CFG),0+((c:_CANSdata)+01h)
+	line	720
 	
 l3159:
-;YellowFlash.C: 725: CANReadVersion();
-	call	_CANReadVersion	;wreg free
-	line	726
-;YellowFlash.C: 726: break;
-	goto	l586
-	line	629
+;YellowFlash.C: 720: CANSdata[2]=yflash_CFG[1];
+	movff	0+((c:_yflash_CFG)+01h),0+((c:_CANSdata)+02h)
+	line	721
+	
+l3161:
+;YellowFlash.C: 721: CANSdata[3]=yflash_status;
+	movff	(c:_yflash_status),0+((c:_CANSdata)+03h)
+	line	722
 	
 l3163:
+;YellowFlash.C: 722: CANSend(CANSid,CANSdata,CANSdlc);
+	movlw	low((c:_CANSdata))
+	movwf	((c:?_CANSend)),c
+	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
+	movlb	0	; () banked
+	movlw	(_CANSid)&0ffh
+	
+	call	_CANSend
+	goto	l586
+	line	631
+	
+l3167:
 	movf	((c:CANDATAAnalyzing@dat)),c,w
 	movwf	fsr2l
 	clrf	fsr2h
@@ -5492,42 +5496,39 @@ l3163:
 	movf ??_CANDATAAnalyzing+1+1,c,w
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l3465
+	goto	l3469
 	goto	l586
 	
-l3465:
+l3469:
 ; Switch size 1, requested type "space"
-; Number of cases is 7, Range of values is 0 to 255
+; Number of cases is 6, Range of values is 0 to 5
 ; switch strategies available:
 ; Name         Instructions Cycles
-; simple_byte           22    12 (average)
+; simple_byte           19    10 (average)
 ;	Chosen strategy is simple_byte
 
 	movf ??_CANDATAAnalyzing+1+0,c,w
 	xorlw	0^0	; case 0
 	skipnz
-	goto	l3065
+	goto	l3071
 	xorlw	1^0	; case 1
 	skipnz
-	goto	l3069
+	goto	l3075
 	xorlw	2^1	; case 2
 	skipnz
-	goto	l3071
+	goto	l3077
 	xorlw	3^2	; case 3
 	skipnz
-	goto	l3079
+	goto	l3085
 	xorlw	4^3	; case 4
 	skipnz
-	goto	l580
+	goto	l581
 	xorlw	5^4	; case 5
 	skipnz
-	goto	l582
-	xorlw	255^5	; case 255
-	skipnz
-	goto	l3159
+	goto	l583
 	goto	l586
 
-	line	738
+	line	736
 	
 l586:
 	return
@@ -5549,7 +5550,7 @@ GLOBAL	__end_of_CANDATAAnalyzing
 ;; Registers used:
 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
 ;; Tracked objects:
-;;		On entry : F/0
+;;		On entry : 0/0
 ;;		On exit  : F/F
 ;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
@@ -5579,18 +5580,17 @@ _CANSendConfirm:
 	opt	stack 24
 	line	411
 	
-l2889:; BSR set to: 0
-
+l2891:
 ;YellowFlash.C: 409: unsigned char i;
 ;YellowFlash.C: 411: for(i=0;i<8;i++)
 	clrf	((c:CANSendConfirm@i)),c
 	line	413
 	
-l2895:; BSR set to: 0
-
+l2897:
 ;YellowFlash.C: 412: {
 ;YellowFlash.C: 413: CANSdata[i] = CANRdata[i];
 	movf	((c:CANSendConfirm@i)),c,w
+	movlb	0	; () banked
 	addlw	low(_CANRdata)
 	movwf	fsr2l
 	clrf	fsr2h
@@ -5601,19 +5601,19 @@ l2895:; BSR set to: 0
 	movff	indf2,indf1
 	line	411
 	
-l2897:; BSR set to: 0
+l2899:; BSR set to: 0
 
 	incf	((c:CANSendConfirm@i)),c
 	
-l2899:; BSR set to: 0
+l2901:; BSR set to: 0
 
 	movlw	(08h-1)
 	cpfsgt	((c:CANSendConfirm@i)),c
-	goto	u1061
-	goto	u1060
-u1061:
-	goto	l2895
-u1060:
+	goto	u1071
+	goto	u1070
+u1071:
+	goto	l2897
+u1070:
 	
 l530:; BSR set to: 0
 
@@ -5623,7 +5623,7 @@ l530:; BSR set to: 0
 	movff	(c:_CANRdlc),(c:_CANSdlc)
 	line	416
 	
-l2901:; BSR set to: 0
+l2903:; BSR set to: 0
 
 ;YellowFlash.C: 416: CANSend(CANSid,CANSdata,CANSdlc);
 	movlw	low((c:_CANSdata))
@@ -5689,19 +5689,19 @@ _CANWriteID:; BSR set to: 15
 	movff	wreg,(c:CANWriteID@fm)
 	line	440
 	
-l2917:
+l2919:
 ;YellowFlash.C: 440: eeprom_addr = 0x0000;
 	clrf	((c:_eeprom_addr)),c
 	clrf	((c:_eeprom_addr+1)),c
 	line	441
 	
-l2919:
+l2921:
 ;YellowFlash.C: 441: eeprom_num = 4;
 	movlw	low(04h)
 	movwf	((c:_eeprom_num)),c
 	line	442
 	
-l2921:
+l2923:
 ;YellowFlash.C: 442: EEPROMWrite(&eeprom_addr,&eeprom_num,(CANRdata+1));
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMWrite)),c
@@ -5715,19 +5715,19 @@ l2921:
 	call	_EEPROMWrite
 	line	443
 	
-l2923:
+l2925:
 ;YellowFlash.C: 443: if(fm==0x01)
 	decf	((c:CANWriteID@fm)),c,w
 
 	btfss	status,2
-	goto	u1081
-	goto	u1080
-u1081:
+	goto	u1091
+	goto	u1090
+u1091:
 	goto	l540
-u1080:
+u1090:
 	line	445
 	
-l2925:
+l2927:
 ;YellowFlash.C: 444: {
 ;YellowFlash.C: 445: CANSendID(0X01);
 	movlw	(01h)&0ffh
@@ -5789,36 +5789,36 @@ _CANSendID:
 	line	423
 	movff	wreg,(c:CANSendID@sm)
 	
-l2903:
+l2905:
 ;YellowFlash.C: 423: CANSdlc = 4 + 1;
 	movlw	low(05h)
 	movwf	((c:_CANSdlc)),c
 	line	425
 	
-l2905:
+l2907:
 ;YellowFlash.C: 425: if(sm == 0X00)
 	tstfsz	((c:CANSendID@sm)),c
-	goto	u1071
-	goto	u1070
-u1071:
-	goto	l2909
-u1070:
+	goto	u1081
+	goto	u1080
+u1081:
+	goto	l2911
+u1080:
 	line	426
 	
-l2907:
+l2909:
 ;YellowFlash.C: 426: CANSdata[0] = 0X00;
 	clrf	((c:_CANSdata)),c
-	goto	l2911
+	goto	l2913
 	line	428
 	
-l2909:
+l2911:
 ;YellowFlash.C: 427: else
 ;YellowFlash.C: 428: CANSdata[0] = 0X01;
 	movlw	low(01h)
 	movwf	((c:_CANSdata)),c
 	line	431
 	
-l2911:
+l2913:
 ;YellowFlash.C: 431: eeprom_addr = 0x0000;
 	clrf	((c:_eeprom_addr)),c
 	clrf	((c:_eeprom_addr+1)),c
@@ -5828,7 +5828,7 @@ l2911:
 	movwf	((c:_eeprom_num)),c
 	line	433
 	
-l2913:
+l2915:
 ;YellowFlash.C: 433: EEPROMRead(&eeprom_addr,&eeprom_num,(CANSdata+1));
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMRead)),c
@@ -5839,7 +5839,7 @@ l2913:
 	call	_EEPROMRead
 	line	434
 	
-l2915:
+l2917:
 ;YellowFlash.C: 434: CANSend(CANSid,CANSdata,CANSdlc);
 	movlw	low((c:_CANSdata))
 	movwf	((c:?_CANSend)),c
@@ -5904,7 +5904,7 @@ _YFlashNewConfigure:; BSR set to: 15
 	opt	stack 22
 	line	506
 	
-l2953:
+l2955:
 ;YellowFlash.C: 506: eeprom_addr = 0x0009;
 	movlw	high(09h)
 	movwf	((c:_eeprom_addr+1)),c
@@ -5916,7 +5916,7 @@ l2953:
 	movwf	((c:_eeprom_num)),c
 	line	508
 	
-l2955:
+l2957:
 ;YellowFlash.C: 508: EEPROMRead(&eeprom_addr,&eeprom_num,&yflash_CFG);
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMRead)),c
@@ -5927,45 +5927,45 @@ l2955:
 	call	_EEPROMRead
 	line	511
 	
-l2957:
+l2959:
 ;YellowFlash.C: 511: if(((yflash_CFG[0]& 0xFF) != (CANRdata[1] & 0xFF)) || ((CANRdata[2] & 0x03)!= 0x00))
 	movf	((c:_yflash_CFG)),c,w
 	movlb	0	; () banked
 	lfsr	2,_CANRdata+01h
 	cpfseq	indf2
-	goto	u1091
-	goto	u1090
-u1091:
-	goto	l2961
-u1090:
+	goto	u1101
+	goto	u1100
+u1101:
+	goto	l2963
+u1100:
 	
-l2959:; BSR set to: 0
+l2961:; BSR set to: 0
 
 	movf	(0+(_CANRdata+02h))&0ffh,w
 	andlw	low(03h)
 	btfsc	status,2
-	goto	u1101
-	goto	u1100
-u1101:
+	goto	u1111
+	goto	u1110
+u1111:
 	goto	l554
-u1100:
+u1110:
 	line	513
 	
-l2961:; BSR set to: 0
+l2963:; BSR set to: 0
 
 ;YellowFlash.C: 512: {
 ;YellowFlash.C: 513: if((yflash_CFG[0]& 0xFF) != (CANRdata[1] & 0xFF))
 	movf	(0+(_CANRdata+01h))&0ffh,w
 	xorwf	((c:_yflash_CFG)),c,w
 	btfsc	status,2
-	goto	u1111
-	goto	u1110
-u1111:
-	goto	l2967
-u1110:
+	goto	u1121
+	goto	u1120
+u1121:
+	goto	l2969
+u1120:
 	line	515
 	
-l2963:; BSR set to: 0
+l2965:; BSR set to: 0
 
 ;YellowFlash.C: 514: {
 ;YellowFlash.C: 515: eeprom_addr = 0x0009;
@@ -5979,7 +5979,7 @@ l2963:; BSR set to: 0
 	movwf	((c:_eeprom_num)),c
 	line	517
 	
-l2965:; BSR set to: 0
+l2967:; BSR set to: 0
 
 ;YellowFlash.C: 517: EEPROMWrite(&eeprom_addr,&eeprom_num,(CANRdata+1));
 	movlw	low((c:_eeprom_num))
@@ -5993,21 +5993,21 @@ l2965:; BSR set to: 0
 	call	_EEPROMWrite
 	line	519
 	
-l2967:
+l2969:
 ;YellowFlash.C: 518: }
 ;YellowFlash.C: 519: if((CANRdata[2] & 0x03)!= 0x00)
 	movlb	0	; () banked
 	movf	(0+(_CANRdata+02h))&0ffh,w
 	andlw	low(03h)
 	btfsc	status,2
-	goto	u1121
-	goto	u1120
-u1121:
-	goto	l2973
-u1120:
+	goto	u1131
+	goto	u1130
+u1131:
+	goto	l2975
+u1130:
 	line	521
 	
-l2969:; BSR set to: 0
+l2971:; BSR set to: 0
 
 ;YellowFlash.C: 520: {
 ;YellowFlash.C: 521: eeprom_addr = 0x000a;
@@ -6021,7 +6021,7 @@ l2969:; BSR set to: 0
 	movwf	((c:_eeprom_num)),c
 	line	523
 	
-l2971:; BSR set to: 0
+l2973:; BSR set to: 0
 
 ;YellowFlash.C: 523: EEPROMWrite(&eeprom_addr,&eeprom_num,(CANRdata+2));
 	movlw	low((c:_eeprom_num))
@@ -6035,7 +6035,7 @@ l2971:; BSR set to: 0
 	call	_EEPROMWrite
 	line	526
 	
-l2973:
+l2975:
 ;YellowFlash.C: 524: }
 ;YellowFlash.C: 526: eeprom_addr = 0x0009;
 	movlw	high(09h)
@@ -6044,13 +6044,13 @@ l2973:
 	movwf	((c:_eeprom_addr)),c
 	line	527
 	
-l2975:
+l2977:
 ;YellowFlash.C: 527: eeprom_num = 2;
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
 	line	528
 	
-l2977:
+l2979:
 ;YellowFlash.C: 528: EEPROMRead(&eeprom_addr,&eeprom_num,&yflash_CFG);
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMRead)),c
@@ -6061,7 +6061,7 @@ l2977:
 	call	_EEPROMRead
 	line	530
 	
-l2979:
+l2981:
 ;YellowFlash.C: 530: rows=((yflash_CFG[0]&0xF0)>>4);
 	swapf	((c:_yflash_CFG)),c,w
 	andlw	(0ffh shr 4) & 0ffh
@@ -6069,14 +6069,14 @@ l2979:
 	movwf	((c:_rows)),c
 	line	531
 	
-l2981:
+l2983:
 ;YellowFlash.C: 531: lines=(yflash_CFG[0]&0x0F);
 	movf	((c:_yflash_CFG)),c,w
 	andlw	low(0Fh)
 	movwf	((c:_lines)),c
 	line	532
 	
-l2983:
+l2985:
 ;YellowFlash.C: 532: CalculateTime25msCounter(rows,lines);
 	movff	(c:_lines),(c:?_CalculateTime25msCounter)
 	movf	((c:_rows)),c,w
@@ -6084,24 +6084,24 @@ l2983:
 	call	_CalculateTime25msCounter
 	line	534
 	
-l2985:
+l2987:
 ;YellowFlash.C: 534: time_counters=time_on_counter;
 	movff	(c:_time_on_counter),(c:_time_counters)
 	movff	(c:_time_on_counter+1),(c:_time_counters+1)
 	line	535
 	
-l2987:
+l2989:
 ;YellowFlash.C: 535: readwrite[0]=time_counters;
 	movff	(c:_time_counters),(c:_readwrite)
 	line	536
 	
-l2989:
+l2991:
 ;YellowFlash.C: 536: readwrite[1]=(time_counters>>8);
 	movf	((c:_time_counters+1)),c,w
 	movwf	(0+((c:_readwrite)+01h)),c
 	line	537
 	
-l2991:
+l2993:
 ;YellowFlash.C: 537: eeprom_addr = 0x0005;
 	movlw	high(05h)
 	movwf	((c:_eeprom_addr+1)),c
@@ -6109,13 +6109,13 @@ l2991:
 	movwf	((c:_eeprom_addr)),c
 	line	538
 	
-l2993:
+l2995:
 ;YellowFlash.C: 538: eeprom_num = 2;
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
 	line	539
 	
-l2995:
+l2997:
 ;YellowFlash.C: 539: EEPROMWrite(&eeprom_addr,&eeprom_num,&readwrite);
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMWrite)),c
@@ -6133,24 +6133,24 @@ l2995:
 	call	_EEPROMWrite
 	line	541
 	
-l2997:
+l2999:
 ;YellowFlash.C: 541: time_counters=time_off_counter;
 	movff	(c:_time_off_counter),(c:_time_counters)
 	movff	(c:_time_off_counter+1),(c:_time_counters+1)
 	line	542
 	
-l2999:
+l3001:
 ;YellowFlash.C: 542: readwrite[0]=time_counters;
 	movff	(c:_time_counters),(c:_readwrite)
 	line	543
 	
-l3001:
+l3003:
 ;YellowFlash.C: 543: readwrite[1]=(time_counters>>8);
 	movf	((c:_time_counters+1)),c,w
 	movwf	(0+((c:_readwrite)+01h)),c
 	line	544
 	
-l3003:
+l3005:
 ;YellowFlash.C: 544: eeprom_addr = 0x0007;
 	movlw	high(07h)
 	movwf	((c:_eeprom_addr+1)),c
@@ -6158,13 +6158,13 @@ l3003:
 	movwf	((c:_eeprom_addr)),c
 	line	545
 	
-l3005:
+l3007:
 ;YellowFlash.C: 545: eeprom_num = 2;
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
 	line	546
 	
-l3007:
+l3009:
 ;YellowFlash.C: 546: EEPROMWrite(&eeprom_addr,&eeprom_num,&readwrite);
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMWrite)),c
@@ -6241,13 +6241,13 @@ _EEPROMWrite:
 	movff	wreg,(c:EEPROMWrite@addr)
 	line	59
 	
-l2773:
+l2775:
 ;mcu.h: 59: INTCON &= 0x3f;
 	movlw	(03Fh)&0ffh
 	andwf	((c:4082)),c	;volatile
 	line	60
 ;mcu.h: 60: while((*num)--)
-	goto	l2797
+	goto	l2799
 	
 l377:
 	line	62
@@ -6256,7 +6256,7 @@ l377:
 	clrf	((c:3957)),c	;volatile
 	line	63
 	
-l2775:
+l2777:
 ;mcu.h: 63: EEADR = (*addr);
 	movf	((c:EEPROMWrite@addr)),c,w
 	movwf	fsr2l
@@ -6265,7 +6265,7 @@ l2775:
 	movwf	((c:3956)),c	;volatile
 	line	64
 	
-l2777:
+l2779:
 ;mcu.h: 64: (*addr)++;
 	movf	((c:EEPROMWrite@addr)),c,w
 	movwf	fsr2l
@@ -6274,7 +6274,7 @@ l2777:
 
 	line	65
 	
-l2779:
+l2781:
 ;mcu.h: 65: EEDATA = (*dat);
 	movff	(c:EEPROMWrite@dat),fsr2l
 	movff	(c:EEPROMWrite@dat+1),fsr2h
@@ -6282,41 +6282,41 @@ l2779:
 	movwf	((c:3955)),c	;volatile
 	line	66
 	
-l2781:
+l2783:
 ;mcu.h: 66: dat++;
 	infsnz	((c:EEPROMWrite@dat)),c
 	incf	((c:EEPROMWrite@dat+1)),c
 	line	68
 	
-l2783:
+l2785:
 ;mcu.h: 68: EECON1 &= 0x3f;
 	movlw	(03Fh)&0ffh
 	andwf	((c:3967)),c	;volatile
 	line	70
 	
-l2785:
+l2787:
 ;mcu.h: 70: EECON1 |= 0x04;
 	bsf	(0+(2/8)+(c:3967)),c,(2)&7	;volatile
 	line	75
 	
-l2787:
+l2789:
 ;mcu.h: 75: EECON2 = 0x55;
 	movlw	low(055h)
 	movwf	((c:3966)),c	;volatile
 	line	76
 	
-l2789:
+l2791:
 ;mcu.h: 76: EECON2 = 0xaa;
 	movlw	low(0AAh)
 	movwf	((c:3966)),c	;volatile
 	line	78
 	
-l2791:
+l2793:
 ;mcu.h: 78: EECON1 |= 0x02;
 	bsf	(0+(1/8)+(c:3967)),c,(1)&7	;volatile
 	line	80
 	
-l2793:
+l2795:
 # 80 "G:\working\YellowFlashingController\mcu.h"
 NOP ;# 
 psect	text17
@@ -6326,11 +6326,11 @@ psect	text17
 l378:
 	
 	btfsc	((c:3967)),c,(1)&7	;volatile
-	goto	u981
-	goto	u980
-u981:
+	goto	u991
+	goto	u990
+u991:
 	goto	l378
-u980:
+u990:
 	
 l380:
 	line	82
@@ -6339,13 +6339,13 @@ NOP ;#
 psect	text17
 	line	83
 	
-l2795:
+l2797:
 ;mcu.h: 83: EECON1 &= 0x04;
 	movlw	(04h)&0ffh
 	andwf	((c:3967)),c	;volatile
 	line	60
 	
-l2797:
+l2799:
 	movf	((c:EEPROMWrite@num)),c,w
 	movwf	fsr2l
 	clrf	fsr2h
@@ -6353,14 +6353,14 @@ l2797:
 
 	movlw	(0FFh)&0ffh
 	cpfseq	indf2
-	goto	u991
-	goto	u990
-u991:
+	goto	u1001
+	goto	u1000
+u1001:
 	goto	l377
-u990:
+u1000:
 	line	87
 	
-l2799:
+l2801:
 ;mcu.h: 85: }
 ;mcu.h: 87: INTCON &= 0xc0;
 	movlw	(0C0h)&0ffh
@@ -6424,7 +6424,7 @@ _CalculateTime25msCounter:
 	line	165
 	movff	wreg,(c:CalculateTime25msCounter@row)
 	
-l2817:
+l2819:
 ;YellowFlash.C: 164: int i,j;
 ;YellowFlash.C: 165: for(i=0;i<10;i++)
 	clrf	((c:CalculateTime25msCounter@i)),c
@@ -6439,7 +6439,7 @@ l477:
 	clrf	((c:CalculateTime25msCounter@j+1)),c
 	line	169
 	
-l2827:
+l2829:
 ;YellowFlash.C: 168: {
 ;YellowFlash.C: 169: time_on[i][j]=period[i]*cycledutyon[j];
 	movf	((c:CalculateTime25msCounter@j)),c,w
@@ -6474,12 +6474,12 @@ l2827:
 	movff	(c:CalculateTime25msCounter@i),??_CalculateTime25msCounter+2+0
 	movff	(c:CalculateTime25msCounter@i+1),??_CalculateTime25msCounter+2+0+1
 	movlw	05h
-u1025:
+u1035:
 	bcf	status,0
 	rlcf	(??_CalculateTime25msCounter+2+0),c
 	rlcf	(??_CalculateTime25msCounter+2+1),c
 	decfsz	wreg
-	goto	u1025
+	goto	u1035
 	movlw	low(_time_on)
 	addwf	(??_CalculateTime25msCounter+2+0),c,w
 	movwf	(??_CalculateTime25msCounter+4+0)&0ffh,c
@@ -6529,12 +6529,12 @@ u1025:
 	movff	(c:CalculateTime25msCounter@i),??_CalculateTime25msCounter+2+0
 	movff	(c:CalculateTime25msCounter@i+1),??_CalculateTime25msCounter+2+0+1
 	movlw	05h
-u1035:
+u1045:
 	bcf	status,0
 	rlcf	(??_CalculateTime25msCounter+2+0),c
 	rlcf	(??_CalculateTime25msCounter+2+1),c
 	decfsz	wreg
-	goto	u1035
+	goto	u1045
 	movlw	low(_time_off)
 	addwf	(??_CalculateTime25msCounter+2+0),c,w
 	movwf	(??_CalculateTime25msCounter+4+0)&0ffh,c
@@ -6552,11 +6552,11 @@ u1035:
 
 	line	167
 	
-l2829:
+l2831:
 	infsnz	((c:CalculateTime25msCounter@j)),c
 	incf	((c:CalculateTime25msCounter@j+1)),c
 	
-l2831:
+l2833:
 	movf	((c:CalculateTime25msCounter@j+1)),c,w
 	xorlw	80h
 	addlw	-((0)^80h)
@@ -6564,18 +6564,18 @@ l2831:
 	btfsc	status,2
 	subwf	((c:CalculateTime25msCounter@j)),c,w
 	btfss	status,0
-	goto	u1041
-	goto	u1040
-u1041:
-	goto	l2827
-u1040:
+	goto	u1051
+	goto	u1050
+u1051:
+	goto	l2829
+u1050:
 	line	165
 	
-l2833:
+l2835:
 	infsnz	((c:CalculateTime25msCounter@i)),c
 	incf	((c:CalculateTime25msCounter@i+1)),c
 	
-l2835:
+l2837:
 	movf	((c:CalculateTime25msCounter@i+1)),c,w
 	xorlw	80h
 	addlw	-((0)^80h)
@@ -6583,14 +6583,14 @@ l2835:
 	btfsc	status,2
 	subwf	((c:CalculateTime25msCounter@i)),c,w
 	btfss	status,0
-	goto	u1051
-	goto	u1050
-u1051:
+	goto	u1061
+	goto	u1060
+u1061:
 	goto	l477
-u1050:
+u1060:
 	line	173
 	
-l2837:
+l2839:
 ;YellowFlash.C: 171: }
 ;YellowFlash.C: 172: }
 ;YellowFlash.C: 173: time_on_counter=time_on[line][row]/25;
@@ -6668,7 +6668,7 @@ GLOBAL	__end_of_CalculateTime25msCounter
 ;; Registers used:
 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
 ;; Tracked objects:
-;;		On entry : 0/0
+;;		On entry : F/0
 ;;		On exit  : F/F
 ;;		Unchanged: FFFFFFF0/0
 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
@@ -6698,18 +6698,21 @@ _CANReadVersion:
 	opt	stack 24
 	line	558
 	
-l3009:
+l3011:; BSR set to: 0
+
 ;YellowFlash.C: 558: CANSdlc = 6;
 	movlw	low(06h)
 	movwf	((c:_CANSdlc)),c
 	line	559
 	
-l3011:
+l3013:; BSR set to: 0
+
 ;YellowFlash.C: 559: CANSdata[0] =0xff;
 	setf	((c:_CANSdata)),c
 	line	560
 	
-l3013:
+l3015:; BSR set to: 0
+
 ;YellowFlash.C: 560: CANSdata[1]=board_version[0];
 	movlw	low((_board_version))
 	movwf	tblptrl
@@ -6720,7 +6723,8 @@ l3013:
 	movff	tablat,0+((c:_CANSdata)+01h)
 	line	561
 	
-l3015:
+l3017:; BSR set to: 0
+
 ;YellowFlash.C: 561: CANSdata[2]=board_version[1];
 	movlw	(_board_version)&0ffh
 	movwf	(??_CANReadVersion+0+0)&0ffh,c
@@ -6734,7 +6738,8 @@ l3015:
 	movff	tablat,0+((c:_CANSdata)+02h)
 	line	562
 	
-l3017:
+l3019:; BSR set to: 0
+
 ;YellowFlash.C: 562: CANSdata[3]=board_version[2];
 	movlw	(_board_version)&0ffh
 	movwf	(??_CANReadVersion+0+0)&0ffh,c
@@ -6748,7 +6753,8 @@ l3017:
 	movff	tablat,0+((c:_CANSdata)+03h)
 	line	563
 	
-l3019:
+l3021:; BSR set to: 0
+
 ;YellowFlash.C: 563: CANSdata[4]=board_version[3];
 	movlw	(_board_version)&0ffh
 	movwf	(??_CANReadVersion+0+0)&0ffh,c
@@ -6762,7 +6768,8 @@ l3019:
 	movff	tablat,0+((c:_CANSdata)+04h)
 	line	564
 	
-l3021:
+l3023:; BSR set to: 0
+
 ;YellowFlash.C: 564: CANSdata[5]=board_version[4];
 	movlw	(_board_version)&0ffh
 	movwf	(??_CANReadVersion+0+0)&0ffh,c
@@ -6776,12 +6783,12 @@ l3021:
 	movff	tablat,0+((c:_CANSdata)+05h)
 	line	566
 	
-l3023:
+l3025:; BSR set to: 0
+
 ;YellowFlash.C: 566: CANSend(CANSid,CANSdata,CANSdlc);
 	movlw	low((c:_CANSdata))
 	movwf	((c:?_CANSend)),c
 	movff	(c:_CANSdlc),0+((c:?_CANSend)+01h)
-	movlb	0	; () banked
 	movlw	(_CANSid)&0ffh
 	
 	call	_CANSend
@@ -6844,30 +6851,30 @@ psect	text20
 	
 _CANSend:; BSR set to: 15
 
-	opt	stack 24
+	opt	stack 25
 	line	165
 	
-l2599:; BSR set to: 0
+l2601:; BSR set to: 0
 
 ;CAN.H: 165: if(!(TXB0CON & 0x80))
 	movlb	15	; () banked
 	
 	btfsc	((3872))&0ffh,(7)&7	;volatile
-	goto	u851
-	goto	u850
-u851:
+	goto	u861
+	goto	u860
+u861:
 	goto	l347
-u850:
+u860:
 	line	176
 	
-l2601:; BSR set to: 15
+l2603:; BSR set to: 15
 
 ;CAN.H: 166: {
 ;CAN.H: 176: TXB0DLC = dlc;
 	movff	(c:CANSend@dlc),(3877)	;volatile
 	line	179
 	
-l2603:; BSR set to: 15
+l2605:; BSR set to: 15
 
 ;CAN.H: 179: TXB0D0 = dat[0];
 	movf	((c:CANSend@dat)),c,w
@@ -6877,7 +6884,7 @@ l2603:; BSR set to: 15
 	movwf	((3878))&0ffh	;volatile
 	line	180
 	
-l2605:; BSR set to: 15
+l2607:; BSR set to: 15
 
 ;CAN.H: 180: TXB0D1 = dat[1];
 	movf	((c:CANSend@dat)),c,w
@@ -6890,7 +6897,7 @@ l2605:; BSR set to: 15
 	movwf	((3879))&0ffh	;volatile
 	line	181
 	
-l2607:; BSR set to: 15
+l2609:; BSR set to: 15
 
 ;CAN.H: 181: TXB0D2 = dat[2];
 	movf	((c:CANSend@dat)),c,w
@@ -6903,7 +6910,7 @@ l2607:; BSR set to: 15
 	movwf	((3880))&0ffh	;volatile
 	line	182
 	
-l2609:; BSR set to: 15
+l2611:; BSR set to: 15
 
 ;CAN.H: 182: TXB0D3 = dat[3];
 	movf	((c:CANSend@dat)),c,w
@@ -6916,7 +6923,7 @@ l2609:; BSR set to: 15
 	movwf	((3881))&0ffh	;volatile
 	line	183
 	
-l2611:; BSR set to: 15
+l2613:; BSR set to: 15
 
 ;CAN.H: 183: TXB0D4 = dat[4];
 	movf	((c:CANSend@dat)),c,w
@@ -6929,7 +6936,7 @@ l2611:; BSR set to: 15
 	movwf	((3882))&0ffh	;volatile
 	line	184
 	
-l2613:; BSR set to: 15
+l2615:; BSR set to: 15
 
 ;CAN.H: 184: TXB0D5 = dat[5];
 	movf	((c:CANSend@dat)),c,w
@@ -6942,7 +6949,7 @@ l2613:; BSR set to: 15
 	movwf	((3883))&0ffh	;volatile
 	line	185
 	
-l2615:; BSR set to: 15
+l2617:; BSR set to: 15
 
 ;CAN.H: 185: TXB0D6 = dat[6];
 	movf	((c:CANSend@dat)),c,w
@@ -6955,7 +6962,7 @@ l2615:; BSR set to: 15
 	movwf	((3884))&0ffh	;volatile
 	line	186
 	
-l2617:; BSR set to: 15
+l2619:; BSR set to: 15
 
 ;CAN.H: 186: TXB0D7 = dat[7];
 	movf	((c:CANSend@dat)),c,w
@@ -6968,7 +6975,7 @@ l2617:; BSR set to: 15
 	movwf	((3885))&0ffh	;volatile
 	line	189
 	
-l2619:; BSR set to: 15
+l2621:; BSR set to: 15
 
 ;CAN.H: 189: TXB0CON |= 0x08;
 	bsf	(0+(3/8)+(3872))&0ffh,(3)&7	;volatile
@@ -6979,11 +6986,11 @@ l348:; BSR set to: 15
 
 	
 	btfsc	((3872))&0ffh,(3)&7	;volatile
-	goto	u861
-	goto	u860
-u861:
+	goto	u871
+	goto	u870
+u871:
 	goto	l348
-u860:
+u870:
 	goto	l351
 	line	192
 	
@@ -6994,21 +7001,21 @@ l347:; BSR set to: 15
 ;CAN.H: 194: if(!(TXB1CON & 0x80))
 	
 	btfsc	((3856))&0ffh,(7)&7	;volatile
-	goto	u871
-	goto	u870
-u871:
+	goto	u881
+	goto	u880
+u881:
 	goto	l352
-u870:
+u880:
 	line	205
 	
-l2621:; BSR set to: 15
+l2623:; BSR set to: 15
 
 ;CAN.H: 195: {
 ;CAN.H: 205: TXB1DLC = dlc;
 	movff	(c:CANSend@dlc),(3861)	;volatile
 	line	208
 	
-l2623:; BSR set to: 15
+l2625:; BSR set to: 15
 
 ;CAN.H: 208: TXB1D0 = dat[0];
 	movf	((c:CANSend@dat)),c,w
@@ -7018,7 +7025,7 @@ l2623:; BSR set to: 15
 	movwf	((3862))&0ffh	;volatile
 	line	209
 	
-l2625:; BSR set to: 15
+l2627:; BSR set to: 15
 
 ;CAN.H: 209: TXB1D1 = dat[1];
 	movf	((c:CANSend@dat)),c,w
@@ -7031,7 +7038,7 @@ l2625:; BSR set to: 15
 	movwf	((3863))&0ffh	;volatile
 	line	210
 	
-l2627:; BSR set to: 15
+l2629:; BSR set to: 15
 
 ;CAN.H: 210: TXB1D2 = dat[2];
 	movf	((c:CANSend@dat)),c,w
@@ -7044,7 +7051,7 @@ l2627:; BSR set to: 15
 	movwf	((3864))&0ffh	;volatile
 	line	211
 	
-l2629:; BSR set to: 15
+l2631:; BSR set to: 15
 
 ;CAN.H: 211: TXB1D3 = dat[3];
 	movf	((c:CANSend@dat)),c,w
@@ -7057,7 +7064,7 @@ l2629:; BSR set to: 15
 	movwf	((3865))&0ffh	;volatile
 	line	212
 	
-l2631:; BSR set to: 15
+l2633:; BSR set to: 15
 
 ;CAN.H: 212: TXB1D4 = dat[4];
 	movf	((c:CANSend@dat)),c,w
@@ -7070,7 +7077,7 @@ l2631:; BSR set to: 15
 	movwf	((3866))&0ffh	;volatile
 	line	213
 	
-l2633:; BSR set to: 15
+l2635:; BSR set to: 15
 
 ;CAN.H: 213: TXB1D5 = dat[5];
 	movf	((c:CANSend@dat)),c,w
@@ -7083,7 +7090,7 @@ l2633:; BSR set to: 15
 	movwf	((3867))&0ffh	;volatile
 	line	214
 	
-l2635:; BSR set to: 15
+l2637:; BSR set to: 15
 
 ;CAN.H: 214: TXB1D6 = dat[6];
 	movf	((c:CANSend@dat)),c,w
@@ -7096,7 +7103,7 @@ l2635:; BSR set to: 15
 	movwf	((3868))&0ffh	;volatile
 	line	215
 	
-l2637:; BSR set to: 15
+l2639:; BSR set to: 15
 
 ;CAN.H: 215: TXB1D7 = dat[7];
 	movf	((c:CANSend@dat)),c,w
@@ -7109,7 +7116,7 @@ l2637:; BSR set to: 15
 	movwf	((3869))&0ffh	;volatile
 	line	218
 	
-l2639:; BSR set to: 15
+l2641:; BSR set to: 15
 
 ;CAN.H: 218: TXB0CON |= 0x08;
 	bsf	(0+(3/8)+(3872))&0ffh,(3)&7	;volatile
@@ -7120,11 +7127,11 @@ l353:; BSR set to: 15
 
 	
 	btfsc	((3872))&0ffh,(3)&7	;volatile
-	goto	u881
-	goto	u880
-u881:
+	goto	u891
+	goto	u890
+u891:
 	goto	l353
-u880:
+u890:
 	goto	l351
 	line	221
 	
@@ -7135,21 +7142,21 @@ l352:; BSR set to: 15
 ;CAN.H: 223: if(!(TXB2CON & 0x80))
 	
 	btfsc	((3840))&0ffh,(7)&7	;volatile
-	goto	u891
-	goto	u890
-u891:
+	goto	u901
+	goto	u900
+u901:
 	goto	l351
-u890:
+u900:
 	line	234
 	
-l2641:; BSR set to: 15
+l2643:; BSR set to: 15
 
 ;CAN.H: 224: {
 ;CAN.H: 234: TXB2DLC = dlc;
 	movff	(c:CANSend@dlc),(3845)	;volatile
 	line	237
 	
-l2643:; BSR set to: 15
+l2645:; BSR set to: 15
 
 ;CAN.H: 237: TXB2D0 = dat[0];
 	movf	((c:CANSend@dat)),c,w
@@ -7159,7 +7166,7 @@ l2643:; BSR set to: 15
 	movwf	((3846))&0ffh	;volatile
 	line	238
 	
-l2645:; BSR set to: 15
+l2647:; BSR set to: 15
 
 ;CAN.H: 238: TXB2D1 = dat[1];
 	movf	((c:CANSend@dat)),c,w
@@ -7172,7 +7179,7 @@ l2645:; BSR set to: 15
 	movwf	((3847))&0ffh	;volatile
 	line	239
 	
-l2647:; BSR set to: 15
+l2649:; BSR set to: 15
 
 ;CAN.H: 239: TXB2D2 = dat[2];
 	movf	((c:CANSend@dat)),c,w
@@ -7185,7 +7192,7 @@ l2647:; BSR set to: 15
 	movwf	((3848))&0ffh	;volatile
 	line	240
 	
-l2649:; BSR set to: 15
+l2651:; BSR set to: 15
 
 ;CAN.H: 240: TXB2D3 = dat[3];
 	movf	((c:CANSend@dat)),c,w
@@ -7198,7 +7205,7 @@ l2649:; BSR set to: 15
 	movwf	((3849))&0ffh	;volatile
 	line	241
 	
-l2651:; BSR set to: 15
+l2653:; BSR set to: 15
 
 ;CAN.H: 241: TXB2D4 = dat[4];
 	movf	((c:CANSend@dat)),c,w
@@ -7211,7 +7218,7 @@ l2651:; BSR set to: 15
 	movwf	((3850))&0ffh	;volatile
 	line	242
 	
-l2653:; BSR set to: 15
+l2655:; BSR set to: 15
 
 ;CAN.H: 242: TXB2D5 = dat[5];
 	movf	((c:CANSend@dat)),c,w
@@ -7224,7 +7231,7 @@ l2653:; BSR set to: 15
 	movwf	((3851))&0ffh	;volatile
 	line	243
 	
-l2655:; BSR set to: 15
+l2657:; BSR set to: 15
 
 ;CAN.H: 243: TXB2D6 = dat[6];
 	movf	((c:CANSend@dat)),c,w
@@ -7237,7 +7244,7 @@ l2655:; BSR set to: 15
 	movwf	((3852))&0ffh	;volatile
 	line	244
 	
-l2657:; BSR set to: 15
+l2659:; BSR set to: 15
 
 ;CAN.H: 244: TXB2D7 = dat[7];
 	movf	((c:CANSend@dat)),c,w
@@ -7250,7 +7257,7 @@ l2657:; BSR set to: 15
 	movwf	((3853))&0ffh	;volatile
 	line	247
 	
-l2659:; BSR set to: 15
+l2661:; BSR set to: 15
 
 ;CAN.H: 247: TXB2CON |= 0x08;
 	bsf	(0+(3/8)+(3840))&0ffh,(3)&7	;volatile
@@ -7261,11 +7268,11 @@ l357:; BSR set to: 15
 
 	
 	btfsc	((3840))&0ffh,(3)&7	;volatile
-	goto	u901
-	goto	u900
-u901:
+	goto	u911
+	goto	u910
+u911:
 	goto	l357
-u900:
+u910:
 	line	252
 	
 l351:; BSR set to: 15
@@ -7279,7 +7286,7 @@ GLOBAL	__end_of_CANSend
 
 ;; *************** function _HeartbeatTest *****************
 ;; Defined at:
-;;		line 777 in file "G:\working\YellowFlashingController\YellowFlash.C"
+;;		line 775 in file "G:\working\YellowFlashingController\YellowFlash.C"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -7311,113 +7318,113 @@ global __ptext21
 __ptext21:
 psect	text21
 	file	"G:\working\YellowFlashingController\YellowFlash.C"
-	line	777
+	line	775
 	global	__size_of_HeartbeatTest
 	__size_of_HeartbeatTest	equ	__end_of_HeartbeatTest-_HeartbeatTest
 	
 _HeartbeatTest:; BSR set to: 15
 
 	opt	stack 24
-	line	779
-	
-l3173:
-;YellowFlash.C: 779: if(time5ms == 1)
-	movlb	(_time5ms/8) >> 8
-	btfss	(_time5ms/8),c,(_time5ms)&7
-	goto	u1231
-	goto	u1230
-u1231:
-	goto	l597
-u1230:
-	line	781
-	
-l3175:
-;YellowFlash.C: 780: {
-;YellowFlash.C: 781: time5ms = 0;
-	movlb	(_time5ms/8) >> 8
-	bcf	(_time5ms/8),c,(_time5ms)&7
-	line	782
+	line	777
 	
 l3177:
-;YellowFlash.C: 782: t500ms_count++;
-	incf	((c:_t500ms_count)),c
-	line	783
-	
-l3179:
-;YellowFlash.C: 783: if(t500ms_count>=100)
-	movlw	(064h-1)
-	cpfsgt	((c:_t500ms_count)),c
-	goto	u1241
-	goto	u1240
-u1241:
-	goto	l597
-u1240:
-	line	785
-	
-l3181:
-;YellowFlash.C: 784: {
-;YellowFlash.C: 785: t500ms_count=0;
-	clrf	((c:_t500ms_count)),c
-	line	786
-	
-l3183:
-;YellowFlash.C: 786: heartbeat++;
-	incf	((c:_heartbeat)),c
-	line	788
-	
-l3185:
-;YellowFlash.C: 788: if(heartbeat>=4)
-	movlw	(04h-1)
-	cpfsgt	((c:_heartbeat)),c
+;YellowFlash.C: 777: if(time5ms == 1)
+	movlb	(_time5ms/8) >> 8
+	btfss	(_time5ms/8),c,(_time5ms)&7
 	goto	u1251
 	goto	u1250
 u1251:
 	goto	l597
 u1250:
-	line	790
+	line	779
+	
+l3179:
+;YellowFlash.C: 778: {
+;YellowFlash.C: 779: time5ms = 0;
+	movlb	(_time5ms/8) >> 8
+	bcf	(_time5ms/8),c,(_time5ms)&7
+	line	780
+	
+l3181:
+;YellowFlash.C: 780: t500ms_count++;
+	incf	((c:_t500ms_count)),c
+	line	781
+	
+l3183:
+;YellowFlash.C: 781: if(t500ms_count>=100)
+	movlw	(064h-1)
+	cpfsgt	((c:_t500ms_count)),c
+	goto	u1261
+	goto	u1260
+u1261:
+	goto	l597
+u1260:
+	line	783
+	
+l3185:
+;YellowFlash.C: 782: {
+;YellowFlash.C: 783: t500ms_count=0;
+	clrf	((c:_t500ms_count)),c
+	line	784
 	
 l3187:
-;YellowFlash.C: 789: {
-;YellowFlash.C: 790: heartbeat=0;
-	clrf	((c:_heartbeat)),c
-	line	791
-;YellowFlash.C: 791: RD2=1;
-	bsf	c:(31770/8),(31770)&7	;volatile
-	line	792
-;YellowFlash.C: 792: TMR0ON = 0;
-	bcf	c:(32431/8),(32431)&7	;volatile
-	line	793
-;YellowFlash.C: 793: TMR0IF = 0;
-	bcf	c:(32658/8),(32658)&7	;volatile
-	line	794
+;YellowFlash.C: 784: heartbeat++;
+	incf	((c:_heartbeat)),c
+	line	786
 	
 l3189:
-;YellowFlash.C: 794: yflash_status=0x06;
-	movlw	low(06h)
-	movwf	((c:_yflash_status)),c
-	line	795
+;YellowFlash.C: 786: if(heartbeat>=4)
+	movlw	(04h-1)
+	cpfsgt	((c:_heartbeat)),c
+	goto	u1271
+	goto	u1270
+u1271:
+	goto	l597
+u1270:
+	line	788
 	
 l3191:
-;YellowFlash.C: 795: Read_YFlash_CFG();
-	call	_Read_YFlash_CFG	;wreg free
-	line	796
+;YellowFlash.C: 787: {
+;YellowFlash.C: 788: heartbeat=0;
+	clrf	((c:_heartbeat)),c
+	line	789
+;YellowFlash.C: 789: RD2=1;
+	bsf	c:(31770/8),(31770)&7	;volatile
+	line	790
+;YellowFlash.C: 790: TMR0ON = 0;
+	bcf	c:(32431/8),(32431)&7	;volatile
+	line	791
+;YellowFlash.C: 791: TMR0IF = 0;
+	bcf	c:(32658/8),(32658)&7	;volatile
+	line	792
 	
 l3193:
-;YellowFlash.C: 796: T1CON |= 0x01;
-	bsf	(0+(0/8)+(c:4045)),c,(0)&7	;volatile
-	line	797
+;YellowFlash.C: 792: yflash_status=0x06;
+	movlw	low(06h)
+	movwf	((c:_yflash_status)),c
+	line	793
 	
 l3195:
-;YellowFlash.C: 797: turnoff=0x01;
-	movlw	low(01h)
-	movwf	((c:_turnoff)),c
-	line	798
+;YellowFlash.C: 793: Read_YFlash_CFG();
+	call	_Read_YFlash_CFG	;wreg free
+	line	794
 	
 l3197:
-;YellowFlash.C: 798: switchmode=1;
+;YellowFlash.C: 794: T1CON |= 0x01;
+	bsf	(0+(0/8)+(c:4045)),c,(0)&7	;volatile
+	line	795
+	
+l3199:
+;YellowFlash.C: 795: turnoff=0x01;
+	movlw	low(01h)
+	movwf	((c:_turnoff)),c
+	line	796
+	
+l3201:
+;YellowFlash.C: 796: switchmode=1;
 	movlb	(_switchmode/8) >> 8
 	bsf	(_switchmode/8),c,(_switchmode)&7
-	line	808
+	line	806
 	
 l597:
 	return
@@ -7470,7 +7477,7 @@ _Read_YFlash_CFG:
 	opt	stack 24
 	line	454
 	
-l2927:
+l2929:
 ;YellowFlash.C: 454: eeprom_addr = 0x0005;
 	movlw	high(05h)
 	movwf	((c:_eeprom_addr+1)),c
@@ -7482,7 +7489,7 @@ l2927:
 	movwf	((c:_eeprom_num)),c
 	line	456
 	
-l2929:
+l2931:
 ;YellowFlash.C: 456: EEPROMRead(&eeprom_addr,&eeprom_num,&readwrite);
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMRead)),c
@@ -7493,19 +7500,19 @@ l2929:
 	call	_EEPROMRead
 	line	457
 	
-l2931:
+l2933:
 ;YellowFlash.C: 457: time_on_counter=readwrite[0];
 	movff	(c:_readwrite),(c:_time_on_counter)
 	clrf	((c:_time_on_counter+1)),c
 	line	458
 	
-l2933:
+l2935:
 ;YellowFlash.C: 458: time_counters=readwrite[1];
 	movff	0+((c:_readwrite)+01h),(c:_time_counters)
 	clrf	((c:_time_counters+1)),c
 	line	460
 	
-l2935:
+l2937:
 ;YellowFlash.C: 460: time_on_counter|=time_counters;
 	movf	((c:_time_counters)),c,w
 	iorwf	((c:_time_on_counter)),c
@@ -7514,7 +7521,7 @@ l2935:
 
 	line	463
 	
-l2937:
+l2939:
 ;YellowFlash.C: 463: eeprom_addr = 0x0007;
 	movlw	high(07h)
 	movwf	((c:_eeprom_addr+1)),c
@@ -7522,13 +7529,13 @@ l2937:
 	movwf	((c:_eeprom_addr)),c
 	line	464
 	
-l2939:
+l2941:
 ;YellowFlash.C: 464: eeprom_num = 2;
 	movlw	low(02h)
 	movwf	((c:_eeprom_num)),c
 	line	465
 	
-l2941:
+l2943:
 ;YellowFlash.C: 465: EEPROMRead(&eeprom_addr,&eeprom_num,&readwrite);
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMRead)),c
@@ -7539,19 +7546,19 @@ l2941:
 	call	_EEPROMRead
 	line	466
 	
-l2943:
+l2945:
 ;YellowFlash.C: 466: time_off_counter=readwrite[0];
 	movff	(c:_readwrite),(c:_time_off_counter)
 	clrf	((c:_time_off_counter+1)),c
 	line	467
 	
-l2945:
+l2947:
 ;YellowFlash.C: 467: time_counters=readwrite[1];
 	movff	0+((c:_readwrite)+01h),(c:_time_counters)
 	clrf	((c:_time_counters+1)),c
 	line	469
 	
-l2947:
+l2949:
 ;YellowFlash.C: 469: time_off_counter|=time_counters;
 	movf	((c:_time_counters)),c,w
 	iorwf	((c:_time_off_counter)),c
@@ -7570,7 +7577,7 @@ l2947:
 	movwf	((c:_eeprom_num)),c
 	line	474
 	
-l2949:
+l2951:
 ;YellowFlash.C: 474: EEPROMRead(&eeprom_addr,&eeprom_num,&yflash_CFG);
 	movlw	low((c:_eeprom_num))
 	movwf	((c:?_EEPROMRead)),c
@@ -7581,7 +7588,7 @@ l2949:
 	call	_EEPROMRead
 	line	475
 	
-l2951:
+l2953:
 ;YellowFlash.C: 475: run_mode=(yflash_CFG[1]&0x03);
 	movf	(0+((c:_yflash_CFG)+01h)),c,w
 	andlw	low(03h)
@@ -7658,7 +7665,7 @@ l371:
 	clrf	((c:3957)),c	;volatile
 	line	37
 	
-l2755:
+l2757:
 ;mcu.h: 37: EEADR = (*addr);
 	movf	((c:EEPROMRead@addr)),c,w
 	movwf	fsr2l
@@ -7667,7 +7674,7 @@ l2755:
 	movwf	((c:3956)),c	;volatile
 	line	38
 	
-l2757:
+l2759:
 ;mcu.h: 38: (*addr)++;
 	movf	((c:EEPROMRead@addr)),c,w
 	movwf	fsr2l
@@ -7676,29 +7683,29 @@ l2757:
 
 	line	40
 	
-l2759:
+l2761:
 ;mcu.h: 40: EEDATA = 0;
 	clrf	((c:3955)),c	;volatile
 	line	42
 	
-l2761:
+l2763:
 ;mcu.h: 42: EECON1 &= 0x3f;
 	movlw	(03Fh)&0ffh
 	andwf	((c:3967)),c	;volatile
 	line	45
 	
-l2763:
+l2765:
 ;mcu.h: 45: EECON1 |= 0x01;
 	bsf	(0+(0/8)+(c:3967)),c,(0)&7	;volatile
 	line	46
 	
-l2765:
+l2767:
 # 46 "G:\working\YellowFlashingController\mcu.h"
 NOP ;# 
 psect	text23
 	line	48
 	
-l2767:
+l2769:
 ;mcu.h: 48: (*dat) = EEDATA;
 	movf	((c:EEPROMRead@dat)),c,w
 	movwf	fsr2l
@@ -7707,12 +7714,12 @@ l2767:
 
 	line	49
 	
-l2769:
+l2771:
 ;mcu.h: 49: dat++;
 	incf	((c:EEPROMRead@dat)),c
 	line	51
 	
-l2771:
+l2773:
 ;mcu.h: 50: }
 ;mcu.h: 51: while((*num)--);
 	movf	((c:EEPROMRead@num)),c,w
@@ -7722,11 +7729,11 @@ l2771:
 
 	movlw	(0FFh)&0ffh
 	cpfseq	indf2
-	goto	u971
-	goto	u970
-u971:
+	goto	u981
+	goto	u980
+u981:
 	goto	l371
-u970:
+u980:
 	line	53
 	
 l373:
@@ -7783,48 +7790,13 @@ ___ftmul:
 	opt	stack 22
 	line	56
 	
-l3255:; BSR set to: 0
+l3259:; BSR set to: 0
 
 	movlw	(0Fh)&0ffh
 	movwf	(??___ftmul+0+0)&0ffh,c
 	movff	(c:___ftmul@f1),??___ftmul+1+0
 	movff	(c:___ftmul@f1+1),??___ftmul+1+0+1
 	movff	(c:___ftmul@f1+2),??___ftmul+1+0+2
-	incf	((??___ftmul+0+0)),c,w
-	movwf	(??___ftmul+4+0)&0ffh,c
-	goto	u1350
-u1355:
-	bcf	status,0
-	rrcf	(??___ftmul+1+2),c
-	rrcf	(??___ftmul+1+1),c
-	rrcf	(??___ftmul+1+0),c
-u1350:
-	decfsz	(??___ftmul+4+0)&0ffh,c
-	goto	u1355
-	movf	(??___ftmul+1+0),c,w
-	movwf	((c:___ftmul@exp)),c
-	tstfsz	((c:___ftmul@exp))&0ffh
-	goto	u1361
-	goto	u1360
-u1361:
-	goto	l3259
-u1360:
-	line	57
-	
-l3257:
-	clrf	((c:?___ftmul)),c
-	clrf	((c:?___ftmul+1)),c
-	clrf	((c:?___ftmul+2)),c
-
-	goto	l939
-	line	58
-	
-l3259:
-	movlw	(0Fh)&0ffh
-	movwf	(??___ftmul+0+0)&0ffh,c
-	movff	(c:___ftmul@f2),??___ftmul+1+0
-	movff	(c:___ftmul@f2+1),??___ftmul+1+0+1
-	movff	(c:___ftmul@f2+2),??___ftmul+1+0+2
 	incf	((??___ftmul+0+0)),c,w
 	movwf	(??___ftmul+4+0)&0ffh,c
 	goto	u1370
@@ -7837,14 +7809,14 @@ u1370:
 	decfsz	(??___ftmul+4+0)&0ffh,c
 	goto	u1375
 	movf	(??___ftmul+1+0),c,w
-	movwf	((c:___ftmul@sign)),c
-	tstfsz	((c:___ftmul@sign))&0ffh
+	movwf	((c:___ftmul@exp)),c
+	tstfsz	((c:___ftmul@exp))&0ffh
 	goto	u1381
 	goto	u1380
 u1381:
 	goto	l3263
 u1380:
-	line	59
+	line	57
 	
 l3261:
 	clrf	((c:?___ftmul)),c
@@ -7852,15 +7824,50 @@ l3261:
 	clrf	((c:?___ftmul+2)),c
 
 	goto	l939
-	line	60
+	line	58
 	
 l3263:
+	movlw	(0Fh)&0ffh
+	movwf	(??___ftmul+0+0)&0ffh,c
+	movff	(c:___ftmul@f2),??___ftmul+1+0
+	movff	(c:___ftmul@f2+1),??___ftmul+1+0+1
+	movff	(c:___ftmul@f2+2),??___ftmul+1+0+2
+	incf	((??___ftmul+0+0)),c,w
+	movwf	(??___ftmul+4+0)&0ffh,c
+	goto	u1390
+u1395:
+	bcf	status,0
+	rrcf	(??___ftmul+1+2),c
+	rrcf	(??___ftmul+1+1),c
+	rrcf	(??___ftmul+1+0),c
+u1390:
+	decfsz	(??___ftmul+4+0)&0ffh,c
+	goto	u1395
+	movf	(??___ftmul+1+0),c,w
+	movwf	((c:___ftmul@sign)),c
+	tstfsz	((c:___ftmul@sign))&0ffh
+	goto	u1401
+	goto	u1400
+u1401:
+	goto	l3267
+u1400:
+	line	59
+	
+l3265:
+	clrf	((c:?___ftmul)),c
+	clrf	((c:?___ftmul+1)),c
+	clrf	((c:?___ftmul+2)),c
+
+	goto	l939
+	line	60
+	
+l3267:
 	movf	((c:___ftmul@sign)),c,w
 	addlw	low(07Bh)
 	addwf	((c:___ftmul@exp)),c
 	line	61
 	
-l3265:
+l3269:
 	movff	0+2+(c:___ftmul@f1),(c:___ftmul@sign)
 	line	62
 	movf	(0+2+(c:___ftmul@f2))&0ffh,w
@@ -7870,15 +7877,15 @@ l3265:
 	andwf	((c:___ftmul@sign)),c
 	line	64
 	
-l3267:
+l3271:
 	bsf	(0+(15/8)+(c:___ftmul@f1)),c,(15)&7
 	line	66
 	
-l3269:
+l3273:
 	bsf	(0+(15/8)+(c:___ftmul@f2)),c,(15)&7
 	line	67
 	
-l3271:
+l3275:
 	movlw	low(0FFFFh)
 	andwf	((c:___ftmul@f2)),c
 	movlw	high(0FFFFh)
@@ -7888,29 +7895,29 @@ l3271:
 
 	line	68
 	
-l3273:
+l3277:
 	clrf	((c:___ftmul@f3_as_product)),c
 	clrf	((c:___ftmul@f3_as_product+1)),c
 	clrf	((c:___ftmul@f3_as_product+2)),c
 
 	line	69
 	
-l3275:
+l3279:
 	movlw	low(07h)
 	movwf	((c:___ftmul@cntr)),c
 	line	71
 	
-l3277:
+l3281:
 	
 	btfss	((c:___ftmul@f1)),c,(0)&7
-	goto	u1391
-	goto	u1390
-u1391:
-	goto	l3281
-u1390:
+	goto	u1411
+	goto	u1410
+u1411:
+	goto	l3285
+u1410:
 	line	72
 	
-l3279:
+l3283:
 	movf	((c:___ftmul@f2)),c,w
 	addwf	((c:___ftmul@f3_as_product)),c
 	movf	((c:___ftmul@f2+1)),c,w
@@ -7920,7 +7927,7 @@ l3279:
 
 	line	73
 	
-l3281:
+l3285:
 	bcf	status,0
 	rrcf	((c:___ftmul@f1+2)),c
 	rrcf	((c:___ftmul@f1+1)),c
@@ -7932,28 +7939,28 @@ l3281:
 	rlcf	((c:___ftmul@f2+2)),c
 	line	75
 	
-l3283:
+l3287:
 	decfsz	((c:___ftmul@cntr)),c
 	
-	goto	l3277
+	goto	l3281
 	line	76
 	
-l3285:
+l3289:
 	movlw	low(09h)
 	movwf	((c:___ftmul@cntr)),c
 	line	78
 	
-l3287:
+l3291:
 	
 	btfss	((c:___ftmul@f1)),c,(0)&7
-	goto	u1401
-	goto	u1400
-u1401:
-	goto	l3291
-u1400:
+	goto	u1421
+	goto	u1420
+u1421:
+	goto	l3295
+u1420:
 	line	79
 	
-l3289:
+l3293:
 	movf	((c:___ftmul@f2)),c,w
 	addwf	((c:___ftmul@f3_as_product)),c
 	movf	((c:___ftmul@f2+1)),c,w
@@ -7963,7 +7970,7 @@ l3289:
 
 	line	80
 	
-l3291:
+l3295:
 	bcf	status,0
 	rrcf	((c:___ftmul@f1+2)),c
 	rrcf	((c:___ftmul@f1+1)),c
@@ -7975,13 +7982,13 @@ l3291:
 	rrcf	((c:___ftmul@f3_as_product)),c
 	line	82
 	
-l3293:
+l3297:
 	decfsz	((c:___ftmul@cntr)),c
 	
-	goto	l3287
+	goto	l3291
 	line	83
 	
-l3295:
+l3299:
 	movff	(c:___ftmul@f3_as_product),(c:?___ftpack)
 	movff	(c:___ftmul@f3_as_product+1),(c:?___ftpack+1)
 	movff	(c:___ftmul@f3_as_product+2),(c:?___ftpack+2)
@@ -8045,25 +8052,25 @@ ___ftpack:
 	opt	stack 22
 	line	64
 	
-l3223:
+l3227:
 	movf	((c:___ftpack@exp)),c,w
 	btfsc	status,2
-	goto	u1281
-	goto	u1280
-u1281:
+	goto	u1301
+	goto	u1300
+u1301:
 	goto	l854
-u1280:
+u1300:
 	
-l3225:
+l3229:
 	movf	((c:___ftpack@arg)),c,w
 	iorwf	((c:___ftpack@arg+1)),c,w
 	iorwf	((c:___ftpack@arg+2)),c,w
 	btfss	status,2
-	goto	u1291
-	goto	u1290
-u1291:
-	goto	l3229
-u1290:
+	goto	u1311
+	goto	u1310
+u1311:
+	goto	l3233
+u1310:
 	
 l854:
 	line	65
@@ -8074,7 +8081,7 @@ l854:
 	goto	l855
 	line	67
 	
-l3227:
+l3231:
 	incf	((c:___ftpack@exp)),c
 	line	68
 	bcf	status,0
@@ -8083,7 +8090,7 @@ l3227:
 	rrcf	((c:___ftpack@arg)),c
 	line	66
 	
-l3229:
+l3233:
 	movlw	low(0FE0000h)
 	andwf	((c:___ftpack@arg)),c,w
 	movwf	(??___ftpack+0+0)&0ffh,c
@@ -8098,19 +8105,19 @@ l3229:
 	iorwf	(??___ftpack+0+1),c,w
 	iorwf	(??___ftpack+0+2),c,w
 	btfss	status,2
-	goto	u1301
-	goto	u1300
-u1301:
-	goto	l3227
-u1300:
-	goto	l3235
+	goto	u1321
+	goto	u1320
+u1321:
+	goto	l3231
+u1320:
+	goto	l3239
 	line	71
 	
-l3231:
+l3235:
 	incf	((c:___ftpack@exp)),c
 	line	72
 	
-l3233:
+l3237:
 	movlw	low(01h)
 	addwf	((c:___ftpack@arg)),c
 	movlw	high(01h)
@@ -8125,7 +8132,7 @@ l3233:
 	rrcf	((c:___ftpack@arg)),c
 	line	70
 	
-l3235:
+l3239:
 	movlw	low(0FF0000h)
 	andwf	((c:___ftpack@arg)),c,w
 	movwf	(??___ftpack+0+0)&0ffh,c
@@ -8140,15 +8147,15 @@ l3235:
 	iorwf	(??___ftpack+0+1),c,w
 	iorwf	(??___ftpack+0+2),c,w
 	btfss	status,2
-	goto	u1311
-	goto	u1310
-u1311:
-	goto	l3231
-u1310:
-	goto	l3239
+	goto	u1331
+	goto	u1330
+u1331:
+	goto	l3235
+u1330:
+	goto	l3243
 	line	76
 	
-l3237:
+l3241:
 	decf	((c:___ftpack@exp)),c
 	line	77
 	bcf	status,0
@@ -8157,37 +8164,37 @@ l3237:
 	rlcf	((c:___ftpack@arg+2)),c
 	line	75
 	
-l3239:
+l3243:
 	
 	btfss	((c:___ftpack@arg+1)),c,(15)&7
-	goto	u1321
-	goto	u1320
-u1321:
-	goto	l3237
-u1320:
+	goto	u1341
+	goto	u1340
+u1341:
+	goto	l3241
+u1340:
 	
 l864:
 	line	79
 	
 	btfsc	((c:___ftpack@exp)),c,(0)&7
-	goto	u1331
-	goto	u1330
-u1331:
-	goto	l3243
-u1330:
+	goto	u1351
+	goto	u1350
+u1351:
+	goto	l3247
+u1350:
 	line	80
 	
-l3241:
+l3245:
 	bcf	(0+(15/8)+(c:___ftpack@arg)),c,(15)&7
 	line	81
 	
-l3243:
+l3247:
 	bcf status,0
 	rrcf	((c:___ftpack@exp)),c
 
 	line	82
 	
-l3245:
+l3249:
 	movf	((c:___ftpack@exp)),c,w
 	movwf	(??___ftpack+0+0+2)&0ffh,c
 	clrf	(??___ftpack+0+0+1)&0ffh,c
@@ -8201,21 +8208,21 @@ l3245:
 
 	line	83
 	
-l3247:
+l3251:
 	movf	((c:___ftpack@sign)),c,w
 	btfsc	status,2
-	goto	u1341
-	goto	u1340
-u1341:
-	goto	l3251
-u1340:
+	goto	u1361
+	goto	u1360
+u1361:
+	goto	l3255
+u1360:
 	line	84
 	
-l3249:
+l3253:
 	bsf	(0+(23/8)+(c:___ftpack@arg)),c,(23)&7
 	line	85
 	
-l3251:
+l3255:
 	movff	(c:___ftpack@arg),(c:?___ftpack)
 	movff	(c:___ftpack@arg+1),(c:?___ftpack+1)
 	movff	(c:___ftpack@arg+2),(c:?___ftpack+2)
@@ -8273,44 +8280,8 @@ ___fttol:
 	opt	stack 23
 	line	49
 	
-l3299:
-	movlw	(0Fh)&0ffh
-	movwf	(??___fttol+0+0)&0ffh,c
-	movff	(c:___fttol@f1),??___fttol+1+0
-	movff	(c:___fttol@f1+1),??___fttol+1+0+1
-	movff	(c:___fttol@f1+2),??___fttol+1+0+2
-	incf	((??___fttol+0+0)),c,w
-	movwf	(??___fttol+4+0)&0ffh,c
-	goto	u1410
-u1415:
-	bcf	status,0
-	rrcf	(??___fttol+1+2),c
-	rrcf	(??___fttol+1+1),c
-	rrcf	(??___fttol+1+0),c
-u1410:
-	decfsz	(??___fttol+4+0)&0ffh,c
-	goto	u1415
-	movf	(??___fttol+1+0),c,w
-	movwf	((c:___fttol@exp1)),c
-	tstfsz	((c:___fttol@exp1))&0ffh
-	goto	u1421
-	goto	u1420
-u1421:
-	goto	l3303
-u1420:
-	line	50
-	
-l3301:
-	clrf	((c:?___fttol)),c
-	clrf	((c:?___fttol+1)),c
-	clrf	((c:?___fttol+2)),c
-	clrf	((c:?___fttol+3)),c
-
-	goto	l959
-	line	51
-	
 l3303:
-	movlw	(017h)&0ffh
+	movlw	(0Fh)&0ffh
 	movwf	(??___fttol+0+0)&0ffh,c
 	movff	(c:___fttol@f1),??___fttol+1+0
 	movff	(c:___fttol@f1+1),??___fttol+1+0+1
@@ -8327,14 +8298,50 @@ u1430:
 	decfsz	(??___fttol+4+0)&0ffh,c
 	goto	u1435
 	movf	(??___fttol+1+0),c,w
+	movwf	((c:___fttol@exp1)),c
+	tstfsz	((c:___fttol@exp1))&0ffh
+	goto	u1441
+	goto	u1440
+u1441:
+	goto	l3307
+u1440:
+	line	50
+	
+l3305:
+	clrf	((c:?___fttol)),c
+	clrf	((c:?___fttol+1)),c
+	clrf	((c:?___fttol+2)),c
+	clrf	((c:?___fttol+3)),c
+
+	goto	l959
+	line	51
+	
+l3307:
+	movlw	(017h)&0ffh
+	movwf	(??___fttol+0+0)&0ffh,c
+	movff	(c:___fttol@f1),??___fttol+1+0
+	movff	(c:___fttol@f1+1),??___fttol+1+0+1
+	movff	(c:___fttol@f1+2),??___fttol+1+0+2
+	incf	((??___fttol+0+0)),c,w
+	movwf	(??___fttol+4+0)&0ffh,c
+	goto	u1450
+u1455:
+	bcf	status,0
+	rrcf	(??___fttol+1+2),c
+	rrcf	(??___fttol+1+1),c
+	rrcf	(??___fttol+1+0),c
+u1450:
+	decfsz	(??___fttol+4+0)&0ffh,c
+	goto	u1455
+	movf	(??___fttol+1+0),c,w
 	movwf	((c:___fttol@sign1)),c
 	line	52
 	
-l3305:
+l3309:
 	bsf	(0+(15/8)+(c:___fttol@f1)),c,(15)&7
 	line	53
 	
-l3307:
+l3311:
 	movlw	low(0FFFFh)
 	andwf	((c:___fttol@f1)),c
 	movlw	high(0FFFFh)
@@ -8344,7 +8351,7 @@ l3307:
 
 	line	54
 	
-l3309:
+l3313:
 	movf	((c:___fttol@f1)),c,w
 	movwf	((c:___fttol@lval)),c
 	movf	((c:___fttol@f1+1)),c,w
@@ -8356,34 +8363,34 @@ l3309:
 	clrf	3+((c:___fttol@lval)),c
 	line	55
 	
-l3311:
+l3315:
 	movlw	(08Eh)&0ffh
 	subwf	((c:___fttol@exp1)),c
 	line	56
 	
-l3313:
+l3317:
 	btfss	((c:___fttol@exp1)),c,7
-	goto	u1441
-	goto	u1440
-u1441:
-	goto	l3323
-u1440:
+	goto	u1461
+	goto	u1460
+u1461:
+	goto	l3327
+u1460:
 	line	57
 	
-l3315:
+l3319:
 	movf	((c:___fttol@exp1)),c,w
 	xorlw	80h
 	addlw	-((-15)^80h)
 	btfsc	status,0
-	goto	u1451
-	goto	u1450
-u1451:
-	goto	l3319
-u1450:
-	goto	l3301
+	goto	u1471
+	goto	u1470
+u1471:
+	goto	l3323
+u1470:
+	goto	l3305
 	line	60
 	
-l3319:
+l3323:
 	bcf	status,0
 	rrcf	((c:___fttol@lval+3)),c
 	rrcf	((c:___fttol@lval+2)),c
@@ -8391,25 +8398,25 @@ l3319:
 	rrcf	((c:___fttol@lval)),c
 	line	61
 	
-l3321:
+l3325:
 	incfsz	((c:___fttol@exp1)),c
 	
-	goto	l3319
-	goto	l3331
+	goto	l3323
+	goto	l3335
 	line	63
 	
-l3323:
+l3327:
 	movlw	(018h-1)
 	cpfsgt	((c:___fttol@exp1)),c
-	goto	u1461
-	goto	u1460
-u1461:
-	goto	l3329
-u1460:
-	goto	l3301
+	goto	u1481
+	goto	u1480
+u1481:
+	goto	l3333
+u1480:
+	goto	l3305
 	line	66
 	
-l3327:
+l3331:
 	bcf	status,0
 	rlcf	((c:___fttol@lval)),c
 	rlcf	((c:___fttol@lval+1)),c
@@ -8419,26 +8426,26 @@ l3327:
 	decf	((c:___fttol@exp1)),c
 	line	65
 	
-l3329:
+l3333:
 	tstfsz	((c:___fttol@exp1)),c
-	goto	u1471
-	goto	u1470
-u1471:
-	goto	l3327
-u1470:
+	goto	u1491
+	goto	u1490
+u1491:
+	goto	l3331
+u1490:
 	line	70
 	
-l3331:
+l3335:
 	movf	((c:___fttol@sign1)),c,w
 	btfsc	status,2
-	goto	u1481
-	goto	u1480
-u1481:
-	goto	l3335
-u1480:
+	goto	u1501
+	goto	u1500
+u1501:
+	goto	l3339
+u1500:
 	line	71
 	
-l3333:
+l3337:
 	comf	((c:___fttol@lval+3)),c
 	comf	((c:___fttol@lval+2)),c
 	comf	((c:___fttol@lval+1)),c
@@ -8449,7 +8456,7 @@ l3333:
 	addwfc	((c:___fttol@lval+3)),c
 	line	72
 	
-l3335:
+l3339:
 	movff	(c:___fttol@lval),(c:?___fttol)
 	movff	(c:___fttol@lval+1),(c:?___fttol+1)
 	movff	(c:___fttol@lval+2),(c:?___fttol+2)
@@ -8508,31 +8515,31 @@ ___lwdiv:
 	opt	stack 23
 	line	14
 	
-l3339:
+l3343:
 	clrf	((c:___lwdiv@quotient)),c
 	clrf	((c:___lwdiv@quotient+1)),c
 	line	15
 	
-l3341:
+l3345:
 	movf	((c:___lwdiv@divisor+1)),c,w
 	iorwf ((c:___lwdiv@divisor)),c,w
 
 	btfsc	status,2
-	goto	u1491
-	goto	u1490
-u1491:
+	goto	u1511
+	goto	u1510
+u1511:
 	goto	l1067
-u1490:
+u1510:
 	line	16
 	
-l3343:
+l3347:
 	movlw	low(01h)
 	movwf	((c:___lwdiv@counter)),c
 	line	17
-	goto	l3347
+	goto	l3351
 	line	18
 	
-l3345:
+l3349:
 	bcf	status,0
 	rlcf	((c:___lwdiv@divisor)),c
 	rlcf	((c:___lwdiv@divisor+1)),c
@@ -8540,36 +8547,36 @@ l3345:
 	incf	((c:___lwdiv@counter)),c
 	line	17
 	
-l3347:
+l3351:
 	
 	btfss	((c:___lwdiv@divisor+1)),c,(15)&7
-	goto	u1501
-	goto	u1500
-u1501:
-	goto	l3345
-u1500:
+	goto	u1521
+	goto	u1520
+u1521:
+	goto	l3349
+u1520:
 	line	22
 	
-l3349:
+l3353:
 	bcf	status,0
 	rlcf	((c:___lwdiv@quotient)),c
 	rlcf	((c:___lwdiv@quotient+1)),c
 	line	23
 	
-l3351:
+l3355:
 	movf	((c:___lwdiv@divisor)),c,w
 	subwf	((c:___lwdiv@dividend)),c,w
 	movf	((c:___lwdiv@divisor+1)),c,w
 	subwfb	((c:___lwdiv@dividend+1)),c,w
 	btfss	status,0
-	goto	u1511
-	goto	u1510
-u1511:
-	goto	l3357
-u1510:
+	goto	u1531
+	goto	u1530
+u1531:
+	goto	l3361
+u1530:
 	line	24
 	
-l3353:
+l3357:
 	movf	((c:___lwdiv@divisor)),c,w
 	subwf	((c:___lwdiv@dividend)),c
 	movf	((c:___lwdiv@divisor+1)),c,w
@@ -8577,20 +8584,20 @@ l3353:
 
 	line	25
 	
-l3355:
+l3359:
 	bsf	(0+(0/8)+(c:___lwdiv@quotient)),c,(0)&7
 	line	27
 	
-l3357:
+l3361:
 	bcf	status,0
 	rrcf	((c:___lwdiv@divisor+1)),c
 	rrcf	((c:___lwdiv@divisor)),c
 	line	28
 	
-l3359:
+l3363:
 	decfsz	((c:___lwdiv@counter)),c
 	
-	goto	l3349
+	goto	l3353
 	line	29
 	
 l1067:
@@ -8651,66 +8658,66 @@ _IntServer:
 	opt	stack 22
 	line	295
 	
-i2l3379:
+i2l3383:
 ;YellowFlash.C: 295: if(TMR0IE && TMR0IF)
 	btfss	c:(32661/8),(32661)&7	;volatile
-	goto	i2u155_41
-	goto	i2u155_40
-i2u155_41:
-	goto	i2l3387
-i2u155_40:
+	goto	i2u157_41
+	goto	i2u157_40
+i2u157_41:
+	goto	i2l3391
+i2u157_40:
 	
-i2l3381:
+i2l3385:
 	btfss	c:(32658/8),(32658)&7	;volatile
-	goto	i2u156_41
-	goto	i2u156_40
-i2u156_41:
-	goto	i2l3387
-i2u156_40:
+	goto	i2u158_41
+	goto	i2u158_40
+i2u158_41:
+	goto	i2l3391
+i2u158_40:
 	line	298
 	
-i2l3383:
+i2l3387:
 ;YellowFlash.C: 296: {
 ;YellowFlash.C: 298: TMR0IF = 0;
 	bcf	c:(32658/8),(32658)&7	;volatile
 	line	299
 	
-i2l3385:
+i2l3389:
 ;YellowFlash.C: 299: TMR0IntServer();
 	call	_TMR0IntServer	;wreg free
 	line	302
 	
-i2l3387:
+i2l3391:
 ;YellowFlash.C: 300: }
 ;YellowFlash.C: 302: if(TMR1IE && TMR1IF)
 	btfss	c:(31976/8),(31976)&7	;volatile
-	goto	i2u157_41
-	goto	i2u157_40
-i2u157_41:
-	goto	i2l3395
-i2u157_40:
+	goto	i2u159_41
+	goto	i2u159_40
+i2u159_41:
+	goto	i2l3399
+i2u159_40:
 	
-i2l3389:
+i2l3393:
 	btfss	c:(31984/8),(31984)&7	;volatile
-	goto	i2u158_41
-	goto	i2u158_40
-i2u158_41:
-	goto	i2l3395
-i2u158_40:
+	goto	i2u160_41
+	goto	i2u160_40
+i2u160_41:
+	goto	i2l3399
+i2u160_40:
 	line	305
 	
-i2l3391:
+i2l3395:
 ;YellowFlash.C: 303: {
 ;YellowFlash.C: 305: TMR1IF = 0;
 	bcf	c:(31984/8),(31984)&7	;volatile
 	line	306
 	
-i2l3393:
+i2l3397:
 ;YellowFlash.C: 306: TMR1IntServer();
 	call	_TMR1IntServer	;wreg free
 	line	310
 	
-i2l3395:
+i2l3399:
 ;YellowFlash.C: 311: {
 ;YellowFlash.C: 312: CANInt=1;
 	movf	((c:3950)),c,w	;volatile
@@ -8721,28 +8728,28 @@ i2l518:
 ;YellowFlash.C: 313: }
 ;YellowFlash.C: 314: if(ADIE && ADIF)
 	btfss	c:(31982/8),(31982)&7	;volatile
-	goto	i2u159_41
-	goto	i2u159_40
-i2u159_41:
+	goto	i2u161_41
+	goto	i2u161_40
+i2u161_41:
 	goto	i2l520
-i2u159_40:
+i2u161_40:
 	
-i2l3397:
+i2l3401:
 	btfss	c:(31990/8),(31990)&7	;volatile
-	goto	i2u160_41
-	goto	i2u160_40
-i2u160_41:
+	goto	i2u162_41
+	goto	i2u162_40
+i2u162_41:
 	goto	i2l520
-i2u160_40:
+i2u162_40:
 	line	316
 	
-i2l3399:
+i2l3403:
 ;YellowFlash.C: 315: {
 ;YellowFlash.C: 316: ADIF = 0;
 	bcf	c:(31990/8),(31990)&7	;volatile
 	line	317
 	
-i2l3401:
+i2l3405:
 ;YellowFlash.C: 317: ADIntServer();
 	call	_ADIntServer	;wreg free
 	line	320
@@ -8862,7 +8869,7 @@ _TMR1IntServer:
 	opt	stack 22
 	line	260
 	
-i2l3369:
+i2l3373:
 ;YellowFlash.C: 260: TMR1H = 0x3c;
 	movlw	low(03Ch)
 	movwf	((c:4047)),c	;volatile
@@ -8872,14 +8879,14 @@ i2l3369:
 	movwf	((c:4046)),c	;volatile
 	line	264
 	
-i2l3371:
+i2l3375:
 ;YellowFlash.C: 264: t1_cont++;
 	movlb	0	; () banked
 	infsnz	((_t1_cont))&0ffh
 	incf	((_t1_cont+1))&0ffh
 	line	273
 	
-i2l3373:; BSR set to: 0
+i2l3377:; BSR set to: 0
 
 ;YellowFlash.C: 273: if(t1_cont>=time_counter)
 	movf	((c:_time_counter)),c,w
@@ -8887,14 +8894,14 @@ i2l3373:; BSR set to: 0
 	movf	((c:_time_counter+1)),c,w
 	subwfb	((_t1_cont+1))&0ffh,w
 	btfss	status,0
-	goto	i2u154_41
-	goto	i2u154_40
-i2u154_41:
+	goto	i2u156_41
+	goto	i2u156_40
+i2u156_41:
 	goto	i2l510
-i2u154_40:
+i2u156_40:
 	line	275
 	
-i2l3375:; BSR set to: 0
+i2l3379:; BSR set to: 0
 
 ;YellowFlash.C: 274: {
 ;YellowFlash.C: 275: t1_cont=0;
@@ -8902,7 +8909,7 @@ i2l3375:; BSR set to: 0
 	clrf	((_t1_cont+1))&0ffh
 	line	276
 	
-i2l3377:; BSR set to: 0
+i2l3381:; BSR set to: 0
 
 ;YellowFlash.C: 276: YellowFlash();
 	call	_YellowFlash	;wreg free
@@ -8959,32 +8966,32 @@ _YellowFlash:
 	opt	stack 22
 	line	230
 	
-i2l3361:; BSR set to: 0
+i2l3365:; BSR set to: 0
 
 ;YellowFlash.C: 230: if(turnoff)
 	movf	((c:_turnoff)),c,w
 	btfsc	status,2
-	goto	i2u152_41
-	goto	i2u152_40
-i2u152_41:
+	goto	i2u154_41
+	goto	i2u154_40
+i2u154_41:
 	goto	i2l503
-i2u152_40:
+i2u154_40:
 	line	232
 	
-i2l3363:; BSR set to: 0
+i2l3367:; BSR set to: 0
 
 ;YellowFlash.C: 231: {
 ;YellowFlash.C: 232: if(switchmode)
 	movlb	(_switchmode/8) >> 8
 	btfss	(_switchmode/8),c,(_switchmode)&7
-	goto	i2u153_41
-	goto	i2u153_40
-i2u153_41:
-	goto	i2l3367
-i2u153_40:
+	goto	i2u155_41
+	goto	i2u155_40
+i2u155_41:
+	goto	i2l3371
+i2u155_40:
 	line	234
 	
-i2l3365:
+i2l3369:
 ;YellowFlash.C: 233: {
 ;YellowFlash.C: 234: LED_On_Disp();
 	call	_LED_On_Disp	;wreg free
@@ -8993,7 +9000,7 @@ i2l3365:
 	goto	i2l503
 	line	238
 	
-i2l3367:
+i2l3371:
 ;YellowFlash.C: 236: else
 ;YellowFlash.C: 237: {
 ;YellowFlash.C: 238: LED_Off_Disp();
@@ -9049,9 +9056,9 @@ _LED_On_Disp:
 	opt	stack 22
 	line	180
 	
-i2l2839:
+i2l2841:
 ;YellowFlash.C: 180: switch(run_mode)
-	goto	i2l2843
+	goto	i2l2845
 	line	185
 ;YellowFlash.C: 181: {
 ;YellowFlash.C: 185: case 0x01:
@@ -9087,7 +9094,7 @@ i2l487:
 	goto	i2l486
 	line	180
 	
-i2l2843:
+i2l2845:
 	movf	((c:_run_mode)),c,w
 	; Switch size 1, requested type "space"
 ; Number of cases is 2, Range of values is 1 to 2
@@ -9166,9 +9173,9 @@ _LED_Off_Disp:
 	opt	stack 22
 	line	205
 	
-i2l2845:
+i2l2847:
 ;YellowFlash.C: 205: switch(run_mode)
-	goto	i2l2849
+	goto	i2l2851
 	line	209
 ;YellowFlash.C: 206: {
 ;YellowFlash.C: 209: case 0x01:
@@ -9204,7 +9211,7 @@ i2l495:
 	goto	i2l494
 	line	205
 	
-i2l2849:
+i2l2851:
 	movf	((c:_run_mode)),c,w
 	; Switch size 1, requested type "space"
 ; Number of cases is 2, Range of values is 1 to 2
