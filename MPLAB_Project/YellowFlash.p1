@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"12002 D:\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
+"12002 C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
 [v _PORTB `Vuc ~T0 0 e@3969 ]
 "6417
 [v _RXF0SIDH `Vuc ~T0 0 e@3808 ]
@@ -297,7 +297,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "19863
 [v _SWDTEN `Vb ~T0 0 e@32392 ]
 [; ;PIC18F45K80.h: 17: extern volatile unsigned char RXERRCNT @ 0xE41;
-"19 D:\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
+"19 C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h
 [; ;PIC18F45K80.h: 19: asm("RXERRCNT equ 0E41h");
 [; <" RXERRCNT equ 0E41h ;# ">
 [; ;PIC18F45K80.h: 22: extern volatile union {
@@ -17724,7 +17724,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 186: extern void _delay(unsigned long);
 [; ;pic18.h: 188: extern void _delaywdt(unsigned long);
 [; ;pic18.h: 190: extern void _delay3(unsigned char);
-"82 G:\working\YellowFlashingController\TSC.H
+"82 E:\Git\YellowFlashingController\TSC.H
 [v _GetLampBoardAddr `(uc ~T0 1 ef ]
 {
 [; ;TSC.H: 81: unsigned char GetLampBoardAddr(void)
@@ -17987,7 +17987,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "171
 [e :UE 2743 ]
 }
-"15 G:\working\YellowFlashingController\CAN.H
+"15 E:\Git\YellowFlashingController\CAN.H
 [v _CANFilterSet `(v ~T0 1 ef2`uc`uc ]
 {
 [; ;CAN.H: 14: void CANFilterSet(unsigned char board_addr,unsigned char f_type)
@@ -18639,9 +18639,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;CAN.H: 336: dat[7] = 0;
 "336
 [e = *U + _dat * -> -> 7 `i `x -> -> # *U _dat `i `x -> -> 0 `i `uc ]
-[; ;CAN.H: 338: CANInit(GetAddr(0x06));
-"338
-[e ( _CANInit (1 ( _GetAddr (1 -> -> 6 `i `uc ]
 [; ;CAN.H: 340: return 0;
 "340
 [e ) -> -> 0 `i `b ]
@@ -18658,7 +18655,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "343
 [e :UE 2776 ]
 }
-"4 G:\working\YellowFlashingController\mcu.h
+"4 E:\Git\YellowFlashingController\mcu.h
 [p x XINST=OFF ]
 "5
 [p x FOSC=HS1 ]
@@ -18883,18 +18880,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 "117
 [e :UE 2799 ]
 }
-"42 G:\working\YellowFlashingController\YellowFlash.C
+"42 E:\Git\YellowFlashingController\YellowFlash.C
 [v _board_version `Cuc ~T0 -> 5 `i e ]
 [i _board_version
 :U ..
 -> -> 6 `i `uc
--> -> 14 `i `uc
--> -> 8 `i `uc
--> -> 2 `i `uc
+-> -> 15 `i `uc
+-> -> 3 `i `uc
+-> -> 23 `i `uc
 -> -> 0 `i `uc
 ..
 ]
-[; ;YellowFlash.C: 42: const unsigned char board_version[5]={0x06,14,8,2,0};
+[; ;YellowFlash.C: 42: const unsigned char board_version[5]={0x06,15,3,23,0};
 "47
 [v _time5ms `b ~T0 1 e ]
 [i _time5ms
@@ -20338,128 +20335,133 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;YellowFlash.C: 686: yflash_status=CANRdata[1];
 "686
 [e = _yflash_status *U + &U _CANRdata * -> -> -> 1 `i `ui `ux -> -> # *U &U _CANRdata `ui `ux ]
-[; ;YellowFlash.C: 687: RD2=1;
+[; ;YellowFlash.C: 687: if(CANRdlc==1)yflash_status=0xff;
 "687
-[e = _RD2 -> -> 1 `i `b ]
-[; ;YellowFlash.C: 688: Read_YFlash_CFG();
-"688
-[e ( _Read_YFlash_CFG ..  ]
-[; ;YellowFlash.C: 689: T1CON |= 0x01;
-"689
-[e =| _T1CON -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 690: turnoff=0x01;
-"690
-[e = _turnoff -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 691: switchmode=1;
-"691
-[e = _switchmode -> -> 1 `i `b ]
-[; ;YellowFlash.C: 692: force_status=0x01;
-"692
-[e = _force_status -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 693: if(f_r_mod==0x01)
-"693
-[e $ ! == -> _f_r_mod `i -> 1 `i 2877  ]
-[; ;YellowFlash.C: 694: {
-"694
-{
-[; ;YellowFlash.C: 695: CANSdlc=4;
-"695
-[e = _CANSdlc -> -> 4 `i `uc ]
-[; ;YellowFlash.C: 696: CANSdata[0]=0x02;
-"696
-[e = *U + &U _CANSdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux -> -> 2 `i `uc ]
-[; ;YellowFlash.C: 697: CANSdata[1]=yflash_CFG[0];
-"697
-[e = *U + &U _CANSdata * -> -> -> 1 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux *U + &U _yflash_CFG * -> -> -> 0 `i `ui `ux -> -> # *U &U _yflash_CFG `ui `ux ]
-[; ;YellowFlash.C: 698: CANSdata[2]=yflash_CFG[1];
-"698
-[e = *U + &U _CANSdata * -> -> -> 2 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux *U + &U _yflash_CFG * -> -> -> 1 `i `ui `ux -> -> # *U &U _yflash_CFG `ui `ux ]
-[; ;YellowFlash.C: 699: CANSdata[3]=yflash_status;
-"699
-[e = *U + &U _CANSdata * -> -> -> 3 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux _yflash_status ]
-[; ;YellowFlash.C: 700: CANSend(CANSid,CANSdata,CANSdlc);
-"700
-[e ( _CANSend (3 , , &U _CANSid &U _CANSdata _CANSdlc ]
-"701
-}
+[e $ ! == -> _CANRdlc `i -> 1 `i 2877  ]
+[e = _yflash_status -> -> 255 `i `uc ]
 [e :U 2877 ]
-[; ;YellowFlash.C: 701: }
-[; ;YellowFlash.C: 702: break;
-"702
-[e $U 2868  ]
-[; ;YellowFlash.C: 704: case 0x05:
-"704
-[e :U 2878 ]
-[; ;YellowFlash.C: 705: yflash_status=0x00;
-"705
-[e = _yflash_status -> -> 0 `i `uc ]
-[; ;YellowFlash.C: 706: force_status=0x00;
-"706
-[e = _force_status -> -> 0 `i `uc ]
-[; ;YellowFlash.C: 707: T1CON |= 0x00;
-"707
-[e =| _T1CON -> -> 0 `i `uc ]
-[; ;YellowFlash.C: 708: TMR0ON = 1;
-"708
-[e = _TMR0ON -> -> 1 `i `b ]
-[; ;YellowFlash.C: 709: turnoff=0x00;
-"709
-[e = _turnoff -> -> 0 `i `uc ]
-[; ;YellowFlash.C: 710: switchmode=0;
-"710
-[e = _switchmode -> -> 0 `i `b ]
-[; ;YellowFlash.C: 711: RC6=1;
-"711
-[e = _RC6 -> -> 1 `i `b ]
-[; ;YellowFlash.C: 712: RC4=1;
-"712
-[e = _RC4 -> -> 1 `i `b ]
-[; ;YellowFlash.C: 713: RD3=1;
-"713
-[e = _RD3 -> -> 1 `i `b ]
-[; ;YellowFlash.C: 714: RD2=0;
-"714
-[e = _RD2 -> -> 0 `i `b ]
-[; ;YellowFlash.C: 715: if(f_r_mod==0x01)
-"715
-[e $ ! == -> _f_r_mod `i -> 1 `i 2879  ]
-[; ;YellowFlash.C: 716: {
-"716
+[; ;YellowFlash.C: 688: RD2=1;
+"688
+[e = _RD2 -> -> 1 `i `b ]
+[; ;YellowFlash.C: 689: Read_YFlash_CFG();
+"689
+[e ( _Read_YFlash_CFG ..  ]
+[; ;YellowFlash.C: 690: T1CON |= 0x01;
+"690
+[e =| _T1CON -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 691: turnoff=0x01;
+"691
+[e = _turnoff -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 692: switchmode=1;
+"692
+[e = _switchmode -> -> 1 `i `b ]
+[; ;YellowFlash.C: 693: force_status=0x01;
+"693
+[e = _force_status -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 694: if(f_r_mod==0x01)
+"694
+[e $ ! == -> _f_r_mod `i -> 1 `i 2878  ]
+[; ;YellowFlash.C: 695: {
+"695
 {
-[; ;YellowFlash.C: 717: CANSdlc=4;
-"717
+[; ;YellowFlash.C: 696: CANSdlc=4;
+"696
 [e = _CANSdlc -> -> 4 `i `uc ]
-[; ;YellowFlash.C: 718: CANSdata[0]=0x02;
-"718
+[; ;YellowFlash.C: 697: CANSdata[0]=0x02;
+"697
 [e = *U + &U _CANSdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux -> -> 2 `i `uc ]
-[; ;YellowFlash.C: 719: CANSdata[1]=yflash_CFG[0];
-"719
+[; ;YellowFlash.C: 698: CANSdata[1]=yflash_CFG[0];
+"698
 [e = *U + &U _CANSdata * -> -> -> 1 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux *U + &U _yflash_CFG * -> -> -> 0 `i `ui `ux -> -> # *U &U _yflash_CFG `ui `ux ]
-[; ;YellowFlash.C: 720: CANSdata[2]=yflash_CFG[1];
-"720
+[; ;YellowFlash.C: 699: CANSdata[2]=yflash_CFG[1];
+"699
 [e = *U + &U _CANSdata * -> -> -> 2 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux *U + &U _yflash_CFG * -> -> -> 1 `i `ui `ux -> -> # *U &U _yflash_CFG `ui `ux ]
-[; ;YellowFlash.C: 721: CANSdata[3]=yflash_status;
-"721
+[; ;YellowFlash.C: 700: CANSdata[3]=yflash_status;
+"700
 [e = *U + &U _CANSdata * -> -> -> 3 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux _yflash_status ]
-[; ;YellowFlash.C: 722: CANSend(CANSid,CANSdata,CANSdlc);
-"722
+[; ;YellowFlash.C: 701: CANSend(CANSid,CANSdata,CANSdlc);
+"701
 [e ( _CANSend (3 , , &U _CANSid &U _CANSdata _CANSdlc ]
-"723
+"702
 }
+[e :U 2878 ]
+[; ;YellowFlash.C: 702: }
+[; ;YellowFlash.C: 703: break;
+"703
+[e $U 2868  ]
+[; ;YellowFlash.C: 705: case 0x05:
+"705
 [e :U 2879 ]
-[; ;YellowFlash.C: 723: }
-[; ;YellowFlash.C: 724: break;
+[; ;YellowFlash.C: 706: yflash_status=0x00;
+"706
+[e = _yflash_status -> -> 0 `i `uc ]
+[; ;YellowFlash.C: 707: force_status=0x00;
+"707
+[e = _force_status -> -> 0 `i `uc ]
+[; ;YellowFlash.C: 708: T1CON |= 0x00;
+"708
+[e =| _T1CON -> -> 0 `i `uc ]
+[; ;YellowFlash.C: 709: TMR0ON = 1;
+"709
+[e = _TMR0ON -> -> 1 `i `b ]
+[; ;YellowFlash.C: 710: turnoff=0x00;
+"710
+[e = _turnoff -> -> 0 `i `uc ]
+[; ;YellowFlash.C: 711: switchmode=0;
+"711
+[e = _switchmode -> -> 0 `i `b ]
+[; ;YellowFlash.C: 712: RC6=1;
+"712
+[e = _RC6 -> -> 1 `i `b ]
+[; ;YellowFlash.C: 713: RC4=1;
+"713
+[e = _RC4 -> -> 1 `i `b ]
+[; ;YellowFlash.C: 714: RD3=1;
+"714
+[e = _RD3 -> -> 1 `i `b ]
+[; ;YellowFlash.C: 715: RD2=0;
+"715
+[e = _RD2 -> -> 0 `i `b ]
+[; ;YellowFlash.C: 716: if(f_r_mod==0x01)
+"716
+[e $ ! == -> _f_r_mod `i -> 1 `i 2880  ]
+[; ;YellowFlash.C: 717: {
+"717
+{
+[; ;YellowFlash.C: 718: CANSdlc=4;
+"718
+[e = _CANSdlc -> -> 4 `i `uc ]
+[; ;YellowFlash.C: 719: CANSdata[0]=0x02;
+"719
+[e = *U + &U _CANSdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux -> -> 2 `i `uc ]
+[; ;YellowFlash.C: 720: CANSdata[1]=yflash_CFG[0];
+"720
+[e = *U + &U _CANSdata * -> -> -> 1 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux *U + &U _yflash_CFG * -> -> -> 0 `i `ui `ux -> -> # *U &U _yflash_CFG `ui `ux ]
+[; ;YellowFlash.C: 721: CANSdata[2]=yflash_CFG[1];
+"721
+[e = *U + &U _CANSdata * -> -> -> 2 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux *U + &U _yflash_CFG * -> -> -> 1 `i `ui `ux -> -> # *U &U _yflash_CFG `ui `ux ]
+[; ;YellowFlash.C: 722: CANSdata[3]=yflash_status;
+"722
+[e = *U + &U _CANSdata * -> -> -> 3 `i `ui `ux -> -> # *U &U _CANSdata `ui `ux _yflash_status ]
+[; ;YellowFlash.C: 723: CANSend(CANSid,CANSdata,CANSdlc);
+"723
+[e ( _CANSend (3 , , &U _CANSid &U _CANSdata _CANSdlc ]
 "724
-[e $U 2868  ]
-[; ;YellowFlash.C: 725: default:
-"725
-[e :U 2880 ]
-[; ;YellowFlash.C: 726: break;
-"726
-[e $U 2868  ]
-"730
 }
-[; ;YellowFlash.C: 730: }
+[e :U 2880 ]
+[; ;YellowFlash.C: 724: }
+[; ;YellowFlash.C: 725: break;
+"725
+[e $U 2868  ]
+[; ;YellowFlash.C: 726: default:
+"726
+[e :U 2881 ]
+[; ;YellowFlash.C: 727: break;
+"727
+[e $U 2868  ]
+"731
+}
+[; ;YellowFlash.C: 731: }
 [e $U 2868  ]
 "631
 [e :U 2869 ]
@@ -20468,232 +20470,232 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> 2 `i 2873
  , $ -> 3 `i 2874
  , $ -> 4 `i 2876
- , $ -> 5 `i 2878
- 2880 ]
-"730
+ , $ -> 5 `i 2879
+ 2881 ]
+"731
 [e :U 2868 ]
-[; ;YellowFlash.C: 732: master_time_cont = 0x00;
-"732
-[e = _master_time_cont -> -> 0 `i `uc ]
-[; ;YellowFlash.C: 733: sta = 0X03;
+[; ;YellowFlash.C: 733: master_time_cont = 0x00;
 "733
-[e = _sta -> -> 3 `i `uc ]
+[e = _master_time_cont -> -> 0 `i `uc ]
+[; ;YellowFlash.C: 734: sta = 0X03;
 "734
+[e = _sta -> -> 3 `i `uc ]
+"735
 }
 [e :U 2866 ]
-[; ;YellowFlash.C: 734: }
-[; ;YellowFlash.C: 736: }
-"736
+[; ;YellowFlash.C: 735: }
+[; ;YellowFlash.C: 737: }
+"737
 [e :UE 2854 ]
 }
-"742
+"743
 [v _DoTimeout `(v ~T0 1 ef ]
 {
-[; ;YellowFlash.C: 741: void DoTimeout(void)
-[; ;YellowFlash.C: 742: {
+[; ;YellowFlash.C: 742: void DoTimeout(void)
+[; ;YellowFlash.C: 743: {
 [e :U _DoTimeout ]
 [f ]
-[; ;YellowFlash.C: 743: can_time_cont++;
-"743
-[e ++ _can_time_cont -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 744: master_time_cont++;
+[; ;YellowFlash.C: 744: can_time_cont++;
 "744
+[e ++ _can_time_cont -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 745: master_time_cont++;
+"745
 [e ++ _master_time_cont -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 746: if(can_time_cont>= 100)
-"746
-[e $ ! >= -> _can_time_cont `i -> 100 `i 2882  ]
-[; ;YellowFlash.C: 747: {
+[; ;YellowFlash.C: 747: if(can_time_cont>= 100)
 "747
+[e $ ! >= -> _can_time_cont `i -> 100 `i 2883  ]
+[; ;YellowFlash.C: 748: {
+"748
 {
-[; ;YellowFlash.C: 749: can_time_cont = 100;
-"749
+[; ;YellowFlash.C: 750: can_time_cont = 100;
+"750
 [e = _can_time_cont -> -> 100 `i `uc ]
-"752
-}
-[e :U 2882 ]
-[; ;YellowFlash.C: 752: }
-[; ;YellowFlash.C: 753: if(master_time_cont>=250)
 "753
-[e $ ! >= -> _master_time_cont `i -> 250 `i 2883  ]
-[; ;YellowFlash.C: 754: {
-"754
-{
-[; ;YellowFlash.C: 756: master_time_cont = 250;
-"756
-[e = _master_time_cont -> -> 250 `i `uc ]
-[; ;YellowFlash.C: 757: sta = 0X05;
-"757
-[e = _sta -> -> 5 `i `uc ]
-"758
 }
 [e :U 2883 ]
-[; ;YellowFlash.C: 758: }
-[; ;YellowFlash.C: 760: }
-"760
-[e :UE 2881 ]
+[; ;YellowFlash.C: 753: }
+[; ;YellowFlash.C: 754: if(master_time_cont>=250)
+"754
+[e $ ! >= -> _master_time_cont `i -> 250 `i 2884  ]
+[; ;YellowFlash.C: 755: {
+"755
+{
+[; ;YellowFlash.C: 757: master_time_cont = 250;
+"757
+[e = _master_time_cont -> -> 250 `i `uc ]
+[; ;YellowFlash.C: 758: sta = 0X05;
+"758
+[e = _sta -> -> 5 `i `uc ]
+"759
 }
-"775
+[e :U 2884 ]
+[; ;YellowFlash.C: 759: }
+[; ;YellowFlash.C: 761: }
+"761
+[e :UE 2882 ]
+}
+"776
 [v _HeartbeatTest `(v ~T0 1 ef ]
 {
-[; ;YellowFlash.C: 774: void HeartbeatTest()
-[; ;YellowFlash.C: 775: {
+[; ;YellowFlash.C: 775: void HeartbeatTest()
+[; ;YellowFlash.C: 776: {
 [e :U _HeartbeatTest ]
 [f ]
-[; ;YellowFlash.C: 777: if(time5ms == 1)
-"777
-[e $ ! == -> _time5ms `i -> 1 `i 2885  ]
-[; ;YellowFlash.C: 778: {
+[; ;YellowFlash.C: 778: if(time5ms == 1)
 "778
-{
-[; ;YellowFlash.C: 779: time5ms = 0;
+[e $ ! == -> _time5ms `i -> 1 `i 2886  ]
+[; ;YellowFlash.C: 779: {
 "779
-[e = _time5ms -> -> 0 `i `b ]
-[; ;YellowFlash.C: 780: t500ms_count++;
+{
+[; ;YellowFlash.C: 780: time5ms = 0;
 "780
-[e ++ _t500ms_count -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 781: if(t500ms_count>=100)
+[e = _time5ms -> -> 0 `i `b ]
+[; ;YellowFlash.C: 781: t500ms_count++;
 "781
-[e $ ! >= -> _t500ms_count `i -> 100 `i 2886  ]
-[; ;YellowFlash.C: 782: {
+[e ++ _t500ms_count -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 782: if(t500ms_count>=100)
 "782
-{
-[; ;YellowFlash.C: 783: t500ms_count=0;
+[e $ ! >= -> _t500ms_count `i -> 100 `i 2887  ]
+[; ;YellowFlash.C: 783: {
 "783
-[e = _t500ms_count -> -> 0 `i `uc ]
-[; ;YellowFlash.C: 784: heartbeat++;
-"784
-[e ++ _heartbeat -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 786: if(heartbeat>=4)
-"786
-[e $ ! >= -> _heartbeat `i -> 4 `i 2887  ]
-[; ;YellowFlash.C: 787: {
-"787
 {
-[; ;YellowFlash.C: 788: heartbeat=0;
+[; ;YellowFlash.C: 784: t500ms_count=0;
+"784
+[e = _t500ms_count -> -> 0 `i `uc ]
+[; ;YellowFlash.C: 785: heartbeat++;
+"785
+[e ++ _heartbeat -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 787: if(heartbeat>=4)
+"787
+[e $ ! >= -> _heartbeat `i -> 4 `i 2888  ]
+[; ;YellowFlash.C: 788: {
 "788
-[e = _heartbeat -> -> 0 `i `uc ]
-[; ;YellowFlash.C: 789: RD2=1;
+{
+[; ;YellowFlash.C: 789: heartbeat=0;
 "789
-[e = _RD2 -> -> 1 `i `b ]
-[; ;YellowFlash.C: 790: TMR0ON = 0;
+[e = _heartbeat -> -> 0 `i `uc ]
+[; ;YellowFlash.C: 790: RD2=1;
 "790
-[e = _TMR0ON -> -> 0 `i `b ]
-[; ;YellowFlash.C: 791: TMR0IF = 0;
+[e = _RD2 -> -> 1 `i `b ]
+[; ;YellowFlash.C: 791: TMR0ON = 0;
 "791
-[e = _TMR0IF -> -> 0 `i `b ]
-[; ;YellowFlash.C: 792: yflash_status=0x06;
+[e = _TMR0ON -> -> 0 `i `b ]
+[; ;YellowFlash.C: 792: TMR0IF = 0;
 "792
-[e = _yflash_status -> -> 6 `i `uc ]
-[; ;YellowFlash.C: 793: Read_YFlash_CFG();
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;YellowFlash.C: 793: yflash_status=0x06;
 "793
-[e ( _Read_YFlash_CFG ..  ]
-[; ;YellowFlash.C: 794: T1CON |= 0x01;
+[e = _yflash_status -> -> 6 `i `uc ]
+[; ;YellowFlash.C: 794: Read_YFlash_CFG();
 "794
-[e =| _T1CON -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 795: turnoff=0x01;
+[e ( _Read_YFlash_CFG ..  ]
+[; ;YellowFlash.C: 795: T1CON |= 0x01;
 "795
-[e = _turnoff -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 796: switchmode=1;
+[e =| _T1CON -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 796: turnoff=0x01;
 "796
+[e = _turnoff -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 797: switchmode=1;
+"797
 [e = _switchmode -> -> 1 `i `b ]
-"798
+"799
+}
+[e :U 2888 ]
+"802
 }
 [e :U 2887 ]
-"801
+"805
 }
 [e :U 2886 ]
-"804
+[; ;YellowFlash.C: 799: }
+[; ;YellowFlash.C: 802: }
+[; ;YellowFlash.C: 805: }
+[; ;YellowFlash.C: 807: }
+"807
+[e :UE 2885 ]
 }
-[e :U 2885 ]
-[; ;YellowFlash.C: 798: }
-[; ;YellowFlash.C: 801: }
-[; ;YellowFlash.C: 804: }
-[; ;YellowFlash.C: 806: }
-"806
-[e :UE 2884 ]
-}
-"809
+"810
 [v _main `(v ~T0 1 ef ]
 {
-[; ;YellowFlash.C: 808: void main(void)
-[; ;YellowFlash.C: 809: {
+[; ;YellowFlash.C: 809: void main(void)
+[; ;YellowFlash.C: 810: {
 [e :U _main ]
 [f ]
-[; ;YellowFlash.C: 812: delayms(500);
-"812
-[e ( _delayms (1 -> -> 500 `i `ui ]
-[; ;YellowFlash.C: 813: PORTInit();
+[; ;YellowFlash.C: 813: delayms(500);
 "813
-[e ( _PORTInit ..  ]
-[; ;YellowFlash.C: 814: IntManager();
+[e ( _delayms (1 -> -> 500 `i `ui ]
+[; ;YellowFlash.C: 814: PORTInit();
 "814
-[e ( _IntManager ..  ]
-[; ;YellowFlash.C: 815: my_addr =GetAddr(0x06);
+[e ( _PORTInit ..  ]
+[; ;YellowFlash.C: 815: IntManager();
 "815
-[e = _my_addr ( _GetAddr (1 -> -> 6 `i `uc ]
-[; ;YellowFlash.C: 816: CANInit(my_addr);
+[e ( _IntManager ..  ]
+[; ;YellowFlash.C: 816: my_addr =GetAddr(0x06);
 "816
-[e ( _CANInit (1 _my_addr ]
-[; ;YellowFlash.C: 817: sta = 0X01;
+[e = _my_addr ( _GetAddr (1 -> -> 6 `i `uc ]
+[; ;YellowFlash.C: 817: CANInit(my_addr);
 "817
-[e = _sta -> -> 1 `i `uc ]
-[; ;YellowFlash.C: 818: SWDTEN =1;
+[e ( _CANInit (1 _my_addr ]
+[; ;YellowFlash.C: 818: sta = 0X01;
 "818
+[e = _sta -> -> 1 `i `uc ]
+[; ;YellowFlash.C: 819: SWDTEN =1;
+"819
 [e = _SWDTEN -> -> 1 `i `b ]
-[; ;YellowFlash.C: 819: while(1)
-"819
-[e :U 2890 ]
-[; ;YellowFlash.C: 821: {
-"821
-{
-[; ;YellowFlash.C: 822: CANInt =0;
-"822
-[e = _CANInt -> -> 0 `i `b ]
-[; ;YellowFlash.C: 824: if(CANRecv(CANRid,CANRdata,&CANRdlc))
-"824
-[e $ ! ( _CANRecv (3 , , &U _CANRid &U _CANRdata &U _CANRdlc 2892  ]
-[; ;YellowFlash.C: 825: {
-"825
-{
-[; ;YellowFlash.C: 827: CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
-"827
-[e ( _CANDATAAnalyzing (3 , , &U _CANRid &U _CANRdata _CANRdlc ]
-"828
-}
-[e :U 2892 ]
-[; ;YellowFlash.C: 828: }
-[; ;YellowFlash.C: 829: asm(" clrwdt");
-"829
-[; <"  clrwdt ;# ">
-[; ;YellowFlash.C: 830: if(force_status)
-"830
-[e $ ! != -> _force_status `i -> -> -> 0 `i `uc `i 2893  ]
-[; ;YellowFlash.C: 831: {}
-"831
-{
-}
-[e $U 2894  ]
-"832
-[e :U 2893 ]
-[; ;YellowFlash.C: 832: else
-[; ;YellowFlash.C: 833: {
-"833
-{
-[; ;YellowFlash.C: 834: HeartbeatTest();
-"834
-[e ( _HeartbeatTest ..  ]
-"835
-}
-[e :U 2894 ]
-"837
-}
-[e :U 2889 ]
-"819
-[e $U 2890  ]
+[; ;YellowFlash.C: 820: while(1)
+"820
 [e :U 2891 ]
-[; ;YellowFlash.C: 835: }
-[; ;YellowFlash.C: 837: }
-[; ;YellowFlash.C: 839: }
-"839
-[e :UE 2888 ]
+[; ;YellowFlash.C: 822: {
+"822
+{
+[; ;YellowFlash.C: 823: CANInt =0;
+"823
+[e = _CANInt -> -> 0 `i `b ]
+[; ;YellowFlash.C: 825: if(CANRecv(CANRid,CANRdata,&CANRdlc))
+"825
+[e $ ! ( _CANRecv (3 , , &U _CANRid &U _CANRdata &U _CANRdlc 2893  ]
+[; ;YellowFlash.C: 826: {
+"826
+{
+[; ;YellowFlash.C: 828: CANDATAAnalyzing(CANRid,CANRdata,CANRdlc);
+"828
+[e ( _CANDATAAnalyzing (3 , , &U _CANRid &U _CANRdata _CANRdlc ]
+"829
+}
+[e :U 2893 ]
+[; ;YellowFlash.C: 829: }
+[; ;YellowFlash.C: 830: asm(" clrwdt");
+"830
+[; <"  clrwdt ;# ">
+[; ;YellowFlash.C: 831: if(force_status)
+"831
+[e $ ! != -> _force_status `i -> -> -> 0 `i `uc `i 2894  ]
+[; ;YellowFlash.C: 832: {}
+"832
+{
+}
+[e $U 2895  ]
+"833
+[e :U 2894 ]
+[; ;YellowFlash.C: 833: else
+[; ;YellowFlash.C: 834: {
+"834
+{
+[; ;YellowFlash.C: 835: HeartbeatTest();
+"835
+[e ( _HeartbeatTest ..  ]
+"836
+}
+[e :U 2895 ]
+"838
+}
+[e :U 2890 ]
+"820
+[e $U 2891  ]
+[e :U 2892 ]
+[; ;YellowFlash.C: 836: }
+[; ;YellowFlash.C: 838: }
+[; ;YellowFlash.C: 840: }
+"840
+[e :UE 2889 ]
 }

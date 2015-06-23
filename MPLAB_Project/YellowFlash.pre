@@ -1,7 +1,7 @@
 
-# 1 "G:\working\YellowFlashingController\YellowFlash.C"
+# 1 "E:\Git\YellowFlashingController\YellowFlash.C"
 
-# 17 "D:\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
+# 17 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\PIC18F45K80.h"
 extern volatile unsigned char RXERRCNT @ 0xE41;
 
 asm("RXERRCNT equ 0E41h");
@@ -20945,7 +20945,7 @@ extern volatile bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 
 extern volatile bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
 
-# 971 "D:\HI-TECH Software\PICC-18\9.80\include\plib/adc.h"
+# 971 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/adc.h"
 union ADCResult
 {
 int lr;
@@ -20971,7 +20971,7 @@ void SetChanADC(unsigned char );
 
 void SelChanConvADC( unsigned char );
 
-# 202 "D:\HI-TECH Software\PICC-18\9.80\include\plib/ancomp.h"
+# 202 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/ancomp.h"
 void Close_ancomp1( void );
 void Open_ancomp1(unsigned char config);
 void Close_ancomp2( void );
@@ -20981,7 +20981,7 @@ void Open_ancomp2(unsigned char config);
 void Close_ancomp3( void );
 void Open_ancomp3(unsigned char config);
 
-# 584 "D:\HI-TECH Software\PICC-18\9.80\include\plib\spi.h"
+# 584 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib\spi.h"
 void OpenSPI( unsigned char sync_mode,
 unsigned char bus_mode,
 unsigned char smp_phase );
@@ -20994,7 +20994,7 @@ void putsSPI( unsigned char *wrptr );
 
 unsigned char ReadSPI( void );
 
-# 414 "D:\HI-TECH Software\PICC-18\9.80\include\plib/can2510.h"
+# 414 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/can2510.h"
 void CAN2510Initialize(  unsigned int configuration,
  unsigned char brp,
  unsigned char interruptFlags,
@@ -21101,7 +21101,7 @@ unsigned char CAN2510DataRead(  unsigned char bufferNum,
  unsigned char *numBytes,
  unsigned char *data );
 
-# 64 "D:\HI-TECH Software\PICC-18\9.80\include\plib/capture.h"
+# 64 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/capture.h"
 union capstatus
 {
 
@@ -21162,7 +21162,7 @@ void OpenECapture1 ( unsigned char config);
 unsigned int ReadECapture1 (void);
 void CloseECapture1 (void);
 
-# 343 "D:\HI-TECH Software\PICC-18\9.80\include\plib/compare.h"
+# 343 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/compare.h"
 void OpenCompare2(unsigned char config, unsigned int period);
 void CloseCompare2(void);
 
@@ -21182,20 +21182,20 @@ void CloseCompare5(void);
 void OpenECompare1(unsigned char config,unsigned int period);
 void CloseECompare1(void);
 
-# 249 "D:\HI-TECH Software\PICC-18\9.80\include\plib/ctmu.h"
+# 249 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/ctmu.h"
 void OpenCTMU(unsigned char config1,unsigned char config2,unsigned char config3);
 void CurrentControlCTMU(unsigned char config);
 void CloseCTMU(void);
 
-# 108 "D:\HI-TECH Software\PICC-18\9.80\include\plib/dpslp.h"
+# 108 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/dpslp.h"
 extern void ULPWakeUpEnable( void );
 
-# 36 "D:\HI-TECH Software\PICC-18\9.80\include\plib/EEP.h"
+# 36 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/EEP.h"
 void Busy_eep ( void );
 unsigned char Read_b_eep( unsigned int badd );
 void Write_b_eep( unsigned int badd, unsigned char bdata );
 
-# 2 "D:\HI-TECH Software\PICC-18\9.80\include\stddef.h"
+# 2 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\stddef.h"
 typedef int ptrdiff_t;
 typedef unsigned size_t;
 typedef unsigned short wchar_t;
@@ -21203,7 +21203,7 @@ typedef unsigned short wchar_t;
 # 13
 extern int errno;
 
-# 65 "D:\HI-TECH Software\PICC-18\9.80\include\GenericTypeDefs.h"
+# 65 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\GenericTypeDefs.h"
 typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
 
 
@@ -21638,7 +21638,7 @@ struct
 } bits;
 } QWORD_VAL;
 
-# 113 "D:\HI-TECH Software\PICC-18\9.80\include\plib/flash.h"
+# 113 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/flash.h"
 extern void ReadFlash(unsigned long startaddr, unsigned int num_bytes, unsigned char *flash_array);
 
 # 120
@@ -21648,7 +21648,7 @@ extern void WriteBlockFlash(unsigned long startaddr, unsigned char num_blocks, u
 
 extern void WriteBytesFlash(unsigned long startaddr, unsigned int num_bytes, unsigned char *flash_array);
 
-# 769 "D:\HI-TECH Software\PICC-18\9.80\include\plib/i2c.h"
+# 769 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/i2c.h"
 void IdleI2C( void );
 
 void OpenI2C( unsigned char sync_mode, unsigned char slew );
@@ -21686,7 +21686,7 @@ unsigned char address,
 unsigned char *rdptr,
 unsigned char length );
 
-# 295 "D:\HI-TECH Software\PICC-18\9.80\include\plib/mwire.h"
+# 295 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/mwire.h"
 void OpenMwire( unsigned char sync_mode );
 
 unsigned char ReadMwire( unsigned char high_byte,
@@ -21698,7 +21698,7 @@ unsigned char WriteMwire( unsigned char data_out );
 # 324
 void getsMwire( unsigned char *rdptr, unsigned char length );
 
-# 126 "D:\HI-TECH Software\PICC-18\9.80\include\plib/portb.h"
+# 126 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/portb.h"
 void OpenPORTB( unsigned char config);
 
 # 162
@@ -21713,7 +21713,7 @@ void OpenRB2INT( unsigned char config);
 # 216
 void OpenRB3INT( unsigned char config);
 
-# 85 "D:\HI-TECH Software\PICC-18\9.80\include\plib/pwm.h"
+# 85 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/pwm.h"
 union PWMDC
 {
 unsigned int lpwm;
@@ -21752,7 +21752,7 @@ void SetOutputEPWM1 ( unsigned char output_config,
 unsigned char pwm_mode);
 void CloseEPWM1 (void);
 
-# 16 "D:\HI-TECH Software\PICC-18\9.80\include\plib/reset.h"
+# 16 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/reset.h"
 char isMCLR(void);
 void StatusReset(void);
 char isPOR(void);
@@ -21770,12 +21770,12 @@ char isWDTWU(void);
 
 char isLVD(void);
 
-# 509 "D:\HI-TECH Software\PICC-18\9.80\include\plib/rtcc.h"
+# 509 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/rtcc.h"
 void Open_RTCC(void);
 void Close_RTCC(void);
 unsigned char update_RTCC(void);
 
-# 97 "D:\HI-TECH Software\PICC-18\9.80\include\plib/sw_i2c.h"
+# 97 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/sw_i2c.h"
 void SWStopI2C ( void );
 void SWStartI2C ( void );
 void SWRestartI2C ( void );
@@ -21788,7 +21788,7 @@ signed char SWWriteI2C(  unsigned char data_out );
 signed char SWGetsI2C(  unsigned char *rdptr,  unsigned char length );
 signed char SWPutsI2C(  unsigned char *wrptr );
 
-# 84 "D:\HI-TECH Software\PICC-18\9.80\include\plib/sw_spi.h"
+# 84 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/sw_spi.h"
 void OpenSWSPI(void);
 
 
@@ -21800,7 +21800,7 @@ void SetCSSWSPI(void);
 
 void ClearCSSWSPI(void);
 
-# 47 "D:\HI-TECH Software\PICC-18\9.80\include\plib/sw_uart.h"
+# 47 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/sw_uart.h"
 void OpenUART(void);
 
 unsigned char ReadUART(void);
@@ -21816,7 +21816,7 @@ extern void DelayRXBitUART (void);
 extern void DelayRXHalfBitUART(void);
 extern void DelayTXBitUART (void);
 
-# 36 "D:\HI-TECH Software\PICC-18\9.80\include\plib/timers.h"
+# 36 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/timers.h"
 union Timers
 {
 unsigned int lt;
@@ -21849,7 +21849,7 @@ void WriteTimer3 ( unsigned int timer3);
 void OpenTimer4 ( unsigned char config);
 void CloseTimer4 (void);
 
-# 199 "D:\HI-TECH Software\PICC-18\9.80\include\plib/usart.h"
+# 199 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/usart.h"
 union USART1
 {
 unsigned char val;
@@ -21900,7 +21900,7 @@ void putrs2USART ( const  char *data);
 void baud1USART ( unsigned char baudconfig);
 void baud2USART ( unsigned char baudconfig);
 
-# 79 "D:\HI-TECH Software\PICC-18\9.80\include\plib/xlcd.h"
+# 79 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\plib/xlcd.h"
 void OpenXLCD( unsigned char);
 
 # 84
@@ -21935,7 +21935,7 @@ extern void DelayFor18TCY(void);
 extern void DelayPORXLCD(void);
 extern void DelayXLCD(void);
 
-# 18 "D:\HI-TECH Software\PICC-18\9.80\include\pic18.h"
+# 18 "C:\Program Files\HI-TECH Software\PICC-18\9.80\include\pic18.h"
 __attribute__((unsupported("The flash_write routine is no longer supported. Please use the peripheral library functions: WriteBytesFlash, WriteBlockFlash or WriteWordFlash"))) void flash_write(const unsigned char *, unsigned int, far unsigned char *);
 
 # 60
@@ -21951,7 +21951,7 @@ extern void _delaywdt(unsigned long);
 #pragma inline(_delay3)
 extern void _delay3(unsigned char);
 
-# 81 "G:\working\YellowFlashingController\TSC.H"
+# 81 "E:\Git\YellowFlashingController\TSC.H"
 unsigned char GetLampBoardAddr(void)
 {
 unsigned char addr = 0x00;
@@ -22035,7 +22035,7 @@ break;
 return rel;
 }
 
-# 14 "G:\working\YellowFlashingController\CAN.H"
+# 14 "E:\Git\YellowFlashingController\CAN.H"
 void CANFilterSet(unsigned char board_addr,unsigned char f_type)
 {
 
@@ -22326,7 +22326,7 @@ dat[5] = 0;
 dat[6] = 0;
 dat[7] = 0;
 
-CANInit(GetAddr(0x06));
+
 
 return 0;
 }
@@ -22334,7 +22334,7 @@ return 0;
 }
 
 
-# 4 "G:\working\YellowFlashingController\mcu.h"
+# 4 "E:\Git\YellowFlashingController\mcu.h"
 #pragma config XINST=OFF
 #pragma config FOSC=HS1
 
@@ -22436,8 +22436,8 @@ delayus(997);
 
 }
 
-# 42 "G:\working\YellowFlashingController\YellowFlash.C"
-const unsigned char board_version[5]={0x06,14,8,2,0};
+# 42 "E:\Git\YellowFlashingController\YellowFlash.C"
+const unsigned char board_version[5]={0x06,15,3,23,0};
 
 
 
@@ -22975,6 +22975,7 @@ break;
 
 case 0x04:
 yflash_status=CANRdata[1];
+if(CANRdlc==1)yflash_status=0xff;
 RD2=1;
 Read_YFlash_CFG();
 T1CON |= 0x01;
@@ -23050,7 +23051,7 @@ sta = 0X05;
 
 }
 
-# 774
+# 775
 void HeartbeatTest()
 {
 

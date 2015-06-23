@@ -36,9 +36,9 @@
 
 //#define ABC 0x97
 //#define EFG 0x01
-#define YEAR	  14//程序版本信息中的年
-#define MONTH	  8//程序版本信息中的月
-#define DAY		  2//程序版本信息中的日
+#define YEAR	  15//程序版本信息中的年
+#define MONTH	  3//程序版本信息中的月
+#define DAY		  23//程序版本信息中的日
 const unsigned char board_version[5]={MYTYPE,YEAR,MONTH,DAY,0};//板卡程序版本
 
 
@@ -684,6 +684,7 @@ void CANDATAAnalyzing(unsigned char id[],unsigned char dat[],unsigned char dlc)
 							
 				case FORCEENTERYFLASH://强制进入黄闪
 							yflash_status=CANRdata[1];//黄闪状态更新
+							if(CANRdlc==1)yflash_status=0xff;//若未说明强制黄闪类型则默认为0xff
 							VOLTAGE_12V_CONTROL=1;//继电器放开，信号灯与黄闪器连接
 							Read_YFlash_CFG();//黄闪器配置数据读取
 							T1CON  |= 0x01;//定时器1开启

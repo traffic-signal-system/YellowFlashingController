@@ -335,7 +335,7 @@ bit CANRecv(unsigned char *id,unsigned char *dat,unsigned char *dlc)
 			dat[6] = 0;
 			dat[7] = 0;
 
-			CANInit(GetAddr(MYTYPE));
+			//CANInit(GetAddr(MYTYPE));   //change 20150609
 			//CAN通信错误，返回为0没有任何数据被接收处理
 			return 0;
 		}	
